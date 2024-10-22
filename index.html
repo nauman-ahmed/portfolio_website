@@ -18,7 +18,7 @@
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
-    
+
 <!--
 
 Tooplate 2115 Marvel
@@ -269,20 +269,20 @@ https://www.tooplate.com/view/2115-marvel
             <div class="contact-form">
               <h2 class="mb-4">Interested to work together? Let's talk</h2>
 
-              <form action="/api/send-email" method="post">
+              <form id="contact-form">
                 <div class="row">
                   <div class="col-lg-6 col-12">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name" required>
                   </div>
-
+              
                   <div class="col-lg-6 col-12">
-                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email" required>
                   </div>
-
+              
                   <div class="col-12">
-                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
                   </div>
-
+              
                   <div class="ml-lg-auto col-lg-5 col-12">
                     <input type="submit" class="form-control submit-btn" value="Connect!">
                   </div>
@@ -309,6 +309,7 @@ https://www.tooplate.com/view/2115-marvel
           </div>
      </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -317,6 +318,56 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
-
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+    
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+    
+          const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+          };
+    
+          fetch('http://localhost:5001/api/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then((data) => {
+              // Use SweetAlert2 for success notification
+              Swal.fire({
+                icon: 'success',
+                title: 'Form submitted!',
+                text: 'Your form has been submitted successfully.',
+              });
+    
+              // Reset the form after successful submission
+              form.reset();
+            })
+            .catch((error) => {
+              console.error('There was a problem with the fetch operation:', error);
+              // Use SweetAlert2 for error notification
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'There was an error submitting the form.',
+              });
+            });
+        });
+      });
+    </script>
+    
+    
   </body>
 </html>
