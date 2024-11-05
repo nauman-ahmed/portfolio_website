@@ -117,34 +117,155 @@ https://www.tooplate.com/view/2115-marvel
                   <div class="row">
                       <!-- First row of the grid -->
                       <div class="col-md-4 col-sm-6 mb-4">
-                          <div class="project-info">
-                              <img src="images/project/project-image01.png" class="img-fluid" alt="project image">
+                        <div class="project-info">
+                          <video class="img-fluid" controls autoplay muted loop>
+                            <source src="videos/shutterdown.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                          <div class="row mt-3">
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                                    onclick="openModal('General Information', 
+                                    `<p><strong>The D3 Visualization Project</strong> is a web-based tool that allows users to upload datasets and visualize data using various chart types created with <strong>D3.js</strong>.</p>
+
+                                    <p><strong>Project Overview:</strong></p>
+
+                                    <p><strong>1. Dataset Upload:</strong><br>
+                                    Users can upload datasets, which are displayed in a data table for easy viewing and management.</p>
+
+                                    <p><strong>2. Basic Visualizations:</strong><br>
+                                    Users can create <strong>scatter plots</strong> and <strong>radar plots</strong> based on the uploaded data. The interface allows selecting specific variables, generating customized, interactive visualizations.</p>
+
+                                    <p><strong>3. Advanced Dashboard:</strong><br>
+                                    A preloaded liver cirrhosis dataset from <strong>Kaggle</strong> enables more complex visualizations, including bar charts and density plots, revealing deeper insights and trends within the dataset.</p>
+
+                                    <p><strong>Interactive Features:</strong><br>
+                                    Throughout the project, users can interact with charts, zoom in for detailed views, and explore the data dynamically.</p>
+
+                                    <p><strong>Technologies Used:</strong><br>
+                                    Built with <strong>React</strong> and <strong>D3.js</strong>, the system provides a responsive and customizable interface for data analysis and visualization.</p>`);">
+                              Info
+                            </button>
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                                    onclick="openModal('Project Description', 
+                                    `<p><strong>1. Data Upload and Display:</strong></p>
+                                    
+                                    <p><strong>Data Upload:</strong><br>
+                                    - Users can upload datasets.<br>
+                                    - The system parses and validates the uploaded data to ensure correct format for visualization.</p>
+
+                                    <p><strong>Data Display:</strong><br>
+                                    - Uploaded data is displayed in a tabular format.<br>
+                                    - Users can view the full dataset, including columns and rows.<br>
+                                    - Optional: Implement sorting or filtering features on the table.</p>
+
+                                    <hr>
+
+                                    <p><strong>2. Basic Visualization Section:</strong></p>
+
+                                    <p><strong>Scatter Plot:</strong><br>
+                                    - Users can create scatter plots to visualize relationships between two numerical variables.<br>
+                                    - Options to select x-axis and y-axis variables from the dataset.<br>
+                                    - Customizable features: color by third variable, size, tooltips for points.</p>
+
+                                    <p><strong>Radar Plot:</strong><br>
+                                    - Enables visualization of multi-dimensional data in a radar (spider) plot.<br>
+                                    - Allows selection of multiple variables for axes.<br>
+                                    - Interactive features like hovering to see values.</p>
+
+                                    <hr>
+
+                                    <p><strong>3. Dashboard Section (Liver Cirrhosis Dataset):</strong></p>
+
+                                    <p><strong>Dataset Integration:</strong><br>
+                                    - Preloaded liver cirrhosis dataset from Kaggle displayed in a tabular format for reference.</p>
+
+                                    <p><strong>Data Visualization with D3.js:</strong><br>
+                                    - Multiple visualizations (scatter plot, bar chart, density plot) implemented with the liver cirrhosis dataset.<br>
+                                    - Interactive exploration with D3.js features:<br>
+                                      &nbsp;&nbsp;&bull; Zooming and panning for detailed views.<br>
+                                      &nbsp;&nbsp;&bull; Tooltips showing additional info when hovering over elements.</p>
+
+                                    <p><strong>Insights and Analytics:</strong><br>
+                                    - Visualize trends, distributions, and correlations in the data.<br>
+                                    - Example: Distribution of variables like age, disease stages, treatment outcomes via bar or density plots.</p>
+
+                                    <hr>
+
+                                    <p><strong>4. Additional Features:</strong></p>
+
+                                    <p><strong>Customization of Visualizations:</strong><br>
+                                    - Options for customizing charts: axis labels, color schemes, legends.<br>
+                                    - Ability to resize or rearrange charts in different layouts.</p>
+
+                                    <p><strong>Dynamic Interaction:</strong><br>
+                                    - Ensures visualizations are responsive and interactive, adapting to various screen sizes and input methods.</p>
+
+                                    `);">
+                              Description
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                              `
+                              <strong>1. Frontend:</strong><br>
+                              - React is used for building the user interface and managing the interactive components of the system.<br><br>
+
+                              <strong>2. Data Visualization:</strong><br>
+                              - D3.js is used for rendering the visualizations (scatter plot, radar plot, bar chart, density plot), enabling custom, interactive data charts.<br><br>
+
+                              <strong>3. Dataset Integration:</strong><br>
+                              - The liver cirrhosis dataset from Kaggle is preloaded in the dashboard for advanced data analysis and visualization.`);">
+                              Tech
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                            `
+                            <strong>1. Frontend:</strong><br>
+                            - React is used for building the user interface and managing the interactive components of the system.<br><br>
+
+                            <strong>2. Data Visualization:</strong><br>
+                            - D3.js is used for rendering the visualizations (scatter plot, radar plot, bar chart, density plot), enabling custom, interactive data charts.<br><br>
+
+                            <strong>3. Dataset Integration:</strong><br>
+                            - The liver cirrhosis dataset from Kaggle is preloaded in the dashboard for advanced data analysis and visualization.`);">
+                            Libraries 
+                          </button>
                           </div>
+                        </div>
                       </div>
+                      
   
                       <div class="col-md-4 col-sm-6 mb-4">
-                          <div class="project-info">
-                              <img src="images/project/project-image02.png" class="img-fluid" alt="project image">
-                          </div>
+                        <div class="project-info">
+                          <video class="img-fluid" controls autoplay muted loop>
+                            <source src="videos/shutterdown.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
                       </div>
-  
+
                       <div class="col-md-4 col-sm-6 mb-4">
-                          <div class="project-info">
-                              <img src="images/project/project-image03.png" class="img-fluid" alt="project image">
-                          </div>
+                        <div class="project-info">
+                          <video class="img-fluid" controls autoplay muted loop>
+                            <source src="videos/shutterdown.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
                       </div>
-  
-                      <!-- Second row of the grid -->
+
                       <div class="col-md-4 col-sm-6 mb-4">
-                          <div class="project-info">
-                              <img src="images/project/project-image04.png" class="img-fluid" alt="project image">
-                          </div>
+                        <div class="project-info">
+                          <video class="img-fluid" controls autoplay muted loop>
+                            <source src="videos/shutterdown.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
                       </div>
-  
+
                       <div class="col-md-4 col-sm-6 mb-4">
-                          <div class="project-info">
-                              <img src="images/project/project-image05.png" class="img-fluid" alt="project image">
-                          </div>
+                        <div class="project-info">
+                          <video class="img-fluid" controls autoplay muted loop>
+                            <source src="videos/shutterdown.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
                       </div>
   
                       
@@ -154,160 +275,179 @@ https://www.tooplate.com/view/2115-marvel
       </div>
   </section>
   
-
-    <!-- FEATURES -->
-    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-12">
-                  <h2 class="mb-4">Experiences</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                                  <span>12/2023 </span>
-                             </div>
-                             <div class="timeline-info">
-                                  <h3><span>FULL STACK WEB DEVELOPER</span><small>EVENTPLANNING24</small></h3>
-                                  <p>I have been working as a React JS developer using TypeScript and I have also been involved in building Next JS applications. Following is my role and responsibilities:
-                                    <br/>
-                                    • RESTful API communication
-                                    <br/>
-                                    • Tweaking UI
-                                    <br/>
-                                    • Building features in the existing platform 
-                                    <br/>
-                                    • Serializing APIs
-                                  </p>
-                             </div>
-                        </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>09/2021</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>SOFTWARE ENGINEER</span><small>STRATGIT</small></h3>
-                                <p>I worked as a React JS, React Native, and Vue JS developer at this firm. Following were my responsibilities at the firm I was operating
-                                  at:
-                                  <br/>
-                                  • Optimizing applications to maximize the platform's performance
-                                  <br/>
-                                  • Designing responsive website along with mobile-friendly utilities
-                                  <br/>
-                                  • Testing the application for usability, maintenance, and bug fixation
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                                  <span>2025</span>
-                             </div>
-                             <div class="timeline-info">
-                                  <h3><span>MASTER OF SCIENCE IN COMPUTER SCIENCE</span><small>University of Passau</small></h3>
-                                  <p>Passau, Germany.</p>
-                             </div>
-                        </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2020</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>BACHELOR OF SCIENCE IN SOFTWARE ENGINEERING</span><small>Usman Institute of Technology</small></h3>
-                                <p>Karachi, Pakistan</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-            </div>
+  <!-- Modal Structure -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact py-5" id="contact">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-lg-5 mr-lg-5 col-12">
-            <div class="google-map w-100">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.2231844537023!2d13.448327144020794!3d48.571222960779345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477458a41d07896d%3A0x4784ab6e1b9463f6!2sNeuburger%20Str.%2031A%2C%2094032%20Passau!5e0!3m2!1sen!2sde!4v1729523499687!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          
-          
-
-            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-              <div class="contact-info-item">
-                <h3 class="mb-3 text-white">Contact Us</h3>
-                <p class="footer-text mb-0">Cell Number: +4917669022143</p>
-                <p>Email: <a href="mailto:naumanahmed449@gmail.com">naumanahmed449@gmail.com</a></p>
-              </div>
-              <ul class="social-links">
-                <li><a href="https://www.instagram.com/nauman_ahmed7/profilecard/?igsh=ejB2cXYzYnBncXN1" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
-                <li><a href="https://www.linkedin.com/in/nauman-ahmed-b190b219a/" class="uil" data-toggle="tooltip" data-placement="left" title="LinkedIn">
-                  <i class="fab fa-linkedin icon"></i></a>
-                </li>
-                <li><a href="https://github.com/nauman-ahmed"  class="uil" data-toggle="tooltip" data-placement="left" title="GitHub">
-                  <i class="fab fa-github icon"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12">
-            <div class="contact-form">
-              <h2 class="mb-4">Interested to work together? Let's talk</h2>
-
-              <form id="contact-form">
-                <div class="row">
-                  <div class="col-lg-6 col-12">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name" required>
-                  </div>
-              
-                  <div class="col-lg-6 col-12">
-                    <input type="email" class="form-control" name="email" placeholder="Email" id="email" required>
-                  </div>
-              
-                  <div class="col-12">
-                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
-                  </div>
-              
-                  <div class="ml-lg-auto col-lg-5 col-12">
-                    <input type="submit" class="form-control submit-btn" value="Connect!">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
+        <div class="modal-body" id="modalContent" style="max-height: 400px; overflow-y: auto;">
+          <!-- Modal content will be dynamically inserted here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- FOOTER -->
-     <footer class="footer py-5">
-          <div class="container">
-               <div class="row">
+  <!-- FEATURES -->
+  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+      <div class="container">
+          <div class="row">
 
-                    <div class="col-lg-12 col-12">                                
-                        <!-- <p class="copyright-text text-center">Copyright &copy; 2024 Nauman Ahmed . All rights reserved</p>
-                        <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p> -->
-                    </div>
-                    
-               </div>
+              <div class="col-lg-6 col-12">
+                <h2 class="mb-4">Experiences</h2>
+
+                  <div class="timeline">
+                      <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>12/2023 </span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>FULL STACK WEB DEVELOPER</span><small>EVENTPLANNING24</small></h3>
+                                <p>I have been working as a React JS developer using TypeScript and I have also been involved in building Next JS applications. Following is my role and responsibilities:
+                                  <br/>
+                                  • RESTful API communication
+                                  <br/>
+                                  • Tweaking UI
+                                  <br/>
+                                  • Building features in the existing platform 
+                                  <br/>
+                                  • Serializing APIs
+                                </p>
+                            </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>09/2021</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>SOFTWARE ENGINEER</span><small>STRATGIT</small></h3>
+                              <p>I worked as a React JS, React Native, and Vue JS developer at this firm. Following were my responsibilities at the firm I was operating
+                                at:
+                                <br/>
+                                • Optimizing applications to maximize the platform's performance
+                                <br/>
+                                • Designing responsive website along with mobile-friendly utilities
+                                <br/>
+                                • Testing the application for usability, maintenance, and bug fixation
+                              </p>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+
+              <div class="col-lg-6 col-12">
+                <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+                  <div class="timeline">
+                      <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2025</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>MASTER OF SCIENCE IN COMPUTER SCIENCE</span><small>University of Passau</small></h3>
+                                <p>Passau, Germany.</p>
+                            </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2020</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>BACHELOR OF SCIENCE IN SOFTWARE ENGINEERING</span><small>Usman Institute of Technology</small></h3>
+                              <p>Karachi, Pakistan</p>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+              
           </div>
-     </footer>
+      </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact py-5" id="contact">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-5 mr-lg-5 col-12">
+          <div class="google-map w-100">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.2231844537023!2d13.448327144020794!3d48.571222960779345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477458a41d07896d%3A0x4784ab6e1b9463f6!2sNeuburger%20Str.%2031A%2C%2094032%20Passau!5e0!3m2!1sen!2sde!4v1729523499687!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        
+
+          <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+            <div class="contact-info-item">
+              <h3 class="mb-3 text-white">Contact Us</h3>
+              <p class="footer-text mb-0">Cell Number: +4917669022143</p>
+              <p>Email: <a href="mailto:naumanahmed449@gmail.com">naumanahmed449@gmail.com</a></p>
+            </div>
+            <ul class="social-links">
+              <li><a href="https://www.instagram.com/nauman_ahmed7/profilecard/?igsh=ejB2cXYzYnBncXN1" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+              <li><a href="https://www.linkedin.com/in/nauman-ahmed-b190b219a/" class="uil" data-toggle="tooltip" data-placement="left" title="LinkedIn">
+                <i class="fab fa-linkedin icon"></i></a>
+              </li>
+              <li><a href="https://github.com/nauman-ahmed"  class="uil" data-toggle="tooltip" data-placement="left" title="GitHub">
+                <i class="fab fa-github icon"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-12">
+          <div class="contact-form">
+            <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+            <form id="contact-form">
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <input type="text" class="form-control" name="name" placeholder="Your Name" id="name" required>
+                </div>
+            
+                <div class="col-lg-6 col-12">
+                  <input type="email" class="form-control" name="email" placeholder="Email" id="email" required>
+                </div>
+            
+                <div class="col-12">
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
+                </div>
+            
+                <div class="ml-lg-auto col-lg-5 col-12">
+                  <input type="submit" class="form-control submit-btn" value="Connect!">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container">
+              <div class="row">
+
+                  <div class="col-lg-12 col-12">                                
+                      <!-- <p class="copyright-text text-center">Copyright &copy; 2024 Nauman Ahmed . All rights reserved</p>
+                      <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p> -->
+                  </div>
+                  
+              </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -319,6 +459,11 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
     <script>
+      function openModal(title, content) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalContent').innerHTML = content; // Use innerHTML to allow HTML formatting
+        $('#videoModal').modal('show'); // Using jQuery to show the modal
+      }
       document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('contact-form');
     
@@ -367,7 +512,13 @@ https://www.tooplate.com/view/2115-marvel
         });
       });
     </script>
-    
+    <style>
+      /* Optional: Customize modal max-height and scrolling */
+      .modal-body {
+        max-height: 400px; /* Set a fixed height */
+        overflow-y: auto;  /* Enable vertical scrolling */
+      }
+    </style>
     
   </body>
 </html>
