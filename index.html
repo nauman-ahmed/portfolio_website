@@ -436,9 +436,167 @@ https://www.tooplate.com/view/2115-marvel
                       <div class="col-md-4 col-sm-6 mb-4">
                         <div class="project-info">
                           <video class="img-fluid" controls autoplay muted loop>
-                            <source src="videos/d3visualization.mp4" type="video/mp4">
+                            <source src="videos/pos.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
+                          <div class="row mt-3">
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                              onclick="openModal('General Information', 
+                              `
+                              <p>The <strong>User Side (Sales Interface)</strong> of the system allows users to browse and select from a list of available products, with the option to search for specific items using a search bar. Selected products appear in a billing panel on the right side, where individual prices, quantities, and the total amount are automatically calculated and displayed. Users can adjust product quantities, with the total price updating dynamically. Discounts can be applied on individual products, showing a discounted price, and coupon codes can be entered at checkout, with automatic validation. If the coupon is valid, the discount applies to the total; if not, an error message appears. The final billing screen shows the total amount after discounts, with options to finalize the sale and either print or email the receipt.</p>
+
+                              <p>On the <strong>Admin Side (Management Interface)</strong>, admins can manage product categories, create, edit, or remove products, and assign products to categories. Admins can also set product prices, descriptions, and available quantities. For discount management, admins can create, edit, or delete discount coupons, setting details like discount percentage, validity, and usage conditions, with options to track coupon usage and expiration. A daily sales overview provides a summary of total revenue, transaction count, and average transaction value, with filters for date, category, or product. The reporting section allows admins to view sales by category, product, or timeframe and to generate/export reports in formats like CSV or PDF. Finally, the user permissions feature lets admins create roles (e.g., cashier, manager) with specific permissions, controlling access to features such as report viewing or product modification.</p>
+
+
+                            `);">
+                              Info
+                            </button>
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                              onclick="openModal('Project Description', 
+                              `
+                              <h4>1. User Side (Sales Interface):</h4>
+
+                              <p><strong>1. Product Selection:</strong></p>
+                              <ul>
+                                  <li>Display a <strong>list of available products</strong> to the user.</li>
+                                  <li>Enable users to <strong>select products</strong> by clicking or tapping.</li>
+                                  <li>Allow users to <strong>search for products</strong> using a search bar.</li>
+                              </ul>
+
+                              <p><strong>2. Billing Panel:</strong></p>
+                              <ul>
+                                  <li>Display selected products in a <strong>billing section</strong> (right side of the interface).</li>
+                                  <li><strong>Automatically calculate</strong> and display the total amount of the selected products.</li>
+                                  <li>Display the <strong>individual prices</strong> of selected products along with total quantity.</li>
+                              </ul>
+
+                              <p><strong>3. Adjusting Quantities:</strong></p>
+                              <ul>
+                                  <li>Enable users to <strong>increase or decrease the quantity</strong> of selected products.</li>
+                                  <li>Update the <strong>total price dynamically</strong> based on quantity adjustments.</li>
+                              </ul>
+
+                              <p><strong>4. Applying Discounts:</strong></p>
+                              <ul>
+                                  <li>Allow users to <strong>apply discounts</strong> on individual products.</li>
+                                  <li>Display a <strong>discounted price</strong> after applying the discount to a product.</li>
+                              </ul>
+
+                              <p><strong>5. Coupon Codes:</strong></p>
+                              <ul>
+                                  <li>Enable users to <strong>enter discount coupon codes</strong> at checkout.</li>
+                                  <li>Automatically <strong>validate the coupon code</strong> and apply the discount to the total price.</li>
+                                  <li><strong>Display an error message</strong> if the coupon is invalid or expired.</li>
+                              </ul>
+
+                              <p><strong>6. Final Billing:</strong></p>
+                              <ul>
+                                  <li>Show the <strong>final total amount</strong> after discounts.</li>
+                                  <li>Display an option to <strong>finalize the sale</strong> and process the transaction.</li>
+                                  <li>Option to <strong>print or email the receipt</strong> after the sale.</li>
+                              </ul>
+
+                              <hr>
+
+                              <h4>2. Admin Side (Management Interface):</h4>
+
+                              <p><strong>1. Product and Category Management:</strong></p>
+                              <ul>
+                                  <li>Allow the admin to <strong>create and manage product categories</strong>.</li>
+                                  <li>Enable the admin to <strong>add, edit, or remove products</strong> from the system.</li>
+                                  <li>Include functionality to <strong>set prices</strong>, descriptions, and available quantities for each product.</li>
+                                  <li>Allow the admin to <strong>assign products to categories</strong>.</li>
+                              </ul>
+
+                              <p><strong>2. Discount Coupon Management:</strong></p>
+                              <ul>
+                                  <li>Allow the admin to <strong>create, edit, or delete discount coupons</strong>.</li>
+                                  <li>Enable the admin to set <strong>coupon details</strong>, including discount percentage, validity period, and conditions (e.g., minimum purchase amount).</li>
+                                  <li>Option to <strong>track coupon usage</strong> and expiration dates.</li>
+                              </ul>
+
+                              <p><strong>3. Daily Sales Overview:</strong></p>
+                              <ul>
+                                  <li>Display a <strong>summary of daily sales</strong> including total revenue, number of transactions, and average transaction value.</li>
+                                  <li>Allow filtering sales by <strong>date, category, or product</strong>.</li>
+                              </ul>
+
+                              <p><strong>4. Reporting Section:</strong></p>
+                              <ul>
+                                  <li>Provide a <strong>sales report</strong> that breaks down sales by category, product, or time frame.</li>
+                                  <li>Include an option to <strong>generate and export reports</strong> (e.g., CSV or PDF formats).</li>
+                                  <li>Provide a <strong>real-time view of current sales trends</strong> and inventory levels.</li>
+                              </ul>
+
+                              <p><strong>5. User Permissions:</strong></p>
+                              <ul>
+                                  <li>Allow the admin to create <strong>multiple user roles</strong> (e.g., cashier, manager).</li>
+                                  <li>Enable the admin to set <strong>permissions</strong> for each role, controlling access to different features (e.g., some users can only view reports, others can modify products).</li>
+                              </ul>
+
+
+                              `);">
+                              Description
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                              `
+                              <p><strong>1. Frontend:</strong></p>
+                              <ul>
+                                  <li><strong>React+Vite</strong> for building the user interface, providing a responsive and dynamic experience for all users.</li>
+                              </ul>
+                              </br>
+                              <p><strong>2. Backend:</strong></p>
+                              <ul>
+                                  <li><strong>Node.js</strong> as the backend runtime environment to manage server-side logic.</li>
+                                  <li><strong>REST APIs</strong> to enable communication between the frontend and backend.</li>
+                              </ul>
+                              </br>
+                              <p><strong>3. Database:</strong></p>
+                              <ul>
+                                  <li><strong>MongoDB</strong> to store:
+                                      <ul>
+                                          <li>Categories data</li>
+                                          <li>Products</li>
+                                          <li>Gift Coupon, user data, and order history</li>
+                                      </ul>
+                                  </li>
+                              </ul>
+
+                            `);">
+                              Tech
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                            `
+                            <h3>Libraries used:</h3>
+                            <ol>
+                                <li><strong>axios</strong>: For making HTTP requests, commonly used for API interactions.</li>
+                                <li><strong>bcrypt</strong>: For hashing passwords, adding a layer of security.</li>
+                                <li><strong>cors</strong>: Enables Cross-Origin Resource Sharing, allowing API resources to be accessed from different origins.</li>
+                                <li><strong>dotenv</strong>: Loads environment variables from a <code>.env</code> file, securing sensitive data.</li>
+                                <li><strong>express</strong>: A web framework for Node.js, managing server-side routing and handling requests.</li>
+                                <li><strong>html-to-image</strong>: Converts HTML elements to images, useful for capturing content as an image.</li>
+                                <li><strong>moment</strong>: Provides date and time manipulation capabilities.</li>
+                                <li><strong>mongodb</strong> and <strong>mongoose</strong>: Used for database management, with MongoDB as the database and Mongoose as an ORM.</li>
+                                <li><strong>multer</strong>: Middleware for handling file uploads, primarily for images or other files.</li>
+                                <li><strong>nodemon</strong>: A development tool that automatically restarts the server when file changes are detected.</li>
+                                <li><strong>puppeteer</strong>: Headless browser automation, useful for generating PDFs or scraping data.</li>
+                                <li><strong>@reduxjs/toolkit</strong>: State management for React applications using Redux.</li>
+                                <li><strong>antd</strong>: Ant Design, a popular React UI library providing ready-made components.</li>
+                                <li><strong>bootstrap</strong>: CSS framework for responsive and mobile-first design.</li>
+                                <li><strong>framer-motion</strong>: Provides animations and transitions for React components.</li>
+                                <li><strong>react-jwt</strong>: Handles decoding and managing JSON Web Tokens in React.</li>
+                                <li><strong>react-redux</strong>: Connects React with Redux for state management.</li>
+                                <li><strong>react-toastify</strong>: Enables toast notifications in React applications.</li>
+                                <li><strong>reactstrap</strong>: Bootstrap components specifically for React.</li>
+                                <li><strong>redux</strong>: Manages state in JavaScript applications, especially useful in React.</li>
+                            </ol>
+
+
+                            `);"
+                            >
+                            Libraries 
+                          </button>
+                          </div>
                         </div>
                       </div>
 
@@ -448,6 +606,164 @@ https://www.tooplate.com/view/2115-marvel
                             <source src="videos/d3visualization.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
+                          <div class="row mt-3">
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                              onclick="openModal('General Information', 
+                              `
+                              <p>The <strong>User Side (Sales Interface)</strong> of the system allows users to browse and select from a list of available products, with the option to search for specific items using a search bar. Selected products appear in a billing panel on the right side, where individual prices, quantities, and the total amount are automatically calculated and displayed. Users can adjust product quantities, with the total price updating dynamically. Discounts can be applied on individual products, showing a discounted price, and coupon codes can be entered at checkout, with automatic validation. If the coupon is valid, the discount applies to the total; if not, an error message appears. The final billing screen shows the total amount after discounts, with options to finalize the sale and either print or email the receipt.</p>
+
+                              <p>On the <strong>Admin Side (Management Interface)</strong>, admins can manage product categories, create, edit, or remove products, and assign products to categories. Admins can also set product prices, descriptions, and available quantities. For discount management, admins can create, edit, or delete discount coupons, setting details like discount percentage, validity, and usage conditions, with options to track coupon usage and expiration. A daily sales overview provides a summary of total revenue, transaction count, and average transaction value, with filters for date, category, or product. The reporting section allows admins to view sales by category, product, or timeframe and to generate/export reports in formats like CSV or PDF. Finally, the user permissions feature lets admins create roles (e.g., cashier, manager) with specific permissions, controlling access to features such as report viewing or product modification.</p>
+
+
+                            `);">
+                              Info
+                            </button>
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                              onclick="openModal('Project Description', 
+                              `
+                              <h4>1. User Side (Sales Interface):</h4>
+
+                              <p><strong>1. Product Selection:</strong></p>
+                              <ul>
+                                  <li>Display a <strong>list of available products</strong> to the user.</li>
+                                  <li>Enable users to <strong>select products</strong> by clicking or tapping.</li>
+                                  <li>Allow users to <strong>search for products</strong> using a search bar.</li>
+                              </ul>
+
+                              <p><strong>2. Billing Panel:</strong></p>
+                              <ul>
+                                  <li>Display selected products in a <strong>billing section</strong> (right side of the interface).</li>
+                                  <li><strong>Automatically calculate</strong> and display the total amount of the selected products.</li>
+                                  <li>Display the <strong>individual prices</strong> of selected products along with total quantity.</li>
+                              </ul>
+
+                              <p><strong>3. Adjusting Quantities:</strong></p>
+                              <ul>
+                                  <li>Enable users to <strong>increase or decrease the quantity</strong> of selected products.</li>
+                                  <li>Update the <strong>total price dynamically</strong> based on quantity adjustments.</li>
+                              </ul>
+
+                              <p><strong>4. Applying Discounts:</strong></p>
+                              <ul>
+                                  <li>Allow users to <strong>apply discounts</strong> on individual products.</li>
+                                  <li>Display a <strong>discounted price</strong> after applying the discount to a product.</li>
+                              </ul>
+
+                              <p><strong>5. Coupon Codes:</strong></p>
+                              <ul>
+                                  <li>Enable users to <strong>enter discount coupon codes</strong> at checkout.</li>
+                                  <li>Automatically <strong>validate the coupon code</strong> and apply the discount to the total price.</li>
+                                  <li><strong>Display an error message</strong> if the coupon is invalid or expired.</li>
+                              </ul>
+
+                              <p><strong>6. Final Billing:</strong></p>
+                              <ul>
+                                  <li>Show the <strong>final total amount</strong> after discounts.</li>
+                                  <li>Display an option to <strong>finalize the sale</strong> and process the transaction.</li>
+                                  <li>Option to <strong>print or email the receipt</strong> after the sale.</li>
+                              </ul>
+
+                              <hr>
+
+                              <h4>2. Admin Side (Management Interface):</h4>
+
+                              <p><strong>1. Product and Category Management:</strong></p>
+                              <ul>
+                                  <li>Allow the admin to <strong>create and manage product categories</strong>.</li>
+                                  <li>Enable the admin to <strong>add, edit, or remove products</strong> from the system.</li>
+                                  <li>Include functionality to <strong>set prices</strong>, descriptions, and available quantities for each product.</li>
+                                  <li>Allow the admin to <strong>assign products to categories</strong>.</li>
+                              </ul>
+
+                              <p><strong>2. Discount Coupon Management:</strong></p>
+                              <ul>
+                                  <li>Allow the admin to <strong>create, edit, or delete discount coupons</strong>.</li>
+                                  <li>Enable the admin to set <strong>coupon details</strong>, including discount percentage, validity period, and conditions (e.g., minimum purchase amount).</li>
+                                  <li>Option to <strong>track coupon usage</strong> and expiration dates.</li>
+                              </ul>
+
+                              <p><strong>3. Daily Sales Overview:</strong></p>
+                              <ul>
+                                  <li>Display a <strong>summary of daily sales</strong> including total revenue, number of transactions, and average transaction value.</li>
+                                  <li>Allow filtering sales by <strong>date, category, or product</strong>.</li>
+                              </ul>
+
+                              <p><strong>4. Reporting Section:</strong></p>
+                              <ul>
+                                  <li>Provide a <strong>sales report</strong> that breaks down sales by category, product, or time frame.</li>
+                                  <li>Include an option to <strong>generate and export reports</strong> (e.g., CSV or PDF formats).</li>
+                                  <li>Provide a <strong>real-time view of current sales trends</strong> and inventory levels.</li>
+                              </ul>
+
+                              <p><strong>5. User Permissions:</strong></p>
+                              <ul>
+                                  <li>Allow the admin to create <strong>multiple user roles</strong> (e.g., cashier, manager).</li>
+                                  <li>Enable the admin to set <strong>permissions</strong> for each role, controlling access to different features (e.g., some users can only view reports, others can modify products).</li>
+                              </ul>
+
+
+                              `);">
+                              Description
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                              `
+                              <p><strong>1. Frontend:</strong></p>
+                              <ul>
+                                  <li><strong>React+Vite</strong> for building the user interface, providing a responsive and dynamic experience for all users.</li>
+                              </ul>
+                              </br>
+                              <p><strong>2. Backend:</strong></p>
+                              <ul>
+                                  <li><strong>Node.js</strong> as the backend runtime environment to manage server-side logic.</li>
+                                  <li><strong>REST APIs</strong> to enable communication between the frontend and backend.</li>
+                              </ul>
+                              </br>
+                              <p><strong>3. Database:</strong></p>
+                              <ul>
+                                  <li><strong>MongoDB</strong> to store:
+                                      <ul>
+                                          <li>Categories data</li>
+                                          <li>Products</li>
+                                          <li>Gift Coupon, user data, and order history</li>
+                                      </ul>
+                                  </li>
+                              </ul>
+
+                            `);">
+                              Tech
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                            `
+                            <h3>Libraries used:</h3>
+                            <ol>
+                                <li><strong>axios</strong>: For making HTTP requests, commonly used for API interactions.</li>
+                                <li><strong>bcrypt</strong>: For hashing passwords, adding a layer of security.</li>
+                                <li><strong>cors</strong>: Enables Cross-Origin Resource Sharing, allowing API resources to be accessed from different origins.</li>
+                                <li><strong>dotenv</strong>: Loads environment variables from a <code>.env</code> file, securing sensitive data.</li>
+                                <li><strong>express</strong>: A web framework for Node.js, managing server-side routing and handling requests.</li>
+                                <li><strong>html-to-image</strong>: Converts HTML elements to images, useful for capturing content as an image.</li>
+                                <li><strong>moment</strong>: Provides date and time manipulation capabilities.</li>
+                                <li><strong>mongodb</strong> and <strong>mongoose</strong>: Used for database management, with MongoDB as the database and Mongoose as an ORM.</li>
+                                <li><strong>multer</strong>: Middleware for handling file uploads, primarily for images or other files.</li>
+                                <li><strong>nodemon</strong>: A development tool that automatically restarts the server when file changes are detected.</li>
+                                <li><strong>puppeteer</strong>: Headless browser automation, useful for generating PDFs or scraping data.</li>
+                                <li><strong>@reduxjs/toolkit</strong>: State management for React applications using Redux.</li>
+                                <li><strong>antd</strong>: Ant Design, a popular React UI library providing ready-made components.</li>
+                                <li><strong>bootstrap</strong>: CSS framework for responsive and mobile-first design.</li>
+                                <li><strong>framer-motion</strong>: Provides animations and transitions for React components.</li>
+                                <li><strong>react-jwt</strong>: Handles decoding and managing JSON Web Tokens in React.</li>
+                                <li><strong>react-redux</strong>: Connects React with Redux for state management.</li>
+                                <li><strong>react-toastify</strong>: Enables toast notifications in React applications.</li>
+                                <li><strong>reactstrap</strong>: Bootstrap components specifically for React.</li>
+                                <li><strong>redux</strong>: Manages state in JavaScript applications, especially useful in React.</li>
+                            </ol>
+
+
+                            `);"
+                            >
+                            Libraries 
+                          </button>
+                          </div>
                         </div>
                       </div>
 
