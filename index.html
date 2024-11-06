@@ -603,17 +603,20 @@ https://www.tooplate.com/view/2115-marvel
                       <div class="col-md-4 col-sm-6 mb-4">
                         <div class="project-info">
                           <video class="img-fluid" controls autoplay muted loop>
-                            <source src="videos/d3visualization.mp4" type="video/mp4">
+                            <source src="videos/dewa.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
                           <div class="row mt-3">
                             <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
                               onclick="openModal('General Information', 
                               `
-                              <p>The <strong>User Side (Sales Interface)</strong> of the system allows users to browse and select from a list of available products, with the option to search for specific items using a search bar. Selected products appear in a billing panel on the right side, where individual prices, quantities, and the total amount are automatically calculated and displayed. Users can adjust product quantities, with the total price updating dynamically. Discounts can be applied on individual products, showing a discounted price, and coupon codes can be entered at checkout, with automatic validation. If the coupon is valid, the discount applies to the total; if not, an error message appears. The final billing screen shows the total amount after discounts, with options to finalize the sale and either print or email the receipt.</p>
+                              <p>The <strong>IoT Management System</strong> is a comprehensive platform designed to visualize, manage, and schedule IoT devices within a building. The system allows users to upload or retrieve <strong>IoT metrics data</strong> and display it in various formats, including line charts, bar charts, and scatter plots.</p>
 
-                              <p>On the <strong>Admin Side (Management Interface)</strong>, admins can manage product categories, create, edit, or remove products, and assign products to categories. Admins can also set product prices, descriptions, and available quantities. For discount management, admins can create, edit, or delete discount coupons, setting details like discount percentage, validity, and usage conditions, with options to track coupon usage and expiration. A daily sales overview provides a summary of total revenue, transaction count, and average transaction value, with filters for date, category, or product. The reporting section allows admins to view sales by category, product, or timeframe and to generate/export reports in formats like CSV or PDF. Finally, the user permissions feature lets admins create roles (e.g., cashier, manager) with specific permissions, controlling access to features such as report viewing or product modification.</p>
+                              <p>One of the standout features is the <strong>3D visualization</strong>, where users can interact with a 3D model of the building, displaying devices and their locations on different floors. The system also supports <strong>multi-level device classification</strong>, allowing users to filter devices by floor and type, providing a hierarchical view of device statuses and activity.</p>
 
+                              <p>Additionally, users can <strong>schedule tasks for devices</strong>, such as turning them on or off at specific times, with scheduling data stored in a <strong>PostgreSQL database</strong>. The app provides real-time monitoring and control of devices, making it easy to manage multiple devices from a central interface.</p>
+
+                              <p>Built using <strong>React + Vite</strong> for the frontend, <strong>Node.js</strong> for the backend, and <strong>PostgreSQL</strong> for data storage, the system efficiently handles large volumes of data while providing dynamic visualizations and device control features.</p>
 
                             `);">
                               Info
@@ -621,85 +624,100 @@ https://www.tooplate.com/view/2115-marvel
                             <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
                               onclick="openModal('Project Description', 
                               `
-                              <h4>1. User Side (Sales Interface):</h4>
+                              <h4>1. Data Visualization:</h4>
 
-                              <p><strong>1. Product Selection:</strong></p>
+                              <p><strong>1. Data Metrics Visualization:</strong></p>
                               <ul>
-                                  <li>Display a <strong>list of available products</strong> to the user.</li>
-                                  <li>Enable users to <strong>select products</strong> by clicking or tapping.</li>
-                                  <li>Allow users to <strong>search for products</strong> using a search bar.</li>
+                                  <li>The system should allow users to view <strong>various IoT metrics</strong> (e.g., temperature, device activity, energy consumption) in real-time or using dummy data.</li>
+                                  <li><strong>Multiple types of charts/plots</strong> (e.g., line charts, bar charts, scatter plots) are used to display the metrics for easy interpretation.</li>
+                                  <li>The visualization updates dynamically based on the data retrieved from the database or APIs.</li>
                               </ul>
 
-                              <p><strong>2. Billing Panel:</strong></p>
+                              <p><strong>2. Historical Data View:</strong></p>
                               <ul>
-                                  <li>Display selected products in a <strong>billing section</strong> (right side of the interface).</li>
-                                  <li><strong>Automatically calculate</strong> and display the total amount of the selected products.</li>
-                                  <li>Display the <strong>individual prices</strong> of selected products along with total quantity.</li>
-                              </ul>
-
-                              <p><strong>3. Adjusting Quantities:</strong></p>
-                              <ul>
-                                  <li>Enable users to <strong>increase or decrease the quantity</strong> of selected products.</li>
-                                  <li>Update the <strong>total price dynamically</strong> based on quantity adjustments.</li>
-                              </ul>
-
-                              <p><strong>4. Applying Discounts:</strong></p>
-                              <ul>
-                                  <li>Allow users to <strong>apply discounts</strong> on individual products.</li>
-                                  <li>Display a <strong>discounted price</strong> after applying the discount to a product.</li>
-                              </ul>
-
-                              <p><strong>5. Coupon Codes:</strong></p>
-                              <ul>
-                                  <li>Enable users to <strong>enter discount coupon codes</strong> at checkout.</li>
-                                  <li>Automatically <strong>validate the coupon code</strong> and apply the discount to the total price.</li>
-                                  <li><strong>Display an error message</strong> if the coupon is invalid or expired.</li>
-                              </ul>
-
-                              <p><strong>6. Final Billing:</strong></p>
-                              <ul>
-                                  <li>Show the <strong>final total amount</strong> after discounts.</li>
-                                  <li>Display an option to <strong>finalize the sale</strong> and process the transaction.</li>
-                                  <li>Option to <strong>print or email the receipt</strong> after the sale.</li>
+                                  <li>Users can view <strong>historical data</strong> of the recorded metrics.</li>
+                                  <li>Allow users to <strong>filter or select specific time ranges</strong> to view trends over time (e.g., daily, weekly, monthly views).</li>
                               </ul>
 
                               <hr>
 
-                              <h4>2. Admin Side (Management Interface):</h4>
+                              <h4>2. 3D Visualization:</h4>
 
-                              <p><strong>1. Product and Category Management:</strong></p>
+                              <p><strong>1. 3D Model Integration:</strong></p>
                               <ul>
-                                  <li>Allow the admin to <strong>create and manage product categories</strong>.</li>
-                                  <li>Enable the admin to <strong>add, edit, or remove products</strong> from the system.</li>
-                                  <li>Include functionality to <strong>set prices</strong>, descriptions, and available quantities for each product.</li>
-                                  <li>Allow the admin to <strong>assign products to categories</strong>.</li>
+                                  <li>Implemented a <strong>3D visualization</strong> for representing building layouts or device locations in the system for the first time.</li>
+                                  <li>Users can <strong>interact with the 3D model</strong>, rotate, zoom, and explore different views of the floor plan or device layout.</li>
                               </ul>
 
-                              <p><strong>2. Discount Coupon Management:</strong></p>
+                              <p><strong>2. Device Visualization in 3D:</strong></p>
                               <ul>
-                                  <li>Allow the admin to <strong>create, edit, or delete discount coupons</strong>.</li>
-                                  <li>Enable the admin to set <strong>coupon details</strong>, including discount percentage, validity period, and conditions (e.g., minimum purchase amount).</li>
-                                  <li>Option to <strong>track coupon usage</strong> and expiration dates.</li>
+                                  <li>The 3D model includes <strong>visual markers for devices</strong>, such as sensors or IoT equipment, showing where they are located within the building structure.</li>
+                                  <li>Devices in the 3D model should be clickable, displaying <strong>additional information</strong> (e.g., status, last active, scheduled tasks) when selected.</li>
                               </ul>
 
-                              <p><strong>3. Daily Sales Overview:</strong></p>
+                              <hr>
+
+                              <h4>3. Multi-level Device Classification:</h4>
+
+                              <p><strong>1. Device Classification by Floor:</strong></p>
                               <ul>
-                                  <li>Display a <strong>summary of daily sales</strong> including total revenue, number of transactions, and average transaction value.</li>
-                                  <li>Allow filtering sales by <strong>date, category, or product</strong>.</li>
+                                  <li>Devices are classified and organized based on their <strong>location in a building</strong>.</li>
+                                  <li>Users can view devices on different <strong>floors or areas</strong> of the building by navigating through the classification hierarchy (e.g., floor, room, section).</li>
                               </ul>
 
-                              <p><strong>4. Reporting Section:</strong></p>
+                              <p><strong>2. Filter Devices by Category:</strong></p>
                               <ul>
-                                  <li>Provide a <strong>sales report</strong> that breaks down sales by category, product, or time frame.</li>
-                                  <li>Include an option to <strong>generate and export reports</strong> (e.g., CSV or PDF formats).</li>
-                                  <li>Provide a <strong>real-time view of current sales trends</strong> and inventory levels.</li>
+                                  <li>Provide filtering capabilities where users can filter devices by <strong>type or function</strong> (e.g., sensors, actuators, cameras).</li>
+                                  <li>Display relevant metrics for each category of devices in real-time or historical views.</li>
                               </ul>
 
-                              <p><strong>5. User Permissions:</strong></p>
+                              <hr>
+
+                              <h4>4. Device Scheduling:</h4>
+
+                              <p><strong>1. Schedule Management:</strong></p>
                               <ul>
-                                  <li>Allow the admin to create <strong>multiple user roles</strong> (e.g., cashier, manager).</li>
-                                  <li>Enable the admin to set <strong>permissions</strong> for each role, controlling access to different features (e.g., some users can only view reports, others can modify products).</li>
+                                  <li>The system allows users to <strong>schedule tasks or actions</strong> for specific devices (e.g., turn on/off, adjust settings).</li>
+                                  <li>Scheduling information is stored in the <strong>PostgreSQL database</strong> for persistence.</li>
+                                  <li>Users can set <strong>recurring schedules</strong> (e.g., daily, weekly, at a specific time) or one-time schedules.</li>
                               </ul>
+
+                              <p><strong>2. View and Modify Schedules:</strong></p>
+                              <ul>
+                                  <li>Users can view a <strong>list of scheduled tasks</strong> for all devices or specific devices.</li>
+                                  <li>The system allows users to <strong>modify or cancel scheduled tasks</strong> if needed.</li>
+                              </ul>
+
+                              <hr>
+
+                              <h4>5. Device Control and Monitoring:</h4>
+
+                              <p><strong>1. Real-time Monitoring:</strong></p>
+                              <ul>
+                                  <li>The system provides <strong>real-time monitoring</strong> of device statuses (e.g., on/off, active/inactive).</li>
+                                  <li>Users can see the <strong>current state of devices</strong> and view logs of recent activity.</li>
+                              </ul>
+
+                              <p><strong>2. Control Devices Remotely:</strong></p>
+                              <ul>
+                                  <li>Allow users to <strong>remotely control devices</strong> through the app, triggering actions such as turning devices on or off or adjusting configurations based on the device type.</li>
+                              </ul>
+
+                              <hr>
+
+                              <h4>6. Data Management:</h4>
+
+                              <p><strong>1. PostgreSQL Integration:</strong></p>
+                              <ul>
+                                  <li><strong>PostgreSQL</strong> is used to store data, including device schedules, device information, and metrics history.</li>
+                                  <li>Ensure efficient querying of data for real-time updates and historical views.</li>
+                              </ul>
+
+                              <p><strong>2. REST API Backend:</strong></p>
+                              <ul>
+                                  <li>A <strong>Node.js</strong> backend with <strong>REST APIs</strong> handles communication between the frontend and the database, fetching data for visualizations, device scheduling, and control.</li>
+                              </ul>
+
 
 
                               `);">
@@ -709,24 +727,18 @@ https://www.tooplate.com/view/2115-marvel
                               `
                               <p><strong>1. Frontend:</strong></p>
                               <ul>
-                                  <li><strong>React+Vite</strong> for building the user interface, providing a responsive and dynamic experience for all users.</li>
+                                  <li><strong>React + Vite</strong> for building the user interface, providing fast load times and efficient development using modern front-end technologies.</li>
                               </ul>
-                              </br>
+
                               <p><strong>2. Backend:</strong></p>
                               <ul>
-                                  <li><strong>Node.js</strong> as the backend runtime environment to manage server-side logic.</li>
-                                  <li><strong>REST APIs</strong> to enable communication between the frontend and backend.</li>
+                                  <li><strong>Node.js</strong> for the backend, managing API requests and database interactions.</li>
+                                  <li><strong>PostgreSQL</strong> for persisting device schedules, metrics data, and device classification.</li>
                               </ul>
-                              </br>
-                              <p><strong>3. Database:</strong></p>
+
+                              <p><strong>3. Visualization and 3D Modelling:</strong></p>
                               <ul>
-                                  <li><strong>MongoDB</strong> to store:
-                                      <ul>
-                                          <li>Categories data</li>
-                                          <li>Products</li>
-                                          <li>Gift Coupon, user data, and order history</li>
-                                      </ul>
-                                  </li>
+                                  <li><strong>D3.js</strong> and other relevant 3D libraries for implementing <strong>charts, plots, and 3D visualizations</strong>.</li>
                               </ul>
 
                             `);">
@@ -735,28 +747,55 @@ https://www.tooplate.com/view/2115-marvel
                             <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
                             `
                             <h3>Libraries used:</h3>
-                            <ol>
-                                <li><strong>axios</strong>: For making HTTP requests, commonly used for API interactions.</li>
-                                <li><strong>bcrypt</strong>: For hashing passwords, adding a layer of security.</li>
-                                <li><strong>cors</strong>: Enables Cross-Origin Resource Sharing, allowing API resources to be accessed from different origins.</li>
-                                <li><strong>dotenv</strong>: Loads environment variables from a <code>.env</code> file, securing sensitive data.</li>
-                                <li><strong>express</strong>: A web framework for Node.js, managing server-side routing and handling requests.</li>
-                                <li><strong>html-to-image</strong>: Converts HTML elements to images, useful for capturing content as an image.</li>
-                                <li><strong>moment</strong>: Provides date and time manipulation capabilities.</li>
-                                <li><strong>mongodb</strong> and <strong>mongoose</strong>: Used for database management, with MongoDB as the database and Mongoose as an ORM.</li>
-                                <li><strong>multer</strong>: Middleware for handling file uploads, primarily for images or other files.</li>
-                                <li><strong>nodemon</strong>: A development tool that automatically restarts the server when file changes are detected.</li>
-                                <li><strong>puppeteer</strong>: Headless browser automation, useful for generating PDFs or scraping data.</li>
-                                <li><strong>@reduxjs/toolkit</strong>: State management for React applications using Redux.</li>
-                                <li><strong>antd</strong>: Ant Design, a popular React UI library providing ready-made components.</li>
-                                <li><strong>bootstrap</strong>: CSS framework for responsive and mobile-first design.</li>
-                                <li><strong>framer-motion</strong>: Provides animations and transitions for React components.</li>
-                                <li><strong>react-jwt</strong>: Handles decoding and managing JSON Web Tokens in React.</li>
-                                <li><strong>react-redux</strong>: Connects React with Redux for state management.</li>
-                                <li><strong>react-toastify</strong>: Enables toast notifications in React applications.</li>
-                                <li><strong>reactstrap</strong>: Bootstrap components specifically for React.</li>
-                                <li><strong>redux</strong>: Manages state in JavaScript applications, especially useful in React.</li>
-                            </ol>
+
+                            <p><strong>1. @fullcalendar/daygrid, @fullcalendar/interaction, @fullcalendar/list, @fullcalendar/react, @fullcalendar/timegrid</strong>: Provides a calendar interface with different views (e.g., day grid, time grid) and supports interaction like event creation and drag-and-drop.</p>
+
+                            <p><strong>2. @react-three/drei and @react-three/fiber</strong>: Tools for building 3D interfaces and visualizations with Three.js in React, especially useful for 3D modeling and interactive scenes.</p>
+
+                            <p><strong>3. axios</strong>: For making HTTP requests, commonly used for API interactions.</p>
+
+                            <p><strong>4. crypto-js</strong>: Used for encryption and decryption, providing various cryptographic functions.</p>
+
+                            <p><strong>5. dayjs and luxon</strong>: Date and time manipulation libraries, with Luxon offering extensive timezone support.</p>
+
+                            <p><strong>6. echarts and echarts-for-react</strong>: Provides powerful charting options for data visualization, including line charts, bar charts, scatter plots, and more.</p>
+
+                            <p><strong>7. react-calendar</strong>: Adds a calendar component for date selection in React applications.</p>
+
+                            <p><strong>8. react-google-charts</strong>: A library for integrating Google Charts with React, useful for rich data visualizations.</p>
+
+                            <p><strong>9. react-icons</strong>: Offers a collection of popular icons as React components.</p>
+
+                            <p><strong>10. react-router-dom</strong>: Manages client-side routing, essential for single-page applications in React.</p>
+
+                            <p><strong>11. react-select</strong>: A customizable select dropdown component for React, supporting multi-select and other advanced features.</p>
+
+                            <p><strong>12. react-tailwindcss-datepicker</strong>: A date picker component styled with Tailwind CSS, for seamless integration into Tailwind-based UIs.</p>
+
+                            <p><strong>13. react-toastify</strong>: Enables customizable toast notifications in React applications.</p>
+
+                            <p><strong>14. react-tooltip</strong>: Adds tooltips to elements in React applications, providing contextual information.</p>
+
+                            <p><strong>15. recharts</strong>: Another library for data visualization in React, with easy-to-use chart components like bar, line, and pie charts.</p>
+
+                            <p><strong>16. three</strong>: A JavaScript library for creating 3D graphics in the browser, commonly used with React Three Fiber for interactive 3D elements.</p>
+
+                            <h4>Backend Libraries:</h4>
+
+                            <p><strong>17. cors</strong>: Middleware to enable Cross-Origin Resource Sharing, allowing the API to be accessed from different domains.</p>
+
+                            <p><strong>18. dotenv</strong>: Loads environment variables from a <code>.env</code> file, essential for managing sensitive data like API keys.</p>
+
+                            <p><strong>19. express</strong>: A web framework for Node.js, handling server-side routing and middleware.</p>
+
+                            <p><strong>20. nodemon</strong>: A development tool that automatically restarts the server when changes are detected, aiding in faster development.</p>
+
+                            <p><strong>21. pg</strong>: A PostgreSQL client for Node.js, enabling connection and queries to PostgreSQL databases.</p>
+
+                            <p><strong>22. pg-hstore</strong>: Serializes and deserializes JSON data for PostgreSQL, used with Sequelize for PostgreSQL support.</p>
+
+                            <p><strong>23. sequelize and sequelize-cli</strong>: An ORM (Object Relational Mapping) for managing PostgreSQL, allowing for easier interaction with the database and model-based querying.</p>
+
 
 
                             `);"
@@ -770,9 +809,209 @@ https://www.tooplate.com/view/2115-marvel
                       <div class="col-md-4 col-sm-6 mb-4">
                         <div class="project-info">
                           <video class="img-fluid" controls autoplay muted loop>
-                            <source src="videos/d3visualization.mp4" type="video/mp4">
+                            <source src="videos/myRizq.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
+                          <div class="row mt-3">
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                              onclick="openModal('General Information', 
+                              `
+                              <p>The <strong>Shariah-Compliant Stock Tracking Application</strong> is a web-based platform that helps users track stocks that adhere to Shariah laws, offering both free and paid membership plans. Users can <strong>sign up, sign in, and select between free or paid access</strong>, with secure payment processing available for upgrades.</p>
+
+                              <p>The app features a <strong>stock search function</strong> powered by the Yahoo API, allowing users to find Shariah-compliant stocks. Paid users gain additional benefits, such as the ability to create a <strong>watchlist</strong> for their selected stocks and provide <strong>feedback notes</strong> for personal tracking.</p>
+
+                              <p>The application includes a <strong>dashboard</strong> tailored to each user type—free users can search stocks, while paid users have access to watchlist and feedback features. Other sections include <strong>FAQ and Contact Us pages</strong> for user support and a <strong>Reviews section</strong> for user testimonials.</p>
+
+                              <p>Styled with the <strong>Argon Design System by Creative Tim</strong>, the app offers a cohesive, modern UI. Built with <strong>React</strong> on the frontend, a <strong>Node.js backend with REST APIs</strong>, and <strong>MongoDB</strong> for data management, the application provides a user-friendly experience for tracking compliant investments.</p>
+
+                            `);">
+                              Info
+                            </button>
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                              onclick="openModal('Project Description', 
+                              `
+                              <h4>1. User Management:</h4>
+
+                              <p><strong>1. Sign-Up and Sign-In:</strong></p>
+                              <ul>
+                                  <li>The system includes <strong>sign-up and sign-in pages</strong> for new and existing users.</li>
+                                  <li>New users can create an account, while existing users can log in with their credentials.</li>
+                                  <li>Users can choose between <strong>free and paid membership plans</strong> during sign-up.</li>
+                              </ul>
+
+                              <p><strong>2. User Types and Access Control:</strong></p>
+                              <ul>
+                                  <li>The application supports two user types: <strong>Free</strong> and <strong>Paid</strong>.</li>
+                                  <li><strong>Free users</strong> have limited access, while <strong>paid users</strong> have access to additional features like watchlists and feedback functionality.</li>
+                              </ul>
+
+                              <p><strong>3. Payment Gateway Integration (Stripe):</strong></p>
+                              <ul>
+                                  <li>Integrated <strong>payment gateways</strong> allow users to securely upgrade to paid membership plans.</li>
+                                  <li>Payment plans are managed, allowing users to choose and pay for plans according to their requirements.</li>
+                              </ul>
+
+                              <p><strong>4. Dashboard Access for Signed-Up Users:</strong></p>
+                              <ul>
+                                  <li>Upon logging in, users access a <strong>dashboard</strong> that displays relevant information and accessible features based on their membership type.</li>
+                              </ul>
+
+                              <hr>
+
+                              <h4>2. Stock Search and Tracking:</h4>
+
+                              <p><strong>1. Stock Search Functionality (Yahoo API):</strong></p>
+                              <ul>
+                                  <li>Users can search for <strong>Shariah-compliant stocks</strong> using the <strong>Yahoo API</strong>.</li>
+                                  <li>Search functionality is <strong>restricted to logged-in users</strong> only, providing an additional layer of control.</li>
+                              </ul>
+
+                              <p><strong>2. Watchlist Feature (Paid Users Only):</strong></p>
+                              <ul>
+                                  <li><strong>Paid users</strong> can add specific stocks to a personal <strong>watchlist</strong> for easy tracking.</li>
+                                  <li>Users can view, manage, and update their watchlist within their dashboard.</li>
+                              </ul>
+
+                              <p><strong>3. User Feedback on Stocks:</strong></p>
+                              <ul>
+                                  <li>Paid users can leave <strong>feedback on specific stocks</strong>, adding notes or personal insights.</li>
+                                  <li>Feedback is saved and displayed within the user’s account for reference.</li>
+                              </ul>
+
+                              <hr>
+
+                              <h4>3. Additional User Features:</h4>
+
+                              <p><strong>1. FAQ and Contact Us Pages:</strong></p>
+                              <ul>
+                                  <li>A <strong>FAQ page</strong> provides answers to common questions about the application and Shariah-compliant stocks.</li>
+                                  <li>A <strong>Contact Us page</strong> allows users to send inquiries or feedback to the application support team.</li>
+                              </ul>
+
+                              <p><strong>2. Reviews Section:</strong></p>
+                              <ul>
+                                  <li>The application includes a <strong>reviews section</strong> where users can read testimonials or reviews from other users about the platform.</li>
+                              </ul>
+
+                              <hr>
+
+                              <h4>4. User Dashboard:</h4>
+
+                              <p><strong>1. Dashboard for Free Users:</strong></p>
+                              <ul>
+                                  <li>Free users have access to a basic dashboard, allowing them to:</li>
+                                  <ul>
+                                      <li>Perform limited searches on Shariah-compliant stocks.</li>
+                                      <li>View information on stocks but without the ability to save them.</li>
+                                  </ul>
+                              </ul>
+
+                              <p><strong>2. Dashboard for Paid Users:</strong></p>
+                              <ul>
+                                  <li>Paid users access an enhanced dashboard with additional features, including:</li>
+                                  <ul>
+                                      <li><strong>Watchlist management</strong> to add, view, and update stocks.</li>
+                                      <li><strong>Feedback section</strong> to leave notes on stocks they are tracking.</li>
+                                  </ul>
+                              </ul>
+
+                              <hr>
+
+                              <h4>5. Theme and User Interface:</h4>
+
+                              <p><strong>1. UI Theme Implementation:</strong></p>
+                              <ul>
+                                  <li>The application uses a design theme based on <strong>Argon Design System by Creative Tim</strong>.</li>
+                                  <li>Consistent styling across pages (dashboard, search, FAQ, etc.) creates a unified look and feel.</li>
+                              </ul>
+
+                              `);">
+                              Description
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                              `
+                              <p><strong>1. Frontend:</strong></p>
+                              <ul>
+                                  <li><strong>React</strong> for building the user interface, ensuring a dynamic and interactive experience.</li>
+                              </ul>
+
+                              <p><strong>2. Backend and API Integration:</strong></p>
+                              <ul>
+                                  <li><strong>Node.js</strong> with <strong>REST API</strong> endpoints to handle user authentication, stock search functionality, and dashboard features.</li>
+                                  <li><strong>Yahoo API</strong> integration for retrieving stock data.</li>
+                              </ul>
+
+                              <p><strong>3. Database:</strong></p>
+                              <ul>
+                                  <li><strong>MongoDB</strong> for managing user accounts, storing user feedback, managing watchlists, and tracking payment plan data.</li>
+                              </ul>
+
+                            `);">
+                              Tech
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                            `
+                            <h3>Libraries used:</h3>
+
+                            <p><strong>1. @stripe/react-stripe-js</strong> and <strong>@stripe/stripe-js</strong>: Integrates Stripe for handling secure payment processing on the frontend.</p>
+
+                            <p><strong>2. bootstrap</strong>: CSS framework for building responsive, mobile-first interfaces.</p>
+
+                            <p><strong>3. classnames</strong>: Utility for conditionally joining CSS class names in JavaScript.</p>
+
+                            <p><strong>4. headroom.js</strong>: Adds sticky header functionality that hides the header on scroll down and reveals it on scroll up.</p>
+
+                            <p><strong>5. moment</strong>: Library for handling and manipulating dates and times.</p>
+
+                            <p><strong>6. nouislider</strong>: Provides interactive slider components, useful for forms and data input.</p>
+
+                            <p><strong>7. react</strong> and <strong>react-dom</strong>: Core libraries for building and rendering user interfaces in React.</p>
+
+                            <p><strong>8. react-chartjs-2</strong>: Adds charting capabilities to React using Chart.js for data visualization.</p>
+
+                            <p><strong>9. react-circular-progressbar</strong>: Displays circular progress bars in React applications.</p>
+
+                            <p><strong>10. react-datetime</strong>: A date and time picker component for React.</p>
+
+                            <p><strong>11. react-input-suggestions</strong>: Provides suggestions as users type into an input field.</p>
+
+                            <p><strong>12. react-modal</strong>: Creates accessible modal dialogs in React applications.</p>
+
+                            <p><strong>13. react-router-dom</strong>: Manages routing in single-page applications built with React.</p>
+
+                            <p><strong>14. react-scripts</strong>: Scripts and configuration for running and building React applications.</p>
+
+                            <p><strong>15. react-slick</strong>: Implements carousels and sliders in React, based on the Slick carousel library.</p>
+
+                            <p><strong>16. reactstrap</strong>: Provides Bootstrap components specifically for React.</p>
+
+                            <p><strong>17. sass</strong>: A CSS preprocessor that adds advanced styling features and variables to CSS.</p>
+
+                            <p><strong>18. sweetalert</strong>: Creates popup alerts and notifications, with customizable styling.</p>
+
+                            <h4>Backend Libraries:</h4>
+
+                            <p><strong>19. cors</strong>: Middleware to enable Cross-Origin Resource Sharing, allowing API access from different domains.</p>
+
+                            <p><strong>20. csv-reader</strong> and <strong>csv-writer</strong>: Read from and write to CSV files, useful for importing and exporting data.</p>
+
+                            <p><strong>21. dotenv</strong>: Loads environment variables from a <code>.env</code> file, essential for managing sensitive data securely.</p>
+
+                            <p><strong>22. express</strong>: Web framework for Node.js, handling routing and middleware on the backend.</p>
+
+                            <p><strong>23. fs</strong> and <strong>fs-extra</strong>: Provides utilities for working with the file system, with additional features in <strong>fs-extra</strong>.</p>
+
+                            <p><strong>24. mongoose</strong>: An ODM (Object Data Modeling) library for MongoDB, used to manage and interact with MongoDB databases.</p>
+
+                            <p><strong>25. stripe</strong>: Official Stripe library for handling payment transactions on the backend.</p>
+
+                            <p><strong>26. yahoo-finance</strong> and <strong>yahoo-finance2</strong>: Fetch financial data from Yahoo Finance, useful for retrieving stock data in real-time.</p>
+
+                            `);"
+                            >
+                            Libraries 
+                          </button>
+                          </div>
                         </div>
                       </div>
   
