@@ -119,6 +119,234 @@ https://www.tooplate.com/view/2115-marvel
                       <div class="col-md-4 col-sm-6 mb-4">
                         <div class="project-info">
                           <video class="img-fluid" controls autoplay muted loop>
+                            <source src="videos/excelScoring.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                          <div class="row mt-3">
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                                    onclick="openModal('General Information', 
+                                    `
+                                    <p>The <strong>Sheet Scoring System</strong> is a web-based platform designed to streamline the process of conducting simulation-based learning, with two main user views: <strong>student</strong> and <strong>admin</strong>.</p>
+
+                                    <p>On the <strong>student side</strong>, users can register, edit their profiles, and enroll in simulations. Once registered, students download an Excel sheet containing simulation tasks, perform the necessary calculations, and upload the completed sheet. The system automatically processes the uploaded file, calculates scores based on predefined formulas, and provides instant feedback to the student.</p>
+
+                                    <p>On the <strong>admin side</strong>, admins can create and manage simulations by uploading Excel sheets, setting time limits, and monitoring student participation. They can view detailed reports, track student submissions, and manage all student data, including profile edits and score updates.</p>
+
+                                    <p>Built using <strong>React</strong> for the frontend, <strong>Flask</strong> for backend logic, and <strong>MongoDB</strong> for data management, the system offers an efficient and automated way to conduct and score simulations while providing real-time feedback to students and giving admins full control over the simulation process.</p>
+
+                                    `);">
+                              Info
+                            </button>
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                                    onclick="openModal('Project Description', 
+                                    `
+                                    <h4>1. Student Side (User Interface):</h4>
+
+                                    <p><strong>1. Student Registration:</strong></p>
+                                    <ul>
+                                        <li>Students can <strong>register an account</strong> by providing their personal details.</li>
+                                        <li>Allow students to <strong>edit their profile</strong> information after registration.</li>
+                                    </ul>
+
+                                    <p><strong>2. Simulation Registration:</strong></p>
+                                    <ul>
+                                        <li>Students can <strong>register for a simulation</strong> from a list of available simulations.</li>
+                                        <li>Display available simulations, their deadlines, and any instructions.</li>
+                                    </ul>
+
+                                    <p><strong>3. Download Simulation Excel Sheet:</strong></p>
+                                    <ul>
+                                        <li>Students can <strong>download the simulation Excel file</strong> uploaded by the admin.</li>
+                                        <li>Ensure students can only download simulations they have registered for.</li>
+                                    </ul>
+
+                                    <p><strong>4. Perform and Upload Calculations:</strong></p>
+                                    <ul>
+                                        <li>Students can complete the calculations on the downloaded Excel sheet.</li>
+                                        <li>Enable students to <strong>upload the completed Excel sheet</strong> back into the system for scoring.</li>
+                                        <li>Restrict uploads to only those students who are registered for the simulation.</li>
+                                    </ul>
+
+                                    <p><strong>5. Scoring System:</strong></p>
+                                    <ul>
+                                        <li>The system will <strong>automatically calculate the student’s score</strong> based on the uploaded Excel file.</li>
+                                        <li>Display the <strong>score to the student</strong> after calculation is complete.</li>
+                                    </ul>
+
+                                    <p><strong>6. Simulation Time Limits:</strong></p>
+                                    <ul>
+                                        <li>Ensure that students cannot upload the simulation sheet after the <strong>time limit expires</strong>.</li>
+                                    </ul>
+
+                                    <p><strong>7. Error Handling:</strong></p>
+                                    <ul>
+                                        <li>Display appropriate <strong>error messages</strong> if the uploaded Excel sheet is invalid or fails to meet required conditions (e.g., wrong format, missing fields).</li>
+                                    </ul>
+
+                                    <hr>
+
+                                    <h4>2. Admin Side (Management Interface):</h4>
+
+                                    <p><strong>1. Add Simulations:</strong></p>
+                                    <ul>
+                                        <li>The admin can <strong>create new simulations</strong> by uploading an Excel file.</li>
+                                        <li>Assign a <strong>time limit</strong> to each simulation (start date, end date).</li>
+                                        <li>Set parameters for <strong>scoring logic</strong> that will calculate student scores based on uploaded files.</li>
+                                    </ul>
+
+                                    <p><strong>2. Track Participants:</strong></p>
+                                    <ul>
+                                        <li>The admin can <strong>track all participants</strong> who have registered for a particular simulation.</li>
+                                        <li>See detailed participant information, including their <strong>registration status</strong>, time of upload, and scores.</li>
+                                    </ul>
+
+                                    <p><strong>3. Restrict Uploads:</strong></p>
+                                    <ul>
+                                        <li>Enforce restrictions on student uploads based on the <strong>simulation time limit</strong>.</li>
+                                        <li>Prevent students from uploading after the time window for the simulation has passed.</li>
+                                    </ul>
+
+                                    <p><strong>4. View Simulation Results:</strong></p>
+                                    <ul>
+                                        <li>The admin can view <strong>detailed results of each simulation</strong>, including:</li>
+                                        <ul>
+                                            <li>List of participants.</li>
+                                            <li>Their uploaded Excel sheets.</li>
+                                            <li>Their calculated scores.</li>
+                                        </ul>
+                                    </ul>
+
+                                    <p><strong>5. Manage Student Information:</strong></p>
+                                    <ul>
+                                        <li>Allow the admin to <strong>view and update all student details</strong>, including their registration information and simulation history.</li>
+                                        <li>The admin can also <strong>edit or delete student profiles</strong> if necessary.</li>
+                                    </ul>
+
+                                    <p><strong>6. Simulation Status Management:</strong></p>
+                                    <ul>
+                                        <li>Admins can <strong>change the status of a simulation</strong> (e.g., open, closed).</li>
+                                        <li>Control when a simulation is <strong>active or inactive</strong>, affecting whether students can participate.</li>
+                                    </ul>
+
+                                    <p><strong>7. Scoring and Results Overview:</strong></p>
+                                    <ul>
+                                        <li>Admins can <strong>view and modify scores</strong> if required.</li>
+                                        <li>Provide <strong>downloadable reports</strong> of simulation results, including scores and participant details.</li>
+                                    </ul>
+
+                                    `);">
+                              Description
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                              `
+                              <p><strong>1. Frontend:</strong></p>
+                              <ul>
+                                  <li><strong>React</strong> for building the user interface for both student and admin views.</li>
+                                  <li>Ensure <strong>dynamic interaction</strong> and seamless user experience using React components.</li>
+                              </ul>
+
+                              <p><strong>2. Backend:</strong></p>
+                              <ul>
+                                  <li><strong>Flask (Python)</strong> as the web application framework for handling server-side logic and processing.</li>
+                                  <li><strong>REST APIs</strong> to enable communication between the frontend and backend, particularly for file uploads, score calculations, and fetching data.</li>
+                              </ul>
+
+                              <p><strong>3. Database:</strong></p>
+                              <ul>
+                                  <li><strong>MongoDB</strong> for storing:</li>
+                                  <ul>
+                                      <li>Student data (profile, registration details).</li>
+                                      <li>Simulation data (uploaded Excel files, results).</li>
+                                      <li>Scores and participant information.</li>
+                                  </ul>
+                              </ul>
+
+                              `);">
+                              Tech
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                            `
+                            <h3>Libraries used:</h3>
+
+                            <p><strong>1. @fortawesome/free-solid-svg-icons</strong> and <strong>@fortawesome/react-fontawesome</strong>: Provides a collection of Font Awesome icons for React applications, allowing for rich iconography.</p>
+
+                            <p><strong>2. @testing-library/jest-dom, @testing-library/react, @testing-library/user-event</strong>: Testing utilities for React applications, useful for building test suites and simulating user interactions.</p>
+
+                            <p><strong>3. antd</strong>: Ant Design, a UI component library for React, providing a set of components for building a modern, professional-looking UI.</p>
+
+                            <p><strong>4. axios</strong>: For making HTTP requests, commonly used for API calls and data fetching.</p>
+
+                            <p><strong>5. bootstrap</strong> and <strong>react-bootstrap</strong>: CSS frameworks that provide responsive and pre-styled components for UI consistency and faster development.</p>
+
+                            <p><strong>6. formik</strong>: A library for building and managing forms in React, including validation, handling submissions, and managing form state.</p>
+
+                            <p><strong>7. js-cookie</strong>: Manages cookies on the client side, useful for storing session tokens and other small data.</p>
+
+                            <p><strong>8. moment</strong> and <strong>moment-timezone</strong>: Libraries for handling and manipulating dates and times, including timezone support.</p>
+
+                            <p><strong>9. react</strong> and <strong>react-dom</strong>: Core libraries for building and rendering user interfaces in React.</p>
+
+                            <p><strong>10. react-icons</strong>: Provides a set of popular icons as React components.</p>
+
+                            <p><strong>11. react-router-dom</strong>: Manages routing in single-page applications built with React.</p>
+
+                            <p><strong>12. react-scripts</strong>: Scripts and configuration for running and building React applications.</p>
+
+                            <p><strong>13. react-table</strong>: A library for creating data tables in React, supporting sorting, pagination, and filtering.</p>
+
+                            <p><strong>14. react-toastify</strong>: Provides customizable toast notifications in React applications.</p>
+
+                            <p><strong>15. reactstrap</strong>: Bootstrap components specifically for React, simplifying the integration of Bootstrap UI elements.</p>
+
+                            <p><strong>16. recharts</strong>: A charting library for React, offering a variety of customizable chart types for data visualization.</p>
+
+                            <p><strong>17. web-vitals</strong>: Provides metrics for measuring web performance, useful for optimization.</p>
+
+                            <p><strong>18. xlsx</strong> and <strong>XlsxWriter</strong>: Libraries for reading and writing Excel files, often used for importing and exporting data.</p>
+
+                            <p><strong>19. yup</strong>: A schema validation library often used with Formik for form validation in React applications.</p>
+
+                            <h4>Backend Libraries:</h4>
+
+                            <p><strong>20. Flask</strong>: A lightweight web framework for Python, used for handling backend logic and API endpoints.</p>
+
+                            <p><strong>21. Flask-Cors</strong>: Middleware to enable Cross-Origin Resource Sharing in Flask applications.</p>
+
+                            <p><strong>22. Flask-PyMongo</strong>: Integrates MongoDB with Flask, simplifying MongoDB interactions in Flask applications.</p>
+
+                            <p><strong>23. gunicorn</strong>: A WSGI HTTP server for running Python applications in production.</p>
+
+                            <p><strong>24. mongoengine</strong>: An ORM (Object-Relational Mapping) library for MongoDB, providing a structured way to work with MongoDB data.</p>
+
+                            <p><strong>25. pymongo</strong>: The official MongoDB driver for Python, used for connecting and interacting with MongoDB.</p>
+
+                            <p><strong>26. openpyxl</strong> and <strong>et-xmlfile</strong>: Libraries for reading and writing Excel files in Python, often used for data processing and analysis.</p>
+
+                            <p><strong>27. numpy</strong> and <strong>pandas</strong>: Essential libraries for data manipulation, analysis, and numerical calculations in Python.</p>
+
+                            <p><strong>28. PyJWT</strong>: Handles JSON Web Token (JWT) encoding and decoding, often used for user authentication.</p>
+
+                            <p><strong>29. email_validator</strong> and <strong>dnspython</strong>: Validates email addresses and handles DNS queries, adding an extra layer of validation.</p>
+
+                            <p><strong>30. Werkzeug</strong>: Provides utility functions and middleware for Flask, handling request/response management and security.</p>
+
+                            <p><strong>31. Jinja2</strong> and <strong>MarkupSafe</strong>: Templating libraries for generating HTML responses in Flask.</p>
+
+                            <p><strong>32. pydantic</strong>: A data validation and parsing library for Python, used for defining and validating data structures.</p>
+
+                            <p><strong>33. python-dateutil</strong>, <strong>pytz</strong>, and <strong>tzdata</strong>: Libraries for handling dates, times, and timezones in Python.</p>
+                          
+                            `);"
+                            >
+                            Libraries 
+                          </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="project-info">
+                          <video class="img-fluid" controls autoplay muted loop>
                             <source src="videos/d3visualization.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
@@ -230,7 +458,6 @@ https://www.tooplate.com/view/2115-marvel
                           </div>
                         </div>
                       </div>
-                      
   
                       <div class="col-md-4 col-sm-6 mb-4">
                         <div class="project-info">
