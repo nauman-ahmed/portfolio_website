@@ -235,9 +235,201 @@ https://www.tooplate.com/view/2115-marvel
                       <div class="col-md-4 col-sm-6 mb-4">
                         <div class="project-info">
                           <video class="img-fluid" controls autoplay muted loop>
-                            <source src="videos/d3visualization.mp4" type="video/mp4">
+                            <source src="videos/shutterdown.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
+                          <div class="row mt-3">
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                              onclick="openModal('General Information', 
+                              `
+                              <p><strong>The Event/Wedding Management System</strong> is a comprehensive platform designed to streamline event management for multiple roles: <strong>Admin</strong>, <strong>Manager</strong>, <strong>Shooter</strong>, and <strong>Editor</strong>, each with distinct sub-roles and responsibilities.</p>
+
+                              <p><strong>System Features:</strong></p>
+
+                              <p><strong>1. Event Creation and Role Assignment:</strong><br>
+                              Managers can create events, assign deliverables such as cinematography, photos, albums, and pre-wedding tasks, and allocate specific roles to shooters and editors.</p>
+
+                              <p><strong>2. Calendar View with Color-Coded Scheduling:</strong><br>
+                              The system includes a <strong>calendar view</strong> that displays event density with intuitive color-coding: green for one event, yellow for two events, and red for three or more, helping managers schedule tasks efficiently.</p>
+
+                              <p><strong>3. Client Communication:</strong><br>
+                              Managers can communicate directly with clients via <strong>WhatsApp</strong> through the application for streamlined coordination.</p>
+
+                              <p><strong>4. Task and Deliverable Management:</strong><br>
+                              Shooters and editors can view their assigned events, update task statuses, and manage deliverables, ensuring that everyone stays informed and on schedule.</p>
+
+                              <p><strong>5. Admin Controls:</strong><br>
+                              Admins have full control over user management, role assignments, and can create custom options for events and deliverables, allowing for flexible system configuration.</p>
+
+                              <p><strong>6. User Authentication and Profile Management:</strong><br>
+                              The system supports <strong>Google Sign-In</strong>, password recovery, and profile updates for all users, enhancing ease of access and security.</p>
+
+                              <p><strong>Technologies Used:</strong><br>
+                              Built with <strong>React</strong> for the frontend, <strong>Node.js</strong> and <strong>REST APIs</strong> for the backend, and <strong>MongoDB</strong> for data storage, the system offers a seamless, role-based workflow for efficient event planning and management.</p>
+
+                            `);">
+                              Info
+                            </button>
+                            <button class="col-md-6 btn custom-btn custom-btn-bg custom-btn-link" 
+                              onclick="openModal('Project Description', 
+                              `
+                              <p><strong>1. Admin Role:</strong></p>
+
+                              <p><strong>User Management:</strong><br>
+                              Admin can <strong>create, edit, and delete users</strong>.<br>
+                              Admin can assign different roles (Manager, Shooter, Editor) to the users.<br>
+                              Admin can set <strong>access control</strong>, defining what each role can view or edit.</p>
+
+                              <p><strong>Custom Options Management:</strong><br>
+                              Admin can <strong>add custom options</strong> for events (like custom event categories or deliverable types).<br>
+                              Admin can configure default settings for events and deliverables.</p>
+
+                              <p><strong>Global Access Control:</strong><br>
+                              Admin can view and manage <strong>all events</strong>, users, and tasks in the system.<br>
+                              Ability to <strong>generate reports</strong> for events, deliverables, and user performance.</p>
+
+                              <p><strong>Role Assignments Overview:</strong><br>
+                              Admin can view <strong>which users are assigned to which roles</strong> in a given event (Manager, Shooter, Editor).</p>
+
+                              <hr>
+
+                              <p><strong>2. Manager Role:</strong></p>
+
+                              <p><strong>Event Creation:</strong><br>
+                              Manager can <strong>create events/weddings</strong> by entering all the necessary details (e.g., event name, date, location).<br>
+                              Manager can view the <strong>number of events</strong> on a particular date, with color-coded indicators:<br>
+                              - <strong>Green</strong> for one event.<br>
+                              - <strong>Yellow</strong> for two events.<br>
+                              - <strong>Red</strong> for three or more events.</p>
+
+                              <p><strong>Deliverables Assignment:</strong><br>
+                              Manager can assign <strong>deliverables</strong> for each event, such as:<br>
+                              - <strong>Cinematographer</strong><br>
+                              - <strong>Photos</strong><br>
+                              - <strong>Albums</strong><br>
+                              - <strong>Pre-wedding tasks</strong><br>
+                              Manager can assign editors or shooters to each deliverable.</p>
+
+                              <p><strong>Task Management:</strong><br>
+                              Manager can assign specific <strong>tasks to editors</strong> through the task section.<br>
+                              Managers can view task statuses and update progress as needed.</p>
+
+                              <p><strong>Calendar and List View:</strong><br>
+                              In the <strong>calendar section</strong>, Managers can view the number of events scheduled for a particular day or month.<br>
+                              In the <strong>list view</strong>, Managers can assign users (Shooters, Editors) to their respective roles for the event.</p>
+
+                              <p><strong>Client and Event Overview:</strong><br>
+                              Managers can view a detailed list of <strong>clients and their events</strong>.<br>
+                              Each event will show <strong>assigned employees</strong>, their roles, and their specific deliverables.</p>
+
+                              <p><strong>Communication:</strong><br>
+                              Managers can <strong>send WhatsApp messages</strong> to clients directly through the application for quick communication.</p>
+
+                              <hr>
+
+                              <p><strong>3. Shooter Role:</strong></p>
+
+                              <p><strong>Event Overview:</strong><br>
+                              Shooters can <strong>view details of events</strong> where they are assigned.<br>
+                              Shooters can see their role and the deliverables they are responsible for (e.g., photos, cinematography).</p>
+
+                              <p><strong>Task Status Overview:</strong><br>
+                              Shooters can see the <strong>status of deliverables and tasks</strong> assigned to them.</p>
+
+                              <hr>
+
+                              <p><strong>4. Editor Role:</strong></p>
+
+                              <p><strong>Event Overview:</strong><br>
+                              Editors can <strong>view details of events</strong> where they are assigned.<br>
+                              Editors can view <strong>deliverables</strong> they are responsible for (e.g., albums, photo editing).</p>
+
+                              <p><strong>Task Management:</strong><br>
+                              Editors can <strong>update the status</strong> of tasks assigned to them (e.g., completed, in progress).<br>
+                              Editors can view their list of assigned tasks and make updates directly from the task section.</p>
+
+                              <hr>
+
+                              <p><strong>5. Global Features:</strong></p>
+
+                              <p><strong>User Authentication:</strong><br>
+                              <strong>Google Sign-In</strong> functionality for secure and easy login.<br>
+                              <strong>Forget password</strong> feature allowing users to reset their password if needed.</p>
+
+                              <p><strong>User Profile Management:</strong><br>
+                              Users (across all roles) can <strong>update their profile details</strong>.<br>
+                              Users can <strong>upload files</strong> (e.g., profile pictures, work samples) to their profiles.</p>
+
+                              `);">
+                              Description
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                              `
+                              <p><strong>1. Frontend:</strong><br>
+                              <strong>React</strong> for building the user interface, providing a responsive and dynamic experience for all roles (Admin, Manager, Shooter, Editor).</p>
+
+                              <p><strong>2. Backend:</strong><br>
+                              <strong>Node.js</strong> as the backend runtime environment to manage server-side logic.<br>
+                              <strong>REST APIs</strong> to enable communication between the frontend and backend, allowing users to interact with events, tasks, and deliverables.</p>
+
+                              <p><strong>3. Database:</strong><br>
+                              <strong>MongoDB</strong> to store:</p>
+                              <ul>
+                                  <li>Event data (event details, dates, assigned users).</li>
+                                  <li>User profiles (personal information, assigned roles).</li>
+                                  <li>Deliverables, tasks, and client information.</li>
+                              </ul>
+                            `);">
+                              Tech
+                            </button>
+                            <button class="col-md-6 mt-1 btn custom-btn custom-btn-bg custom-btn-link" onclick="openModal('Technologies Used', 
+                            `
+                            <p><strong>Libraries used:</strong></p>
+
+                            <p><strong>1. Frontend Libraries</strong></p>
+
+                            <p><strong>@react-oauth/google</strong>: Google OAuth for authentication.</p>
+                            <p><strong>@react-pdf/renderer</strong>: Generates PDFs directly in React.</p>
+                            <p><strong>@reduxjs/toolkit</strong>: State management for React using Redux.</p>
+                            <p><strong>axios</strong>: For making HTTP requests from the frontend to the backend.</p>
+                            <p><strong>bootstrap</strong> and <strong>react-bootstrap</strong>: CSS framework for responsive and mobile-first web design.</p>
+                            <p><strong>date-fns</strong>, <strong>dayjs</strong>, <strong>moment</strong>: Date manipulation libraries.</p>
+                            <p><strong>draft-js</strong> and <strong>draft-js-export-html</strong>: For creating and exporting rich text editors in React.</p>
+                            <p><strong>html2canvas</strong>: Takes screenshots of web pages.</p>
+                            <p><strong>js-cookie</strong>: Manages cookies on the client side.</p>
+                            <p><strong>jspdf</strong>: Generates PDFs from web pages.</p>
+                            <p><strong>jwt-decode</strong>: Decodes JSON Web Tokens (JWT).</p>
+                            <p><strong>react-calendar</strong>: Calendar component for React.</p>
+                            <p><strong>react-draft-wysiwyg</strong>: WYSIWYG editor for React.</p>
+                            <p><strong>react-icons</strong>: Provides popular icons as React components.</p>
+                            <p><strong>react-phone-input-2</strong>, <strong>react-phone-number-input</strong>: For phone number input formatting.</p>
+                            <p><strong>react-pro-sidebar</strong>: Sidebar menu for React applications.</p>
+                            <p><strong>react-redux</strong>: Connects React with Redux for state management.</p>
+                            <p><strong>react-select</strong>: Customizable select input control for React.</p>
+                            <p><strong>react-toastify</strong>: Provides toast notifications.</p>
+                            <p><strong>reactstrap</strong>: React components for Bootstrap.</p>
+                            <p><strong>socket.io-client</strong>: Client for real-time, bidirectional, event-based communication.</p>
+
+                            <p><strong>2. Backend Libraries</strong></p>
+
+                            <p><strong>body-parser</strong>: Parses incoming request bodies in a middleware.</p>
+                            <p><strong>config</strong>: Manages configuration files.</p>
+                            <p><strong>cookie-parser</strong>: Parses cookies attached to the client request object.</p>
+                            <p><strong>cors</strong>: Allows cross-origin resource sharing.</p>
+                            <p><strong>dotenv</strong>: Loads environment variables from <code>.env</code> files.</p>
+                            <p><strong>express</strong>: Web framework for Node.js.</p>
+                            <p><strong>gridfs-stream</strong>: Streams files to and from MongoDB GridFS.</p>
+                            <p><strong>mongodb</strong>, <strong>mongoose</strong>: Database driver and ODM for MongoDB.</p>
+                            <p><strong>multer</strong>: Middleware for handling <code>multipart/form-data</code>, primarily for file uploads.</p>
+                            <p><strong>node-cron</strong>: Schedules tasks to run periodically.</p>
+                            <p><strong>nodemailer</strong>: Sends emails from Node.js applications.</p>
+                            <p><strong>socket.io</strong>: Real-time communication library.</p>
+
+                            `);"
+                            >
+                            Libraries 
+                          </button>
+                          </div>
                         </div>
                       </div>
 
