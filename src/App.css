@@ -1,0 +1,22 @@
+.modal-body {
+  max-height: 400px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.projectBox {
+  -webkit-box-shadow: 0px 0px 20px 3px rgba(189,189,189,1);
+  -moz-box-shadow: 0px 0px 20px 3px rgba(189,189,189,1);
+  box-shadow: 0px 0px 20px 3px rgba(189,189,189,1);
+  border-radius: 10px;
+}
+.dark-mode .projectBox {
+  -webkit-box-shadow: 0px 0px 20px 5px rgb(124, 124, 124);
+  -moz-box-shadow: 0px 0px 20px 5px rgb(124, 124, 124);
+  box-shadow: 0px 0px 20px 5px rgb(124, 124, 124);
+  border-radius: 10px;
+}
+.rounded{
+  border-radius: 8px !important;
+}
+.rounded-vid {
+  border-radius: 0px 0px 10px 10px;
+}
