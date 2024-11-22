@@ -1145,7 +1145,7 @@ export default function Projects() {
                         <div className='d-flex justify-content-center align-items-center flex-row flex-wrap mt-5'>
                             {allTechs.map((tech, i) => <button style={{ width: '140px' }} className={`m-1 d-flex align-items-center justify-content-center btn ${selectedTechs.includes(tech.name) && 'custom-btn-bg'}  custom-btn custom-btn-tech `}
                                 onClick={() => {
-
+                                    
                                     let updatedTechs;
                                     if (selectedTechs.includes(tech.name)) {
                                         updatedTechs = selectedTechs.filter(techName => techName !== tech.name)
