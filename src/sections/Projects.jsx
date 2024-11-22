@@ -1132,7 +1132,6 @@ export default function Projects() {
     const [selectedTechs, setSelectedTechs] = useState([])
     const [animateProjects, setAnimatePojects] = useState(false)
 
-    console.log(animateProjects);
 
     return (
         <section className="project py-5" id="project">
@@ -1143,7 +1142,7 @@ export default function Projects() {
                             <h2>Things I have developed as a <br></br> Full Stack Developer/AI Engineer</h2>
                         </div>
                         <div className='d-flex justify-content-center align-items-center flex-row flex-wrap mt-5'>
-                            {allTechs.map((tech, i) => <button style={{ width: '140px' }} className={`m-1 d-flex align-items-center justify-content-center btn ${selectedTechs.includes(tech.name) && 'custom-btn-bg'}  custom-btn custom-btn-tech `}
+                            {allTechs.map((tech, i) => <button key={i} style={{ width: '140px' }} className={`m-1 d-flex align-items-center justify-content-center btn ${selectedTechs.includes(tech.name) && 'custom-btn-bg'}  custom-btn custom-btn-tech `}
                                 onClick={() => {
                                     
                                     let updatedTechs;
@@ -1175,7 +1174,7 @@ export default function Projects() {
                                 {tech.name}
                             </button>)}
                         </div>
-                        <div className={`row mt-3 animate__animated ${animateProjects ? 'animate__fadeInUp animate__faster' : ''}`}>
+                        <div className={`row mt-3 animate__animated animate__faster ${animateProjects ? 'animate__fadeInUp' : ''}`}>
                             {projectsToShow?.map((projectData, i) => <ProjectBox key={i} projectData={projectData} />)}
                         </div>
                     </div>

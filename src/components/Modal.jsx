@@ -24,7 +24,7 @@ export default function Modal({ show, setShow, title, content }) {
     <>
       {show && (
         <div className="modal fade show d-block " tabIndex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-          <div className={`modal-dialog modal-dialog-centered animate__animated animate__fadeInDown   ${hideAnimate ? 'animate__fadeOutUp' : ''} `} role="document">
+          <div className={`modal-dialog modal-dialog-centered animate__animated animate__faster animate__fadeInDown   ${hideAnimate ? 'animate__fadeOutUp' : ''} `} role="document">
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title" id="modalTitle">{title}</h5>

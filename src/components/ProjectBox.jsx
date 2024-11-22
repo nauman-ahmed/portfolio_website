@@ -15,7 +15,7 @@ export default function ProjectBox({ projectData }) {
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            console.log('Video playback started.');
+         
           })
           .catch((error) => {
             if (error.name === 'AbortError') {
