@@ -21,7 +21,14 @@ export default function About() {
                                 </div>
                         </h1>
 
-                        <p>Building a successful product requires a blend of technical expertise, innovative design, and a deep understanding of AI-driven solutions. I am highly skilled in user experience design, front-end and back-end development, with extensive experience in React JS, TypeScript, and Next JS for creating dynamic, responsive web applications. Additionally, I have experience in AI-driven projects, such as optimizing algorithms for robotics and automation, which enhances the efficiency of autonomous systems.</p>
+                        <p>
+                        Experienced Full Stack Web Developer and Software Engineer skilled in React.js,
+                        Next.js, Flask, GraphQL, and TypeScript for building scalable, interactive applications.
+                        Expertise in dynamic data visualization, complex data analysis, and robotics research,
+                        particularly in Coverage Path Planning. Proficient in deploying robust solutions using
+                        AWS, Heroku, and DigitalOcean. Driven to deliver innovative, efficient technology
+                        solutions that align with business objectives.
+                        </p>
                         
                         <div className="custom-btn-group mt-4">
                           <a href={pdfFile} className="btn mr-lg-2 custom-btn"><i className='uil uil-file-alt'></i> Download Resume</a>
