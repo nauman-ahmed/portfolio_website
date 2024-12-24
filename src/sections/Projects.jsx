@@ -6,14 +6,96 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { SiD3Dotjs } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
+import { SiTypescript } from "react-icons/si"; 
+import { SiJest } from "react-icons/si";
 
-const allTechs = [{ name: 'React', icon: <GrReactjs className='mx-1 ' /> }, { name: 'Flask (py)', icon: <SiFlask className='mx-1 ' /> }, { name: 'Node', icon: <FaNodeJs className='mx-1 ' /> }, { name: 'MongoDB', icon: <SiMongodb className='mx-1 ' /> }, { name: 'PostgreSQL', icon: <SiPostgresql className='mx-1 ' /> }, { name: 'D3.js', icon: <SiD3Dotjs className='mx-1 ' /> }]
+const allTechs = [
+    { name: 'React', icon: <GrReactjs className='mx-1 ' /> }, 
+    { name: 'TypeScript', icon: <SiTypescript className='mx-1 ' /> }, 
+    { name: 'Jest', icon: <SiJest className='mx-1 ' /> }, 
+    { name: 'Flask (py)', icon: <SiFlask className='mx-1 ' /> }, 
+    { name: 'Node', icon: <FaNodeJs className='mx-1 ' /> }, 
+    { name: 'MongoDB', icon: <SiMongodb className='mx-1 ' /> }, 
+    { name: 'PostgreSQL', icon: <SiPostgresql className='mx-1 ' /> }, 
+    { name: 'D3.js', icon: <SiD3Dotjs className='mx-1 ' /> }
+]
 
 const projectsData = [
     {
+        "title": "To-Do App",
+        "videoPath": "/videos/todoAppDemo.mp4",
+        "techs": ["React", "Zustand", "TypeScript", "Tailwind CSS"],
+        "modalsArray": [
+          {
+            "btnText": "Info",
+            "title": "General Information",
+            "content": `
+              <p>The <strong>To-Do App</strong> is a modern task management application built using React, Zustand for state management, TypeScript for type safety, and Tailwind CSS for styling. It provides an intuitive interface for creating, managing, and completing tasks.</p>
+              <p>Users can add new tasks, mark tasks as completed or incomplete, and delete tasks. The app features a clean and responsive design optimized for both desktop and mobile devices.</p>
+            `
+          },
+          {
+            "btnText": "Description",
+            "title": "Project Description",
+            "content": `
+              <h4>1. TodoInput Component:</h4>
+              <ul>
+                <li>Allows users to input new tasks.</li>
+                <li>Validates input to prevent empty task entries.</li>
+                <li>Provides a responsive layout with an input field and an "Add" button.</li>
+              </ul>
+              
+              <h4>2. TodoList Component:</h4>
+              <ul>
+                <li>Displays the list of tasks dynamically based on the store's state.</li>
+                <li>Allows users to toggle a task's completed state by clicking on it.</li>
+                <li>Includes a "Remove" button for deleting tasks, with hover effects.</li>
+              </ul>
+              
+              <h4>3. Zustand Store:</h4>
+              <ul>
+                <li>Manages the state of the application, including the task list.</li>
+                <li>Provides actions for adding, toggling, and removing tasks.</li>
+                <li>Uses efficient state management techniques to ensure seamless updates.</li>
+              </ul>
+            `
+          },
+          {
+            "btnText": "Tech",
+            "title": "Technologies Used",
+            "content": `
+              <p><strong>Frontend:</strong></p>
+              <ul>
+                <li><strong>React:</strong> For building the user interface with reusable components.</li>
+                <li><strong>TypeScript:</strong> For adding static typing and ensuring reliable code.</li>
+                <li><strong>Tailwind CSS:</strong> For responsive and modern utility-first styling.</li>
+              </ul>
+              
+              <p><strong>State Management:</strong></p>
+              <ul>
+                <li><strong>Zustand:</strong> For managing the state of the to-do list with lightweight efficiency.</li>
+              </ul>
+            `
+          },
+          {
+            "btnText": "Libraries",
+            "title": "Libraries Used",
+            "content": `
+              <ul>
+                <li><strong>Zustand:</strong> For state management in the to-do application.</li>
+                <li><strong>Tailwind CSS:</strong> For styling the input and list components.</li>
+                <li><strong>React:</strong> Core library for building the user interface.</li>
+                <li><strong>React Testing Library:</strong> For writing and running tests on the app's functionality.</li>
+              </ul>
+            `
+          }
+        ]
+    },
+          
+    {
         "title": "Calculator App",
         videoPath: "/videos/calculatorDemo.mp4",
-        "techs": ["React", "Zustand", "TypeScript", "Tailwind CSS"],
+        "techs": ["React", "Zustand", "TypeScript", "Tailwind CSS", "Jest"],
         "modalsArray": [
           {
             "btnText": "Info",
@@ -1229,13 +1311,11 @@ export default function Projects() {
                                         updatedTechs = [...selectedTechs, tech.name]
                                     }
                                     setSelectedTechs(updatedTechs)
-                                    console.log(updatedTechs);
 
                                     if (updatedTechs.length > 0) {
-
+                                        
+                                        projectsData?.filter(project => project.techs.some(projectTech => console.log("selectedTechs",projectTech)));
                                         const filteredProjects = projectsData?.filter(project => project.techs.some(projectTech => updatedTechs.includes(projectTech)));
-                                        console.log(filteredProjects);
-
                                         setProjectsToShow(filteredProjects)
                                     } else {
                                         setProjectsToShow(projectsData)
