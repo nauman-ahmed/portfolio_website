@@ -11,6 +11,84 @@ const allTechs = [{ name: 'React', icon: <GrReactjs className='mx-1 ' /> }, { na
 
 const projectsData = [
     {
+        "title": "Calculator App",
+        videoPath: "/videos/calculatorDemo.mp4",
+        "techs": ["React", "Zustand", "TypeScript", "Tailwind CSS"],
+        "modalsArray": [
+          {
+            "btnText": "Info",
+            "title": "General Information",
+            "content": `
+              <p>The <strong>Calculator App</strong> is a responsive, modern calculator built using React, Zustand for state management, TypeScript for type safety, and Tailwind CSS for styling. It provides a basic calculator interface and a history log feature to recall past calculations.</p>
+              <p>Users can perform standard arithmetic operations, view their calculation history, and restore results from the history log. The app also features smooth animations and user-friendly controls.</p>
+            `
+          },
+          {
+            "btnText": "Description",
+            "title": "Project Description",
+            "content": `
+              <h4>1. Calculator Component:</h4>
+              <ul>
+                <li>Provides a user interface for arithmetic operations.</li>
+                <li>Features a grid layout for buttons and a display area for showing calculations and results.</li>
+                <li>Includes essential buttons for digits, operations, clear functionality, and accessing history.</li>
+              </ul>
+              
+              <h4>2. History Component:</h4>
+              <ul>
+                <li>Displays a list of past calculations in a visually appealing card.</li>
+                <li>Allows users to click on a previous calculation to restore its result.</li>
+                <li>Features smooth animations for showing and hiding the history log.</li>
+              </ul>
+              
+              <h4>3. CalculatorBox Component:</h4>
+              <ul>
+                <li>Serves as a container to manage the visibility and interaction between Calculator and History components.</li>
+                <li>Uses useState for toggling the history view.</li>
+                <li>Ensures clean and modular architecture by separating concerns.</li>
+              </ul>
+              
+              <h4>4. Zustand Store:</h4>
+              <ul>
+                <li>Handles application state, including the current display and calculation history.</li>
+                <li>Provides actions to append values, clear the display, calculate results, and restore previous calculations.</li>
+              </ul>
+            `
+          },
+          {
+            "btnText": "Tech",
+            "title": "Technologies Used",
+            "content": `
+              <p><strong>Frontend:</strong></p>
+              <ul>
+                <li><strong>React:</strong> For building the user interface with functional components.</li>
+                <li><strong>TypeScript:</strong> For adding static typing and ensuring robust, error-free code.</li>
+                <li><strong>Tailwind CSS:</strong> For responsive, modern, and utility-first styling.</li>
+              </ul>
+              
+              <p><strong>State Management:</strong></p>
+              <ul>
+                <li><strong>Zustand:</strong> For lightweight and efficient state management in the calculator store.</li>
+              </ul>
+            `
+          },
+          {
+            "btnText": "Libraries",
+            "title": "Libraries Used",
+            "content": `
+              <ul>
+                <li><strong>Zustand:</strong> For state management in the calculator application.</li>
+                <li><strong>Tailwind CSS:</strong> For styling the calculator and history components.</li>
+                <li><strong>React:</strong> Core library for building the user interface.</li>
+                <li><strong>React Testing Library:</strong> For writing and running tests on the app's functionality and UI.</li>
+                <li><strong>Jest:</strong> For unit testing and verifying app behavior.</li>
+              </ul>
+            `
+          }
+        ]
+    },
+
+    {
         title: 'Sheet Scoring System',
         videoPath: "/videos/excelScoring.mp4",
         techs: ['React', 'Flask (py)', 'MongoDB'],
@@ -713,7 +791,6 @@ const projectsData = [
         ]
     },
 
-
     {
         title: 'IoT Management System',
         videoPath: "/videos/dewa.mp4",
@@ -919,7 +996,7 @@ const projectsData = [
     },
 
     {
-        title: 'Shariah-Compliant Application',
+        title: 'Stock Tracking App',
         videoPath: "/videos/myRizq.mp4",
         techs: ['React', 'Node', 'MongoDB'],
         modalsArray: [
@@ -927,9 +1004,9 @@ const projectsData = [
                 btnText: "Info",
                 title: "General Information",
                 content: `
-                <p>The <strong>Shariah-Compliant Stock Tracking Application</strong> is a web-based platform that helps users track stocks that adhere to Shariah laws, offering both free and paid membership plans. Users can <strong>sign up, sign in, and select between free or paid access</strong>, with secure payment processing available for upgrades.</p>
+                <p>The <strong>Stock Tracking Application</strong> is a web-based platform that helps users track stocks that adhere to Shariah laws, offering both free and paid membership plans. Users can <strong>sign up, sign in, and select between free or paid access</strong>, with secure payment processing available for upgrades.</p>
 
-                <p>The app features a <strong>stock search function</strong> powered by the Yahoo API, allowing users to find Shariah-compliant stocks. Paid users gain additional benefits, such as the ability to create a <strong>watchlist</strong> for their selected stocks and provide <strong>feedback notes</strong> for personal tracking.</p>
+                <p>The app features a <strong>stock search function</strong> powered by the Yahoo API, allowing users to find stocks. Paid users gain additional benefits, such as the ability to create a <strong>watchlist</strong> for their selected stocks and provide <strong>feedback notes</strong> for personal tracking.</p>
 
                 <p>The application includes a <strong>dashboard</strong> tailored to each user type—free users can search stocks, while paid users have access to watchlist and feedback features. Other sections include <strong>FAQ and Contact Us pages</strong> for user support and a <strong>Reviews section</strong> for user testimonials.</p>
 
@@ -973,7 +1050,7 @@ const projectsData = [
 
                               <p><strong>1. Stock Search Functionality (Yahoo API):</strong></p>
                               <ul>
-                                  <li>Users can search for <strong>Shariah-compliant stocks</strong> using the <strong>Yahoo API</strong>.</li>
+                                  <li>Users can search for <strong>Stocks</strong> using the <strong>Yahoo API</strong>.</li>
                                   <li>Search functionality is <strong>restricted to logged-in users</strong> only, providing an additional layer of control.</li>
                               </ul>
 
@@ -995,7 +1072,7 @@ const projectsData = [
 
                               <p><strong>1. FAQ and Contact Us Pages:</strong></p>
                               <ul>
-                                  <li>A <strong>FAQ page</strong> provides answers to common questions about the application and Shariah-compliant stocks.</li>
+                                  <li>A <strong>FAQ page</strong> provides answers to common questions about the application and stocks.</li>
                                   <li>A <strong>Contact Us page</strong> allows users to send inquiries or feedback to the application support team.</li>
                               </ul>
 
@@ -1012,7 +1089,7 @@ const projectsData = [
                               <ul>
                                   <li>Free users have access to a basic dashboard, allowing them to:</li>
                                   <ul>
-                                      <li>Perform limited searches on Shariah-compliant stocks.</li>
+                                      <li>Perform limited searches on stocks.</li>
                                       <li>View information on stocks but without the ability to save them.</li>
                                   </ul>
                               </ul>
