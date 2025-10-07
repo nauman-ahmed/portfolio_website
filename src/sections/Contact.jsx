@@ -70,7 +70,7 @@ export default function Contact() {
                         <div className="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
                             <div className="contact-info-item">
                                 <h3 className="mb-3 text-white">Contact Us</h3>
-                                <p className="footer-text mb-0">Cell Number: +4917669022143</p>
+                                <p className="footer-text mb-0">Cell Number: ++4915228835221</p>
                                 <p>Email: <a href="mailto:naumanahmed449@gmail.com">naumanahmed449@gmail.com</a></p>
                             </div>
                             <ul className="social-links">
