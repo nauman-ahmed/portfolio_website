@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './sections/Navbar'
 import About from './sections/About'
-import Resume from './sections/Resume'
+import Experiences from './sections/Experiences'
 import Skills from './sections/Skills'
 import Certifications from './sections/Certifications'
 import Contact from './sections/Contact'
@@ -66,7 +66,7 @@ function App() {
       <About />
       <Projects />
       <Modal />
-      <Resume />
+      <Experiences />
       <Skills />
       <Certifications />
       <Contact />

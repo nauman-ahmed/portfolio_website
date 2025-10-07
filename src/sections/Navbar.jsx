@@ -45,7 +45,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a href="#resume" className="nav-link">
-                <span data-hover="Resume">Resume</span>
+                <span data-hover="Experiences">Experiences</span>
               </a>
             </li>
             <li className="nav-item">

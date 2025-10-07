@@ -22,10 +22,13 @@ export default function About() {
                         </h1>
 
                         <p>
-                        Results-driven Software Engineer with <strong>5+ years of hands-on experience</strong>, including 2.5 years in professional software development. I have completed my Master's degree in Computer Science from the University of Passau, Germany and I specialize in building scalable, high-performance web and mobile applications. I have worked on various projects using different technologies and frameworks.
+                        Results-driven Software Engineer with <strong>5+ years of hands-on experience</strong>, including 2.5 years in professional software development. I have completed my <strong>Master's degree in Computer Science</strong> from the <strong>University of Passau, Germany</strong> and I specialize in building scalable, <strong>high-performance web and mobile applications</strong>. I have worked on various projects using different technologies and frameworks.
                         <br />
                         <br />
-                        I’m a continous learner, passionate about solving complex problems, optimizing performance, and creating user-centric solutions. I thrive in Agile teams (Scrum, Kanban) and bring a collaborative mindset to every project.
+                        I’m a <strong>continuous learner</strong>, passionate about solving complex problems, optimizing performance, and creating user-centric solutions. I thrive in Agile teams (Scrum, Kanban) and bring a collaborative mindset to every project.
+                        <br />
+                        <br />
+                        Apart from my profession, I love playing chess, exploring places, running and watching cricket.
                         </p>
                         
                         <div className="custom-btn-group mt-4">
