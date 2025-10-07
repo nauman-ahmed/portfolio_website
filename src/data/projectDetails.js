@@ -376,7 +376,7 @@ export const projectsData = [
     {
         "title": 'Shannon Associates - Creative Management Platform',
         "videoPath": "/videos/shannon-associates.mp4", // You'll need to create this video
-        "techs": ['React', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'JWT', 'Firebase', 'Axios', 'Webflow'],
+        "techs": ['React', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'JWT', 'AWS S3', 'Axios', 'Webflow'],
         "modalsArray": [
             {
                 btnText: "Info",
@@ -386,7 +386,7 @@ export const projectsData = [
                             <p><strong>Project Overview:</strong></p>
     
                             <p><strong>1. Full-Stack Architecture:</strong><br>
-                            Complete React frontend with Node.js/Express.js backend, featuring secure JWT authentication, MongoDB database integration, and Firebase cloud storage for comprehensive artist portfolio management.</p>
+                            Complete React frontend with Node.js/Express.js backend, featuring secure JWT authentication, MongoDB database integration, and AWS S3 cloud storage for comprehensive artist portfolio management.</p>
     
                             <p><strong>2. Multi-User Platform:</strong><br>
                             Three distinct user experiences: public client browsing interface, secure artist portal for portfolio management, and comprehensive admin dashboard for agency staff management.</p>
@@ -438,7 +438,7 @@ export const projectsData = [
                             <p><strong>3. File & Image Processing:</strong></p>
     
                             <p><strong>Cloud Storage & Processing:</strong><br>
-                            - Firebase integration for secure cloud storage of artist images and portfolios.<br>
+                            - AWS S3 integration for secure cloud storage of artist images and portfolios.<br>
                             - Sharp library for image processing, optimization, and dimension calculation.<br>
                             - Multer for handling multipart/form-data file uploads.<br>
                             - Support for multiple image formats with validation and metadata management.</p>
@@ -495,7 +495,7 @@ export const projectsData = [
                             - bcryptjs for secure password hashing and verification.<br><br>
     
                             <strong>4. File & Image Processing:</strong><br>
-                            - Firebase integration for secure cloud storage of artist images and portfolios.<br>
+                            - AWS S3 integration for secure cloud storage of artist images and portfolios.<br>
                             - Sharp library for image processing, optimization, and dimension calculation.<br>
                             - Multer for handling multipart/form-data file uploads.<br><br>
     
@@ -529,7 +529,7 @@ export const projectsData = [
                 16. <strong>Multer</strong> - Middleware for handling multipart/form-data file uploads.<br>
                 17. <strong>Sharp</strong> - High-performance image processing library for optimization and resizing.<br>
                 18. <strong>Nodemailer</strong> - Email sending library for automated notifications and communications.<br>
-                19. <strong>Firebase Admin SDK</strong> - Server-side Firebase integration for cloud storage and authentication.<br>
+                19. <strong>AWS S3 Admin SDK</strong> - Server-side AWS S3 integration for cloud storage and authentication.<br>
                 20. <strong>Moment.js</strong> - Date manipulation and formatting library.<br>
                 21. <strong>generate-password</strong> - Secure password generation for user accounts.<br>
                 22. <strong>image-size</strong> - Image dimension calculation and metadata extraction.<br>
