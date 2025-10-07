@@ -36,7 +36,7 @@ export default function Projects() {
                         <div className="col-lg-8 mx-auto">
                             <h2>Projects I have developed as a <br></br> Full Stack Developer/AI Engineer</h2>
                         </div>
-                        <div className='d-flex justify-content-center align-items-center flex-row flex-wrap mt-5'>
+                        {/* <div className='d-flex justify-content-center align-items-center flex-row flex-wrap mt-5'>
                             {allTechs.map((tech, i) => <button key={i} style={{ width: '140px' }} className={`m-1 d-flex align-items-center justify-content-center btn ${selectedTechs.includes(tech.name) && 'custom-btn-bg'}  custom-btn custom-btn-tech `}
                                 onClick={() => {
                                     
@@ -66,8 +66,8 @@ export default function Projects() {
                                 {tech.icon}
                                 {tech.name}
                             </button>)}
-                        </div>
-                        <div className={`row mt-3 animate__animated animate__faster ${animateProjects ? 'animate__fadeInUp' : ''}`}>
+                        </div> */}
+                        <div className={`row mt-5 animate__animated animate__faster ${animateProjects ? 'animate__fadeInUp' : ''}`}>
                             {projectsToShow?.map((projectData, i) => <ProjectBox key={i} projectData={projectData} />)}
                         </div>
                     </div>

@@ -20,3 +20,126 @@
 .rounded-vid {
   border-radius: 0px 0px 10px 10px;
 }
+
+/* Certifications Section Styles */
+.certification-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  height: 100%;
+}
+
+.certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .certification-item {
+  background: #2c2c2c;
+  border-color: #404040;
+  color: #fff;
+}
+
+.certification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.certification-header h4 {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.dark-mode .certification-header h4 {
+  color: #fff;
+}
+
+.certification-date {
+  background: #007bff;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.certification-issuer {
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.dark-mode .certification-issuer {
+  color: #ccc;
+}
+
+.certification-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.dark-mode .certification-description {
+  color: #ddd;
+}
+
+.certification-badge {
+  display: flex;
+  align-items: center;
+  color: #28a745;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.certification-badge:hover {
+  color: #1e7e34;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.certification-badge i {
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.dark-mode .certification-badge {
+  color: #4caf50;
+}
+
+.dark-mode .certification-badge:hover {
+  color: #66bb6a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certification-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .certification-header h4 {
+    margin-bottom: 10px;
+    min-width: auto;
+  }
+  
+  .certification-item {
+    padding: 20px;
+  }
+}

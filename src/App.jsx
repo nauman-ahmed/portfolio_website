@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './sections/Navbar'
 import About from './sections/About'
 import Resume from './sections/Resume'
+import Certifications from './sections/Certifications'
 import Contact from './sections/Contact'
 import $ from 'jquery';
 import 'popper.js';
@@ -65,6 +66,7 @@ function App() {
       <Projects />
       <Modal />
       <Resume />
+      <Certifications />
       <Contact />
     </>
   )

@@ -17,7 +17,7 @@ export default function Resume() {
                             <span>05/25-10/25 </span>
                         </div>
                         <div className="timeline-info">
-                            <h3><span>Multi-Agent Coverage Path Planning (UAVs)</span><br/><small>Master Thesis</small></h3>
+                            <h3><span>MULTI-AGENT COVERAGE PATH PLANNING (UAVs)</span><br/><small>MASTER THESIS</small></h3>
                             <p>    
                                 • Designed and implemented a multi-agent reinforcement learning environment for
                                 UAVs using PyTorch, Gym, and NCP/Liquid Neural Networks.
@@ -61,7 +61,7 @@ export default function Resume() {
                             <span>09/19-09/21</span>
                         </div>
                         <div className="timeline-info">
-                            <h3><span>SOFTWARE ENGINEER</span><small>STRATGIT</small></h3>
+                            <h3><span>SOFTWARE ENGINEER</span><br/><small>STRATGIT</small></h3>
                             <p>I worked as a React JS, React Native, and Vue JS developer at this firm. Following were my responsibilities at the firm I was operating
                               at:
                               <br/>
@@ -86,7 +86,7 @@ export default function Resume() {
                                 <span>2021-2025</span>
                             </div>
                             <div className="timeline-info">
-                                <h3><span>M.Sc COMPUTER SCIENCE</span><small>University of Passau</small></h3>
+                                <h3><span>M.Sc COMPUTER SCIENCE</span><small>UNIVERSITY OF PASSAU</small></h3>
                                 <p>Passau, Germany</p>
                             </div>
                       </div>
@@ -96,7 +96,7 @@ export default function Resume() {
                               <span>2016-2020</span>
                           </div>
                           <div className="timeline-info">
-                              <h3><span>B.Sc SOFTWARE ENGINEERING</span><small>Usman Institute of Technology</small></h3>
+                              <h3><span>B.Sc SOFTWARE ENGINEERING</span><small>USMAN INSTITUTE OF TECHNOLOGY</small></h3>
                               <p>Karachi, Pakistan</p>
                           </div>
                       </div>
