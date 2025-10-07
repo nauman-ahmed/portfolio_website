@@ -25,16 +25,18 @@ export default function About() {
                         Results-driven Software Engineer with 5+ years of hands-on experience, including 2.5 years in professional software development. I specialize in building scalable, high-performance web and mobile applications.
                         <br />
                         <br />
-                        Frontend: ReactJS, Next.js, React Native, Vue.js, TypeScript
+                        Frontend: ReactJS, Next.js, React Native, Vue.js, TypeScript, D3.js
                         <br />
 
                         Backend: Node.js, Express, Django, FastAPI, Flask
                         <br />
                         APIs: RESTful & GraphQL
                         <br />
-                        DevOps / Cloud: AWS, Docker, Terraform, Jenkins, Vercel, Heroku
+                        Testing Tools: Jest, React Testing Library, Playwright
                         <br />
                         Databases: MongoDB, PostgreSQL, MySQL
+                        <br />
+                        DevOps / Cloud: AWS, Docker, Terraform, Jenkins, Vercel, Heroku
                         <br />
                         <br />
                         I’m passionate about solving complex problems, optimizing performance, and creating user-centric solutions. I thrive in Agile teams (Scrum, Kanban) and bring a collaborative mindset to every project.
