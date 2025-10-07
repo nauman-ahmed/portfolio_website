@@ -18,7 +18,7 @@ body {
 }
 
 .small-text {
-  color: #5b5b5b;
+  color: #6b7280;
   font-size: 14px;
   font-weight: bold;
   padding: 8px 16px;
@@ -40,7 +40,7 @@ a {
   transition: all 0.4s ease;
 }
 a:hover {
-  color: #ffc200 !important;
+  color: #1e3a8a !important;
 }
 
 .navbar-brand .uil {
@@ -51,7 +51,7 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
-  color: #5b5b5b;
+  color: #4b5563;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,19 +60,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: #212121;
+  color: #111827;
   font-size: 2.8em;
   margin: 24px 0;
 }
 
 h2 {
-  color: #353535;
+  color: #1f2937;
   font-size: 2.4em;
   font-weight: bold;
 }
 
 h3 {
-  color: #484848;
+  color: #374151;
 }
 
 h3,
@@ -85,8 +85,8 @@ b, strong {
 }
 
 .custom-btn {
-  background: #eeeeee;
-  color: #5b5b5b;
+  background: #f3f4f6;
+  color: #4b5563;
   font-weight: bolder;
   border-radius: 100px;
   padding: 4px 11px;
@@ -97,27 +97,27 @@ b, strong {
   
 }
 .titleBox {
-  background-color: #e0dede;
+  background-color: #f3f4f6;
   border-radius: 10px 10px 0px 0px;
 }
 .dark-mode .titleBox h5 {
-  color: #444444;
+  color: #6b7280;
   border-radius: 10px 10px 0px 0px;
 }
 .custom-btn:hover {
-  color: #ffc200;
+  color: #1e3a8a;
 }
 .custom-btn.custom-btn-bg {
-  background: #474559;
+  background: #1e3a8a;
   color: #ffffff;
 }
 .custom-btn-project:hover{
-  background: #474559;
+  background: #1e3a8a;
   color: #ffffff;
 }
 .custom-btn-tech{
-  background: #eee;
-  color: #5b5b5b;
+  background: #f9fafb;
+  color: #4b5563;
   font-weight: 400;
   border-radius: 100px;
   padding: 8px 10px;
@@ -125,15 +125,15 @@ b, strong {
   line-height: normal;
   overflow: hidden;
   transition: all 0.4s ease;
-  border: 1px solid rgb(45, 45, 45);
+  border: 1px solid #d1d5db;
 }
 .custom-btn-tech:hover {
-  background: #ffc200;
+  background: #1e3a8a;
   color: #ffffff !important;
 }
 
 .custom-btn.custom-btn-bg:hover {
-  background: #ffc200;
+  background: #3b82f6;
   color: #ffffff !important;
 }
 
@@ -150,7 +150,7 @@ b, strong {
 }
 
 .animated-item {
-  color: #ffc200;
+  color: #1e3a8a;
 }
 
 .animated-item {
@@ -249,7 +249,7 @@ b, strong {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
+  color: #1e3a8a;
   font-weight: bold;
 }
 .navbar-light .navbar-nav .nav-link:focus span,
@@ -261,7 +261,7 @@ b, strong {
   background: none;
 }
 .dark-mode .navbar {
-  background-color: #0d0c15;
+  background-color: #1f2937;
 }
 
 .navbar-toggler {
@@ -337,27 +337,42 @@ b, strong {
 }
 
 .dark-mode {
-  background: #0c0c0d;
+  background: #111827;
 }
 .dark-mode .navbar-light .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.8);
 }
 .dark-mode .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
+  color: #3b82f6;
 }
 .dark-mode .navbar[class*="headroom--not-top"] {
-  background: #0c0c0d;
-  border-bottom: 1px solid #1f1f1f;
+  background: #1f2937;
+  border-bottom: 1px solid #374151;
 }
 .dark-mode .small-text {
-  background: #0d0c15;
-  color: #ffffff;
+  background: #374151;
+  color: #f9fafb;
 }
 .dark-mode .feature-card .uil,
 .dark-mode .navbar-light .navbar-brand,
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6,
 .dark-mode .color-mode {
   color: #ffffff;
+}
+
+.dark-mode p {
+  color: #d1d5db;
+}
+
+.dark-mode .custom-btn {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.dark-mode .custom-btn-tech {
+  background: #374151;
+  color: #d1d5db;
+  border: 1px solid #4b5563;
 }
 .dark-mode .owl-carousel .owl-nav button.owl-next,
 .dark-mode .owl-carousel .owl-nav button.owl-prev,
@@ -374,7 +389,7 @@ b, strong {
 }
 .timeline-wrapper:before {
   content: "";
-  background: #474559;
+  background: #1e3a8a;
   width: 3px;
   height: 100%;
   position: absolute;
@@ -382,7 +397,7 @@ b, strong {
 }
 
 .timeline-yr {
-  background: #474559;
+  background: #1e3a8a;
   border-radius: 100%;
   position: absolute;
   width: 75px;
@@ -406,7 +421,7 @@ b, strong {
   margin-left: 6em;
 }
 .timeline-info small {
-  color: #474559;
+  color: #1e3a8a;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
@@ -446,7 +461,7 @@ b, strong {
   font-size: inherit;
 }
 .owl-theme .owl-nav [class*=owl-]:hover {
-  color: #ffc200;
+  color: #1e3a8a;
 }
 .owl-theme .owl-dots .owl-dot {
   outline: none;
@@ -478,10 +493,10 @@ b, strong {
   height: 48px;
 }
 .contact-form .form-control:hover, .contact-form .form-control:focus {
-  border-color: #ffc200;
+  border-color: #1e3a8a;
 }
 .contact-form .submit-btn {
-  background: #ffc200;
+  background: #1e3a8a;
   border-radius: 50px;
   color: #ffffff;
   font-weight: bold;
@@ -490,11 +505,11 @@ b, strong {
   transition: all 0.4s ease;
 }
 .contact-form .submit-btn:hover {
-  background: #474559;
+  background: #3b82f6;
 }
 
 .contact-info {
-  background: #474559;
+  background: #1e3a8a;
   border-radius: 0 0 3px 3px;
   position: relative;
   bottom: 8px;
@@ -514,7 +529,7 @@ b, strong {
   margin: 5px 0;
 }
 .social-links .uil:hover {
-  color: #ffc200;
+  color: #3b82f6;
 }
 
 @media (min-width: 1270px) {
@@ -564,9 +579,9 @@ b, strong {
     padding-bottom: 20px;
   }
 
-  .dark-mode .navbar-collapse {
-    background :  #242424 ;
-  }
+.dark-mode .navbar-collapse {
+  background :  #1f2937 ;
+}
 
   .navbar-expand-sm .navbar-nav .nav-link {
     padding: 3px 20px;
