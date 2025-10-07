@@ -143,3 +143,143 @@
     padding: 20px;
   }
 }
+
+/* Clean Skills Section - No Boxes */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-item:hover {
+  transform: translateY(-4px);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.1);
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-name {
+  color: #007bff;
+}
+
+.dark-mode .skill-name {
+  color: #f8f9fa;
+}
+
+.dark-mode .skill-item:hover .skill-name {
+  color: #4caf50;
+}
+
+/* Brand colors for each technology */
+.skill-item:nth-child(1) .skill-icon { color: #61dafb; } /* ReactJS */
+.skill-item:nth-child(2) .skill-icon { color: #000000; } /* Next.js */
+.skill-item:nth-child(3) .skill-icon { color: #61dafb; } /* React Native */
+.skill-item:nth-child(4) .skill-icon { color: #4fc08d; } /* Vue.js */
+.skill-item:nth-child(5) .skill-icon { color: #3178c6; } /* TypeScript */
+.skill-item:nth-child(6) .skill-icon { color: #f9a03c; } /* D3.js */
+.skill-item:nth-child(7) .skill-icon { color: #339933; } /* Node.js */
+.skill-item:nth-child(8) .skill-icon { color: #68a063; } /* Express */
+.skill-item:nth-child(9) .skill-icon { color: #092e20; } /* Django */
+.skill-item:nth-child(10) .skill-icon { color: #009688; } /* FastAPI */
+.skill-item:nth-child(11) .skill-icon { color: #000000; } /* Flask */
+.skill-item:nth-child(12) .skill-icon { color: #ff6b6b; } /* RESTful */
+.skill-item:nth-child(13) .skill-icon { color: #e10098; } /* GraphQL */
+.skill-item:nth-child(14) .skill-icon { color: #c21325; } /* Jest */
+.skill-item:nth-child(15) .skill-icon { color: #f7df1e; } /* RTL */
+.skill-item:nth-child(16) .skill-icon { color: #2eade3; } /* Playwright */
+.skill-item:nth-child(17) .skill-icon { color: #47a248; } /* MongoDB */
+.skill-item:nth-child(18) .skill-icon { color: #336791; } /* PostgreSQL */
+.skill-item:nth-child(19) .skill-icon { color: #4479a1; } /* MySQL */
+.skill-item:nth-child(20) .skill-icon { color: #ff9900; } /* AWS */
+.skill-item:nth-child(21) .skill-icon { color: #2496ed; } /* Docker */
+.skill-item:nth-child(22) .skill-icon { color: #7c42a0; } /* Terraform */
+.skill-item:nth-child(23) .skill-icon { color: #d24939; } /* Jenkins */
+.skill-item:nth-child(24) .skill-icon { color: #000000; } /* Vercel */
+.skill-item:nth-child(25) .skill-icon { color: #430098; } /* Heroku */
+
+/* Hover effects with darker brand colors */
+.skill-item:nth-child(1):hover .skill-icon { color: #21a0c4; } /* ReactJS */
+.skill-item:nth-child(2):hover .skill-icon { color: #333333; } /* Next.js */
+.skill-item:nth-child(3):hover .skill-icon { color: #21a0c4; } /* React Native */
+.skill-item:nth-child(4):hover .skill-icon { color: #3da56b; } /* Vue.js */
+.skill-item:nth-child(5):hover .skill-icon { color: #1e5a9c; } /* TypeScript */
+.skill-item:nth-child(6):hover .skill-icon { color: #e8912a; } /* D3.js */
+.skill-item:nth-child(7):hover .skill-icon { color: #2d7a2d; } /* Node.js */
+.skill-item:nth-child(8):hover .skill-icon { color: #4a7c4a; } /* Express */
+.skill-item:nth-child(9):hover .skill-icon { color: #1a1a1a; } /* Django */
+.skill-item:nth-child(10):hover .skill-icon { color: #00695c; } /* FastAPI */
+.skill-item:nth-child(11):hover .skill-icon { color: #333333; } /* Flask */
+.skill-item:nth-child(12):hover .skill-icon { color: #e55555; } /* RESTful */
+.skill-item:nth-child(13):hover .skill-icon { color: #c7007a; } /* GraphQL */
+.skill-item:nth-child(14):hover .skill-icon { color: #a00f1f; } /* Jest */
+.skill-item:nth-child(15):hover .skill-icon { color: #d4b91a; } /* RTL */
+.skill-item:nth-child(16):hover .skill-icon { color: #1e8bb8; } /* Playwright */
+.skill-item:nth-child(17):hover .skill-icon { color: #3d8b3d; } /* MongoDB */
+.skill-item:nth-child(18):hover .skill-icon { color: #2a5a7a; } /* PostgreSQL */
+.skill-item:nth-child(19):hover .skill-icon { color: #366088; } /* MySQL */
+.skill-item:nth-child(20):hover .skill-icon { color: #e68900; } /* AWS */
+.skill-item:nth-child(21):hover .skill-icon { color: #1e7bb8; } /* Docker */
+.skill-item:nth-child(22):hover .skill-icon { color: #6a4199; } /* Terraform */
+.skill-item:nth-child(23):hover .skill-icon { color: #b83d2f; } /* Jenkins */
+.skill-item:nth-child(24):hover .skill-icon { color: #333333; } /* Vercel */
+.skill-item:nth-child(25):hover .skill-icon { color: #33007a; } /* Heroku */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+  }
+  
+  .skill-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .skill-icon {
+    font-size: 1.8rem;
+  }
+  
+  .skill-name {
+    font-size: 0.75rem;
+  }
+}

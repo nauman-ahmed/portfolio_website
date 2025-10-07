@@ -22,24 +22,10 @@ export default function About() {
                         </h1>
 
                         <p>
-                        Results-driven Software Engineer with 5+ years of hands-on experience, including 2.5 years in professional software development. I specialize in building scalable, high-performance web and mobile applications.
+                        Results-driven Software Engineer with <strong>5+ years of hands-on experience</strong>, including 2.5 years in professional software development. I have completed my Master's degree in Computer Science from the University of Passau, Germany and I specialize in building scalable, high-performance web and mobile applications. I have worked on various projects using different technologies and frameworks.
                         <br />
                         <br />
-                        Frontend: ReactJS, Next.js, React Native, Vue.js, TypeScript, D3.js
-                        <br />
-
-                        Backend: Node.js, Express, Django, FastAPI, Flask
-                        <br />
-                        APIs: RESTful & GraphQL
-                        <br />
-                        Testing Tools: Jest, React Testing Library, Playwright
-                        <br />
-                        Databases: MongoDB, PostgreSQL, MySQL
-                        <br />
-                        DevOps / Cloud: AWS, Docker, Terraform, Jenkins, Vercel, Heroku
-                        <br />
-                        <br />
-                        I’m passionate about solving complex problems, optimizing performance, and creating user-centric solutions. I thrive in Agile teams (Scrum, Kanban) and bring a collaborative mindset to every project.
+                        I’m a continous learner, passionate about solving complex problems, optimizing performance, and creating user-centric solutions. I thrive in Agile teams (Scrum, Kanban) and bring a collaborative mindset to every project.
                         </p>
                         
                         <div className="custom-btn-group mt-4">

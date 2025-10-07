@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './sections/Navbar'
 import About from './sections/About'
 import Resume from './sections/Resume'
+import Skills from './sections/Skills'
 import Certifications from './sections/Certifications'
 import Contact from './sections/Contact'
 import $ from 'jquery';
@@ -66,6 +67,7 @@ function App() {
       <Projects />
       <Modal />
       <Resume />
+      <Skills />
       <Certifications />
       <Contact />
     </>

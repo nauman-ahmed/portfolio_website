@@ -7,7 +7,7 @@ export default function Certifications() {
         <div className="container">
             <div className="row">
                 <div className="col-lg-12 col-12">
-                    <h2 className="mb-4 text-center">Publication/Certifications</h2>
+                    <h2 className="mb-5 text-center">Publications & Certifications</h2>
                     
                     <div className="row">
                         

@@ -8,7 +8,7 @@ export default function Resume() {
           <div className="row">
 
               <div className="col-lg-6 col-12">
-                <h2 className="mb-4">Experiences</h2>
+                <h2 className="mb-5">Experiences</h2>
 
                 <div className="timeline">
 
@@ -78,7 +78,7 @@ export default function Resume() {
               </div>
 
               <div className="col-lg-6 col-12">
-                <h2 className="mb-4 mobile-mt-2">Education</h2>
+                <h2 className="mb-5 mobile-mt-2">Education</h2>
 
                   <div className="timeline">
                       <div className="timeline-wrapper">
