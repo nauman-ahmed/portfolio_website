@@ -3,8 +3,7 @@ import Modal from './Modal';
 
 export default function ProjectBox({ projectData }) {
   const [showInfo, setShowInfo] = useState(false);
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [selectedModalIndex, setSelectedModalIndex] = useState(0);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -53,9 +52,8 @@ export default function ProjectBox({ projectData }) {
                 <button
                   className="w-100 btn custom-btn custom-btn-project"
                   onClick={() => {
+                    setSelectedModalIndex(i);
                     setShowInfo(true);
-                    setTitle(modalData?.title);
-                    setContent(modalData?.content);
                   }}
                 >
                   {modalData.btnText}
@@ -64,7 +62,12 @@ export default function ProjectBox({ projectData }) {
             ))}
           </div>
         </div>
-        <Modal show={showInfo} setShow={setShowInfo} title={title} content={content} />
+        <Modal 
+          show={showInfo} 
+          setShow={setShowInfo} 
+          modalsArray={projectData?.modalsArray}
+          initialIndex={selectedModalIndex}
+        />
       </div>
     </>
   );
