@@ -149,14 +149,14 @@ export const projectsData = [
     // },
 
     {
-        "title": 'Shannon Associates - Creative Management Platform',
+        "title": 'Shannon Associates - Digital Artist Platform',
         "videoPath": "/videos/Shannon.mp4", // You'll need to create this video
         "techs": ['React', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'JWT', 'AWS S3', 'Axios', 'Webflow'],
         "modalsArray": [
             {
                 btnText: "Info",
                 title: "General Information",
-                content: `<p><strong>Shannon Associates</strong> is a comprehensive full-stack web application that serves as a premier creative management agency platform, connecting talented artists, illustrators, and authors with clients across publishing, advertising, entertainment, design, architecture, and tech industries.</p>
+                content: `<p><strong>Shannon Associates</strong> is a comprehensive full-stack web application that serves as a premier digital rtist agency platform, connecting talented artists, illustrators, and authors with clients across publishing, advertising, entertainment, design, architecture, and tech industries.</p>
     
                             <p><strong>Project Overview:</strong></p>
     
@@ -317,7 +317,7 @@ export const projectsData = [
     },
 
     {
-        title: 'DEWA Energy Management Dashboard',
+        title: 'DEWA Energy Management Platform(IoT)',
         videoPath: '/videos/dewa.mp4',
         techs: [
           'React', 'Vite', 'Tailwind CSS', 'ECharts', 'Recharts', 'Google Charts',
@@ -329,7 +329,7 @@ export const projectsData = [
           {
             btnText: 'Info',
             title: 'General Information',
-            content: `<p><strong>DEWA Energy Management Dashboard</strong> is a full‑stack web application for building operations and energy analytics. It provides interactive dashboards, <strong>3D visualization</strong>, <strong>schedule management</strong>, and <strong>alert notifications</strong> to support monitoring and decision‑making.</p>
+            content: `<p><strong>DEWA Energy Management Platform</strong> is a full‑stack web application for building operations and energy analytics. It provides interactive dashboards, <strong>3D visualization</strong>, <strong>schedule management</strong>, and <strong>alert notifications</strong> to support monitoring and decision‑making.</p>
       
                       <p><strong>Project Overview:</strong></p>
       
@@ -434,7 +434,7 @@ export const projectsData = [
     },
 
     {
-        title: 'ShutterDown - Photography Business Management System',
+        title: 'ShutterDown - Event Management System',
         videoPath: "/videos/shutterdown.mp4", // You'll need to create this video
         techs: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Socket.io'],
         modalsArray: [
@@ -442,7 +442,7 @@ export const projectsData = [
                 btnText: "Info",
                 title: "General Information",
                 content: `
-                    <p>The <strong>ShutterDown</strong> is a comprehensive photography business management system designed specifically for wedding photography studios. It provides a complete solution for managing the entire client lifecycle from initial booking to final delivery of photography services.</p>
+                    <p>The <strong>ShutterDown</strong> is a comprehensive photography event management system designed specifically for wedding photography studios. It provides a complete solution for managing the entire client lifecycle from initial booking to final delivery of photography services.</p>
     
                     <p>The system features <strong>role-based access control</strong> with different user types including photographers, admins, and clients. It manages client information, wedding events, deliverables tracking, team assignments, attendance monitoring, and real-time communication through WhatsApp integration.</p>
     
@@ -747,7 +747,7 @@ export const projectsData = [
     },
 
     {
-        title: 'User Side (Sales Interface)',
+        title: 'POS System',
         videoPath: "/videos/pos.mp4",
         techs: ['React', 'Node', 'MongoDB'],
         modalsArray: [
@@ -755,7 +755,7 @@ export const projectsData = [
                 btnText: "Info",
                 title: "General Information",
                 content: `
-                <p>The <strong>User Side (Sales Interface)</strong> of the system allows users to browse and select from a list of available products, with the option to search for specific items using a search bar. Selected products appear in a billing panel on the right side, where individual prices, quantities, and the total amount are automatically calculated and displayed. Users can adjust product quantities, with the total price updating dynamically. Discounts can be applied on individual products, showing a discounted price, and coupon codes can be entered at checkout, with automatic validation. If the coupon is valid, the discount applies to the total; if not, an error message appears. The final billing screen shows the total amount after discounts, with options to finalize the sale and either print or email the receipt.</p>
+                <p>The <strong>POS System</strong> of the system allows users to browse and select from a list of available products, with the option to search for specific items using a search bar. Selected products appear in a billing panel on the right side, where individual prices, quantities, and the total amount are automatically calculated and displayed. Users can adjust product quantities, with the total price updating dynamically. Discounts can be applied on individual products, showing a discounted price, and coupon codes can be entered at checkout, with automatic validation. If the coupon is valid, the discount applies to the total; if not, an error message appears. The final billing screen shows the total amount after discounts, with options to finalize the sale and either print or email the receipt.</p>
 
                 <p>On the <strong>Admin Side (Management Interface)</strong>, admins can manage product categories, create, edit, or remove products, and assign products to categories. Admins can also set product prices, descriptions, and available quantities. For discount management, admins can create, edit, or delete discount coupons, setting details like discount percentage, validity, and usage conditions, with options to track coupon usage and expiration. A daily sales overview provides a summary of total revenue, transaction count, and average transaction value, with filters for date, category, or product. The reporting section allows admins to view sales by category, product, or timeframe and to generate/export reports in formats like CSV or PDF. Finally, the user permissions feature lets admins create roles (e.g., cashier, manager) with specific permissions, controlling access to features such as report viewing or product modification.</p>
 
@@ -1119,14 +1119,14 @@ export const projectsData = [
     },
 
     {
-        title: 'D3 Visualization Project',
+        title: 'Liver Analytics - D3.js Dashboard',
         videoPath: "/videos/d3visualization.mp4",
         techs: ['React', 'D3.js'],
         modalsArray: [
             {
                 btnText: "Info",
                 title: "General Information",
-                content: `<p><strong>The D3 Visualization Project</strong> is a web-based tool that allows users to upload datasets and visualize data using various chart types created with <strong>D3.js</strong>.</p>
+                content: `<p><strong>Liver Analytics - D3.js Dashboard</strong> is a web-based tool that allows users to upload datasets and visualize data using various chart types created with <strong>D3.js</strong>.</p>
 
                                     <p><strong>Project Overview:</strong></p>
 
@@ -1232,7 +1232,7 @@ export const projectsData = [
     },
 
     {
-        title: 'Sheet Scoring System',
+        title: 'Real Time Assessment Scoring System',
         videoPath: "/videos/excelScoring.mp4",
         techs: ['React', 'Flask (py)', 'MongoDB'],
         modalsArray: [
@@ -1240,7 +1240,7 @@ export const projectsData = [
                 btnText: "Info",
                 title: "General Information",
                 content: `
-                                    <p>The <strong>Sheet Scoring System</strong> is a web-based platform designed to streamline the process of conducting simulation-based learning, with two main user views: <strong>student</strong> and <strong>admin</strong>.</p>
+                                    <p>The <strong>Real Time Assessment Scoring System</strong> is a web-based platform designed to streamline the process of conducting simulation-based learning, with two main user views: <strong>student</strong> and <strong>admin</strong>.</p>
 
                                     <p>On the <strong>student side</strong>, users can register, edit their profiles, and enroll in simulations. Once registered, students download an Excel sheet containing simulation tasks, perform the necessary calculations, and upload the completed sheet. The system automatically processes the uploaded file, calculates scores based on predefined formulas, and provides instant feedback to the student.</p>
 
@@ -1256,43 +1256,43 @@ export const projectsData = [
                 content: `
                                     <h4>1. Student Side (User Interface):</h4>
 
-                                    <p><strong>1. Student Registration:</strong></p>
+                                    <p><strong>1.1. Student Registration:</strong></p>
                                     <ul>
                                         <li>Students can <strong>register an account</strong> by providing their personal details.</li>
                                         <li>Allow students to <strong>edit their profile</strong> information after registration.</li>
                                     </ul>
 
-                                    <p><strong>2. Simulation Registration:</strong></p>
+                                    <p><strong>1.2. Simulation Registration:</strong></p>
                                     <ul>
                                         <li>Students can <strong>register for a simulation</strong> from a list of available simulations.</li>
                                         <li>Display available simulations, their deadlines, and any instructions.</li>
                                     </ul>
 
-                                    <p><strong>3. Download Simulation Excel Sheet:</strong></p>
+                                    <p><strong>1.3. Download Simulation Excel Sheet:</strong></p>
                                     <ul>
                                         <li>Students can <strong>download the simulation Excel file</strong> uploaded by the admin.</li>
                                         <li>Ensure students can only download simulations they have registered for.</li>
                                     </ul>
 
-                                    <p><strong>4. Perform and Upload Calculations:</strong></p>
+                                    <p><strong>1.4. Perform and Upload Calculations:</strong></p>
                                     <ul>
                                         <li>Students can complete the calculations on the downloaded Excel sheet.</li>
                                         <li>Enable students to <strong>upload the completed Excel sheet</strong> back into the system for scoring.</li>
                                         <li>Restrict uploads to only those students who are registered for the simulation.</li>
                                     </ul>
 
-                                    <p><strong>5. Scoring System:</strong></p>
+                                    <p><strong>1.5. Scoring System:</strong></p>
                                     <ul>
                                         <li>The system will <strong>automatically calculate the student’s score</strong> based on the uploaded Excel file.</li>
                                         <li>Display the <strong>score to the student</strong> after calculation is complete.</li>
                                     </ul>
 
-                                    <p><strong>6. Simulation Time Limits:</strong></p>
+                                    <p><strong>1.6. Simulation Time Limits:</strong></p>
                                     <ul>
                                         <li>Ensure that students cannot upload the simulation sheet after the <strong>time limit expires</strong>.</li>
                                     </ul>
 
-                                    <p><strong>7. Error Handling:</strong></p>
+                                    <p><strong>1.7. Error Handling:</strong></p>
                                     <ul>
                                         <li>Display appropriate <strong>error messages</strong> if the uploaded Excel sheet is invalid or fails to meet required conditions (e.g., wrong format, missing fields).</li>
                                     </ul>
@@ -1301,26 +1301,26 @@ export const projectsData = [
 
                                     <h4>2. Admin Side (Management Interface):</h4>
 
-                                    <p><strong>1. Add Simulations:</strong></p>
+                                    <p><strong>2.1. Add Simulations:</strong></p>
                                     <ul>
                                         <li>The admin can <strong>create new simulations</strong> by uploading an Excel file.</li>
                                         <li>Assign a <strong>time limit</strong> to each simulation (start date, end date).</li>
                                         <li>Set parameters for <strong>scoring logic</strong> that will calculate student scores based on uploaded files.</li>
                                     </ul>
 
-                                    <p><strong>2. Track Participants:</strong></p>
+                                    <p><strong>2.2. Track Participants:</strong></p>
                                     <ul>
                                         <li>The admin can <strong>track all participants</strong> who have registered for a particular simulation.</li>
                                         <li>See detailed participant information, including their <strong>registration status</strong>, time of upload, and scores.</li>
                                     </ul>
 
-                                    <p><strong>3. Restrict Uploads:</strong></p>
+                                    <p><strong>2.3. Restrict Uploads:</strong></p>
                                     <ul>
                                         <li>Enforce restrictions on student uploads based on the <strong>simulation time limit</strong>.</li>
                                         <li>Prevent students from uploading after the time window for the simulation has passed.</li>
                                     </ul>
 
-                                    <p><strong>4. View Simulation Results:</strong></p>
+                                    <p><strong>2.4. View Simulation Results:</strong></p>
                                     <ul>
                                         <li>The admin can view <strong>detailed results of each simulation</strong>, including:</li>
                                         <ul>
@@ -1330,19 +1330,19 @@ export const projectsData = [
                                         </ul>
                                     </ul>
 
-                                    <p><strong>5. Manage Student Information:</strong></p>
+                                    <p><strong>2.5. Manage Student Information:</strong></p>
                                     <ul>
                                         <li>Allow the admin to <strong>view and update all student details</strong>, including their registration information and simulation history.</li>
                                         <li>The admin can also <strong>edit or delete student profiles</strong> if necessary.</li>
                                     </ul>
 
-                                    <p><strong>6. Simulation Status Management:</strong></p>
+                                    <p><strong>2.6. Simulation Status Management:</strong></p>
                                     <ul>
                                         <li>Admins can <strong>change the status of a simulation</strong> (e.g., open, closed).</li>
                                         <li>Control when a simulation is <strong>active or inactive</strong>, affecting whether students can participate.</li>
                                     </ul>
 
-                                    <p><strong>7. Scoring and Results Overview:</strong></p>
+                                    <p><strong>2.7. Scoring and Results Overview:</strong></p>
                                     <ul>
                                         <li>Admins can <strong>view and modify scores</strong> if required.</li>
                                         <li>Provide <strong>downloadable reports</strong> of simulation results, including scores and participant details.</li>

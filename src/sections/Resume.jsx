@@ -14,10 +14,10 @@ export default function Resume() {
 
                     <div className="timeline-wrapper">
                         <div className="timeline-yr">
-                            <span>2025 </span>
+                            <span>05/25-10/25 </span>
                         </div>
                         <div className="timeline-info">
-                            <h3><span>Reinforcement Learning</span><small>Master Thesis</small></h3>
+                            <h3><span>Multi-Agent Coverage Path Planning(UAVs)</span><small>Master Thesis</small></h3>
                             <p>    
                                 • Designed and implemented a multi-agent reinforcement learning environment for
                                 UAVs using PyTorch, Gym, and NCP/Liquid Neural Networks.
@@ -39,7 +39,7 @@ export default function Resume() {
 
                     <div className="timeline-wrapper">
                         <div className="timeline-yr">
-                            <span>12/2023 </span>
+                            <span>06/23-12/23</span>
                         </div>
                         <div className="timeline-info">
                             <h3><span>FULL STACK WEB DEVELOPER</span><small>EVENTPLANNING24</small></h3>
@@ -58,7 +58,7 @@ export default function Resume() {
 
                     <div className="timeline-wrapper">
                         <div className="timeline-yr">
-                            <span>09/2021</span>
+                            <span>09/19-09/21</span>
                         </div>
                         <div className="timeline-info">
                             <h3><span>SOFTWARE ENGINEER</span><small>STRATGIT</small></h3>
@@ -82,21 +82,21 @@ export default function Resume() {
 
                   <div className="timeline">
                       <div className="timeline-wrapper">
-                            <div className="timeline-yr">
-                                <span>2025</span>
+                            <div className="timeline-yr" >
+                                <span>2021-2025</span>
                             </div>
                             <div className="timeline-info">
-                                <h3><span>MASTER OF SCIENCE IN COMPUTER SCIENCE</span><small>University of Passau</small></h3>
-                                <p>Passau, Germany.</p>
+                                <h3><span>M.Sc COMPUTER SCIENCE</span><small>University of Passau</small></h3>
+                                <p>Passau, Germany</p>
                             </div>
                       </div>
 
                       <div className="timeline-wrapper">
                           <div className="timeline-yr">
-                              <span>2020</span>
+                              <span>2020-2020</span>
                           </div>
                           <div className="timeline-info">
-                              <h3><span>BACHELOR OF SCIENCE IN SOFTWARE ENGINEERING</span><small>Usman Institute of Technology</small></h3>
+                              <h3><span>B.Sc SOFTWARE ENGINEERING</span><small>Usman Institute of Technology</small></h3>
                               <p>Karachi, Pakistan</p>
                           </div>
                       </div>
