@@ -1,6 +1,7 @@
 import React from 'react'
 import pdfFile from '../assets/files/Resume-Nauman.pdf';
 import img from '../assets/images/undraw/man-developing-website-on-desk.svg'
+import img2 from '../assets/images/undraw/img-Nauman.png'
 
 export default function About() {
   return (
@@ -38,9 +39,12 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-12 col-12">
-                    <div className="about-image svg">
-                        <img src={img} className="img-fluid" alt="svg image" />
+                <div className="col-lg-4 col-md-12 col-12 d-flex align-items-center justify-content-center">
+                    <div className="about-image svg position-relative">
+                        <div className="circular-image-container">
+                            <img src={img2} className="img-fluid circular-image" alt="svg image" />
+                            <div className="image-overlay"></div>
+                        </div>
                     </div>
                 </div>
 
