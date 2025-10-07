@@ -148,231 +148,6 @@ export const projectsData = [
     //     ]
     // },
 
-    // {
-    //     title: 'Sheet Scoring System',
-    //     videoPath: "/videos/excelScoring.mp4",
-    //     techs: ['React', 'Flask (py)', 'MongoDB'],
-    //     modalsArray: [
-    //         {
-    //             btnText: "Info",
-    //             title: "General Information",
-    //             content: `
-    //                                 <p>The <strong>Sheet Scoring System</strong> is a web-based platform designed to streamline the process of conducting simulation-based learning, with two main user views: <strong>student</strong> and <strong>admin</strong>.</p>
-
-    //                                 <p>On the <strong>student side</strong>, users can register, edit their profiles, and enroll in simulations. Once registered, students download an Excel sheet containing simulation tasks, perform the necessary calculations, and upload the completed sheet. The system automatically processes the uploaded file, calculates scores based on predefined formulas, and provides instant feedback to the student.</p>
-
-    //                                 <p>On the <strong>admin side</strong>, admins can create and manage simulations by uploading Excel sheets, setting time limits, and monitoring student participation. They can view detailed reports, track student submissions, and manage all student data, including profile edits and score updates.</p>
-
-    //                                 <p>Built using <strong>React</strong> for the frontend, <strong>Flask</strong> for backend logic, and <strong>MongoDB</strong> for data management, the system offers an efficient and automated way to conduct and score simulations while providing real-time feedback to students and giving admins full control over the simulation process.</p>
-
-    //                                 `
-    //         },
-    //         {
-    //             btnText: "Description",
-    //             title: "Project Description",
-    //             content: `
-    //                                 <h4>1. Student Side (User Interface):</h4>
-
-    //                                 <p><strong>1. Student Registration:</strong></p>
-    //                                 <ul>
-    //                                     <li>Students can <strong>register an account</strong> by providing their personal details.</li>
-    //                                     <li>Allow students to <strong>edit their profile</strong> information after registration.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>2. Simulation Registration:</strong></p>
-    //                                 <ul>
-    //                                     <li>Students can <strong>register for a simulation</strong> from a list of available simulations.</li>
-    //                                     <li>Display available simulations, their deadlines, and any instructions.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>3. Download Simulation Excel Sheet:</strong></p>
-    //                                 <ul>
-    //                                     <li>Students can <strong>download the simulation Excel file</strong> uploaded by the admin.</li>
-    //                                     <li>Ensure students can only download simulations they have registered for.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>4. Perform and Upload Calculations:</strong></p>
-    //                                 <ul>
-    //                                     <li>Students can complete the calculations on the downloaded Excel sheet.</li>
-    //                                     <li>Enable students to <strong>upload the completed Excel sheet</strong> back into the system for scoring.</li>
-    //                                     <li>Restrict uploads to only those students who are registered for the simulation.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>5. Scoring System:</strong></p>
-    //                                 <ul>
-    //                                     <li>The system will <strong>automatically calculate the student’s score</strong> based on the uploaded Excel file.</li>
-    //                                     <li>Display the <strong>score to the student</strong> after calculation is complete.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>6. Simulation Time Limits:</strong></p>
-    //                                 <ul>
-    //                                     <li>Ensure that students cannot upload the simulation sheet after the <strong>time limit expires</strong>.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>7. Error Handling:</strong></p>
-    //                                 <ul>
-    //                                     <li>Display appropriate <strong>error messages</strong> if the uploaded Excel sheet is invalid or fails to meet required conditions (e.g., wrong format, missing fields).</li>
-    //                                 </ul>
-
-    //                                 <hr>
-
-    //                                 <h4>2. Admin Side (Management Interface):</h4>
-
-    //                                 <p><strong>1. Add Simulations:</strong></p>
-    //                                 <ul>
-    //                                     <li>The admin can <strong>create new simulations</strong> by uploading an Excel file.</li>
-    //                                     <li>Assign a <strong>time limit</strong> to each simulation (start date, end date).</li>
-    //                                     <li>Set parameters for <strong>scoring logic</strong> that will calculate student scores based on uploaded files.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>2. Track Participants:</strong></p>
-    //                                 <ul>
-    //                                     <li>The admin can <strong>track all participants</strong> who have registered for a particular simulation.</li>
-    //                                     <li>See detailed participant information, including their <strong>registration status</strong>, time of upload, and scores.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>3. Restrict Uploads:</strong></p>
-    //                                 <ul>
-    //                                     <li>Enforce restrictions on student uploads based on the <strong>simulation time limit</strong>.</li>
-    //                                     <li>Prevent students from uploading after the time window for the simulation has passed.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>4. View Simulation Results:</strong></p>
-    //                                 <ul>
-    //                                     <li>The admin can view <strong>detailed results of each simulation</strong>, including:</li>
-    //                                     <ul>
-    //                                         <li>List of participants.</li>
-    //                                         <li>Their uploaded Excel sheets.</li>
-    //                                         <li>Their calculated scores.</li>
-    //                                     </ul>
-    //                                 </ul>
-
-    //                                 <p><strong>5. Manage Student Information:</strong></p>
-    //                                 <ul>
-    //                                     <li>Allow the admin to <strong>view and update all student details</strong>, including their registration information and simulation history.</li>
-    //                                     <li>The admin can also <strong>edit or delete student profiles</strong> if necessary.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>6. Simulation Status Management:</strong></p>
-    //                                 <ul>
-    //                                     <li>Admins can <strong>change the status of a simulation</strong> (e.g., open, closed).</li>
-    //                                     <li>Control when a simulation is <strong>active or inactive</strong>, affecting whether students can participate.</li>
-    //                                 </ul>
-
-    //                                 <p><strong>7. Scoring and Results Overview:</strong></p>
-    //                                 <ul>
-    //                                     <li>Admins can <strong>view and modify scores</strong> if required.</li>
-    //                                     <li>Provide <strong>downloadable reports</strong> of simulation results, including scores and participant details.</li>
-    //                                 </ul>
-
-    //                                 `
-    //         },
-    //         {
-    //             btnText: "Tech",
-    //             title: "Technologies Used",
-    //             content: `
-    //                           <p><strong>1. Frontend:</strong></p>
-    //                           <ul>
-    //                               <li><strong>React</strong> for building the user interface for both student and admin views.</li>
-    //                               <li>Ensure <strong>dynamic interaction</strong> and seamless user experience using React components.</li>
-    //                           </ul>
-
-    //                           <p><strong>2. Backend:</strong></p>
-    //                           <ul>
-    //                               <li><strong>Flask (Python)</strong> as the web application framework for handling server-side logic and processing.</li>
-    //                               <li><strong>REST APIs</strong> to enable communication between the frontend and backend, particularly for file uploads, score calculations, and fetching data.</li>
-    //                           </ul>
-
-    //                           <p><strong>3. Database:</strong></p>
-    //                           <ul>
-    //                               <li><strong>MongoDB</strong> for storing:</li>
-    //                               <ul>
-    //                                   <li>Student data (profile, registration details).</li>
-    //                                   <li>Simulation data (uploaded Excel files, results).</li>
-    //                                   <li>Scores and participant information.</li>
-    //                               </ul>
-    //                           </ul>
-
-    //                           `
-    //         },
-    //         {
-    //             btnText: "Libraries",
-    //             title: "Libraries Used",
-    //             content: `
-                            
-
-    //                         <p><strong>1. @fortawesome/free-solid-svg-icons</strong> and <strong>@fortawesome/react-fontawesome</strong>: Provides a collection of Font Awesome icons for React applications, allowing for rich iconography.</p>
-
-    //                         <p><strong>2. @testing-library/jest-dom, @testing-library/react, @testing-library/user-event</strong>: Testing utilities for React applications, useful for building test suites and simulating user interactions.</p>
-
-    //                         <p><strong>3. antd</strong>: Ant Design, a UI component library for React, providing a set of components for building a modern, professional-looking UI.</p>
-
-    //                         <p><strong>4. axios</strong>: For making HTTP requests, commonly used for API calls and data fetching.</p>
-
-    //                         <p><strong>5. bootstrap</strong> and <strong>react-bootstrap</strong>: CSS frameworks that provide responsive and pre-styled components for UI consistency and faster development.</p>
-
-    //                         <p><strong>6. formik</strong>: A library for building and managing forms in React, including validation, handling submissions, and managing form state.</p>
-
-    //                         <p><strong>7. js-cookie</strong>: Manages cookies on the client side, useful for storing session tokens and other small data.</p>
-
-    //                         <p><strong>8. moment</strong> and <strong>moment-timezone</strong>: Libraries for handling and manipulating dates and times, including timezone support.</p>
-
-    //                         <p><strong>9. react</strong> and <strong>react-dom</strong>: Core libraries for building and rendering user interfaces in React.</p>
-
-    //                         <p><strong>10. react-icons</strong>: Provides a set of popular icons as React components.</p>
-
-    //                         <p><strong>11. react-router-dom</strong>: Manages routing in single-page applications built with React.</p>
-
-    //                         <p><strong>12. react-scripts</strong>: Scripts and configuration for running and building React applications.</p>
-
-    //                         <p><strong>13. react-table</strong>: A library for creating data tables in React, supporting sorting, pagination, and filtering.</p>
-
-    //                         <p><strong>14. react-toastify</strong>: Provides customizable toast notifications in React applications.</p>
-
-    //                         <p><strong>15. reactstrap</strong>: Bootstrap components specifically for React, simplifying the integration of Bootstrap UI elements.</p>
-
-    //                         <p><strong>16. recharts</strong>: A charting library for React, offering a variety of customizable chart types for data visualization.</p>
-
-    //                         <p><strong>17. web-vitals</strong>: Provides metrics for measuring web performance, useful for optimization.</p>
-
-    //                         <p><strong>18. xlsx</strong> and <strong>XlsxWriter</strong>: Libraries for reading and writing Excel files, often used for importing and exporting data.</p>
-
-    //                         <p><strong>19. yup</strong>: A schema validation library often used with Formik for form validation in React applications.</p>
-
-    //                         <h4>Backend Libraries:</h4>
-
-    //                         <p><strong>20. Flask</strong>: A lightweight web framework for Python, used for handling backend logic and API endpoints.</p>
-
-    //                         <p><strong>21. Flask-Cors</strong>: Middleware to enable Cross-Origin Resource Sharing in Flask applications.</p>
-
-    //                         <p><strong>22. Flask-PyMongo</strong>: Integrates MongoDB with Flask, simplifying MongoDB interactions in Flask applications.</p>
-
-    //                         <p><strong>23. gunicorn</strong>: A WSGI HTTP server for running Python applications in production.</p>
-
-    //                         <p><strong>24. mongoengine</strong>: An ORM (Object-Relational Mapping) library for MongoDB, providing a structured way to work with MongoDB data.</p>
-
-    //                         <p><strong>25. pymongo</strong>: The official MongoDB driver for Python, used for connecting and interacting with MongoDB.</p>
-
-    //                         <p><strong>26. openpyxl</strong> and <strong>et-xmlfile</strong>: Libraries for reading and writing Excel files in Python, often used for data processing and analysis.</p>
-
-    //                         <p><strong>27. numpy</strong> and <strong>pandas</strong>: Essential libraries for data manipulation, analysis, and numerical calculations in Python.</p>
-
-    //                         <p><strong>28. PyJWT</strong>: Handles JSON Web Token (JWT) encoding and decoding, often used for user authentication.</p>
-
-    //                         <p><strong>29. email_validator</strong> and <strong>dnspython</strong>: Validates email addresses and handles DNS queries, adding an extra layer of validation.</p>
-
-    //                         <p><strong>30. Werkzeug</strong>: Provides utility functions and middleware for Flask, handling request/response management and security.</p>
-
-    //                         <p><strong>31. Jinja2</strong> and <strong>MarkupSafe</strong>: Templating libraries for generating HTML responses in Flask.</p>
-
-    //                         <p><strong>32. pydantic</strong>: A data validation and parsing library for Python, used for defining and validating data structures.</p>
-
-    //                         <p><strong>33. python-dateutil</strong>, <strong>pytz</strong>, and <strong>tzdata</strong>: Libraries for handling dates, times, and timezones in Python.</p>
-                          
-    //                         `
-    //         },
-    //     ]
-    // },
     {
         "title": 'Shannon Associates - Creative Management Platform',
         "videoPath": "/videos/Shannon.mp4", // You'll need to create this video
@@ -540,315 +315,434 @@ export const projectsData = [
             },
         ]
     },
+
     {
-        title: 'D3 Visualization Project',
-        videoPath: "/videos/d3visualization.mp4",
-        techs: ['React', 'D3.js'],
+        title: 'DEWA Energy Management Dashboard',
+        videoPath: '/videos/dewa.mp4',
+        techs: [
+          'React', 'Vite', 'Tailwind CSS', 'ECharts', 'Recharts', 'Google Charts',
+          'Three.js', 'React Three Fiber', 'React Drei',
+          'FullCalendar', 'Axios', 'Day.js', 'Luxon',
+          'Express', 'Node.js', 'PostgreSQL', 'pg', 'Sequelize (migrations)'
+        ],
         modalsArray: [
-            {
-                btnText: "Info",
-                title: "General Information",
-                content: `<p><strong>The D3 Visualization Project</strong> is a web-based tool that allows users to upload datasets and visualize data using various chart types created with <strong>D3.js</strong>.</p>
-
-                                    <p><strong>Project Overview:</strong></p>
-
-                                    <p><strong>1. Dataset Upload:</strong><br>
-                                    Users can upload datasets, which are displayed in a data table for easy viewing and management.</p>
-
-                                    <p><strong>2. Basic Visualizations:</strong><br>
-                                    Users can create <strong>scatter plots</strong> and <strong>radar plots</strong> based on the uploaded data. The interface allows selecting specific variables, generating customized, interactive visualizations.</p>
-
-                                    <p><strong>3. Advanced Dashboard:</strong><br>
-                                    A preloaded liver cirrhosis dataset from <strong>Kaggle</strong> enables more complex visualizations, including bar charts and density plots, revealing deeper insights and trends within the dataset.</p>
-
-                                    <p><strong>Interactive Features:</strong><br>
-                                    Throughout the project, users can interact with charts, zoom in for detailed views, and explore the data dynamically.</p>
-
-                                    <p><strong>Technologies Used:</strong><br>
-                                    Built with <strong>React</strong> and <strong>D3.js</strong>, the system provides a responsive and customizable interface for data analysis and visualization.</p>`
-            },
-            {
-                btnText: "Description",
-                title: "Project Description",
-                content: `<p><strong>1. Data Upload and Display:</strong></p>
-                                    
-                                    <p><strong>Data Upload:</strong><br>
-                                    - Users can upload datasets.<br>
-                                    - The system parses and validates the uploaded data to ensure correct format for visualization.</p>
-
-                                    <p><strong>Data Display:</strong><br>
-                                    - Uploaded data is displayed in a tabular format.<br>
-                                    - Users can view the full dataset, including columns and rows.<br>
-                                    - Optional: Implement sorting or filtering features on the table.</p>
-
-                                    <hr>
-
-                                    <p><strong>2. Basic Visualization Section:</strong></p>
-
-                                    <p><strong>Scatter Plot:</strong><br>
-                                    - Users can create scatter plots to visualize relationships between two numerical variables.<br>
-                                    - Options to select x-axis and y-axis variables from the dataset.<br>
-                                    - Customizable features: color by third variable, size, tooltips for points.</p>
-
-                                    <p><strong>Radar Plot:</strong><br>
-                                    - Enables visualization of multi-dimensional data in a radar (spider) plot.<br>
-                                    - Allows selection of multiple variables for axes.<br>
-                                    - Interactive features like hovering to see values.</p>
-
-                                    <hr>
-
-                                    <p><strong>3. Dashboard Section (Liver Cirrhosis Dataset):</strong></p>
-
-                                    <p><strong>Dataset Integration:</strong><br>
-                                    - Preloaded liver cirrhosis dataset from Kaggle displayed in a tabular format for reference.</p>
-
-                                    <p><strong>Data Visualization with D3.js:</strong><br>
-                                    - Multiple visualizations (scatter plot, bar chart, density plot) implemented with the liver cirrhosis dataset.<br>
-                                    - Interactive exploration with D3.js features:<br>
-                                      &nbsp;&nbsp;&bull; Zooming and panning for detailed views.<br>
-                                      &nbsp;&nbsp;&bull; Tooltips showing additional info when hovering over elements.</p>
-
-                                    <p><strong>Insights and Analytics:</strong><br>
-                                    - Visualize trends, distributions, and correlations in the data.<br>
-                                    - Example: Distribution of variables like age, disease stages, treatment outcomes via bar or density plots.</p>
-
-                                    <hr>
-
-                                    <p><strong>4. Additional Features:</strong></p>
-
-                                    <p><strong>Customization of Visualizations:</strong><br>
-                                    - Options for customizing charts: axis labels, color schemes, legends.<br>
-                                    - Ability to resize or rearrange charts in different layouts.</p>
-
-                                    <p><strong>Dynamic Interaction:</strong><br>
-                                    - Ensures visualizations are responsive and interactive, adapting to various screen sizes and input methods.</p>
-
-                                    `
-            },
-            {
-                btnText: "Tech",
-                title: "Technologies Used",
-                content: `
-                              <strong>1. Frontend:</strong><br>
-                              - React is used for building the user interface and managing the interactive components of the system.<br><br>
-
-                              <strong>2. Data Visualization:</strong><br>
-                              - D3.js is used for rendering the visualizations (scatter plot, radar plot, bar chart, density plot), enabling custom, interactive data charts.<br><br>
-
-                              <strong>3. Dataset Integration:</strong><br>
-                              - The liver cirrhosis dataset from Kaggle is preloaded in the dashboard for advanced data analysis and visualization.`
-            },
-            {
-                btnText: "Libraries",
-                title: "Libraries Used",
-                content: `
-               
-                1. <strong>React</strong> - Used for building the user interface and managing interactive components.<br>
-                2. <strong>Reactstrap</strong> - Provides pre-built Bootstrap-styled components for a responsive UI design.<br>
-                3. <strong>D3.js</strong> - Renders custom, interactive data visualizations (scatter plot, radar plot, bar chart, density plot).<br>
-                4. <strong>React-D3-Library</strong> - Bridges D3 visualizations with React components for seamless integration.<br>
-                5. <strong>PapaParse</strong> - Parses and loads CSV data, enabling easy handling of the liver cirrhosis dataset from Kaggle for advanced analysis.
-              `
-            },
+          {
+            btnText: 'Info',
+            title: 'General Information',
+            content: `<p><strong>DEWA Energy Management Dashboard</strong> is a full‑stack web application for building operations and energy analytics. It provides interactive dashboards, <strong>3D visualization</strong>, <strong>schedule management</strong>, and <strong>alert notifications</strong> to support monitoring and decision‑making.</p>
+      
+                      <p><strong>Project Overview:</strong></p>
+      
+                      <p><strong>1. Operations & Scheduling:</strong><br>
+                      Manage equipment schedules (e.g., coffee machines and building systems) with a modern calendar UI; update or override schedules and automatically log notifications.</p>
+      
+                      <p><strong>2. Analytics Dashboards:</strong><br>
+                      Rich energy KPIs and comparative views using <strong>ECharts</strong>, <strong>Recharts</strong>, and <strong>Google Charts</strong>, including spend vs budget/forecast, month‑wise/core‑wise consumption, and stacked comparisons.</p>
+      
+                      <p><strong>3. 3D Building View:</strong><br>
+                      An interactive <strong>Three.js</strong> scene via <strong>React Three Fiber</strong>/<strong>Drei</strong> to visualize assets and context in 3D.</p>
+      
+                      <p><strong>4. Notifications:</strong><br>
+                      Centralized alerts (critical/warning/normal) with read/unread status to track operational changes and events.</p>
+      
+                      <p><strong>Technologies Used:</strong><br>
+                      Built with <strong>React (Vite)</strong> on the frontend and <strong>Express + PostgreSQL</strong> on the backend.</p>`
+          },
+          {
+            btnText: 'Description',
+            title: 'Project Description',
+            content: `<p><strong>1. Frontend Features:</strong></p>
+      
+                      <p><strong>Dashboards & Analytics:</strong><br>
+                      - Multiple chart types for energy KPIs (ECharts, Recharts, Google Charts).<br>
+                      - Comparative/stacked bar charts, forecasts, and spend vs budget visualizations.<br>
+                      - Reusable widgets and gauges for quick insights.</p>
+      
+                      <p><strong>Scheduling & Calendar:</strong><br>
+                      - <strong>FullCalendar</strong> (daygrid, timegrid, list, interaction) for creating, editing, and reviewing schedules.<br>
+                      - Toast notifications, selects, and date pickers for smooth UX.</p>
+      
+                      <p><strong>3D Visualization:</strong><br>
+                      - <strong>Three.js</strong> scene via <strong>@react-three/fiber</strong> and <strong>@react-three/drei</strong> to present building context and assets.</p>
+      
+                      <p><strong>Pages & Navigation:</strong><br>
+                      - Key views: Dashboard, Overview, Reports, Schedules, Scheduler, Scheduled Event Calendar, 3D Graphic, Load Management, Notifications.</p>
+      
+                      <hr>
+      
+                      <p><strong>2. Backend/API:</strong></p>
+      
+                      <p><strong>Stack:</strong><br>
+                      - <strong>Express</strong> server with <strong>pg</strong> client for PostgreSQL; <strong>Sequelize CLI</strong> for migrations.<br>
+                      - CORS and JSON body parsing enabled.</p>
+      
+                      <p><strong>Endpoints:</strong><br>
+                      - <code>POST /create-schedule</code>: Create a schedule.<br>
+                      - <code>POST /update-schedule</code>: Update/override a schedule and log a notification.<br>
+                      - <code>GET /get-schedules</code>: List schedules.<br>
+                      - <code>GET /get-schedule/:scheduleId</code>: Fetch a schedule by id.<br>
+                      - <code>GET /get-notifications</code>: List notifications.<br>
+                      - <code>POST /read-notification/:notificationId</code>: Mark as read.<br>
+                      - <code>POST /unread-notification/:notificationId</code>: Mark as unread.</p>
+      
+                      <p><strong>Database:</strong><br>
+                      - PostgreSQL with tables for <em>schedules</em> and <em>notifications</em> (migrations present).<br>
+                      - SSL-enabled connection via environment variables.</p>
+      
+                      <hr>
+      
+                      <p><strong>3. Interaction & UX:</strong></p>
+      
+                      <p><strong>Responsive & Interactive:</strong><br>
+                      - Tailwind CSS for responsive UI, tooltips, toasts, and date/time utilities (Day.js, Luxon).<br>
+                      - Selection components and filters for asset/category/core/level.</p>`
+          },
+          {
+            btnText: 'Tech',
+            title: 'Technologies Used',
+            content: `<strong>1. Frontend:</strong><br>
+                      - React 18 (Vite) for SPA architecture and performance.<br>
+                      - Tailwind CSS, PostCSS, Autoprefixer for responsive styling.<br>
+                      - FullCalendar for scheduling UI.<br>
+                      - Three.js + React Three Fiber + Drei for 3D.<br><br>
+      
+                      <strong>2. Data Visualization:</strong><br>
+                      - ECharts, Recharts, Google Charts for robust, interactive analytics.<br><br>
+      
+                      <strong>3. Backend:</strong><br>
+                      - Node.js, Express for REST APIs, CORS, and JSON handling.<br>
+                      - PostgreSQL with <code>pg</code> client; Sequelize CLI for migrations.<br><br>
+      
+                      <strong>4. Utilities:</strong><br>
+                      - Axios, React Toastify, React Select, Day.js, Luxon.`
+          },
+          {
+            btnText: 'Libraries',
+            title: 'Libraries Used',
+            content: `
+              1. <strong>React</strong> / <strong>Vite</strong> — SPA structure and fast dev tooling.<br>
+              2. <strong>Tailwind CSS</strong>, <strong>PostCSS</strong>, <strong>Autoprefixer</strong> — Responsive styling pipeline.<br>
+              3. <strong>ECharts</strong>, <strong>Recharts</strong>, <strong>react-google-charts</strong> — Charts and analytics.<br>
+              4. <strong>Three.js</strong>, <strong>@react-three/fiber</strong>, <strong>@react-three/drei</strong> — 3D visualization and helpers.<br>
+              5. <strong>@fullcalendar/react</strong> (+ daygrid, timegrid, list, interaction) — Calendar and scheduling UI.<br>
+              6. <strong>Axios</strong>, <strong>react-toastify</strong>, <strong>react-select</strong>, <strong>react-tooltip</strong> — UX and data handling utilities.<br>
+              7. <strong>Day.js</strong>, <strong>Luxon</strong> — Date/time utilities.<br>
+              8. <strong>Express</strong>, <strong>pg</strong>, <strong>Sequelize CLI</strong> — REST API, PostgreSQL access, and migrations.<br>
+              9. <strong>dotenv</strong>, <strong>cors</strong>, <strong>nodemon</strong> — Configuration, cross‑origin support, dev reload.`
+          }
         ]
     },
 
     {
-        title: 'Wedding Management System',
-        videoPath: "/videos/shutterdown.mp4",
-        techs: ['React', 'Node', 'MongoDB'],
+        title: 'ShutterDown - Photography Business Management System',
+        videoPath: "/videos/shutterdown.mp4", // You'll need to create this video
+        techs: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Socket.io'],
         modalsArray: [
             {
                 btnText: "Info",
                 title: "General Information",
                 content: `
-                              <p><strong>The Event/Wedding Management System</strong> is a comprehensive platform designed to streamline event management for multiple roles: <strong>Admin</strong>, <strong>Manager</strong>, <strong>Shooter</strong>, and <strong>Editor</strong>, each with distinct sub-roles and responsibilities.</p>
-
-                              <p><strong>System Features:</strong></p>
-
-                              <p><strong>1. Event Creation and Role Assignment:</strong><br>
-                              Managers can create events, assign deliverables such as cinematography, photos, albums, and pre-wedding tasks, and allocate specific roles to shooters and editors.</p>
-
-                              <p><strong>2. Calendar View with Color-Coded Scheduling:</strong><br>
-                              The system includes a <strong>calendar view</strong> that displays event density with intuitive color-coding: green for one event, yellow for two events, and red for three or more, helping managers schedule tasks efficiently.</p>
-
-                              <p><strong>3. Client Communication:</strong><br>
-                              Managers can communicate directly with clients via <strong>WhatsApp</strong> through the application for streamlined coordination.</p>
-
-                              <p><strong>4. Task and Deliverable Management:</strong><br>
-                              Shooters and editors can view their assigned events, update task statuses, and manage deliverables, ensuring that everyone stays informed and on schedule.</p>
-
-                              <p><strong>5. Admin Controls:</strong><br>
-                              Admins have full control over user management, role assignments, and can create custom options for events and deliverables, allowing for flexible system configuration.</p>
-
-                              <p><strong>6. User Authentication and Profile Management:</strong><br>
-                              The system supports <strong>Google Sign-In</strong>, password recovery, and profile updates for all users, enhancing ease of access and security.</p>
-
-                              <p><strong>Technologies Used:</strong><br>
-                              Built with <strong>React</strong> for the frontend, <strong>Node.js</strong> and <strong>REST APIs</strong> for the backend, and <strong>MongoDB</strong> for data storage, the system offers a seamless, role-based workflow for efficient event planning and management.</p>
-
-                            `
+                    <p>The <strong>ShutterDown</strong> is a comprehensive photography business management system designed specifically for wedding photography studios. It provides a complete solution for managing the entire client lifecycle from initial booking to final delivery of photography services.</p>
+    
+                    <p>The system features <strong>role-based access control</strong> with different user types including photographers, admins, and clients. It manages client information, wedding events, deliverables tracking, team assignments, attendance monitoring, and real-time communication through WhatsApp integration.</p>
+    
+                    <p>Built with <strong>React</strong> for the frontend, <strong>Node.js</strong> with Express for the backend, and <strong>MongoDB</strong> for data persistence, the system offers real-time updates through Socket.io, automated backup systems, and comprehensive reporting capabilities.</p>
+    
+                    <p>The platform handles complex workflows including pre-wedding shoots, main wedding events, deliverable management (albums, photos, videos), team scheduling, attendance tracking, and client communication, making it an all-in-one solution for photography businesses.</p>
+                `
             },
             {
                 btnText: "Description",
                 title: "Project Description",
                 content: `
-                              <p><strong>1. Admin Role:</strong></p>
-
-                              <p><strong>User Management:</strong><br>
-                              Admin can <strong>create, edit, and delete users</strong>.<br>
-                              Admin can assign different roles (Manager, Shooter, Editor) to the users.<br>
-                              Admin can set <strong>access control</strong>, defining what each role can view or edit.</p>
-
-                              <p><strong>Custom Options Management:</strong><br>
-                              Admin can <strong>add custom options</strong> for events (like custom event categories or deliverable types).<br>
-                              Admin can configure default settings for events and deliverables.</p>
-
-                              <p><strong>Global Access Control:</strong><br>
-                              Admin can view and manage <strong>all events</strong>, users, and tasks in the system.<br>
-                              Ability to <strong>generate reports</strong> for events, deliverables, and user performance.</p>
-
-                              <p><strong>Role Assignments Overview:</strong><br>
-                              Admin can view <strong>which users are assigned to which roles</strong> in a given event (Manager, Shooter, Editor).</p>
-
-                              <hr>
-
-                              <p><strong>2. Manager Role:</strong></p>
-
-                              <p><strong>Event Creation:</strong><br>
-                              Manager can <strong>create events/weddings</strong> by entering all the necessary details (e.g., event name, date, location).<br>
-                              Manager can view the <strong>number of events</strong> on a particular date, with color-coded indicators:<br>
-                              - <strong>Green</strong> for one event.<br>
-                              - <strong>Yellow</strong> for two events.<br>
-                              - <strong>Red</strong> for three or more events.</p>
-
-                              <p><strong>Deliverables Assignment:</strong><br>
-                              Manager can assign <strong>deliverables</strong> for each event, such as:<br>
-                              - <strong>Cinematographer</strong><br>
-                              - <strong>Photos</strong><br>
-                              - <strong>Albums</strong><br>
-                              - <strong>Pre-wedding tasks</strong><br>
-                              Manager can assign editors or shooters to each deliverable.</p>
-
-                              <p><strong>Task Management:</strong><br>
-                              Manager can assign specific <strong>tasks to editors</strong> through the task section.<br>
-                              Managers can view task statuses and update progress as needed.</p>
-
-                              <p><strong>Calendar and List View:</strong><br>
-                              In the <strong>calendar section</strong>, Managers can view the number of events scheduled for a particular day or month.<br>
-                              In the <strong>list view</strong>, Managers can assign users (Shooters, Editors) to their respective roles for the event.</p>
-
-                              <p><strong>Client and Event Overview:</strong><br>
-                              Managers can view a detailed list of <strong>clients and their events</strong>.<br>
-                              Each event will show <strong>assigned employees</strong>, their roles, and their specific deliverables.</p>
-
-                              <p><strong>Communication:</strong><br>
-                              Managers can <strong>send WhatsApp messages</strong> to clients directly through the application for quick communication.</p>
-
-                              <hr>
-
-                              <p><strong>3. Shooter Role:</strong></p>
-
-                              <p><strong>Event Overview:</strong><br>
-                              Shooters can <strong>view details of events</strong> where they are assigned.<br>
-                              Shooters can see their role and the deliverables they are responsible for (e.g., photos, cinematography).</p>
-
-                              <p><strong>Task Status Overview:</strong><br>
-                              Shooters can see the <strong>status of deliverables and tasks</strong> assigned to them.</p>
-
-                              <hr>
-
-                              <p><strong>4. Editor Role:</strong></p>
-
-                              <p><strong>Event Overview:</strong><br>
-                              Editors can <strong>view details of events</strong> where they are assigned.<br>
-                              Editors can view <strong>deliverables</strong> they are responsible for (e.g., albums, photo editing).</p>
-
-                              <p><strong>Task Management:</strong><br>
-                              Editors can <strong>update the status</strong> of tasks assigned to them (e.g., completed, in progress).<br>
-                              Editors can view their list of assigned tasks and make updates directly from the task section.</p>
-
-                              <hr>
-
-                              <p><strong>5. Global Features:</strong></p>
-
-                              <p><strong>User Authentication:</strong><br>
-                              <strong>Google Sign-In</strong> functionality for secure and easy login.<br>
-                              <strong>Forget password</strong> feature allowing users to reset their password if needed.</p>
-
-                              <p><strong>User Profile Management:</strong><br>
-                              Users (across all roles) can <strong>update their profile details</strong>.<br>
-                              Users can <strong>upload files</strong> (e.g., profile pictures, work samples) to their profiles.</p>
-
-                              `
+                    <h4>1. Client Management System:</h4>
+                    <p><strong>Client Registration & Information:</strong></p>
+                    <ul>
+                        <li>Complete client profiles with bride/groom details, contact information, and wedding dates.</li>
+                        <li>Payment tracking with status monitoring and pending amount calculations.</li>
+                        <li>Project status management (Open, In Progress, Completed).</li>
+                        <li>Pre-wedding shoot planning with photographer and equipment requirements.</li>
+                    </ul>
+    
+                    <p><strong>Event Management:</strong></p>
+                    <ul>
+                        <li>Wedding event scheduling with multiple dates support.</li>
+                        <li>Pre-wedding shoot coordination with photographer assignments.</li>
+                        <li>Event-specific deliverables tracking and requirements.</li>
+                        <li>Checklist management for each event type.</li>
+                    </ul>
+    
+                    <hr>
+    
+                    <h4>2. Team & Resource Management:</h4>
+                    <p><strong>User Management:</strong></p>
+                    <ul>
+                        <li>Role-based access control (Admin, Photographer, Assistant).</li>
+                        <li>Complete employee profiles with personal and professional details.</li>
+                        <li>Document management (Aadhar, PAN, Driving License, etc.).</li>
+                        <li>Google Calendar integration for scheduling.</li>
+                    </ul>
+    
+                    <p><strong>Attendance System:</strong></p>
+                    <ul>
+                        <li>Real-time attendance tracking with mobile check-in/out.</li>
+                        <li>Work-from-home (WFH) tracking and approval system.</li>
+                        <li>Holiday management and leave tracking.</li>
+                        <li>Attendance reports and analytics.</li>
+                    </ul>
+    
+                    <hr>
+    
+                    <h4>3. Deliverables & Project Tracking:</h4>
+                    <p><strong>Deliverable Management:</strong></p>
+                    <ul>
+                        <li>Comprehensive deliverable tracking (Photos, Albums, Videos, Cinematography).</li>
+                        <li>Pre-wedding deliverables with specific requirements.</li>
+                        <li>Raw photos and edited photos management.</li>
+                        <li>Hard drives, pen drives, and physical deliverables tracking.</li>
+                    </ul>
+    
+                    <p><strong>Project Workflow:</strong></p>
+                    <ul>
+                        <li>Deadline management with automated notifications.</li>
+                        <li>Task assignment and progress tracking.</li>
+                        <li>Quality control and approval workflows.</li>
+                        <li>Client feedback and revision management.</li>
+                    </ul>
+    
+                    <hr>
+    
+                    <h4>4. Communication & Notifications:</h4>
+                    <p><strong>Real-time Communication:</strong></p>
+                    <ul>
+                        <li>WhatsApp integration for client communication.</li>
+                        <li>Real-time notifications using Socket.io.</li>
+                        <li>Email notifications for important updates.</li>
+                        <li>Team collaboration tools and messaging.</li>
+                    </ul>
+    
+                    <p><strong>Reporting & Analytics:</strong></p>
+                    <ul>
+                        <li>Comprehensive reporting dashboard with charts and graphs.</li>
+                        <li>Team performance analytics and attendance reports.</li>
+                        <li>Client satisfaction tracking and feedback analysis.</li>
+                        <li>Financial reporting and payment tracking.</li>
+                    </ul>
+    
+                    <hr>
+    
+                    <h4>5. System Administration:</h4>
+                    <p><strong>Data Management:</strong></p>
+                    <ul>
+                        <li>Automated backup system with scheduled backups.</li>
+                        <li>Data recovery and restoration capabilities.</li>
+                        <li>System monitoring and health checks.</li>
+                        <li>User activity logging and audit trails.</li>
+                    </ul>
+    
+                    <p><strong>Security & Access Control:</strong></p>
+                    <ul>
+                        <li>JWT-based authentication with secure token management.</li>
+                        <li>Role-based permissions and access control.</li>
+                        <li>Secure file upload and storage management.</li>
+                        <li>API security with CORS and request validation.</li>
+                    </ul>
+                `
             },
             {
                 btnText: "Tech",
                 title: "Technologies Used",
                 content: `
-                              <p><strong>1. Frontend:</strong><br>
-                              <strong>React</strong> for building the user interface, providing a responsive and dynamic experience for all roles (Admin, Manager, Shooter, Editor).</p>
-
-                              <p><strong>2. Backend:</strong><br>
-                              <strong>Node.js</strong> as the backend runtime environment to manage server-side logic.<br>
-                              <strong>REST APIs</strong> to enable communication between the frontend and backend, allowing users to interact with events, tasks, and deliverables.</p>
-
-                              <p><strong>3. Database:</strong><br>
-                              <strong>MongoDB</strong> to store:</p>
-                              <ul>
-                                  <li>Event data (event details, dates, assigned users).</li>
-                                  <li>User profiles (personal information, assigned roles).</li>
-                                  <li>Deliverables, tasks, and client information.</li>
-                              </ul>
-                            `
+                    <p><strong>1. Frontend Technologies:</strong></p>
+                    <ul>
+                        <li><strong>React 18.2.0</strong> - Modern UI framework with hooks and functional components</li>
+                        <li><strong>React Router DOM 6.21.1</strong> - Client-side routing and navigation</li>
+                        <li><strong>Redux Toolkit 2.0.1</strong> - Global state management for complex application state</li>
+                        <li><strong>Zustand 5.0.1</strong> - Lightweight state management for specific features</li>
+                        <li><strong>Jotai 2.10.0</strong> - Atomic state management for component-level state</li>
+                    </ul>
+    
+                    <p><strong>2. Backend Technologies:</strong></p>
+                    <ul>
+                        <li><strong>Node.js</strong> - JavaScript runtime for server-side development</li>
+                        <li><strong>Express.js 4.18.2</strong> - Web application framework for RESTful APIs</li>
+                        <li><strong>Socket.io 4.7.5</strong> - Real-time bidirectional communication</li>
+                        <li><strong>JWT (JSON Web Tokens)</strong> - Secure authentication and authorization</li>
+                        <li><strong>Multer 1.4.5</strong> - File upload handling and processing</li>
+                    </ul>
+    
+                    <p><strong>3. Database & Storage:</strong></p>
+                    <ul>
+                        <li><strong>MongoDB 6.8.1</strong> - NoSQL database for flexible data storage</li>
+                        <li><strong>Mongoose 6.13.4</strong> - MongoDB object modeling for Node.js</li>
+                        <li><strong>GridFS</strong> - MongoDB file storage system for large files</li>
+                        <li><strong>MongoDB Database Tools</strong> - Backup and data management utilities</li>
+                    </ul>
+    
+                    <p><strong>4. UI/UX Libraries:</strong></p>
+                    <ul>
+                        <li><strong>Bootstrap 5.3.2</strong> - CSS framework for responsive design</li>
+                        <li><strong>React Bootstrap 2.9.2</strong> - Bootstrap components for React</li>
+                        <li><strong>Reactstrap 9.2.1</strong> - Additional Bootstrap components</li>
+                        <li><strong>FullCalendar 6.1.10</strong> - Advanced calendar component for scheduling</li>
+                        <li><strong>Chart.js 4.4.9</strong> - Data visualization and analytics charts</li>
+                    </ul>
+    
+                    <p><strong>5. Integration & Services:</strong></p>
+                    <ul>
+                        <li><strong>Google APIs 144.0.0</strong> - Google Calendar integration</li>
+                        <li><strong>Nodemailer 6.9.15</strong> - Email service for notifications</li>
+                        <li><strong>Node-cron 3.0.3</strong> - Scheduled tasks and automated processes</li>
+                        <li><strong>React OAuth Google</strong> - Google authentication integration</li>
+                    </ul>
+                `
             },
             {
                 btnText: "Libraries",
                 title: "Libraries Used",
                 content: `
-                           
-
-                            <p><strong>1. Frontend Libraries</strong></p>
-
-                            <p><strong>@react-oauth/google</strong>: Google OAuth for authentication.</p>
-                            <p><strong>@react-pdf/renderer</strong>: Generates PDFs directly in React.</p>
-                            <p><strong>@reduxjs/toolkit</strong>: State management for React using Redux.</p>
-                            <p><strong>axios</strong>: For making HTTP requests from the frontend to the backend.</p>
-                            <p><strong>bootstrap</strong> and <strong>react-bootstrap</strong>: CSS framework for responsive and mobile-first web design.</p>
-                            <p><strong>date-fns</strong>, <strong>dayjs</strong>, <strong>moment</strong>: Date manipulation libraries.</p>
-                            <p><strong>draft-js</strong> and <strong>draft-js-export-html</strong>: For creating and exporting rich text editors in React.</p>
-                            <p><strong>html2canvas</strong>: Takes screenshots of web pages.</p>
-                            <p><strong>js-cookie</strong>: Manages cookies on the client side.</p>
-                            <p><strong>jspdf</strong>: Generates PDFs from web pages.</p>
-                            <p><strong>jwt-decode</strong>: Decodes JSON Web Tokens (JWT).</p>
-                            <p><strong>react-calendar</strong>: Calendar component for React.</p>
-                            <p><strong>react-draft-wysiwyg</strong>: WYSIWYG editor for React.</p>
-                            <p><strong>react-icons</strong>: Provides popular icons as React components.</p>
-                            <p><strong>react-phone-input-2</strong>, <strong>react-phone-number-input</strong>: For phone number input formatting.</p>
-                            <p><strong>react-pro-sidebar</strong>: Sidebar menu for React applications.</p>
-                            <p><strong>react-redux</strong>: Connects React with Redux for state management.</p>
-                            <p><strong>react-select</strong>: Customizable select input control for React.</p>
-                            <p><strong>react-toastify</strong>: Provides toast notifications.</p>
-                            <p><strong>reactstrap</strong>: React components for Bootstrap.</p>
-                            <p><strong>socket.io-client</strong>: Client for real-time, bidirectional, event-based communication.</p>
-
-                            <p><strong>2. Backend Libraries</strong></p>
-
-                            <p><strong>body-parser</strong>: Parses incoming request bodies in a middleware.</p>
-                            <p><strong>config</strong>: Manages configuration files.</p>
-                            <p><strong>cookie-parser</strong>: Parses cookies attached to the client request object.</p>
-                            <p><strong>cors</strong>: Allows cross-origin resource sharing.</p>
-                            <p><strong>dotenv</strong>: Loads environment variables from <code>.env</code> files.</p>
-                            <p><strong>express</strong>: Web framework for Node.js.</p>
-                            <p><strong>gridfs-stream</strong>: Streams files to and from MongoDB GridFS.</p>
-                            <p><strong>mongodb</strong>, <strong>mongoose</strong>: Database driver and ODM for MongoDB.</p>
-                            <p><strong>multer</strong>: Middleware for handling <code>multipart/form-data</code>, primarily for file uploads.</p>
-                            <p><strong>node-cron</strong>: Schedules tasks to run periodically.</p>
-                            <p><strong>nodemailer</strong>: Sends emails from Node.js applications.</p>
-                            <p><strong>socket.io</strong>: Real-time communication library.</p>
-
-                            `
-            },
+                    <h4>Frontend Libraries:</h4>
+                    
+                    <p><strong>Core React Libraries:</strong></p>
+                    <ul>
+                        <li><strong>react</strong> (18.2.0) & <strong>react-dom</strong> (18.2.0) - Core React framework</li>
+                        <li><strong>react-router-dom</strong> (6.21.1) - Client-side routing</li>
+                        <li><strong>react-scripts</strong> (5.0.1) - Create React App build tools</li>
+                    </ul>
+    
+                    <p><strong>State Management:</strong></p>
+                    <ul>
+                        <li><strong>@reduxjs/toolkit</strong> (2.0.1) - Redux state management</li>
+                        <li><strong>react-redux</strong> (9.0.4) - React-Redux bindings</li>
+                        <li><strong>zustand</strong> (5.0.1) - Lightweight state management</li>
+                        <li><strong>jotai</strong> (2.10.0) - Atomic state management</li>
+                    </ul>
+    
+                    <p><strong>UI Components & Styling:</strong></p>
+                    <ul>
+                        <li><strong>bootstrap</strong> (5.3.2) - CSS framework</li>
+                        <li><strong>react-bootstrap</strong> (2.9.2) - Bootstrap React components</li>
+                        <li><strong>reactstrap</strong> (9.2.1) - Additional Bootstrap components</li>
+                        <li><strong>react-pro-sidebar</strong> (0.7.1) - Professional sidebar component</li>
+                        <li><strong>react-icons</strong> (4.12.0) - Icon library</li>
+                        <li><strong>react-tippy</strong> (1.4.0) & <strong>tippy.js</strong> (6.3.7) - Tooltip components</li>
+                    </ul>
+    
+                    <p><strong>Data Visualization & Calendar:</strong></p>
+                    <ul>
+                        <li><strong>chart.js</strong> (4.4.9) - Charting library</li>
+                        <li><strong>react-chartjs-2</strong> (5.3.0) - Chart.js React wrapper</li>
+                        <li><strong>@fullcalendar/react</strong> (6.1.10) - Calendar component</li>
+                        <li><strong>@fullcalendar/daygrid</strong> (6.1.10) - Day grid view</li>
+                        <li><strong>@fullcalendar/timegrid</strong> (6.1.10) - Time grid view</li>
+                        <li><strong>@fullcalendar/list</strong> (6.1.10) - List view</li>
+                        <li><strong>@fullcalendar/interaction</strong> (6.1.10) - Interaction features</li>
+                        <li><strong>react-calendar</strong> (4.8.0) - Additional calendar component</li>
+                    </ul>
+    
+                    <p><strong>Forms & Input:</strong></p>
+                    <ul>
+                        <li><strong>react-select</strong> (5.8.0) - Select input component</li>
+                        <li><strong>react-phone-input-2</strong> (2.15.1) - Phone number input</li>
+                        <li><strong>react-phone-number-input</strong> (3.3.8) - Alternative phone input</li>
+                        <li><strong>react-draft-wysiwyg</strong> (1.15.0) - Rich text editor</li>
+                        <li><strong>draft-js</strong> (0.11.7) - Rich text framework</li>
+                        <li><strong>draft-js-export-html</strong> (1.4.1) - HTML export for Draft.js</li>
+                    </ul>
+    
+                    <p><strong>PDF & Document Generation:</strong></p>
+                    <ul>
+                        <li><strong>@react-pdf/renderer</strong> (3.4.4) - PDF generation</li>
+                        <li><strong>jspdf</strong> (2.5.1) - PDF creation library</li>
+                        <li><strong>html2canvas</strong> (1.4.1) - HTML to canvas conversion</li>
+                    </ul>
+    
+                    <p><strong>HTTP & API:</strong></p>
+                    <ul>
+                        <li><strong>axios</strong> (1.6.3) - HTTP client</li>
+                        <li><strong>@tanstack/react-query</strong> (5.62.0) - Data fetching and caching</li>
+                        <li><strong>socket.io-client</strong> (4.7.5) - Real-time communication</li>
+                    </ul>
+    
+                    <p><strong>Authentication & Security:</strong></p>
+                    <ul>
+                        <li><strong>@react-oauth/google</strong> (0.12.1) - Google OAuth</li>
+                        <li><strong>jwt-decode</strong> (4.0.0) - JWT token decoding</li>
+                        <li><strong>js-cookie</strong> (3.0.5) - Cookie management</li>
+                    </ul>
+    
+                    <p><strong>Date & Time:</strong></p>
+                    <ul>
+                        <li><strong>moment</strong> (2.30.1) - Date manipulation</li>
+                        <li><strong>dayjs</strong> (1.11.10) - Lightweight date library</li>
+                        <li><strong>date-fns</strong> (3.3.1) - Modern date utility library</li>
+                    </ul>
+    
+                    <p><strong>Notifications & UI Feedback:</strong></p>
+                    <ul>
+                        <li><strong>react-toastify</strong> (9.1.3) - Toast notifications</li>
+                        <li><strong>web-vitals</strong> (2.1.4) - Performance monitoring</li>
+                    </ul>
+    
+                    <h4>Backend Libraries:</h4>
+    
+                    <p><strong>Core Framework:</strong></p>
+                    <ul>
+                        <li><strong>express</strong> (4.18.2) - Web application framework</li>
+                        <li><strong>cors</strong> (2.8.5) - Cross-origin resource sharing</li>
+                        <li><strong>body-parser</strong> (1.20.1) - Request body parsing</li>
+                        <li><strong>cookie-parser</strong> (1.4.6) - Cookie parsing middleware</li>
+                    </ul>
+    
+                    <p><strong>Database & ODM:</strong></p>
+                    <ul>
+                        <li><strong>mongoose</strong> (6.13.4) - MongoDB object modeling</li>
+                        <li><strong>mongodb</strong> (6.8.1) - MongoDB driver</li>
+                        <li><strong>gridfs-stream</strong> (1.1.1) - GridFS file streaming</li>
+                    </ul>
+    
+                    <p><strong>Authentication & Security:</strong></p>
+                    <ul>
+                        <li><strong>jsonwebtoken</strong> (9.0.2) - JWT token handling</li>
+                        <li><strong>dotenv</strong> (16.4.7) - Environment variable management</li>
+                    </ul>
+    
+                    <p><strong>File Handling:</strong></p>
+                    <ul>
+                        <li><strong>multer</strong> (1.4.5-lts.1) - File upload middleware</li>
+                        <li><strong>mime-types</strong> (2.1.35) - MIME type detection</li>
+                        <li><strong>stream</strong> (0.0.3) - Stream utilities</li>
+                    </ul>
+    
+                    <p><strong>Communication & Integration:</strong></p>
+                    <ul>
+                        <li><strong>socket.io</strong> (4.7.5) - Real-time communication</li>
+                        <li><strong>nodemailer</strong> (6.9.15) - Email service</li>
+                        <li><strong>googleapis</strong> (144.0.0) - Google APIs integration</li>
+                    </ul>
+    
+                    <p><strong>Scheduling & Automation:</strong></p>
+                    <ul>
+                        <li><strong>node-cron</strong> (3.0.3) - Cron job scheduling</li>
+                    </ul>
+    
+                    <p><strong>Date & Time:</strong></p>
+                    <ul>
+                        <li><strong>moment</strong> (2.30.1) - Date manipulation</li>
+                        <li><strong>dayjs</strong> (1.11.13) - Lightweight date library</li>
+                    </ul>
+    
+                    <p><strong>Configuration:</strong></p>
+                    <ul>
+                        <li><strong>config</strong> (3.3.12) - Configuration management</li>
+                    </ul>
+    
+                    <p><strong>Development Tools:</strong></p>
+                    <ul>
+                        <li><strong>nodemon</strong> (2.0.20) - Development server with auto-restart</li>
+                    </ul>
+                `
+            }
         ]
     },
 
@@ -1010,210 +904,6 @@ export const projectsData = [
                                 <li><strong>reactstrap</strong>: Bootstrap components specifically for React.</li>
                                 <li><strong>redux</strong>: Manages state in JavaScript applications, especially useful in React.</li>
                             </ol>
-
-
-                            `
-            },
-        ]
-    },
-
-    {
-        title: 'IoT Management System',
-        videoPath: "/videos/dewa.mp4",
-        techs: ['React', 'Node', 'PostgreSQL', 'D3.js'],
-        modalsArray: [
-            {
-                btnText: "Info",
-                title: "General Information",
-                content: `
-                              <p>The <strong>IoT Management System</strong> is a comprehensive platform designed to visualize, manage, and schedule IoT devices within a building. The system allows users to upload or retrieve <strong>IoT metrics data</strong> and display it in various formats, including line charts, bar charts, and scatter plots.</p>
-
-                              <p>One of the standout features is the <strong>3D visualization</strong>, where users can interact with a 3D model of the building, displaying devices and their locations on different floors. The system also supports <strong>multi-level device classification</strong>, allowing users to filter devices by floor and type, providing a hierarchical view of device statuses and activity.</p>
-
-                              <p>Additionally, users can <strong>schedule tasks for devices</strong>, such as turning them on or off at specific times, with scheduling data stored in a <strong>PostgreSQL database</strong>. The app provides real-time monitoring and control of devices, making it easy to manage multiple devices from a central interface.</p>
-
-                              <p>Built using <strong>React + Vite</strong> for the frontend, <strong>Node.js</strong> for the backend, and <strong>PostgreSQL</strong> for data storage, the system efficiently handles large volumes of data while providing dynamic visualizations and device control features.</p>
-
-                            `
-            },
-            {
-                btnText: "Description",
-                title: "Project Description",
-                content: `
-                              <h4>1. Data Visualization:</h4>
-
-                              <p><strong>1. Data Metrics Visualization:</strong></p>
-                              <ul>
-                                  <li>The system should allow users to view <strong>various IoT metrics</strong> (e.g., temperature, device activity, energy consumption) in real-time or using dummy data.</li>
-                                  <li><strong>Multiple types of charts/plots</strong> (e.g., line charts, bar charts, scatter plots) are used to display the metrics for easy interpretation.</li>
-                                  <li>The visualization updates dynamically based on the data retrieved from the database or APIs.</li>
-                              </ul>
-
-                              <p><strong>2. Historical Data View:</strong></p>
-                              <ul>
-                                  <li>Users can view <strong>historical data</strong> of the recorded metrics.</li>
-                                  <li>Allow users to <strong>filter or select specific time ranges</strong> to view trends over time (e.g., daily, weekly, monthly views).</li>
-                              </ul>
-
-                              <hr>
-
-                              <h4>2. 3D Visualization:</h4>
-
-                              <p><strong>1. 3D Model Integration:</strong></p>
-                              <ul>
-                                  <li>Implemented a <strong>3D visualization</strong> for representing building layouts or device locations in the system for the first time.</li>
-                                  <li>Users can <strong>interact with the 3D model</strong>, rotate, zoom, and explore different views of the floor plan or device layout.</li>
-                              </ul>
-
-                              <p><strong>2. Device Visualization in 3D:</strong></p>
-                              <ul>
-                                  <li>The 3D model includes <strong>visual markers for devices</strong>, such as sensors or IoT equipment, showing where they are located within the building structure.</li>
-                                  <li>Devices in the 3D model should be clickable, displaying <strong>additional information</strong> (e.g., status, last active, scheduled tasks) when selected.</li>
-                              </ul>
-
-                              <hr>
-
-                              <h4>3. Multi-level Device Classification:</h4>
-
-                              <p><strong>1. Device Classification by Floor:</strong></p>
-                              <ul>
-                                  <li>Devices are classified and organized based on their <strong>location in a building</strong>.</li>
-                                  <li>Users can view devices on different <strong>floors or areas</strong> of the building by navigating through the classification hierarchy (e.g., floor, room, section).</li>
-                              </ul>
-
-                              <p><strong>2. Filter Devices by Category:</strong></p>
-                              <ul>
-                                  <li>Provide filtering capabilities where users can filter devices by <strong>type or function</strong> (e.g., sensors, actuators, cameras).</li>
-                                  <li>Display relevant metrics for each category of devices in real-time or historical views.</li>
-                              </ul>
-
-                              <hr>
-
-                              <h4>4. Device Scheduling:</h4>
-
-                              <p><strong>1. Schedule Management:</strong></p>
-                              <ul>
-                                  <li>The system allows users to <strong>schedule tasks or actions</strong> for specific devices (e.g., turn on/off, adjust settings).</li>
-                                  <li>Scheduling information is stored in the <strong>PostgreSQL database</strong> for persistence.</li>
-                                  <li>Users can set <strong>recurring schedules</strong> (e.g., daily, weekly, at a specific time) or one-time schedules.</li>
-                              </ul>
-
-                              <p><strong>2. View and Modify Schedules:</strong></p>
-                              <ul>
-                                  <li>Users can view a <strong>list of scheduled tasks</strong> for all devices or specific devices.</li>
-                                  <li>The system allows users to <strong>modify or cancel scheduled tasks</strong> if needed.</li>
-                              </ul>
-
-                              <hr>
-
-                              <h4>5. Device Control and Monitoring:</h4>
-
-                              <p><strong>1. Real-time Monitoring:</strong></p>
-                              <ul>
-                                  <li>The system provides <strong>real-time monitoring</strong> of device statuses (e.g., on/off, active/inactive).</li>
-                                  <li>Users can see the <strong>current state of devices</strong> and view logs of recent activity.</li>
-                              </ul>
-
-                              <p><strong>2. Control Devices Remotely:</strong></p>
-                              <ul>
-                                  <li>Allow users to <strong>remotely control devices</strong> through the app, triggering actions such as turning devices on or off or adjusting configurations based on the device type.</li>
-                              </ul>
-
-                              <hr>
-
-                              <h4>6. Data Management:</h4>
-
-                              <p><strong>1. PostgreSQL Integration:</strong></p>
-                              <ul>
-                                  <li><strong>PostgreSQL</strong> is used to store data, including device schedules, device information, and metrics history.</li>
-                                  <li>Ensure efficient querying of data for real-time updates and historical views.</li>
-                              </ul>
-
-                              <p><strong>2. REST API Backend:</strong></p>
-                              <ul>
-                                  <li>A <strong>Node.js</strong> backend with <strong>REST APIs</strong> handles communication between the frontend and the database, fetching data for visualizations, device scheduling, and control.</li>
-                              </ul>
-
-
-
-                              `
-            },
-            {
-                btnText: "Tech",
-                title: "Technologies Used",
-                content: `
-                              <p><strong>1. Frontend:</strong></p>
-                              <ul>
-                                  <li><strong>React + Vite</strong> for building the user interface, providing fast load times and efficient development using modern front-end technologies.</li>
-                              </ul>
-
-                              <p><strong>2. Backend:</strong></p>
-                              <ul>
-                                  <li><strong>Node.js</strong> for the backend, managing API requests and database interactions.</li>
-                                  <li><strong>PostgreSQL</strong> for persisting device schedules, metrics data, and device classification.</li>
-                              </ul>
-
-                              <p><strong>3. Visualization and 3D Modelling:</strong></p>
-                              <ul>
-                                  <li><strong>D3.js</strong> and other relevant 3D libraries for implementing <strong>charts, plots, and 3D visualizations</strong>.</li>
-                              </ul>
-
-                            `
-            },
-            {
-                btnText: "Libraries",
-                title: "Libraries Used",
-                content: `
-                         
-
-                            <p><strong>1. @fullcalendar/daygrid, @fullcalendar/interaction, @fullcalendar/list, @fullcalendar/react, @fullcalendar/timegrid</strong>: Provides a calendar interface with different views (e.g., day grid, time grid) and supports interaction like event creation and drag-and-drop.</p>
-
-                            <p><strong>2. @react-three/drei and @react-three/fiber</strong>: Tools for building 3D interfaces and visualizations with Three.js in React, especially useful for 3D modeling and interactive scenes.</p>
-
-                            <p><strong>3. axios</strong>: For making HTTP requests, commonly used for API interactions.</p>
-
-                            <p><strong>4. crypto-js</strong>: Used for encryption and decryption, providing various cryptographic functions.</p>
-
-                            <p><strong>5. dayjs and luxon</strong>: Date and time manipulation libraries, with Luxon offering extensive timezone support.</p>
-
-                            <p><strong>6. echarts and echarts-for-react</strong>: Provides powerful charting options for data visualization, including line charts, bar charts, scatter plots, and more.</p>
-
-                            <p><strong>7. react-calendar</strong>: Adds a calendar component for date selection in React applications.</p>
-
-                            <p><strong>8. react-google-charts</strong>: A library for integrating Google Charts with React, useful for rich data visualizations.</p>
-
-                            <p><strong>9. react-icons</strong>: Offers a collection of popular icons as React components.</p>
-
-                            <p><strong>10. react-router-dom</strong>: Manages client-side routing, essential for single-page applications in React.</p>
-
-                            <p><strong>11. react-select</strong>: A customizable select dropdown component for React, supporting multi-select and other advanced features.</p>
-
-                            <p><strong>12. react-tailwindcss-datepicker</strong>: A date picker component styled with Tailwind CSS, for seamless integration into Tailwind-based UIs.</p>
-
-                            <p><strong>13. react-toastify</strong>: Enables customizable toast notifications in React applications.</p>
-
-                            <p><strong>14. react-tooltip</strong>: Adds tooltips to elements in React applications, providing contextual information.</p>
-
-                            <p><strong>15. recharts</strong>: Another library for data visualization in React, with easy-to-use chart components like bar, line, and pie charts.</p>
-
-                            <p><strong>16. three</strong>: A JavaScript library for creating 3D graphics in the browser, commonly used with React Three Fiber for interactive 3D elements.</p>
-
-                            <h4>Backend Libraries:</h4>
-
-                            <p><strong>17. cors</strong>: Middleware to enable Cross-Origin Resource Sharing, allowing the API to be accessed from different domains.</p>
-
-                            <p><strong>18. dotenv</strong>: Loads environment variables from a <code>.env</code> file, essential for managing sensitive data like API keys.</p>
-
-                            <p><strong>19. express</strong>: A web framework for Node.js, handling server-side routing and middleware.</p>
-
-                            <p><strong>20. nodemon</strong>: A development tool that automatically restarts the server when changes are detected, aiding in faster development.</p>
-
-                            <p><strong>21. pg</strong>: A PostgreSQL client for Node.js, enabling connection and queries to PostgreSQL databases.</p>
-
-                            <p><strong>22. pg-hstore</strong>: Serializes and deserializes JSON data for PostgreSQL, used with Sequelize for PostgreSQL support.</p>
-
-                            <p><strong>23. sequelize and sequelize-cli</strong>: An ORM (Object Relational Mapping) for managing PostgreSQL, allowing for easier interaction with the database and model-based querying.</p>
-
 
 
                             `
@@ -1427,4 +1117,344 @@ export const projectsData = [
             },
         ]
     },
+
+    {
+        title: 'D3 Visualization Project',
+        videoPath: "/videos/d3visualization.mp4",
+        techs: ['React', 'D3.js'],
+        modalsArray: [
+            {
+                btnText: "Info",
+                title: "General Information",
+                content: `<p><strong>The D3 Visualization Project</strong> is a web-based tool that allows users to upload datasets and visualize data using various chart types created with <strong>D3.js</strong>.</p>
+
+                                    <p><strong>Project Overview:</strong></p>
+
+                                    <p><strong>1. Dataset Upload:</strong><br>
+                                    Users can upload datasets, which are displayed in a data table for easy viewing and management.</p>
+
+                                    <p><strong>2. Basic Visualizations:</strong><br>
+                                    Users can create <strong>scatter plots</strong> and <strong>radar plots</strong> based on the uploaded data. The interface allows selecting specific variables, generating customized, interactive visualizations.</p>
+
+                                    <p><strong>3. Advanced Dashboard:</strong><br>
+                                    A preloaded liver cirrhosis dataset from <strong>Kaggle</strong> enables more complex visualizations, including bar charts and density plots, revealing deeper insights and trends within the dataset.</p>
+
+                                    <p><strong>Interactive Features:</strong><br>
+                                    Throughout the project, users can interact with charts, zoom in for detailed views, and explore the data dynamically.</p>
+
+                                    <p><strong>Technologies Used:</strong><br>
+                                    Built with <strong>React</strong> and <strong>D3.js</strong>, the system provides a responsive and customizable interface for data analysis and visualization.</p>`
+            },
+            {
+                btnText: "Description",
+                title: "Project Description",
+                content: `<p><strong>1. Data Upload and Display:</strong></p>
+                                    
+                                    <p><strong>Data Upload:</strong><br>
+                                    - Users can upload datasets.<br>
+                                    - The system parses and validates the uploaded data to ensure correct format for visualization.</p>
+
+                                    <p><strong>Data Display:</strong><br>
+                                    - Uploaded data is displayed in a tabular format.<br>
+                                    - Users can view the full dataset, including columns and rows.<br>
+                                    - Optional: Implement sorting or filtering features on the table.</p>
+
+                                    <hr>
+
+                                    <p><strong>2. Basic Visualization Section:</strong></p>
+
+                                    <p><strong>Scatter Plot:</strong><br>
+                                    - Users can create scatter plots to visualize relationships between two numerical variables.<br>
+                                    - Options to select x-axis and y-axis variables from the dataset.<br>
+                                    - Customizable features: color by third variable, size, tooltips for points.</p>
+
+                                    <p><strong>Radar Plot:</strong><br>
+                                    - Enables visualization of multi-dimensional data in a radar (spider) plot.<br>
+                                    - Allows selection of multiple variables for axes.<br>
+                                    - Interactive features like hovering to see values.</p>
+
+                                    <hr>
+
+                                    <p><strong>3. Dashboard Section (Liver Cirrhosis Dataset):</strong></p>
+
+                                    <p><strong>Dataset Integration:</strong><br>
+                                    - Preloaded liver cirrhosis dataset from Kaggle displayed in a tabular format for reference.</p>
+
+                                    <p><strong>Data Visualization with D3.js:</strong><br>
+                                    - Multiple visualizations (scatter plot, bar chart, density plot) implemented with the liver cirrhosis dataset.<br>
+                                    - Interactive exploration with D3.js features:<br>
+                                      &nbsp;&nbsp;&bull; Zooming and panning for detailed views.<br>
+                                      &nbsp;&nbsp;&bull; Tooltips showing additional info when hovering over elements.</p>
+
+                                    <p><strong>Insights and Analytics:</strong><br>
+                                    - Visualize trends, distributions, and correlations in the data.<br>
+                                    - Example: Distribution of variables like age, disease stages, treatment outcomes via bar or density plots.</p>
+
+                                    <hr>
+
+                                    <p><strong>4. Additional Features:</strong></p>
+
+                                    <p><strong>Customization of Visualizations:</strong><br>
+                                    - Options for customizing charts: axis labels, color schemes, legends.<br>
+                                    - Ability to resize or rearrange charts in different layouts.</p>
+
+                                    <p><strong>Dynamic Interaction:</strong><br>
+                                    - Ensures visualizations are responsive and interactive, adapting to various screen sizes and input methods.</p>
+
+                                    `
+            },
+            {
+                btnText: "Tech",
+                title: "Technologies Used",
+                content: `
+                              <strong>1. Frontend:</strong><br>
+                              - React is used for building the user interface and managing the interactive components of the system.<br><br>
+
+                              <strong>2. Data Visualization:</strong><br>
+                              - D3.js is used for rendering the visualizations (scatter plot, radar plot, bar chart, density plot), enabling custom, interactive data charts.<br><br>
+
+                              <strong>3. Dataset Integration:</strong><br>
+                              - The liver cirrhosis dataset from Kaggle is preloaded in the dashboard for advanced data analysis and visualization.`
+            },
+            {
+                btnText: "Libraries",
+                title: "Libraries Used",
+                content: `
+               
+                1. <strong>React</strong> - Used for building the user interface and managing interactive components.<br>
+                2. <strong>Reactstrap</strong> - Provides pre-built Bootstrap-styled components for a responsive UI design.<br>
+                3. <strong>D3.js</strong> - Renders custom, interactive data visualizations (scatter plot, radar plot, bar chart, density plot).<br>
+                4. <strong>React-D3-Library</strong> - Bridges D3 visualizations with React components for seamless integration.<br>
+                5. <strong>PapaParse</strong> - Parses and loads CSV data, enabling easy handling of the liver cirrhosis dataset from Kaggle for advanced analysis.
+              `
+            },
+        ]
+    },
+
+    {
+        title: 'Sheet Scoring System',
+        videoPath: "/videos/excelScoring.mp4",
+        techs: ['React', 'Flask (py)', 'MongoDB'],
+        modalsArray: [
+            {
+                btnText: "Info",
+                title: "General Information",
+                content: `
+                                    <p>The <strong>Sheet Scoring System</strong> is a web-based platform designed to streamline the process of conducting simulation-based learning, with two main user views: <strong>student</strong> and <strong>admin</strong>.</p>
+
+                                    <p>On the <strong>student side</strong>, users can register, edit their profiles, and enroll in simulations. Once registered, students download an Excel sheet containing simulation tasks, perform the necessary calculations, and upload the completed sheet. The system automatically processes the uploaded file, calculates scores based on predefined formulas, and provides instant feedback to the student.</p>
+
+                                    <p>On the <strong>admin side</strong>, admins can create and manage simulations by uploading Excel sheets, setting time limits, and monitoring student participation. They can view detailed reports, track student submissions, and manage all student data, including profile edits and score updates.</p>
+
+                                    <p>Built using <strong>React</strong> for the frontend, <strong>Flask</strong> for backend logic, and <strong>MongoDB</strong> for data management, the system offers an efficient and automated way to conduct and score simulations while providing real-time feedback to students and giving admins full control over the simulation process.</p>
+
+                                    `
+            },
+            {
+                btnText: "Description",
+                title: "Project Description",
+                content: `
+                                    <h4>1. Student Side (User Interface):</h4>
+
+                                    <p><strong>1. Student Registration:</strong></p>
+                                    <ul>
+                                        <li>Students can <strong>register an account</strong> by providing their personal details.</li>
+                                        <li>Allow students to <strong>edit their profile</strong> information after registration.</li>
+                                    </ul>
+
+                                    <p><strong>2. Simulation Registration:</strong></p>
+                                    <ul>
+                                        <li>Students can <strong>register for a simulation</strong> from a list of available simulations.</li>
+                                        <li>Display available simulations, their deadlines, and any instructions.</li>
+                                    </ul>
+
+                                    <p><strong>3. Download Simulation Excel Sheet:</strong></p>
+                                    <ul>
+                                        <li>Students can <strong>download the simulation Excel file</strong> uploaded by the admin.</li>
+                                        <li>Ensure students can only download simulations they have registered for.</li>
+                                    </ul>
+
+                                    <p><strong>4. Perform and Upload Calculations:</strong></p>
+                                    <ul>
+                                        <li>Students can complete the calculations on the downloaded Excel sheet.</li>
+                                        <li>Enable students to <strong>upload the completed Excel sheet</strong> back into the system for scoring.</li>
+                                        <li>Restrict uploads to only those students who are registered for the simulation.</li>
+                                    </ul>
+
+                                    <p><strong>5. Scoring System:</strong></p>
+                                    <ul>
+                                        <li>The system will <strong>automatically calculate the student’s score</strong> based on the uploaded Excel file.</li>
+                                        <li>Display the <strong>score to the student</strong> after calculation is complete.</li>
+                                    </ul>
+
+                                    <p><strong>6. Simulation Time Limits:</strong></p>
+                                    <ul>
+                                        <li>Ensure that students cannot upload the simulation sheet after the <strong>time limit expires</strong>.</li>
+                                    </ul>
+
+                                    <p><strong>7. Error Handling:</strong></p>
+                                    <ul>
+                                        <li>Display appropriate <strong>error messages</strong> if the uploaded Excel sheet is invalid or fails to meet required conditions (e.g., wrong format, missing fields).</li>
+                                    </ul>
+
+                                    <hr>
+
+                                    <h4>2. Admin Side (Management Interface):</h4>
+
+                                    <p><strong>1. Add Simulations:</strong></p>
+                                    <ul>
+                                        <li>The admin can <strong>create new simulations</strong> by uploading an Excel file.</li>
+                                        <li>Assign a <strong>time limit</strong> to each simulation (start date, end date).</li>
+                                        <li>Set parameters for <strong>scoring logic</strong> that will calculate student scores based on uploaded files.</li>
+                                    </ul>
+
+                                    <p><strong>2. Track Participants:</strong></p>
+                                    <ul>
+                                        <li>The admin can <strong>track all participants</strong> who have registered for a particular simulation.</li>
+                                        <li>See detailed participant information, including their <strong>registration status</strong>, time of upload, and scores.</li>
+                                    </ul>
+
+                                    <p><strong>3. Restrict Uploads:</strong></p>
+                                    <ul>
+                                        <li>Enforce restrictions on student uploads based on the <strong>simulation time limit</strong>.</li>
+                                        <li>Prevent students from uploading after the time window for the simulation has passed.</li>
+                                    </ul>
+
+                                    <p><strong>4. View Simulation Results:</strong></p>
+                                    <ul>
+                                        <li>The admin can view <strong>detailed results of each simulation</strong>, including:</li>
+                                        <ul>
+                                            <li>List of participants.</li>
+                                            <li>Their uploaded Excel sheets.</li>
+                                            <li>Their calculated scores.</li>
+                                        </ul>
+                                    </ul>
+
+                                    <p><strong>5. Manage Student Information:</strong></p>
+                                    <ul>
+                                        <li>Allow the admin to <strong>view and update all student details</strong>, including their registration information and simulation history.</li>
+                                        <li>The admin can also <strong>edit or delete student profiles</strong> if necessary.</li>
+                                    </ul>
+
+                                    <p><strong>6. Simulation Status Management:</strong></p>
+                                    <ul>
+                                        <li>Admins can <strong>change the status of a simulation</strong> (e.g., open, closed).</li>
+                                        <li>Control when a simulation is <strong>active or inactive</strong>, affecting whether students can participate.</li>
+                                    </ul>
+
+                                    <p><strong>7. Scoring and Results Overview:</strong></p>
+                                    <ul>
+                                        <li>Admins can <strong>view and modify scores</strong> if required.</li>
+                                        <li>Provide <strong>downloadable reports</strong> of simulation results, including scores and participant details.</li>
+                                    </ul>
+
+                                    `
+            },
+            {
+                btnText: "Tech",
+                title: "Technologies Used",
+                content: `
+                              <p><strong>1. Frontend:</strong></p>
+                              <ul>
+                                  <li><strong>React</strong> for building the user interface for both student and admin views.</li>
+                                  <li>Ensure <strong>dynamic interaction</strong> and seamless user experience using React components.</li>
+                              </ul>
+
+                              <p><strong>2. Backend:</strong></p>
+                              <ul>
+                                  <li><strong>Flask (Python)</strong> as the web application framework for handling server-side logic and processing.</li>
+                                  <li><strong>REST APIs</strong> to enable communication between the frontend and backend, particularly for file uploads, score calculations, and fetching data.</li>
+                              </ul>
+
+                              <p><strong>3. Database:</strong></p>
+                              <ul>
+                                  <li><strong>MongoDB</strong> for storing:</li>
+                                  <ul>
+                                      <li>Student data (profile, registration details).</li>
+                                      <li>Simulation data (uploaded Excel files, results).</li>
+                                      <li>Scores and participant information.</li>
+                                  </ul>
+                              </ul>
+
+                              `
+            },
+            {
+                btnText: "Libraries",
+                title: "Libraries Used",
+                content: `
+                            
+
+                            <p><strong>1. @fortawesome/free-solid-svg-icons</strong> and <strong>@fortawesome/react-fontawesome</strong>: Provides a collection of Font Awesome icons for React applications, allowing for rich iconography.</p>
+
+                            <p><strong>2. @testing-library/jest-dom, @testing-library/react, @testing-library/user-event</strong>: Testing utilities for React applications, useful for building test suites and simulating user interactions.</p>
+
+                            <p><strong>3. antd</strong>: Ant Design, a UI component library for React, providing a set of components for building a modern, professional-looking UI.</p>
+
+                            <p><strong>4. axios</strong>: For making HTTP requests, commonly used for API calls and data fetching.</p>
+
+                            <p><strong>5. bootstrap</strong> and <strong>react-bootstrap</strong>: CSS frameworks that provide responsive and pre-styled components for UI consistency and faster development.</p>
+
+                            <p><strong>6. formik</strong>: A library for building and managing forms in React, including validation, handling submissions, and managing form state.</p>
+
+                            <p><strong>7. js-cookie</strong>: Manages cookies on the client side, useful for storing session tokens and other small data.</p>
+
+                            <p><strong>8. moment</strong> and <strong>moment-timezone</strong>: Libraries for handling and manipulating dates and times, including timezone support.</p>
+
+                            <p><strong>9. react</strong> and <strong>react-dom</strong>: Core libraries for building and rendering user interfaces in React.</p>
+
+                            <p><strong>10. react-icons</strong>: Provides a set of popular icons as React components.</p>
+
+                            <p><strong>11. react-router-dom</strong>: Manages routing in single-page applications built with React.</p>
+
+                            <p><strong>12. react-scripts</strong>: Scripts and configuration for running and building React applications.</p>
+
+                            <p><strong>13. react-table</strong>: A library for creating data tables in React, supporting sorting, pagination, and filtering.</p>
+
+                            <p><strong>14. react-toastify</strong>: Provides customizable toast notifications in React applications.</p>
+
+                            <p><strong>15. reactstrap</strong>: Bootstrap components specifically for React, simplifying the integration of Bootstrap UI elements.</p>
+
+                            <p><strong>16. recharts</strong>: A charting library for React, offering a variety of customizable chart types for data visualization.</p>
+
+                            <p><strong>17. web-vitals</strong>: Provides metrics for measuring web performance, useful for optimization.</p>
+
+                            <p><strong>18. xlsx</strong> and <strong>XlsxWriter</strong>: Libraries for reading and writing Excel files, often used for importing and exporting data.</p>
+
+                            <p><strong>19. yup</strong>: A schema validation library often used with Formik for form validation in React applications.</p>
+
+                            <h4>Backend Libraries:</h4>
+
+                            <p><strong>20. Flask</strong>: A lightweight web framework for Python, used for handling backend logic and API endpoints.</p>
+
+                            <p><strong>21. Flask-Cors</strong>: Middleware to enable Cross-Origin Resource Sharing in Flask applications.</p>
+
+                            <p><strong>22. Flask-PyMongo</strong>: Integrates MongoDB with Flask, simplifying MongoDB interactions in Flask applications.</p>
+
+                            <p><strong>23. gunicorn</strong>: A WSGI HTTP server for running Python applications in production.</p>
+
+                            <p><strong>24. mongoengine</strong>: An ORM (Object-Relational Mapping) library for MongoDB, providing a structured way to work with MongoDB data.</p>
+
+                            <p><strong>25. pymongo</strong>: The official MongoDB driver for Python, used for connecting and interacting with MongoDB.</p>
+
+                            <p><strong>26. openpyxl</strong> and <strong>et-xmlfile</strong>: Libraries for reading and writing Excel files in Python, often used for data processing and analysis.</p>
+
+                            <p><strong>27. numpy</strong> and <strong>pandas</strong>: Essential libraries for data manipulation, analysis, and numerical calculations in Python.</p>
+
+                            <p><strong>28. PyJWT</strong>: Handles JSON Web Token (JWT) encoding and decoding, often used for user authentication.</p>
+
+                            <p><strong>29. email_validator</strong> and <strong>dnspython</strong>: Validates email addresses and handles DNS queries, adding an extra layer of validation.</p>
+
+                            <p><strong>30. Werkzeug</strong>: Provides utility functions and middleware for Flask, handling request/response management and security.</p>
+
+                            <p><strong>31. Jinja2</strong> and <strong>MarkupSafe</strong>: Templating libraries for generating HTML responses in Flask.</p>
+
+                            <p><strong>32. pydantic</strong>: A data validation and parsing library for Python, used for defining and validating data structures.</p>
+
+                            <p><strong>33. python-dateutil</strong>, <strong>pytz</strong>, and <strong>tzdata</strong>: Libraries for handling dates, times, and timezones in Python.</p>
+                          
+                            `
+            },
+        ]
+    },
+
 ];

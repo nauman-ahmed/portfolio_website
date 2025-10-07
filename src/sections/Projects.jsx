@@ -34,7 +34,7 @@ export default function Projects() {
                 <div className="row">
                     <div className="col-lg-12 text-center mx-auto col-12">
                         <div className="col-lg-8 mx-auto">
-                            <h2>Things I have developed as a <br></br> Full Stack Developer/AI Engineer</h2>
+                            <h2>Projects I have developed as a <br></br> Full Stack Developer/AI Engineer</h2>
                         </div>
                         <div className='d-flex justify-content-center align-items-center flex-row flex-wrap mt-5'>
                             {allTechs.map((tech, i) => <button key={i} style={{ width: '140px' }} className={`m-1 d-flex align-items-center justify-content-center btn ${selectedTechs.includes(tech.name) && 'custom-btn-bg'}  custom-btn custom-btn-tech `}

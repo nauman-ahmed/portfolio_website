@@ -22,16 +22,23 @@ export default function About() {
                         </h1>
 
                         <p>
-                        Experienced Full Stack Web Developer and Software Engineer skilled in React.js,
-                        Next.js, Flask, GraphQL, and TypeScript for building scalable, interactive applications.
-                        Expertise in dynamic data visualization, complex data analysis, and robotics research,
-                        particularly in Coverage Path Planning. Proficient in deploying robust solutions using
-                        AWS, Heroku, and DigitalOcean. Driven to deliver innovative, efficient technology
-                        solutions that align with business objectives.
+                        Results-driven Software Engineer with 5 years of hands-on development experience,
+                        including 2.5 years of professional expertise in building scalable, high-performance
+                        applications. Skilled in frontend development with ReactJS, Next.js, React Native,
+                        Vue.js, and TypeScript, complemented by strong experience in backend engineering
+                        using Node.js, Express, Django, FastAPI, and Flask. Proficient in designing and
+                        integrating RESTful and GraphQL APIs, with proven ability to deliver end-to-end
+                        solutions. Experienced in DevOps and cloud platforms including AWS, Docker,
+                        Terraform, Jenkins, Vercel, and Heroku, ensuring reliable deployments and CI/CD
+                        pipelines. Adept at working with databases like MongoDB, PostgreSQL, and MySQL to
+                        architect efficient data models. Collaborative team player with a strong foundation in
+                        Agile methodologies (Scrum, Kanban), version control, and DevOps best practices.
+                        Passionate about solving complex problems, optimizing performance, and delivering
+                        user-centric solutions.
                         </p>
                         
                         <div className="custom-btn-group mt-4">
-                          <a href={pdfFile} className="btn mr-lg-2 custom-btn"><i className='uil uil-file-alt'></i> Download Resume</a>
+                          <a href={pdfFile} target="_blank" rel="noopener noreferrer" className="btn mr-lg-2 custom-btn"><i className='uil uil-file-alt'></i> View Resume</a>
                           <a href="#contact" className="btn custom-btn custom-btn-bg custom-btn-link">Get in touch</a>
                         </div>
                     </div>
