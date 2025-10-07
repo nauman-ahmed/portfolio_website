@@ -375,7 +375,7 @@ export const projectsData = [
     // },
     {
         "title": 'Shannon Associates - Creative Management Platform',
-        "videoPath": "/videos/shannon-associates.mp4", // You'll need to create this video
+        "videoPath": "/videos/Shannon.mp4", // You'll need to create this video
         "techs": ['React', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'JWT', 'AWS S3', 'Axios', 'Webflow'],
         "modalsArray": [
             {
