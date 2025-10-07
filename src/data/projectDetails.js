@@ -1119,7 +1119,7 @@ export const projectsData = [
     },
 
     {
-        title: 'Liver Disease Analytics - D3.js Dashboard',
+        title: 'Liver Disease Analytics - D3.js',
         videoPath: "/videos/d3visualization.mp4",
         techs: ['React', 'D3.js'],
         modalsArray: [
