@@ -317,7 +317,7 @@ export const projectsData = [
     },
 
     {
-        title: 'DEWA Energy Management Platform(IoT)',
+        title: 'DEWA - Energy Management Platform (IoT)',
         videoPath: '/videos/dewa.mp4',
         techs: [
           'React', 'Vite', 'Tailwind CSS', 'ECharts', 'Recharts', 'Google Charts',
@@ -1119,14 +1119,14 @@ export const projectsData = [
     },
 
     {
-        title: 'Liver Analytics - D3.js Dashboard',
+        title: 'Liver Disease Analytics - D3.js Dashboard',
         videoPath: "/videos/d3visualization.mp4",
         techs: ['React', 'D3.js'],
         modalsArray: [
             {
                 btnText: "Info",
                 title: "General Information",
-                content: `<p><strong>Liver Analytics - D3.js Dashboard</strong> is a web-based tool that allows users to upload datasets and visualize data using various chart types created with <strong>D3.js</strong>.</p>
+                content: `<p><strong>Liver Disease Analytics - D3.js Dashboard</strong> is a web-based tool that allows users to upload datasets and visualize data using various chart types created with <strong>D3.js</strong>.</p>
 
                                     <p><strong>Project Overview:</strong></p>
 

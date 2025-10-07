@@ -17,7 +17,7 @@ export default function Resume() {
                             <span>05/25-10/25 </span>
                         </div>
                         <div className="timeline-info">
-                            <h3><span>Multi-Agent Coverage Path Planning(UAVs)</span><small>Master Thesis</small></h3>
+                            <h3><span>Multi-Agent Coverage Path Planning (UAVs)</span><br/><small>Master Thesis</small></h3>
                             <p>    
                                 • Designed and implemented a multi-agent reinforcement learning environment for
                                 UAVs using PyTorch, Gym, and NCP/Liquid Neural Networks.
@@ -42,7 +42,7 @@ export default function Resume() {
                             <span>06/23-12/23</span>
                         </div>
                         <div className="timeline-info">
-                            <h3><span>FULL STACK WEB DEVELOPER</span><small>EVENTPLANNING24</small></h3>
+                            <h3><span>FULL STACK WEB DEVELOPER</span><br/><small>EVENTPLANNING24</small></h3>
                             <p>I have been working as a React JS developer using TypeScript and I have also been involved in building Next JS applications. Following is my role and responsibilities:
                               <br/>
                               • RESTful API communication
@@ -78,7 +78,7 @@ export default function Resume() {
               </div>
 
               <div className="col-lg-6 col-12">
-                <h2 className="mb-4 mobile-mt-2">Educations</h2>
+                <h2 className="mb-4 mobile-mt-2">Education</h2>
 
                   <div className="timeline">
                       <div className="timeline-wrapper">
@@ -93,7 +93,7 @@ export default function Resume() {
 
                       <div className="timeline-wrapper">
                           <div className="timeline-yr">
-                              <span>2020-2020</span>
+                              <span>2016-2020</span>
                           </div>
                           <div className="timeline-info">
                               <h3><span>B.Sc SOFTWARE ENGINEERING</span><small>Usman Institute of Technology</small></h3>

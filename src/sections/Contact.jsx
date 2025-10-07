@@ -87,7 +87,7 @@ export default function Contact() {
 
                     <div className="col-lg-6 col-12">
                         <div className="contact-form">
-                            <h2 className="mb-4">Interested to work together? Let's talk</h2>
+                            <h2 className="mb-4">Interested in working together? Let's connect!</h2>
 
                             <form id="contact-form">
                                 <div className="row">
