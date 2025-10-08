@@ -128,10 +128,10 @@ export default function Skills() {
                 <span className="skill-name">PostgreSQL</span>
               </div>
 
-              <div className="skill-item">
+              {/* <div className="skill-item">
                 <SiMysql className="skill-icon" color="#4479A1"/>
                 <span className="skill-name">MySQL</span>
-              </div>
+              </div> */}
 
               {/* <div className="skill-item">
                 <SiVercel className="skill-icon" color="#000000"/>
