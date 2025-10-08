@@ -23,13 +23,16 @@ export default function About() {
                         </h1>
 
                         <p>
-                        Results-driven Software Engineer with <strong>5+ years of hands-on experience</strong>, including 2.5 years in professional software development. I have completed my <strong>Master's degree in Computer Science</strong> from the <strong>University of Passau, Germany</strong> and I specialize in building scalable, <strong>high-performance web and mobile applications</strong>. I have worked on various projects using different technologies and frameworks.
+                        <strong>Results-driven Software Engineer</strong> with <strong>5+ years of experience</strong> (including <strong>2.5 years professionally</strong>) and a <strong>Master’s in Computer Science</strong> from the <strong>University of Passau, Germany</strong>. I specialize in building <strong>scalable web and mobile applications</strong> with <strong>advanced AI/ML capabilities</strong>.
                         <br />
                         <br />
-                        I’m a <strong>continuous learner</strong>, passionate about solving complex problems, optimizing performance, and creating user-centric solutions. I thrive in Agile teams (Scrum, Kanban) and bring a collaborative mindset to every project.
+                        Experienced in developing <strong>AI-powered solutions</strong> such as <strong>conversational assistants</strong>, <strong>personalized content platforms</strong>, and <strong>intelligent search systems</strong> using <strong>LLMs</strong> (e.g., <strong>Mixtral-8x7B</strong>), <strong>BERT-based moderation</strong>, and <strong>semantic search</strong> with <strong>sentence transformers</strong>. Skilled in <strong>end-to-end AI development</strong> — from <strong>data processing</strong> to <strong>model deployment</strong> and <strong>UI integration</strong>.
                         <br />
                         <br />
-                        Apart from my profession, I love playing chess, exploring places, running and watching cricket.
+                        A <strong>continuous learner</strong> passionate about <strong>solving complex problems</strong>, <strong>optimizing performance</strong>, and creating <strong>user-centric, AI-driven solutions</strong>. I thrive in <strong>Agile environments</strong> (<strong>Scrum</strong>, <strong>Kanban</strong>) and enjoy <strong>collaborating across disciplines</strong>.
+                        <br />
+                        <br />
+                        Outside of work, I love <strong>chess</strong>, <strong>travel</strong>, <strong>running</strong>, and <strong>cricket</strong>.
                         </p>
                         
                         <div className="custom-btn-group mt-4">
