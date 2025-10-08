@@ -149,6 +149,552 @@ export const projectsData = [
     // },
 
     {
+    "title": "AI-Powered Personalized Story Generation Platform",
+    "videoPath": "/videos/StoryPlatform.mp4", // You'll need to create this video
+    "techs": ['Django', 'Python', 'React', 'Bootstrap', 'SQLite', 'BERT', 'Transformers', 'PyTorch', 'gTTS', 'Mixtral-8x7B', 'Sentence-Transformers', 'Scikit-learn', 'Pandas', 'NumPy'],
+    "modalsArray": [
+        {
+            btnText: "Info",
+            title: "General Information",
+            content: `<p><strong>AI-Powered Personalized Story Generation Platform</strong> is a comprehensive full-stack web application that leverages advanced artificial intelligence to create personalized, child-friendly stories with multi-layered content moderation and adaptive learning capabilities.</p>
+
+                        <p><strong>Project Overview:</strong></p>
+
+                        <p><strong>1. AI-Driven Story Generation:</strong><br>
+                        Utilizes Mixtral-8x7B-Instruct large language model for intelligent story creation, incorporating user preferences, gender, friends' names, and story topics to generate personalized narratives.</p>
+
+                        <p><strong>2. Multi-Layer Content Moderation:</strong><br>
+                        Implements BERT-based and LLM-based content filtering systems to ensure child-safe content, with stereotype detection and bad word filtering for comprehensive safety measures.</p>
+
+                        <p><strong>3. Adaptive Learning System:</strong><br>
+                        System learns from user preferences and favorite stories to improve future story generation, creating increasingly personalized content based on user interaction history.</p>
+
+                        <p><strong>4. Audio Story Generation:</strong><br>
+                        Converts generated stories to audio using Google Text-to-Speech (gTTS) for enhanced accessibility and user experience.</p>
+
+                        <p><strong>5. User Profile Management:</strong><br>
+                        Comprehensive user management with gender preferences, story preferences, rating systems, and favorite story tracking for personalized recommendations.</p>`
+        },
+        {
+            btnText: "Description",
+            title: "Project Description",
+            content: `<p><strong>1. Frontend Architecture (Django Templates/Bootstrap):</strong></p>
+                                
+                        <p><strong>User Interface:</strong><br>
+                        - Django template system with Bootstrap 5 for responsive design and modern UI components.<br>
+                        - Custom CSS styling with interactive elements and smooth transitions.<br>
+                        - Font Awesome icons and jQuery for enhanced user interactions.<br>
+                        - Mobile-responsive design optimized for all device types.</p>
+
+                        <p><strong>Story Creation Interface:</strong><br>
+                        - Intuitive form-based story creation with real-time validation.<br>
+                        - Multi-step input collection (name, friends, topic, length preferences).<br>
+                        - Real-time content moderation feedback with error handling.<br>
+                        - Audio playback controls for generated story narration.</p>
+
+                        <hr>
+
+                        <p><strong>2. Backend Architecture (Django/Python):</strong></p>
+
+                        <p><strong>API Development:</strong><br>
+                        - Django REST Framework for robust API development with comprehensive error handling.<br>
+                        - Django's built-in authentication system with user session management.<br>
+                        - Modular app structure with separate apps for story generation, moderation, and assistant features.<br>
+                        - SQLite database with Django ORM for efficient data management.</p>
+
+                        <p><strong>AI Integration:</strong><br>
+                        - Mixtral-8x7B-Instruct integration for advanced story generation.<br>
+                        - BERT model integration for content moderation and safety filtering.<br>
+                        - Sentence Transformers for semantic analysis and content similarity.<br>
+                        - Multi-stage content validation pipeline with fallback mechanisms.</p>
+
+                        <hr>
+
+                        <p><strong>3. AI/ML Technologies:</strong></p>
+
+                        <p><strong>Content Moderation:</strong><br>
+                        - BERT-based text classification for initial content screening.<br>
+                        - LLM-based content moderation for nuanced content detection.<br>
+                        - Stereotype detection and bias prevention algorithms.<br>
+                        - Bad word filtering with comprehensive profanity detection.</p>
+
+                        <p><strong>Story Generation:</strong><br>
+                        - Large Language Model integration with Mixtral-8x7B-Instruct.<br>
+                        - Contextual story generation based on user preferences and history.<br>
+                        - Adaptive learning from user interactions and favorite stories.<br>
+                        - Multi-parameter story customization (length, style, characters).</p>
+
+                        <hr>
+
+                        <p><strong>4. User Experience Features:</strong></p>
+
+                        <p><strong>Personalization:</strong><br>
+                        - User profile management with gender and preference tracking.<br>
+                        - Story rating and favorite system for learning user preferences.<br>
+                        - Adaptive system preferences based on user interaction history.<br>
+                        - Contextual story generation using past user data.</p>
+
+                        <p><strong>Accessibility:</strong><br>
+                        - Audio story generation using Google Text-to-Speech.<br>
+                        - Multi-format content delivery (text and audio).<br>
+                        - Responsive design for various device types and screen sizes.</p>
+
+                        <hr>
+
+                        <p><strong>5. Safety & Quality Assurance:</strong></p>
+
+                        <p><strong>Content Safety:</strong><br>
+                        - Multi-layer content validation with BERT and LLM models.<br>
+                        - Real-time content screening before story generation.<br>
+                        - Stereotype and bias detection with automatic content correction.<br>
+                        - Comprehensive bad word filtering and inappropriate content detection.</p>
+
+                        <p><strong>Data Management:</strong><br>
+                        - Secure user data storage with Django's built-in security features.<br>
+                        - User preference tracking for personalized recommendations.<br>
+                        - Story history management with rating and favorite capabilities.</p>`
+        },
+        {
+            btnText: "Tech",
+            title: "Technologies Used",
+            content: `
+                        <strong>1. Backend Framework:</strong><br>
+                        - Django 4.2.15 for robust web application development with built-in admin and ORM.<br>
+                        - Django REST Framework for comprehensive API development and documentation.<br>
+                        - SQLite database with Django ORM for efficient data management and relationships.<br><br>
+
+                        <strong>2. AI/ML Technologies:</strong><br>
+                        - Mixtral-8x7B-Instruct for advanced large language model story generation.<br>
+                        - BERT models for content moderation and text classification.<br>
+                        - Sentence Transformers for semantic similarity and content analysis.<br>
+                        - PyTorch for deep learning model integration and processing.<br>
+                        - Scikit-learn for machine learning utilities and cosine similarity calculations.<br><br>
+
+                        <strong>3. Frontend Technologies:</strong><br>
+                        - Bootstrap 5 for responsive UI framework and modern design components.<br>
+                        - HTML5/CSS3 for semantic markup and advanced styling capabilities.<br>
+                        - JavaScript and jQuery for interactive functionality and DOM manipulation.<br>
+                        - Font Awesome for comprehensive icon library and visual enhancements.<br><br>
+
+                        <strong>4. Data Processing & Analysis:</strong><br>
+                        - Pandas for data manipulation and analysis of user preferences.<br>
+                        - NumPy for numerical computing and array operations.<br>
+                        - Transformers (Hugging Face) for pre-trained model integration.<br>
+                        - BeautifulSoup4 for web scraping and content processing capabilities.<br><br>
+
+                        <strong>5. Audio & Communication:</strong><br>
+                        - Google Text-to-Speech (gTTS) for audio story generation.<br>
+                        - Requests library for HTTP client operations and API communication.<br>
+                        - Prometheus Client for application monitoring and metrics collection.`
+        },
+        {
+            btnText: "Libraries",
+            title: "Libraries & Dependencies",
+            content: `
+            <strong>Core Framework Libraries:</strong><br>
+            1. <strong>Django 4.2.15</strong> - Full-stack web framework with built-in admin, ORM, and security features.<br>
+            2. <strong>Django REST Framework</strong> - API development framework with serializers and viewsets.<br>
+            3. <strong>Django Debug Toolbar</strong> - Development debugging and performance analysis tool.<br>
+            4. <strong>DRF-YASG</strong> - Swagger/OpenAPI documentation generator for API endpoints.<br><br>
+
+            <strong>AI/ML Libraries:</strong><br>
+            5. <strong>Transformers 4.44.1</strong> - Hugging Face transformers library for pre-trained model integration.<br>
+            6. <strong>Sentence-Transformers 3.0.1</strong> - Semantic similarity and embedding generation.<br>
+            7. <strong>PyTorch 2.2.2</strong> - Deep learning framework for model processing and inference.<br>
+            8. <strong>Scikit-learn 1.5.1</strong> - Machine learning utilities and cosine similarity calculations.<br>
+            9. <strong>Huggingface-Hub 0.24.6</strong> - Model hub integration for pre-trained models.<br>
+            10. <strong>Tokenizers 0.19.1</strong> - Text tokenization for language model processing.<br><br>
+
+            <strong>Data Processing Libraries:</strong><br>
+            11. <strong>Pandas 2.2.2</strong> - Data manipulation and analysis for user preference tracking.<br>
+            12. <strong>NumPy 2.0.1</strong> - Numerical computing and array operations for ML processing.<br>
+            13. <strong>SciPy 1.13.1</strong> - Scientific computing library for advanced mathematical operations.<br>
+            14. <strong>BeautifulSoup4 4.12.3</strong> - Web scraping and HTML parsing capabilities.<br><br>
+
+            <strong>Audio & Communication Libraries:</strong><br>
+            15. <strong>gTTS 2.5.3</strong> - Google Text-to-Speech for audio story generation.<br>
+            16. <strong>Requests 2.32.3</strong> - HTTP client for API communication and external service integration.<br>
+            17. <strong>Prometheus Client 0.20.0</strong> - Application monitoring and metrics collection.<br><br>
+
+            <strong>Utility Libraries:</strong><br>
+            18. <strong>Python-dotenv 1.0.1</strong> - Environment variable management for secure configuration.<br>
+            19. <strong>Pillow 10.4.0</strong> - Image processing library for media handling.<br>
+            20. <strong>Certifi 2024.7.4</strong> - SSL certificate verification for secure connections.<br>
+            21. <strong>Urllib3 2.2.2</strong> - HTTP client library for low-level network operations.<br>
+            22. <strong>Regex 2024.7.24</strong> - Advanced regular expression processing for text analysis.<br>
+            23. <strong>Joblib 1.4.2</strong> - Parallel processing and model persistence utilities.<br>
+            24. <strong>Threadpoolctl 3.5.0</strong> - Thread pool control for optimized performance.<br>
+            25. <strong>SafeTensors 0.4.4</strong> - Secure tensor serialization for model storage and transfer.
+            `
+        },
+    ]
+    },
+
+    {
+        "title": "Academic Assistant - Course Catalog Search",
+        "videoPath": "/videos/AcademicAssistant.mp4", // You'll need to create this video
+        "techs": ['Django', 'Python', 'React', 'JavaScript', 'SQLite', 'sentence-transformers', 'scikit-learn', 'pandas', 'numpy', 'pdfplumber', 'Bootstrap'],
+        "modalsArray": [
+            {
+                btnText: "Info",
+                title: "General Information",
+                content: `<p><strong>Academic Assistant for Course Catalog Search</strong> is an intelligent AI-powered system that revolutionizes how students and faculty explore university course catalogs using advanced natural language processing and semantic search capabilities.</p>
+        
+                            <p><strong>Project Overview:</strong></p>
+        
+                            <p><strong>1. Intelligent Course Discovery:</strong><br>
+                            Advanced semantic search engine that processes natural language queries to find relevant courses, instructors, and academic information from university course catalogs.</p>
+        
+                            <p><strong>2. Multi-Modal Query Processing:</strong><br>
+                            Handles diverse query types including ECTS credit lookups, instructor searches, course content exploration, learning outcomes analysis, and personalized course recommendations.</p>
+        
+                            <p><strong>3. Advanced NLP Pipeline:</strong><br>
+                            Implements sentence transformers with cosine similarity for intelligent course matching, supporting both German and English course descriptions with multilingual processing capabilities.</p>
+        
+                            <p><strong>4. Real-Time Chat Interface:</strong><br>
+                            Interactive web-based assistant with dynamic query processing, providing instant responses to academic inquiries with context-aware recommendations.</p>
+        
+                            <p><strong>5. Comprehensive Data Processing:</strong><br>
+                            Automated PDF extraction and parsing system that processes complex university course catalogs, extracting structured data for intelligent search and recommendation systems.</p>`
+            },
+            {
+                btnText: "Description",
+                title: "Project Description",
+                content: `<p><strong>1. Backend Architecture (Django/Python):</strong></p>
+                                    
+                            <p><strong>Web Framework:</strong><br>
+                            - Django 4.2.15 with Django REST Framework for robust API development.<br>
+                            - SQLite database with Django ORM for efficient data management.<br>
+                            - Modular app structure with separate modules for assistant, moderation, and story features.<br>
+                            - RESTful API endpoints with comprehensive error handling and validation.</p>
+        
+                            <p><strong>AI/ML Integration:</strong><br>
+                            - sentence-transformers 3.0.1 for semantic embedding generation using all-MiniLM-L6-v2 model.<br>
+                            - scikit-learn 1.5.1 for cosine similarity calculations and machine learning utilities.<br>
+                            - Dynamic query classification system with pattern recognition for intelligent routing.<br>
+                            - Vector search implementation for semantic course matching and recommendations.</p>
+        
+                            <hr>
+        
+                            <p><strong>2. Data Processing Pipeline:</strong></p>
+        
+                            <p><strong>PDF Processing:</strong><br>
+                            - pdfplumber for extracting course information from complex PDF documents.<br>
+                            - Advanced table parsing and data structuring from university course catalogs.<br>
+                            - Multi-language support for German and English course descriptions.<br>
+                            - Automated CSV generation with structured course metadata.</p>
+        
+                            <p><strong>Embedding Generation:</strong><br>
+                            - Automated vector embedding creation for course content and descriptions.<br>
+                            - Cosine similarity calculations for intelligent course matching.<br>
+                            - Persistent storage of embeddings for fast query processing.<br>
+                            - Support for multiple query types including ECTS, instructors, and content-based searches.</p>
+        
+                            <hr>
+        
+                            <p><strong>3. Intelligent Query Processing:</strong></p>
+        
+                            <p><strong>Dynamic Query Handling:</strong><br>
+                            - ECTS Credit Queries: "How many ECTS does [Course] have?"<br>
+                            - Instructor Lookup: "Who teaches [Course]?"<br>
+                            - Content-based Recommendations: "Courses related to machine learning"<br>
+                            - Learning Outcomes: "What are the learning outcomes of [Course]?"<br>
+                            - Prerequisites: "What are the recommended skills for [Course]?"</p>
+        
+                            <p><strong>Semantic Search Features:</strong><br>
+                            - Context-aware query processing with intent recognition.<br>
+                            - Multi-query support with intelligent classification and routing.<br>
+                            - Similarity-based course recommendations using vector embeddings.<br>
+                            - Real-time response generation with relevant course information.</p>
+        
+                            <hr>
+        
+                            <p><strong>4. Frontend Interface (React/Bootstrap):</strong></p>
+        
+                            <p><strong>Chat Interface:</strong><br>
+                            - Real-time chat interface with typing indicators and message history.<br>
+                            - Responsive design optimized for desktop and mobile devices.<br>
+                            - Dynamic input handling with auto-resize textarea functionality.<br>
+                            - AJAX integration for seamless backend communication.</p>
+        
+                            <p><strong>User Experience:</strong><br>
+                            - Intuitive query input with placeholder guidance.<br>
+                            - Loading states and error handling for improved user experience.<br>
+                            - Message threading with user and assistant message differentiation.<br>
+                            - Keyboard shortcuts (Enter to send, Shift+Enter for new line).</p>
+        
+                            <hr>
+        
+                            <p><strong>5. Monitoring & Documentation:</strong></p>
+        
+                            <p><strong>API Documentation:</strong><br>
+                            - Swagger/OpenAPI documentation with drf-yasg integration.<br>
+                            - Comprehensive API endpoint documentation with example requests/responses.<br>
+                            - Interactive API testing interface for development and testing.</p>
+        
+                            <p><strong>Performance Monitoring:</strong><br>
+                            - Prometheus metrics integration for system monitoring.<br>
+                            - Request latency and memory usage tracking.<br>
+                            - Method call counting and performance analytics.</p>`
+            },
+            {
+                btnText: "Tech",
+                title: "Technologies Used",
+                content: `
+                            <strong>1. Backend Framework:</strong><br>
+                            - Django 4.2.15 for robust web application development with built-in admin interface.<br>
+                            - Django REST Framework for creating comprehensive RESTful APIs.<br>
+                            - SQLite database with Django ORM for efficient data management and querying.<br><br>
+        
+                            <strong>2. AI/ML Technologies:</strong><br>
+                            - sentence-transformers 3.0.1 for semantic embedding generation and similarity search.<br>
+                            - scikit-learn 1.5.1 for machine learning utilities and cosine similarity calculations.<br>
+                            - transformers 4.44.1 for advanced natural language processing capabilities.<br>
+                            - PyTorch 2.2.2 for deep learning model integration and processing.<br><br>
+        
+                            <strong>3. Data Processing:</strong><br>
+                            - pandas 2.2.2 for data manipulation and analysis of course information.<br>
+                            - numpy 2.0.1 for numerical computing and array operations.<br>
+                            - pdfplumber for extracting structured data from PDF course catalogs.<br>
+                            - beautifulsoup4 4.12.3 for HTML/XML parsing and data extraction.<br><br>
+        
+                            <strong>4. Frontend Technologies:</strong><br>
+                            - Bootstrap for responsive CSS framework and UI components.<br>
+                            - jQuery for DOM manipulation and AJAX requests.<br>
+                            - Font Awesome for icon integration and visual enhancements.<br>
+                            - Custom JavaScript for interactive chat interface and real-time communication.<br><br>
+        
+                            <strong>5. API & Documentation:</strong><br>
+                            - drf-yasg 1.21.7 for automatic Swagger/OpenAPI documentation generation.<br>
+                            - prometheus_client 0.20.0 for system metrics and performance monitoring.<br>
+                            - requests 2.32.3 for HTTP communication and external API integration.`
+            },
+            {
+                btnText: "Libraries",
+                title: "Libraries & Dependencies",
+                content: `
+                <strong>Core Framework Libraries:</strong><br>
+                1. <strong>Django 4.2.15</strong> - Web framework for rapid development and clean design.<br>
+                2. <strong>Django REST Framework</strong> - Toolkit for building Web APIs with Django.<br>
+                3. <strong>django-debug-toolbar</strong> - Debug toolbar for Django applications.<br>
+                4. <strong>drf-yasg 1.21.7</strong> - Yet another Swagger generator for Django REST framework.<br><br>
+        
+                <strong>AI/ML Libraries:</strong><br>
+                5. <strong>sentence-transformers 3.0.1</strong> - Framework for sentence, paragraph and image embeddings.<br>
+                6. <strong>transformers 4.44.1</strong> - Hugging Face transformers library for NLP models.<br>
+                7. <strong>torch 2.2.2</strong> - PyTorch deep learning framework.<br>
+                8. <strong>scikit-learn 1.5.1</strong> - Machine learning library for Python.<br>
+                9. <strong>numpy 2.0.1</strong> - Fundamental package for scientific computing.<br>
+                10. <strong>pandas 2.2.2</strong> - Data manipulation and analysis library.<br><br>
+        
+                <strong>Data Processing Libraries:</strong><br>
+                11. <strong>pdfplumber</strong> - PDF text extraction and table parsing library.<br>
+                12. <strong>beautifulsoup4 4.12.3</strong> - HTML/XML parsing library for web scraping.<br>
+                13. <strong>requests 2.32.3</strong> - HTTP library for making API requests.<br>
+                14. <strong>python-dotenv 1.0.1</strong> - Environment variable management.<br><br>
+        
+                <strong>Frontend Libraries:</strong><br>
+                15. <strong>Bootstrap</strong> - CSS framework for responsive web design.<br>
+                16. <strong>jQuery</strong> - JavaScript library for DOM manipulation and AJAX.<br>
+                17. <strong>Font Awesome</strong> - Icon library for web interfaces.<br><br>
+        
+                <strong>Monitoring & Utilities:</strong><br>
+                18. <strong>prometheus_client 0.20.0</strong> - Prometheus metrics client for Python.<br>
+                19. <strong>psutil 6.0.0</strong> - System and process utilities for monitoring.<br>
+                20. <strong>gTTS 2.5.3</strong> - Google Text-to-Speech library for audio generation.<br>
+                21. <strong>coverage 7.6.1</strong> - Code coverage measurement tool.<br>
+                22. <strong>fastchat 0.1.0</strong> - Chat application framework integration.<br>
+                23. <strong>huggingface-hub 0.24.6</strong> - Hugging Face model hub integration.<br>
+                24. <strong>safetensors 0.4.4</strong> - Safe tensor serialization format.<br>
+                25. <strong>tokenizers 0.19.1</strong> - Fast tokenizers for natural language processing.
+                `
+            },
+        ]
+    },
+
+    {
+        "title": "Conversational Assistant for University Cafeteria & News",
+        "videoPath": "/videos/UniversityAssistant.mp4", // You'll need to create this video
+        "techs": ['Django', 'Python', 'React', 'JavaScript', 'SQLite', 'BeautifulSoup', 'Transformers', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'Bootstrap', 'jQuery', 'Prometheus'],
+        "modalsArray": [
+            {
+                btnText: "Info",
+                title: "General Information",
+                content: `<p><strong>Conversational Assistant for University Cafeteria & News</strong> is an intelligent AI-powered chatbot designed for University of Passau students, providing real-time access to cafeteria menus, university news, and academic course information through natural language conversations.</p>
+        
+                                <p><strong>Project Overview:</strong></p>
+        
+                                <p><strong>1. Multi-Domain Intelligence:</strong><br>
+                                Advanced conversational AI that understands and responds to queries across three distinct domains: cafeteria menus, university news, and academic course information, with intelligent query classification and routing.</p>
+        
+                                <p><strong>2. Real-Time Data Integration:</strong><br>
+                                Automated web scraping system that continuously updates cafeteria menus from mensaplan.de and university news from uni-passau.de, ensuring students always have access to current information.</p>
+        
+                                <p><strong>3. Advanced NLP & ML Pipeline:</strong><br>
+                                Sophisticated natural language processing using Sentence Transformers, BERT models, and Large Language Models (Mixtral-8x7B) for semantic understanding, query classification, and contextual response generation.</p>
+        
+                                <p><strong>4. Semantic Search & Embeddings:</strong><br>
+                                Vector-based similarity search using cosine similarity and embeddings to find relevant course information, enabling students to discover courses based on content rather than exact name matches.</p>
+        
+                                <p><strong>5. Conversation Memory & Context:</strong><br>
+                                Maintains conversation history across multiple interactions, enabling follow-up questions and context-aware responses that understand the flow of student inquiries.</p>`
+            },
+            {
+                btnText: "Description",
+                title: "Project Description",
+                content: `<p><strong>1. Backend Architecture (Django/Python):</strong></p>
+                                        
+                                <p><strong>Web Framework & API:</strong><br>
+                                - Django 4.2.15 with Django REST Framework for robust web application development.<br>
+                                - RESTful API endpoints with comprehensive error handling and response formatting.<br>
+                                - SQLite database for efficient data storage and retrieval.<br>
+                                - Prometheus integration for real-time monitoring and performance metrics.</p>
+        
+                                <p><strong>AI/ML Integration:</strong><br>
+                                - Sentence Transformers (all-MiniLM-L6-v2) for generating semantic embeddings.<br>
+                                - Hugging Face Transformers library for BERT-based content moderation.<br>
+                                - PyTorch framework for deep learning model operations.<br>
+                                - Scikit-learn for machine learning utilities and similarity calculations.</p>
+        
+                                <hr>
+        
+                                <p><strong>2. Data Processing & Web Scraping:</strong></p>
+        
+                                <p><strong>Automated Data Collection:</strong><br>
+                                - BeautifulSoup for HTML parsing and content extraction from university websites.<br>
+                                - Pandas for data manipulation, cleaning, and structuring of scraped information.<br>
+                                - Automated scheduling for regular data updates and content refresh.<br>
+                                - Multi-language support with German-to-English translation capabilities.</p>
+        
+                                <p><strong>Data Sources Integration:</strong><br>
+                                - Real-time cafeteria menu scraping from mensaplan.de with category classification.<br>
+                                - University news extraction from uni-passau.de with content categorization.<br>
+                                - Academic course catalog processing with ECTS credits and learning outcomes.</p>
+        
+                                <hr>
+        
+                                <p><strong>3. Intelligent Query Processing:</strong></p>
+        
+                                <p><strong>Query Classification System:</strong><br>
+                                - Multi-level classification pipeline that determines query domain (cafeteria, news, academic).<br>
+                                - Secondary classification within each domain for precise response generation.<br>
+                                - Fallback mechanisms for handling ambiguous or unknown queries.</p>
+        
+                                <p><strong>Semantic Search Engine:</strong><br>
+                                - Vector-based similarity search using cosine similarity for course discovery.<br>
+                                - Context-aware response generation based on query intent and user history.<br>
+                                - Dynamic content retrieval based on query classification results.</p>
+        
+                                <hr>
+        
+                                <p><strong>4. Frontend Interface (React/JavaScript):</strong></p>
+        
+                                <p><strong>Interactive Chat Interface:</strong><br>
+                                - Real-time chat interface with typing indicators and message history.<br>
+                                - Responsive design optimized for mobile and desktop access.<br>
+                                - AJAX-based asynchronous communication with backend services.<br>
+                                - Bootstrap integration for modern, professional UI components.</p>
+        
+                                <p><strong>User Experience Features:</strong><br>
+                                - Auto-resizing text input with keyboard shortcuts for message sending.<br>
+                                - Loading states and error handling for smooth user interactions.<br>
+                                - Message history preservation across browser sessions.</p>
+        
+                                <hr>
+        
+                                <p><strong>5. Advanced AI Features:</strong></p>
+        
+                                <p><strong>Conversation Management:</strong><br>
+                                - Multi-turn dialogue support with conversation history tracking.<br>
+                                - Context preservation across different query domains.<br>
+                                - Intelligent response generation using Mixtral-8x7B language model.</p>
+        
+                                <p><strong>Content Moderation:</strong><br>
+                                - BERT-based toxicity detection for user input validation.<br>
+                                - LLM-powered content analysis for inappropriate content filtering.<br>
+                                - Automated response generation with safety checks and validation.</p>`
+            },
+            {
+                btnText: "Tech",
+                title: "Technologies Used",
+                content: `
+                                <strong>1. Backend Framework:</strong><br>
+                                - Django 4.2.15 for web application framework with built-in admin interface.<br>
+                                - Django REST Framework for API development and serialization.<br>
+                                - SQLite database for lightweight, efficient data storage and retrieval.<br>
+                                - Prometheus Client for application monitoring and metrics collection.<br><br>
+        
+                                <strong>2. AI/ML & NLP Libraries:</strong><br>
+                                - Transformers 4.44.1 for Hugging Face model integration and BERT implementations.<br>
+                                - Sentence Transformers 3.0.1 for semantic embeddings and similarity calculations.<br>
+                                - PyTorch 2.2.2 for deep learning model operations and tensor computations.<br>
+                                - Scikit-learn 1.5.1 for machine learning utilities and cosine similarity.<br>
+                                - NumPy 2.0.1 for numerical computing and array operations.<br><br>
+        
+                                <strong>3. Data Processing & Web Scraping:</strong><br>
+                                - BeautifulSoup 4.12.3 for HTML parsing and content extraction.<br>
+                                - Pandas 2.2.2 for data manipulation, analysis, and CSV processing.<br>
+                                - Requests 2.32.3 for HTTP requests and web scraping operations.<br>
+                                - Python-dotenv for environment variable management and configuration.<br><br>
+        
+                                <strong>4. Frontend Technologies:</strong><br>
+                                - Bootstrap for responsive UI framework and component styling.<br>
+                                - jQuery for DOM manipulation and AJAX communication.<br>
+                                - Custom CSS for chat interface styling and responsive design.<br>
+                                - JavaScript for interactive features and real-time communication.<br><br>
+        
+                                <strong>5. Development & Monitoring:</strong><br>
+                                - DRF-YASG for automatic API documentation generation.<br>
+                                - Coverage for code coverage testing and quality assurance.<br>
+                                - Prometheus for application performance monitoring and alerting.`
+            },
+            {
+                btnText: "Libraries",
+                title: "Libraries & Dependencies",
+                content: `
+                    <strong>Core Framework Libraries:</strong><br>
+                    1. <strong>Django 4.2.15</strong> - High-level Python web framework for rapid development.<br>
+                    2. <strong>Django REST Framework</strong> - Toolkit for building Web APIs with Django.<br>
+                    3. <strong>DRF-YASG</strong> - Swagger documentation generator for Django REST Framework.<br>
+                    4. <strong>SQLite</strong> - Lightweight, serverless database engine for data persistence.<br><br>
+        
+                    <strong>AI/ML & NLP Libraries:</strong><br>
+                    5. <strong>Transformers 4.44.1</strong> - Hugging Face library for state-of-the-art NLP models.<br>
+                    6. <strong>Sentence Transformers 3.0.1</strong> - Framework for sentence embeddings and semantic search.<br>
+                    7. <strong>PyTorch 2.2.2</strong> - Open source machine learning framework for deep learning.<br>
+                    8. <strong>Scikit-learn 1.5.1</strong> - Machine learning library for classification and similarity.<br>
+                    9. <strong>NumPy 2.0.1</strong> - Fundamental package for scientific computing with Python.<br>
+                    10. <strong>Pandas 2.2.2</strong> - Data manipulation and analysis library for structured data.<br><br>
+        
+                    <strong>Web Scraping & Data Processing:</strong><br>
+                    11. <strong>BeautifulSoup 4.12.3</strong> - Python library for pulling data out of HTML and XML files.<br>
+                    12. <strong>Requests 2.32.3</strong> - HTTP library for making web requests and API calls.<br>
+                    13. <strong>Python-dotenv</strong> - Library for loading environment variables from .env files.<br>
+                    14. <strong>Regex</strong> - Regular expression operations for text processing and pattern matching.<br><br>
+        
+                    <strong>Frontend & UI Libraries:</strong><br>
+                    15. <strong>Bootstrap</strong> - CSS framework for responsive web design and UI components.<br>
+                    16. <strong>jQuery</strong> - JavaScript library for DOM manipulation and AJAX requests.<br>
+                    17. <strong>Font Awesome</strong> - Icon library for scalable vector icons and social logos.<br>
+                    18. <strong>Select2</strong> - jQuery plugin for enhanced select boxes with search functionality.<br><br>
+        
+                    <strong>Monitoring & Development:</strong><br>
+                    19. <strong>Prometheus Client</strong> - Python client for Prometheus monitoring system.<br>
+                    20. <strong>Coverage</strong> - Code coverage measurement tool for Python applications.<br>
+                    21. <strong>Django Debug Toolbar</strong> - Configurable set of panels for debugging Django applications.<br>
+                    22. <strong>Psutil</strong> - Cross-platform library for retrieving system information and processes.<br><br>
+        
+                    <strong>Additional Utilities:</strong><br>
+                    23. <strong>GTTs (Google Text-to-Speech)</strong> - Python library for text-to-speech conversion.<br>
+                    24. <strong>Pillow</strong> - Python Imaging Library for image processing and manipulation.<br>
+                    25. <strong>PyYAML</strong> - YAML parser and emitter for Python configuration files.<br>
+                    26. <strong>Certifi</strong> - Python package for providing Mozilla's CA Bundle for SSL verification.
+                    `
+            },
+        ]
+    },
+
+    {
         "title": 'Shannon Associates - Digital Artist Platform',
         "videoPath": "/videos/Shannon.mp4", // You'll need to create this video
         "techs": ['React', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'JWT', 'AWS S3', 'Axios', 'Webflow'],
