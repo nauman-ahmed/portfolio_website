@@ -9,22 +9,7 @@ export default function ProjectBox({ projectData }) {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.load(); // Reload the video source
-      const playPromise = videoRef.current.play();
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-         
-          })
-          .catch((error) => {
-            if (error.name === 'AbortError') {
-              console.log('Play interrupted. Retrying...');
-              videoRef.current.play();
-            } else {
-              console.error('Error playing video:', error);
-            }
-          });
-      }
+      // Videos will remain paused until user manually clicks play
     }
   }, [projectData]); // Re-run the effect when the video path changes
 
@@ -39,7 +24,6 @@ export default function ProjectBox({ projectData }) {
             className="img-fluid w-100 rounded-vid border border-secondary"
             ref={videoRef}
             controls
-            autoPlay
             muted
             loop
           >
