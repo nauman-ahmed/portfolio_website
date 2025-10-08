@@ -406,6 +406,13 @@ b, strong {
   text-align: center;
 }
 
+.email-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+}
+.email-link:hover { color: black !important; }
+
 .timeline-yr span {
   color: #ffffff;
   font-size: 10px;

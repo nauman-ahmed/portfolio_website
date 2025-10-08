@@ -71,7 +71,7 @@ export default function Contact() {
                             <div className="contact-info-item">
                                 <h3 className="mb-3 text-white">Contact Us</h3>
                                 <p className="footer-text mb-0">Cell Number: +4915228835221</p>
-                                <p>Email: <a href="mailto:naumanahmed449@gmail.com">naumanahmed449@gmail.com</a></p>
+                                <p>Email: <a href="mailto:naumanahmed449@gmail.com" className="email-link">naumanahmed449@gmail.com</a></p>
                             </div>
                             <ul className="social-links">
                                 <li><a target='_blank' href="https://www.instagram.com/nauman_ahmed7/profilecard/?igsh=ejB2cXYzYnBncXN1" className="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>

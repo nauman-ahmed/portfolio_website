@@ -39,7 +39,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-12 col-12 d-flex align-items-center justify-content-center">
+                <div className="col-lg-4 col-md-12 col-12">
                     <div className="about-image svg position-relative">
                         <div className="circular-image-container">
                             <img src={img2} className="img-fluid circular-image" alt="svg image" />
