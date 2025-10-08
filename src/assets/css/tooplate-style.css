@@ -411,7 +411,7 @@ b, strong {
   text-decoration: none;
   transition: color 150ms ease-in-out;
 }
-.email-link:hover { color: black !important; }
+.email-link:hover { color: rgb(203, 202, 202) !important; }
 
 .timeline-yr span {
   color: #ffffff;

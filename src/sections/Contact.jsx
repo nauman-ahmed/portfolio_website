@@ -74,11 +74,11 @@ export default function Contact() {
                                 <p>Email: <a href="mailto:naumanahmed449@gmail.com" className="email-link">naumanahmed449@gmail.com</a></p>
                             </div>
                             <ul className="social-links">
-                                <li><a target='_blank' href="https://www.instagram.com/nauman_ahmed7/profilecard/?igsh=ejB2cXYzYnBncXN1" className="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
-                                <li><a target='_blank' href="https://www.linkedin.com/in/nauman-ahmed-b190b219a/" className="uil" data-toggle="tooltip" data-placement="left" title="LinkedIn">
+                                <li><a target='_blank' href="https://www.instagram.com/nauman_ahmed7/profilecard/?igsh=ejB2cXYzYnBncXN1" className="email-link uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+                                <li><a target='_blank' href="https://www.linkedin.com/in/nauman-ahmed-b190b219a/" className="email-link uil" data-toggle="tooltip" data-placement="left" title="LinkedIn">
                                     <i className="fab fa-linkedin icon"></i></a>
                                 </li>
-                                <li><a target='_blank' href="https://github.com/nauman-ahmed" className="uil" data-toggle="tooltip" data-placement="left" title="GitHub">
+                                <li><a target='_blank' href="https://github.com/nauman-ahmed" className=" email-link uil" data-toggle="tooltip" data-placement="left" title="GitHub">
                                     <i className="fab fa-github icon"></i></a>
                                 </li>
                             </ul>
