@@ -42,7 +42,7 @@ export default function Resume() {
                             <span>06/23-12/23</span>
                         </div>
                         <div className="timeline-info">
-                            <h3><span>FULL STACK WEB DEVELOPER</span><br/><small>EVENTPLANNING24</small></h3>
+                            <h3><span>FRONTEND WEB DEVELOPER</span><br/><small>EVENTPLANNING24</small></h3>
                             <p>I have been working as a React JS developer using TypeScript and I have also been involved in building Next JS applications. Following is my role and responsibilities:
                               <br/>
                               • RESTful API communication
