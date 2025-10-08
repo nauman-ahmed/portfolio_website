@@ -79,28 +79,43 @@ export default function Skills() {
               </div>
 
               <div className="skill-item">
-                <i className="fas fa-plug skill-icon"></i>
-                <span className="skill-name">RESTful</span>
+                <SiOpenai className="skill-icon" title="LLM" color="#412991" />
+                <span className="skill-name">LLMs</span>
+              </div>
+              
+              <div className="skill-item">
+                <SiPytorch className="skill-icon" color="#000000"/>
+                <span className="skill-name">PyTorch</span>
+              </div>
+
+              <div className="skill-item">
+                <SiAmazonwebservices className="skill-icon" color="#FF9900"/>
+                <span className="skill-name">AWS</span>
+              </div>
+
+              <div className="skill-item">
+                <SiDocker className="skill-icon" color="#2496ED"/>
+                <span className="skill-name">Docker</span>
+              </div>
+
+              <div className="skill-item">
+                <SiJenkins className="skill-icon" color="#D24939"/>
+                <span className="skill-name">Jenkins</span>
+              </div>
+
+              <div className="skill-item">
+                <SiTerraform className="skill-icon" color="#7C42A0"/>
+                <span className="skill-name">Terraform</span>
+              </div>
+
+              <div className="skill-item">
+                <i className="fas fa-plug skill-icon" style={{color: '#000000'}}></i>
+                <span className="skill-name">RESTful API</span>
               </div>
 
               <div className="skill-item">
                 <SiGraphql className="skill-icon" color="#E10098"/>
                 <span className="skill-name">GraphQL</span>
-              </div>
-
-              <div className="skill-item">
-                <SiJest className="skill-icon" color="#C21325"/>
-                <span className="skill-name">Jest</span>
-              </div>
-
-              <div className="skill-item">
-                <i className="fas fa-wrench skill-icon"></i>
-                <span className="skill-name">React Testing Library</span>
-              </div>
-
-              <div className="skill-item">
-                <SiPlaywright className="skill-icon" color="#2EAD32"/>
-                <span className="skill-name">Playwright</span>
               </div>
 
               <div className="skill-item">
@@ -118,27 +133,7 @@ export default function Skills() {
                 <span className="skill-name">MySQL</span>
               </div>
 
-              <div className="skill-item">
-                <SiAmazonwebservices className="skill-icon" color="#FF9900"/>
-                <span className="skill-name">AWS</span>
-              </div>
-
-              <div className="skill-item">
-                <SiDocker className="skill-icon" color="#2496ED"/>
-                <span className="skill-name">Docker</span>
-              </div>
-
-              <div className="skill-item">
-                <SiTerraform className="skill-icon" color="#7C42A0"/>
-                <span className="skill-name">Terraform</span>
-              </div>
-
-              <div className="skill-item">
-                <SiJenkins className="skill-icon" color="#D24939"/>
-                <span className="skill-name">Jenkins</span>
-              </div>
-
-              <div className="skill-item">
+              {/* <div className="skill-item">
                 <SiVercel className="skill-icon" color="#000000"/>
                 <span className="skill-name">Vercel</span>
               </div>
@@ -146,14 +141,9 @@ export default function Skills() {
               <div className="skill-item">
                 <SiHeroku className="skill-icon" color="#430098"/>
                 <span className="skill-name">Heroku</span>
-              </div>
+              </div> */}
 
-              <div className="skill-item">
-                <SiOpenai className="skill-icon" title="LLM" color="#412991" />
-                <span className="skill-name">LLMs</span>
-              </div>
-
-              <div className="skill-item">
+              {/* <div className="skill-item">
                 <SiTensorflow className="skill-icon" title="BERT" color="#FF6F00" />
                 <span className="skill-name">BERT</span>
               </div>
@@ -161,14 +151,9 @@ export default function Skills() {
               <div className="skill-item">
                 <GiNetworkBars className="skill-icon" title="Sentence Transformers" color="#FFCC4D" />
                 <span className="skill-name">Sentence Transformers</span>
-              </div>
+              </div> */}
 
-              <div className="skill-item">
-                <SiPytorch className="skill-icon" color="#000000"/>
-                <span className="skill-name">PyTorch</span>
-              </div>
-
-              <div className="skill-item">
+              {/* <div className="skill-item">
                 <MdOutlineLanguage className="skill-icon" title="NLP" color="#3C91E6" />
                 <span className="skill-name">NLP</span>
               </div>
@@ -191,7 +176,23 @@ export default function Skills() {
               <div className="skill-item">
                 <FaSpider className="skill-icon" title="Web Scraping" color="#2B3A67" />
                 <span className="skill-name">Web Scraping</span>
+              </div> */}
+
+              <div className="skill-item">
+                <SiJest className="skill-icon" color="#C21325"/>
+                <span className="skill-name">Jest</span>
               </div>
+
+              {/* <div className="skill-item">
+                <i className="fas fa-wrench skill-icon"></i>
+                <span className="skill-name">React Testing Library</span>
+              </div> */}
+
+              <div className="skill-item">
+                <SiPlaywright className="skill-icon" color="#2EAD32"/>
+                <span className="skill-name">Playwright</span>
+              </div>
+
             </div>
           </div>
         </div>

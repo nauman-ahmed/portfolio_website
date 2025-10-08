@@ -23,12 +23,12 @@ export default function About() {
                         </h1>
 
                         <p>
-                        <strong>Results-driven Software Engineer</strong> with <strong>5+ years of experience</strong> (including <strong>2.5 years professionally</strong>) and a <strong>Master’s in Computer Science</strong> from the <strong>University of Passau, Germany</strong>. I specialize in building <strong>scalable web and mobile applications</strong> with <strong>advanced AI/ML capabilities</strong>.
+                        <strong>Results-driven Software Engineer</strong> with <strong>5+ years of experience</strong> (including <strong>2.5 years professionally</strong>) and a <strong>Master’s in Computer Science</strong> from the <strong>University of Passau, Germany</strong>. I specialize in building <strong>AI powered web and mobile applications</strong>.
                         <br />
                         <br />
-                        Experienced in developing <strong>AI-powered solutions</strong> such as <strong>conversational assistants</strong>, <strong>personalized content platforms</strong>, and <strong>intelligent search systems</strong> using <strong>LLMs</strong> (e.g., <strong>Mixtral-8x7B</strong>), <strong>BERT-based moderation</strong>, and <strong>semantic search</strong> with <strong>sentence transformers</strong>. Skilled in <strong>end-to-end AI development</strong> — from <strong>data processing</strong> to <strong>model deployment</strong> and <strong>UI integration</strong>.
+                        {/* Experienced in developing <strong>AI-powered solutions</strong> such as <strong>conversational assistants</strong>, <strong>personalized content platforms</strong>, and <strong>intelligent search systems</strong> using <strong>LLMs</strong> (e.g., <strong>Mixtral-8x7B</strong>), <strong>BERT-based moderation</strong>, and <strong>semantic search</strong> with <strong>sentence transformers</strong>. Skilled in <strong>end-to-end AI development</strong> — from <strong>data processing</strong> to <strong>model deployment</strong> and <strong>UI integration</strong>.
                         <br />
-                        <br />
+                        <br /> */}
                         A <strong>continuous learner</strong> passionate about <strong>solving complex problems</strong>, <strong>optimizing performance</strong>, and creating <strong>user-centric, AI-driven solutions</strong>. I thrive in <strong>Agile environments</strong> (<strong>Scrum</strong>, <strong>Kanban</strong>) and enjoy <strong>collaborating across disciplines</strong>.
                         <br />
                         <br />
