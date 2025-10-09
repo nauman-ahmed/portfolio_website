@@ -208,6 +208,7 @@ b, strong {
   z-index: 999999;
   will-change: transform;
   transition: transform 200ms linear;
+  background-color: #ffffff;
 }
 .navbar[class*="-unpinned"] {
   transform: translate(0, -150%);
