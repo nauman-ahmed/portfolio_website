@@ -150,7 +150,7 @@ export const projectsData = [
 
     {
     "title": "AI-Powered Personalized Story Generation Platform",
-    "videoPath": "/videos/StoryPlatform.mp4", // You'll need to create this video
+    "videoPath": "/videos/story.mp4", // You'll need to create this video
     "techs": ['Django', 'Python', 'React', 'Bootstrap', 'SQLite', 'BERT', 'Transformers', 'PyTorch', 'gTTS', 'Mixtral-8x7B', 'Sentence-Transformers', 'Scikit-learn', 'Pandas', 'NumPy'],
     "modalsArray": [
         {
@@ -332,7 +332,7 @@ export const projectsData = [
 
     {
         "title": "Academic Assistant - Course Catalog Search",
-        "videoPath": "/videos/AcademicAssistant.mp4", // You'll need to create this video
+        "videoPath": "/videos/news_catalog.mp4", 
         "techs": ['Django', 'Python', 'React', 'JavaScript', 'SQLite', 'sentence-transformers', 'scikit-learn', 'pandas', 'numpy', 'pdfplumber', 'Bootstrap'],
         "modalsArray": [
             {
@@ -514,7 +514,7 @@ export const projectsData = [
 
     {
         "title": "Conversational Assistant for University Cafeteria & News",
-        "videoPath": "/videos/UniversityAssistant.mp4", // You'll need to create this video
+        "videoPath": "/videos/news_catalog.mp4", 
         "techs": ['Django', 'Python', 'React', 'JavaScript', 'SQLite', 'BeautifulSoup', 'Transformers', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'Bootstrap', 'jQuery', 'Prometheus'],
         "modalsArray": [
             {
