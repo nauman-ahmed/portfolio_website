@@ -12,12 +12,10 @@ import 'bootstrap';
 import 'bootstrap';
 import Projects from './sections/Projects'
 import Modal from './components/Modal'
-import 'headroom.js';
 import 'smoothscroll';
 window.jQuery = $;
 window.$ = $;
 import 'animate.css';
-import Headroom from 'headroom.js';
 
 
 
@@ -34,12 +32,7 @@ function App() {
     });
 
     // HEADER
-      // HEADER (Headroom.js without jQuery)
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    const headroom = new Headroom(navbar);
-    headroom.init();
-  }
+    // Headroom.js disabled to keep header always visible
 
     // SMOOTHSCROLL
     $('.nav-link, .custom-btn-link').on('click', function (event) {

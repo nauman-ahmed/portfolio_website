@@ -11,7 +11,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-light">
+    <nav className="navbar navbar-expand-sm navbar-light shadow">
       <div className="container">
         <a className="navbar-brand" href="index.html">
           <i className="uil uil-user"></i> Nauman
