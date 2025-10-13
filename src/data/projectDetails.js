@@ -331,6 +331,174 @@ export const projectsData = [
     },
 
     {
+        "title": 'Shannon Associates - Digital Artist Platform',
+        "videoPath": "/videos/Shannon.mp4", // You'll need to create this video
+        "techs": ['React', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'JWT', 'AWS S3', 'Axios', 'Webflow'],
+        "modalsArray": [
+            {
+                btnText: "Info",
+                title: "General Information",
+                content: `<p><strong>Shannon Associates</strong> is a comprehensive full-stack web application that serves as a premier digital rtist agency platform, connecting talented artists, illustrators, and authors with clients across publishing, advertising, entertainment, design, architecture, and tech industries.</p>
+    
+                            <p><strong>Project Overview:</strong></p>
+    
+                            <p><strong>1. Full-Stack Architecture:</strong><br>
+                            Complete React frontend with Node.js/Express.js backend, featuring secure JWT authentication, MongoDB database integration, and AWS S3 cloud storage for comprehensive artist portfolio management.</p>
+    
+                            <p><strong>2. Multi-User Platform:</strong><br>
+                            Three distinct user experiences: public client browsing interface, secure artist portal for portfolio management, and comprehensive admin dashboard for agency staff management.</p>
+    
+                            <p><strong>3. Advanced Portfolio Management:</strong><br>
+                            Sophisticated image upload system with automatic processing, cropping, and thumbnail generation. Support for multi-image uploads with content categorization by divisions (Illustration, Photography, Medical, Motion, CGI).</p>
+    
+                            <p><strong>4. Diversity & Inclusion Focus:</strong><br>
+                            Dedicated BIPOC (Black, Indigenous, People of Color) artist showcase sections, specialized kid artist support, and comprehensive diversity initiatives in creative representation.</p>
+    
+                            <p><strong>5. Client Discovery & Communication:</strong><br>
+                            Advanced search functionality, interactive image galleries, direct communication channels, and automated email notification systems for seamless client-artist connections.</p>`
+            },
+            {
+                btnText: "Description",
+                title: "Project Description",
+                content: `<p><strong>1. Frontend Architecture (React/Redux):</strong></p>
+                                    
+                            <p><strong>User Interface:</strong><br>
+                            - React 17.0.2 with React Router for single-page application navigation.<br>
+                            - Redux with Redux Toolkit for centralized state management.<br>
+                            - Custom components integrated with Webflow design system.<br>
+                            - Responsive design optimized for mobile and desktop browsing.</p>
+    
+                            <p><strong>Artist Portal Features:</strong><br>
+                            - Secure authentication system with JWT tokens for artist account management.<br>
+                            - Multi-image upload system with automatic processing and optimization.<br>
+                            - Image cropping and thumbnail generation using React Image Crop.<br>
+                            - Drag-and-drop functionality for content organization using React Beautiful DnD.<br>
+                            - AI protection integration with Glaze tool to protect artists' work.</p>
+    
+                            <hr>
+    
+                            <p><strong>2. Backend Architecture (Node.js/Express):</strong></p>
+    
+                            <p><strong>API Development:</strong><br>
+                            - RESTful API with modular route structure and comprehensive error handling.<br>
+                            - JWT-based authentication with secure token management.<br>
+                            - Password hashing using bcryptjs for enhanced security.<br>
+                            - CORS configuration for cross-origin requests.</p>
+    
+                            <p><strong>Database & Data Management:</strong><br>
+                            - MongoDB with Mongoose ODM for NoSQL database operations and data modeling.<br>
+                            - Account status management (active, pending, suspended).<br>
+                            - Advanced filtering and sorting capabilities with keyword-based categorization.</p>
+    
+                            <hr>
+    
+                            <p><strong>3. File & Image Processing:</strong></p>
+    
+                            <p><strong>Cloud Storage & Processing:</strong><br>
+                            - AWS S3 integration for secure cloud storage of artist images and portfolios.<br>
+                            - Sharp library for image processing, optimization, and dimension calculation.<br>
+                            - Multer for handling multipart/form-data file uploads.<br>
+                            - Support for multiple image formats with validation and metadata management.</p>
+    
+                            <hr>
+    
+                            <p><strong>4. Multi-User Support System:</strong></p>
+    
+                            <p><strong>Regular Artists:</strong><br>
+                            - Full portfolio management capabilities with profile customization.<br>
+                            - Image upload and organization features with bio management.</p>
+    
+                            <p><strong>Kid Artists Section:</strong><br>
+                            - Specialized interface for young artists with age-appropriate content management.<br>
+                            - Parental oversight features and specialized categorization.</p>
+    
+                            <p><strong>BIPOC Artists Support:</strong><br>
+                            - Dedicated support for Black, Indigenous, and People of Color artists.<br>
+                            - Specialized categorization and promotion features for diverse creative talent.</p>
+    
+                            <hr>
+    
+                            <p><strong>5. Administrative & Communication Features:</strong></p>
+    
+                            <p><strong>Admin Dashboard:</strong><br>
+                            - Complete system administration capabilities with user account management.<br>
+                            - Artist registration approval system with review workflow.<br>
+                            - Dynamic banner system and content management for various page types.<br>
+                            - Analytics dashboard for tracking submissions and platform activity.</p>
+    
+                            <p><strong>Communication System:</strong><br>
+                            - Nodemailer for automated email notifications and password reset functionality.<br>
+                            - Automated password generation and secure email delivery.<br>
+                            - Support ticket system integration with professional email templates.</p>`
+            },
+            {
+                btnText: "Tech",
+                title: "Technologies Used",
+                content: `
+                            <strong>1. Frontend Technologies:</strong><br>
+                            - React 17.0.2 for building the user interface and managing interactive components.<br>
+                            - Redux with Redux Toolkit for centralized application state management.<br>
+                            - React Router for client-side routing and navigation between different sections.<br>
+                            - Axios for HTTP requests and API communication with backend services.<br><br>
+    
+                            <strong>2. Backend Framework:</strong><br>
+                            - Node.js serves as the runtime environment for the server-side application.<br>
+                            - Express.js provides the web application framework with middleware support.<br>
+                            - RESTful API with modular route structure and comprehensive error handling.<br><br>
+    
+                            <strong>3. Database & Data Management:</strong><br>
+                            - MongoDB with Mongoose ODM for NoSQL database operations and data modeling.<br>
+                            - JWT (JSON Web Tokens) for secure authentication and session management.<br>
+                            - bcryptjs for secure password hashing and verification.<br><br>
+    
+                            <strong>4. File & Image Processing:</strong><br>
+                            - AWS S3 integration for secure cloud storage of artist images and portfolios.<br>
+                            - Sharp library for image processing, optimization, and dimension calculation.<br>
+                            - Multer for handling multipart/form-data file uploads.<br><br>
+    
+                            <strong>5. Communication & Integration:</strong><br>
+                            - Nodemailer for automated email notifications and password reset functionality.<br>
+                            - CORS middleware for cross-origin resource sharing configuration.<br>
+                            - Input validation and sanitization for enhanced security.`
+            },
+            {
+                btnText: "Libraries",
+                title: "Libraries & Dependencies",
+                content: `
+                <strong>Frontend Libraries:</strong><br>
+                1. <strong>React</strong> - Core framework for building the user interface and managing interactive components.<br>
+                2. <strong>Redux Toolkit</strong> - State management library for predictable state updates across the application.<br>
+                3. <strong>React Router DOM</strong> - Client-side routing for single-page application navigation.<br>
+                4. <strong>Axios</strong> - HTTP client for API requests and backend communication.<br>
+                5. <strong>React Image Crop</strong> - Image cropping and thumbnail generation for artist portfolios.<br>
+                6. <strong>React Beautiful DnD</strong> - Drag and drop functionality for content organization.<br>
+                7. <strong>React JWT</strong> - JWT token decoding and authentication management.<br>
+                8. <strong>React Quill</strong> - Rich text editor for content management.<br>
+                9. <strong>React Slick</strong> - Carousel and slider components for image galleries.<br>
+                10. <strong>Bootstrap</strong> - CSS framework for responsive design and UI components.<br>
+                11. <strong>Webflow</strong> - Design system integration for custom styling and animations.<br><br>
+    
+                <strong>Backend Libraries:</strong><br>
+                12. <strong>Express.js</strong> - Web application framework for Node.js with middleware support.<br>
+                13. <strong>Mongoose</strong> - MongoDB object modeling tool for Node.js with schema validation.<br>
+                14. <strong>jsonwebtoken</strong> - JWT implementation for secure authentication and authorization.<br>
+                15. <strong>bcryptjs</strong> - Password hashing library for secure user authentication.<br>
+                16. <strong>Multer</strong> - Middleware for handling multipart/form-data file uploads.<br>
+                17. <strong>Sharp</strong> - High-performance image processing library for optimization and resizing.<br>
+                18. <strong>Nodemailer</strong> - Email sending library for automated notifications and communications.<br>
+                19. <strong>AWS S3 Admin SDK</strong> - Server-side AWS S3 integration for cloud storage and authentication.<br>
+                20. <strong>Moment.js</strong> - Date manipulation and formatting library.<br>
+                21. <strong>generate-password</strong> - Secure password generation for user accounts.<br>
+                22. <strong>image-size</strong> - Image dimension calculation and metadata extraction.<br>
+                23. <strong>express-unless</strong> - Conditional middleware application for route-specific functionality.<br>
+                24. <strong>country-state-city</strong> - Geographic data for location-based features.<br>
+                25. <strong>uuid-v4</strong> - Unique identifier generation for various system components.
+                `
+            },
+        ]
+    },
+
+    {
         "title": "Academic Assistant - Course Catalog Search",
         "videoPath": "/videos/news_catalog.mp4", 
         "techs": ['Django', 'Python', 'React', 'JavaScript', 'SQLite', 'sentence-transformers', 'scikit-learn', 'pandas', 'numpy', 'pdfplumber', 'Bootstrap'],
@@ -513,6 +681,123 @@ export const projectsData = [
     },
 
     {
+        title: 'DEWA - Energy Management Platform (IoT)',
+        videoPath: '/videos/dewa.mp4',
+        techs: [
+          'React', 'Vite', 'Tailwind CSS', 'ECharts', 'Recharts', 'Google Charts',
+          'Three.js', 'React Three Fiber', 'React Drei',
+          'FullCalendar', 'Axios', 'Day.js', 'Luxon',
+          'Express', 'Node.js', 'PostgreSQL', 'pg', 'Sequelize (migrations)'
+        ],
+        modalsArray: [
+          {
+            btnText: 'Info',
+            title: 'General Information',
+            content: `<p><strong>DEWA Energy Management Platform</strong> is a full‑stack web application for building operations and energy analytics. It provides interactive dashboards, <strong>3D visualization</strong>, <strong>schedule management</strong>, and <strong>alert notifications</strong> to support monitoring and decision‑making.</p>
+      
+                      <p><strong>Project Overview:</strong></p>
+      
+                      <p><strong>1. Operations & Scheduling:</strong><br>
+                      Manage equipment schedules (e.g., coffee machines and building systems) with a modern calendar UI; update or override schedules and automatically log notifications.</p>
+      
+                      <p><strong>2. Analytics Dashboards:</strong><br>
+                      Rich energy KPIs and comparative views using <strong>ECharts</strong>, <strong>Recharts</strong>, and <strong>Google Charts</strong>, including spend vs budget/forecast, month‑wise/core‑wise consumption, and stacked comparisons.</p>
+      
+                      <p><strong>3. 3D Building View:</strong><br>
+                      An interactive <strong>Three.js</strong> scene via <strong>React Three Fiber</strong>/<strong>Drei</strong> to visualize assets and context in 3D.</p>
+      
+                      <p><strong>4. Notifications:</strong><br>
+                      Centralized alerts (critical/warning/normal) with read/unread status to track operational changes and events.</p>
+      
+                      <p><strong>Technologies Used:</strong><br>
+                      Built with <strong>React (Vite)</strong> on the frontend and <strong>Express + PostgreSQL</strong> on the backend.</p>`
+          },
+          {
+            btnText: 'Description',
+            title: 'Project Description',
+            content: `<p><strong>1. Frontend Features:</strong></p>
+      
+                      <p><strong>Dashboards & Analytics:</strong><br>
+                      - Multiple chart types for energy KPIs (ECharts, Recharts, Google Charts).<br>
+                      - Comparative/stacked bar charts, forecasts, and spend vs budget visualizations.<br>
+                      - Reusable widgets and gauges for quick insights.</p>
+      
+                      <p><strong>Scheduling & Calendar:</strong><br>
+                      - <strong>FullCalendar</strong> (daygrid, timegrid, list, interaction) for creating, editing, and reviewing schedules.<br>
+                      - Toast notifications, selects, and date pickers for smooth UX.</p>
+      
+                      <p><strong>3D Visualization:</strong><br>
+                      - <strong>Three.js</strong> scene via <strong>@react-three/fiber</strong> and <strong>@react-three/drei</strong> to present building context and assets.</p>
+      
+                      <p><strong>Pages & Navigation:</strong><br>
+                      - Key views: Dashboard, Overview, Reports, Schedules, Scheduler, Scheduled Event Calendar, 3D Graphic, Load Management, Notifications.</p>
+      
+                      <hr>
+      
+                      <p><strong>2. Backend/API:</strong></p>
+      
+                      <p><strong>Stack:</strong><br>
+                      - <strong>Express</strong> server with <strong>pg</strong> client for PostgreSQL; <strong>Sequelize CLI</strong> for migrations.<br>
+                      - CORS and JSON body parsing enabled.</p>
+      
+                      <p><strong>Endpoints:</strong><br>
+                      - <code>POST /create-schedule</code>: Create a schedule.<br>
+                      - <code>POST /update-schedule</code>: Update/override a schedule and log a notification.<br>
+                      - <code>GET /get-schedules</code>: List schedules.<br>
+                      - <code>GET /get-schedule/:scheduleId</code>: Fetch a schedule by id.<br>
+                      - <code>GET /get-notifications</code>: List notifications.<br>
+                      - <code>POST /read-notification/:notificationId</code>: Mark as read.<br>
+                      - <code>POST /unread-notification/:notificationId</code>: Mark as unread.</p>
+      
+                      <p><strong>Database:</strong><br>
+                      - PostgreSQL with tables for <em>schedules</em> and <em>notifications</em> (migrations present).<br>
+                      - SSL-enabled connection via environment variables.</p>
+      
+                      <hr>
+      
+                      <p><strong>3. Interaction & UX:</strong></p>
+      
+                      <p><strong>Responsive & Interactive:</strong><br>
+                      - Tailwind CSS for responsive UI, tooltips, toasts, and date/time utilities (Day.js, Luxon).<br>
+                      - Selection components and filters for asset/category/core/level.</p>`
+          },
+          {
+            btnText: 'Tech',
+            title: 'Technologies Used',
+            content: `<strong>1. Frontend:</strong><br>
+                      - React 18 (Vite) for SPA architecture and performance.<br>
+                      - Tailwind CSS, PostCSS, Autoprefixer for responsive styling.<br>
+                      - FullCalendar for scheduling UI.<br>
+                      - Three.js + React Three Fiber + Drei for 3D.<br><br>
+      
+                      <strong>2. Data Visualization:</strong><br>
+                      - ECharts, Recharts, Google Charts for robust, interactive analytics.<br><br>
+      
+                      <strong>3. Backend:</strong><br>
+                      - Node.js, Express for REST APIs, CORS, and JSON handling.<br>
+                      - PostgreSQL with <code>pg</code> client; Sequelize CLI for migrations.<br><br>
+      
+                      <strong>4. Utilities:</strong><br>
+                      - Axios, React Toastify, React Select, Day.js, Luxon.`
+          },
+          {
+            btnText: 'Libraries',
+            title: 'Libraries Used',
+            content: `
+              1. <strong>React</strong> / <strong>Vite</strong> — SPA structure and fast dev tooling.<br>
+              2. <strong>Tailwind CSS</strong>, <strong>PostCSS</strong>, <strong>Autoprefixer</strong> — Responsive styling pipeline.<br>
+              3. <strong>ECharts</strong>, <strong>Recharts</strong>, <strong>react-google-charts</strong> — Charts and analytics.<br>
+              4. <strong>Three.js</strong>, <strong>@react-three/fiber</strong>, <strong>@react-three/drei</strong> — 3D visualization and helpers.<br>
+              5. <strong>@fullcalendar/react</strong> (+ daygrid, timegrid, list, interaction) — Calendar and scheduling UI.<br>
+              6. <strong>Axios</strong>, <strong>react-toastify</strong>, <strong>react-select</strong>, <strong>react-tooltip</strong> — UX and data handling utilities.<br>
+              7. <strong>Day.js</strong>, <strong>Luxon</strong> — Date/time utilities.<br>
+              8. <strong>Express</strong>, <strong>pg</strong>, <strong>Sequelize CLI</strong> — REST API, PostgreSQL access, and migrations.<br>
+              9. <strong>dotenv</strong>, <strong>cors</strong>, <strong>nodemon</strong> — Configuration, cross‑origin support, dev reload.`
+          }
+        ]
+    },
+
+    {
         "title": "Conversational Assistant for University Cafeteria & News",
         "videoPath": "/videos/news_catalog.mp4", 
         "techs": ['Django', 'Python', 'React', 'JavaScript', 'SQLite', 'BeautifulSoup', 'Transformers', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'Bootstrap', 'jQuery', 'Prometheus'],
@@ -691,291 +976,6 @@ export const projectsData = [
                     26. <strong>Certifi</strong> - Python package for providing Mozilla's CA Bundle for SSL verification.
                     `
             },
-        ]
-    },
-
-    {
-        "title": 'Shannon Associates - Digital Artist Platform',
-        "videoPath": "/videos/Shannon.mp4", // You'll need to create this video
-        "techs": ['React', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'JWT', 'AWS S3', 'Axios', 'Webflow'],
-        "modalsArray": [
-            {
-                btnText: "Info",
-                title: "General Information",
-                content: `<p><strong>Shannon Associates</strong> is a comprehensive full-stack web application that serves as a premier digital rtist agency platform, connecting talented artists, illustrators, and authors with clients across publishing, advertising, entertainment, design, architecture, and tech industries.</p>
-    
-                            <p><strong>Project Overview:</strong></p>
-    
-                            <p><strong>1. Full-Stack Architecture:</strong><br>
-                            Complete React frontend with Node.js/Express.js backend, featuring secure JWT authentication, MongoDB database integration, and AWS S3 cloud storage for comprehensive artist portfolio management.</p>
-    
-                            <p><strong>2. Multi-User Platform:</strong><br>
-                            Three distinct user experiences: public client browsing interface, secure artist portal for portfolio management, and comprehensive admin dashboard for agency staff management.</p>
-    
-                            <p><strong>3. Advanced Portfolio Management:</strong><br>
-                            Sophisticated image upload system with automatic processing, cropping, and thumbnail generation. Support for multi-image uploads with content categorization by divisions (Illustration, Photography, Medical, Motion, CGI).</p>
-    
-                            <p><strong>4. Diversity & Inclusion Focus:</strong><br>
-                            Dedicated BIPOC (Black, Indigenous, People of Color) artist showcase sections, specialized kid artist support, and comprehensive diversity initiatives in creative representation.</p>
-    
-                            <p><strong>5. Client Discovery & Communication:</strong><br>
-                            Advanced search functionality, interactive image galleries, direct communication channels, and automated email notification systems for seamless client-artist connections.</p>`
-            },
-            {
-                btnText: "Description",
-                title: "Project Description",
-                content: `<p><strong>1. Frontend Architecture (React/Redux):</strong></p>
-                                    
-                            <p><strong>User Interface:</strong><br>
-                            - React 17.0.2 with React Router for single-page application navigation.<br>
-                            - Redux with Redux Toolkit for centralized state management.<br>
-                            - Custom components integrated with Webflow design system.<br>
-                            - Responsive design optimized for mobile and desktop browsing.</p>
-    
-                            <p><strong>Artist Portal Features:</strong><br>
-                            - Secure authentication system with JWT tokens for artist account management.<br>
-                            - Multi-image upload system with automatic processing and optimization.<br>
-                            - Image cropping and thumbnail generation using React Image Crop.<br>
-                            - Drag-and-drop functionality for content organization using React Beautiful DnD.<br>
-                            - AI protection integration with Glaze tool to protect artists' work.</p>
-    
-                            <hr>
-    
-                            <p><strong>2. Backend Architecture (Node.js/Express):</strong></p>
-    
-                            <p><strong>API Development:</strong><br>
-                            - RESTful API with modular route structure and comprehensive error handling.<br>
-                            - JWT-based authentication with secure token management.<br>
-                            - Password hashing using bcryptjs for enhanced security.<br>
-                            - CORS configuration for cross-origin requests.</p>
-    
-                            <p><strong>Database & Data Management:</strong><br>
-                            - MongoDB with Mongoose ODM for NoSQL database operations and data modeling.<br>
-                            - Account status management (active, pending, suspended).<br>
-                            - Advanced filtering and sorting capabilities with keyword-based categorization.</p>
-    
-                            <hr>
-    
-                            <p><strong>3. File & Image Processing:</strong></p>
-    
-                            <p><strong>Cloud Storage & Processing:</strong><br>
-                            - AWS S3 integration for secure cloud storage of artist images and portfolios.<br>
-                            - Sharp library for image processing, optimization, and dimension calculation.<br>
-                            - Multer for handling multipart/form-data file uploads.<br>
-                            - Support for multiple image formats with validation and metadata management.</p>
-    
-                            <hr>
-    
-                            <p><strong>4. Multi-User Support System:</strong></p>
-    
-                            <p><strong>Regular Artists:</strong><br>
-                            - Full portfolio management capabilities with profile customization.<br>
-                            - Image upload and organization features with bio management.</p>
-    
-                            <p><strong>Kid Artists Section:</strong><br>
-                            - Specialized interface for young artists with age-appropriate content management.<br>
-                            - Parental oversight features and specialized categorization.</p>
-    
-                            <p><strong>BIPOC Artists Support:</strong><br>
-                            - Dedicated support for Black, Indigenous, and People of Color artists.<br>
-                            - Specialized categorization and promotion features for diverse creative talent.</p>
-    
-                            <hr>
-    
-                            <p><strong>5. Administrative & Communication Features:</strong></p>
-    
-                            <p><strong>Admin Dashboard:</strong><br>
-                            - Complete system administration capabilities with user account management.<br>
-                            - Artist registration approval system with review workflow.<br>
-                            - Dynamic banner system and content management for various page types.<br>
-                            - Analytics dashboard for tracking submissions and platform activity.</p>
-    
-                            <p><strong>Communication System:</strong><br>
-                            - Nodemailer for automated email notifications and password reset functionality.<br>
-                            - Automated password generation and secure email delivery.<br>
-                            - Support ticket system integration with professional email templates.</p>`
-            },
-            {
-                btnText: "Tech",
-                title: "Technologies Used",
-                content: `
-                            <strong>1. Frontend Technologies:</strong><br>
-                            - React 17.0.2 for building the user interface and managing interactive components.<br>
-                            - Redux with Redux Toolkit for centralized application state management.<br>
-                            - React Router for client-side routing and navigation between different sections.<br>
-                            - Axios for HTTP requests and API communication with backend services.<br><br>
-    
-                            <strong>2. Backend Framework:</strong><br>
-                            - Node.js serves as the runtime environment for the server-side application.<br>
-                            - Express.js provides the web application framework with middleware support.<br>
-                            - RESTful API with modular route structure and comprehensive error handling.<br><br>
-    
-                            <strong>3. Database & Data Management:</strong><br>
-                            - MongoDB with Mongoose ODM for NoSQL database operations and data modeling.<br>
-                            - JWT (JSON Web Tokens) for secure authentication and session management.<br>
-                            - bcryptjs for secure password hashing and verification.<br><br>
-    
-                            <strong>4. File & Image Processing:</strong><br>
-                            - AWS S3 integration for secure cloud storage of artist images and portfolios.<br>
-                            - Sharp library for image processing, optimization, and dimension calculation.<br>
-                            - Multer for handling multipart/form-data file uploads.<br><br>
-    
-                            <strong>5. Communication & Integration:</strong><br>
-                            - Nodemailer for automated email notifications and password reset functionality.<br>
-                            - CORS middleware for cross-origin resource sharing configuration.<br>
-                            - Input validation and sanitization for enhanced security.`
-            },
-            {
-                btnText: "Libraries",
-                title: "Libraries & Dependencies",
-                content: `
-                <strong>Frontend Libraries:</strong><br>
-                1. <strong>React</strong> - Core framework for building the user interface and managing interactive components.<br>
-                2. <strong>Redux Toolkit</strong> - State management library for predictable state updates across the application.<br>
-                3. <strong>React Router DOM</strong> - Client-side routing for single-page application navigation.<br>
-                4. <strong>Axios</strong> - HTTP client for API requests and backend communication.<br>
-                5. <strong>React Image Crop</strong> - Image cropping and thumbnail generation for artist portfolios.<br>
-                6. <strong>React Beautiful DnD</strong> - Drag and drop functionality for content organization.<br>
-                7. <strong>React JWT</strong> - JWT token decoding and authentication management.<br>
-                8. <strong>React Quill</strong> - Rich text editor for content management.<br>
-                9. <strong>React Slick</strong> - Carousel and slider components for image galleries.<br>
-                10. <strong>Bootstrap</strong> - CSS framework for responsive design and UI components.<br>
-                11. <strong>Webflow</strong> - Design system integration for custom styling and animations.<br><br>
-    
-                <strong>Backend Libraries:</strong><br>
-                12. <strong>Express.js</strong> - Web application framework for Node.js with middleware support.<br>
-                13. <strong>Mongoose</strong> - MongoDB object modeling tool for Node.js with schema validation.<br>
-                14. <strong>jsonwebtoken</strong> - JWT implementation for secure authentication and authorization.<br>
-                15. <strong>bcryptjs</strong> - Password hashing library for secure user authentication.<br>
-                16. <strong>Multer</strong> - Middleware for handling multipart/form-data file uploads.<br>
-                17. <strong>Sharp</strong> - High-performance image processing library for optimization and resizing.<br>
-                18. <strong>Nodemailer</strong> - Email sending library for automated notifications and communications.<br>
-                19. <strong>AWS S3 Admin SDK</strong> - Server-side AWS S3 integration for cloud storage and authentication.<br>
-                20. <strong>Moment.js</strong> - Date manipulation and formatting library.<br>
-                21. <strong>generate-password</strong> - Secure password generation for user accounts.<br>
-                22. <strong>image-size</strong> - Image dimension calculation and metadata extraction.<br>
-                23. <strong>express-unless</strong> - Conditional middleware application for route-specific functionality.<br>
-                24. <strong>country-state-city</strong> - Geographic data for location-based features.<br>
-                25. <strong>uuid-v4</strong> - Unique identifier generation for various system components.
-                `
-            },
-        ]
-    },
-
-    {
-        title: 'DEWA - Energy Management Platform (IoT)',
-        videoPath: '/videos/dewa.mp4',
-        techs: [
-          'React', 'Vite', 'Tailwind CSS', 'ECharts', 'Recharts', 'Google Charts',
-          'Three.js', 'React Three Fiber', 'React Drei',
-          'FullCalendar', 'Axios', 'Day.js', 'Luxon',
-          'Express', 'Node.js', 'PostgreSQL', 'pg', 'Sequelize (migrations)'
-        ],
-        modalsArray: [
-          {
-            btnText: 'Info',
-            title: 'General Information',
-            content: `<p><strong>DEWA Energy Management Platform</strong> is a full‑stack web application for building operations and energy analytics. It provides interactive dashboards, <strong>3D visualization</strong>, <strong>schedule management</strong>, and <strong>alert notifications</strong> to support monitoring and decision‑making.</p>
-      
-                      <p><strong>Project Overview:</strong></p>
-      
-                      <p><strong>1. Operations & Scheduling:</strong><br>
-                      Manage equipment schedules (e.g., coffee machines and building systems) with a modern calendar UI; update or override schedules and automatically log notifications.</p>
-      
-                      <p><strong>2. Analytics Dashboards:</strong><br>
-                      Rich energy KPIs and comparative views using <strong>ECharts</strong>, <strong>Recharts</strong>, and <strong>Google Charts</strong>, including spend vs budget/forecast, month‑wise/core‑wise consumption, and stacked comparisons.</p>
-      
-                      <p><strong>3. 3D Building View:</strong><br>
-                      An interactive <strong>Three.js</strong> scene via <strong>React Three Fiber</strong>/<strong>Drei</strong> to visualize assets and context in 3D.</p>
-      
-                      <p><strong>4. Notifications:</strong><br>
-                      Centralized alerts (critical/warning/normal) with read/unread status to track operational changes and events.</p>
-      
-                      <p><strong>Technologies Used:</strong><br>
-                      Built with <strong>React (Vite)</strong> on the frontend and <strong>Express + PostgreSQL</strong> on the backend.</p>`
-          },
-          {
-            btnText: 'Description',
-            title: 'Project Description',
-            content: `<p><strong>1. Frontend Features:</strong></p>
-      
-                      <p><strong>Dashboards & Analytics:</strong><br>
-                      - Multiple chart types for energy KPIs (ECharts, Recharts, Google Charts).<br>
-                      - Comparative/stacked bar charts, forecasts, and spend vs budget visualizations.<br>
-                      - Reusable widgets and gauges for quick insights.</p>
-      
-                      <p><strong>Scheduling & Calendar:</strong><br>
-                      - <strong>FullCalendar</strong> (daygrid, timegrid, list, interaction) for creating, editing, and reviewing schedules.<br>
-                      - Toast notifications, selects, and date pickers for smooth UX.</p>
-      
-                      <p><strong>3D Visualization:</strong><br>
-                      - <strong>Three.js</strong> scene via <strong>@react-three/fiber</strong> and <strong>@react-three/drei</strong> to present building context and assets.</p>
-      
-                      <p><strong>Pages & Navigation:</strong><br>
-                      - Key views: Dashboard, Overview, Reports, Schedules, Scheduler, Scheduled Event Calendar, 3D Graphic, Load Management, Notifications.</p>
-      
-                      <hr>
-      
-                      <p><strong>2. Backend/API:</strong></p>
-      
-                      <p><strong>Stack:</strong><br>
-                      - <strong>Express</strong> server with <strong>pg</strong> client for PostgreSQL; <strong>Sequelize CLI</strong> for migrations.<br>
-                      - CORS and JSON body parsing enabled.</p>
-      
-                      <p><strong>Endpoints:</strong><br>
-                      - <code>POST /create-schedule</code>: Create a schedule.<br>
-                      - <code>POST /update-schedule</code>: Update/override a schedule and log a notification.<br>
-                      - <code>GET /get-schedules</code>: List schedules.<br>
-                      - <code>GET /get-schedule/:scheduleId</code>: Fetch a schedule by id.<br>
-                      - <code>GET /get-notifications</code>: List notifications.<br>
-                      - <code>POST /read-notification/:notificationId</code>: Mark as read.<br>
-                      - <code>POST /unread-notification/:notificationId</code>: Mark as unread.</p>
-      
-                      <p><strong>Database:</strong><br>
-                      - PostgreSQL with tables for <em>schedules</em> and <em>notifications</em> (migrations present).<br>
-                      - SSL-enabled connection via environment variables.</p>
-      
-                      <hr>
-      
-                      <p><strong>3. Interaction & UX:</strong></p>
-      
-                      <p><strong>Responsive & Interactive:</strong><br>
-                      - Tailwind CSS for responsive UI, tooltips, toasts, and date/time utilities (Day.js, Luxon).<br>
-                      - Selection components and filters for asset/category/core/level.</p>`
-          },
-          {
-            btnText: 'Tech',
-            title: 'Technologies Used',
-            content: `<strong>1. Frontend:</strong><br>
-                      - React 18 (Vite) for SPA architecture and performance.<br>
-                      - Tailwind CSS, PostCSS, Autoprefixer for responsive styling.<br>
-                      - FullCalendar for scheduling UI.<br>
-                      - Three.js + React Three Fiber + Drei for 3D.<br><br>
-      
-                      <strong>2. Data Visualization:</strong><br>
-                      - ECharts, Recharts, Google Charts for robust, interactive analytics.<br><br>
-      
-                      <strong>3. Backend:</strong><br>
-                      - Node.js, Express for REST APIs, CORS, and JSON handling.<br>
-                      - PostgreSQL with <code>pg</code> client; Sequelize CLI for migrations.<br><br>
-      
-                      <strong>4. Utilities:</strong><br>
-                      - Axios, React Toastify, React Select, Day.js, Luxon.`
-          },
-          {
-            btnText: 'Libraries',
-            title: 'Libraries Used',
-            content: `
-              1. <strong>React</strong> / <strong>Vite</strong> — SPA structure and fast dev tooling.<br>
-              2. <strong>Tailwind CSS</strong>, <strong>PostCSS</strong>, <strong>Autoprefixer</strong> — Responsive styling pipeline.<br>
-              3. <strong>ECharts</strong>, <strong>Recharts</strong>, <strong>react-google-charts</strong> — Charts and analytics.<br>
-              4. <strong>Three.js</strong>, <strong>@react-three/fiber</strong>, <strong>@react-three/drei</strong> — 3D visualization and helpers.<br>
-              5. <strong>@fullcalendar/react</strong> (+ daygrid, timegrid, list, interaction) — Calendar and scheduling UI.<br>
-              6. <strong>Axios</strong>, <strong>react-toastify</strong>, <strong>react-select</strong>, <strong>react-tooltip</strong> — UX and data handling utilities.<br>
-              7. <strong>Day.js</strong>, <strong>Luxon</strong> — Date/time utilities.<br>
-              8. <strong>Express</strong>, <strong>pg</strong>, <strong>Sequelize CLI</strong> — REST API, PostgreSQL access, and migrations.<br>
-              9. <strong>dotenv</strong>, <strong>cors</strong>, <strong>nodemon</strong> — Configuration, cross‑origin support, dev reload.`
-          }
         ]
     },
 
