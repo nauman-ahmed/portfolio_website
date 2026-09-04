@@ -756,6 +756,137 @@ export const projectsData = [
     },
 
     {
+    "title": "Automated Essay Scoring System (NLP, Transformers)",
+    "imagePath": "/videos/AutomatedEssayScoring.png",
+    "techs": ['Python', 'Transformers', 'RoBERTa', 'DeBERTa', 'MiniLM', 'SpaCy', 'VADER', 'Optuna', 'TF-IDF', 'Word2Vec', 'NLP', 'Machine Learning'],
+    "modalsArray": [
+        {
+            btnText: "Info",
+            title: "General Information",
+            content: `<p><strong>Automated Essay Scoring System</strong> is an end-to-end NLP pipeline that grades written essays, combining transformer language models with engineered linguistic features and classical text representations to reach close agreement with human graders.</p>
+
+                        <p><strong>My Role:</strong> AI Engineer - model development, feature engineering, hyperparameter optimization, and evaluation.</p>
+
+                        <p><strong>Project Overview:</strong></p>
+
+                        <p><strong>1. Transformer-Based Scoring:</strong><br>
+                        Built the scoring system on transformer models including RoBERTa, DeBERTa, and MiniLM, comparing their performance on the grading task.</p>
+
+                        <p><strong>2. Classical Baselines:</strong><br>
+                        Implemented traditional representations - TF-IDF and Word2Vec - alongside the transformers, so modern architectures were measured against established baselines rather than adopted on assumption.</p>
+
+                        <p><strong>3. Linguistic and Semantic Features:</strong><br>
+                        Engineered features using SpaCy for linguistic structure, VADER for sentiment analysis, and readability metrics, capturing qualities of writing that raw embeddings do not directly expose.</p>
+
+                        <p><strong>4. Hyperparameter Optimization:</strong><br>
+                        Tuned model performance with Optuna, replacing manual search with systematic optimization over the hyperparameter space.</p>
+
+                        <p><strong>5. Evaluation Result:</strong><br>
+                        Achieved a Cohen's Kappa score of 0.81, indicating high agreement with human grading - a substantial result for a task where even human graders disagree with one another.</p>`
+        },
+        {
+            btnText: "Description",
+            title: "Project Description",
+            content: `<p><strong>1. Transformer Models:</strong></p>
+
+                        <p><strong>Architecture Comparison:</strong><br>
+                        - RoBERTa applied as a primary transformer encoder for essay representation.<br>
+                        - DeBERTa evaluated for its disentangled attention treatment of content and position.<br>
+                        - MiniLM included as a lighter-weight alternative, trading capacity for efficiency.<br>
+                        - Models compared directly on the scoring task to establish which architecture suited the data.</p>
+
+                        <hr>
+
+                        <p><strong>2. Traditional NLP Methods:</strong></p>
+
+                        <p><strong>Classical Representations:</strong><br>
+                        - TF-IDF vectorization capturing term importance across the essay corpus.<br>
+                        - Word2Vec embeddings providing distributional word semantics.<br>
+                        - Baselines used to quantify what the transformer models actually contributed over established methods.</p>
+
+                        <hr>
+
+                        <p><strong>3. Feature Engineering:</strong></p>
+
+                        <p><strong>Linguistic Features (SpaCy):</strong><br>
+                        - Linguistic structure extracted through SpaCy's NLP pipeline.<br>
+                        - Syntactic and morphological signals derived from parsed essay text.</p>
+
+                        <p><strong>Sentiment Features (VADER):</strong><br>
+                        - VADER sentiment analysis applied to capture affective tone within submissions.</p>
+
+                        <p><strong>Readability Metrics:</strong><br>
+                        - Readability scoring incorporated as an explicit measure of writing complexity and accessibility.<br>
+                        - Combined with semantic features to represent writing quality beyond surface content.</p>
+
+                        <hr>
+
+                        <p><strong>4. Optimization:</strong></p>
+
+                        <p><strong>Hyperparameter Tuning:</strong><br>
+                        - Optuna used to search the hyperparameter space systematically.<br>
+                        - Automated trials replacing manual tuning, improving final model performance.</p>
+
+                        <hr>
+
+                        <p><strong>5. Evaluation:</strong></p>
+
+                        <p><strong>Agreement with Human Graders:</strong><br>
+                        - Cohen's Kappa adopted as the evaluation metric, measuring agreement beyond what chance alone would produce.<br>
+                        - Achieved a score of 0.81, placing the system in high agreement with human grading.<br>
+                        - Metric chosen because raw accuracy overstates performance on ordinal grading tasks.</p>`
+        },
+        {
+            btnText: "Tech",
+            title: "Technologies Used",
+            content: `
+                        <strong>1. Transformer Models:</strong><br>
+                        - RoBERTa for robust contextual essay representation.<br>
+                        - DeBERTa for disentangled attention over content and position.<br>
+                        - MiniLM as an efficient distilled alternative.<br><br>
+
+                        <strong>2. Classical NLP:</strong><br>
+                        - TF-IDF for term-frequency based document representation.<br>
+                        - Word2Vec for distributional word embeddings.<br><br>
+
+                        <strong>3. Feature Extraction:</strong><br>
+                        - SpaCy for linguistic parsing and structural feature extraction.<br>
+                        - VADER for rule-based sentiment scoring.<br>
+                        - Readability metrics quantifying writing complexity.<br><br>
+
+                        <strong>4. Optimization and Evaluation:</strong><br>
+                        - Optuna for automated hyperparameter search.<br>
+                        - Cohen's Kappa as the inter-rater agreement metric against human scores.<br><br>
+
+                        <strong>5. Implementation:</strong><br>
+                        - Python as the implementation language across the pipeline.<br>
+                        - End-to-end workflow spanning preprocessing, feature engineering, training, tuning, and evaluation.`
+        },
+        {
+            btnText: "Libraries",
+            title: "Libraries & Dependencies",
+            content: `
+            <strong>Transformer Libraries:</strong><br>
+            1. <strong>RoBERTa</strong> - Robustly optimized BERT variant used as a primary scoring encoder.<br>
+            2. <strong>DeBERTa</strong> - Decoding-enhanced BERT with disentangled attention.<br>
+            3. <strong>MiniLM</strong> - Distilled transformer offering reduced inference cost.<br><br>
+
+            <strong>NLP Libraries:</strong><br>
+            4. <strong>SpaCy</strong> - Industrial NLP pipeline for tokenization, parsing, and linguistic feature extraction.<br>
+            5. <strong>VADER</strong> - Lexicon and rule-based sentiment analysis tool.<br>
+            6. <strong>Word2Vec</strong> - Word embedding model providing distributional semantics.<br>
+            7. <strong>TF-IDF</strong> - Term frequency-inverse document frequency vectorization.<br><br>
+
+            <strong>Optimization Libraries:</strong><br>
+            8. <strong>Optuna</strong> - Hyperparameter optimization framework driving automated tuning trials.<br><br>
+
+            <strong>Core:</strong><br>
+            9. <strong>Python</strong> - Implementation language for the full scoring pipeline.`
+        }
+    ]
+    },
+
+    {
     "title": "Passenger Volume Prediction - DB Regio",
     "imagePath": "/videos/PassengerVolume.png",
     "techs": ['Machine Learning', 'Time Series Analysis', 'Predictive Modeling', 'Feature Engineering', 'Data Science'],
