@@ -149,6 +149,176 @@ export const projectsData = [
     // },
 
     {
+    "title": "KnowledgeFlow - AI Knowledge Assistant (RAG)",
+    "videoPath": "/videos/knowledgeFlow.mp4",
+    "techs": ['Next.js', 'React', 'TypeScript', 'Clerk', 'FastAPI', 'Python', 'PostgreSQL', 'pgvector', 'LangChain', 'LangGraph', 'Langfuse', 'Redis', 'Pydantic', 'RAGAS', 'Docker'],
+    "modalsArray": [
+        {
+            btnText: "Info",
+            title: "General Information",
+            content: `<p><strong>KnowledgeFlow</strong> is a ChatGPT-style knowledge assistant built over a curated document library. It pairs a Next.js chat interface with a FastAPI retrieval-augmented generation (RAG) backend, so answers are grounded in your own documents and every claim is traceable back to its source.</p>
+
+                        <p><strong>My Role:</strong> AI Systems Engineer - full-stack and GenAI integration, covering the retrieval pipeline, the agent graph, observability, and deployment.</p>
+
+                        <p><strong>Project Overview:</strong></p>
+
+                        <p><strong>1. Grounded Question Answering:</strong><br>
+                        Retrieval-augmented generation over a PostgreSQL/pgvector store, so responses are drawn from the indexed document library rather than model memory alone.</p>
+
+                        <p><strong>2. Citation-Backed Answers:</strong><br>
+                        Retrieved passages surface in the UI as citation chips, letting users verify exactly which source and section an answer came from.</p>
+
+                        <p><strong>3. Multi-Step Agent Reasoning:</strong><br>
+                        A LangGraph agent decomposes questions through a Planner to Researcher to Answer flow, with tool access for steps that need more than a single retrieval pass.</p>
+
+                        <p><strong>4. Streaming Chat Experience:</strong><br>
+                        Server-Sent Events stream tokens to the client as they are generated, alongside persistent conversation history and a dedicated search interface.</p>
+
+                        <p><strong>5. Observability and Evaluation:</strong><br>
+                        Langfuse traces every run end to end, and an evaluation CLI scores answer faithfulness using RAGAS metrics so regressions are caught before they ship.</p>`
+        },
+        {
+            btnText: "Description",
+            title: "Project Description",
+            content: `<p><strong>1. Frontend Architecture (Next.js 16 / React / TypeScript):</strong></p>
+
+                        <p><strong>Chat Interface:</strong><br>
+                        - ChatGPT-style conversational UI with token-by-token streaming over Server-Sent Events.<br>
+                        - Persistent conversation history so users can revisit and continue earlier threads.<br>
+                        - Citation chips rendered inline with answers, linking each response back to its source passages.<br>
+                        - Dedicated search UI for querying the document library directly, outside of a chat turn.</p>
+
+                        <p><strong>Authentication:</strong><br>
+                        - Clerk handles sign-in, session management, and route protection.<br>
+                        - Per-user scoping of conversation history and search activity.</p>
+
+                        <hr>
+
+                        <p><strong>2. Backend Architecture (FastAPI / Python):</strong></p>
+
+                        <p><strong>API Layer:</strong><br>
+                        - FastAPI application exposing streaming chat, search, and ingestion endpoints.<br>
+                        - Server-Sent Events transport for incremental token delivery to the client.<br>
+                        - Pydantic models enforce structured, validated outputs across the request and response boundary.<br>
+                        - Guardrails applied to model output to keep responses within expected shape and scope.</p>
+
+                        <p><strong>Memory:</strong><br>
+                        - Redis-backed conversation memory for fast retrieval of session state across turns.</p>
+
+                        <hr>
+
+                        <p><strong>3. RAG Pipeline (PostgreSQL / pgvector):</strong></p>
+
+                        <p><strong>Ingestion:</strong><br>
+                        - Command-line ingest tool for loading and indexing the document library.<br>
+                        - LangChain document loaders covering PDF, DOCX, TXT, and Markdown sources.<br>
+                        - Chunked embeddings written to PostgreSQL with the pgvector extension.</p>
+
+                        <p><strong>Retrieval:</strong><br>
+                        - Cosine similarity search over the vector store to select the most relevant passages.<br>
+                        - Retrieved context passed to the agent and returned to the UI as verifiable citations.</p>
+
+                        <hr>
+
+                        <p><strong>4. Agent Orchestration (LangGraph):</strong></p>
+
+                        <p><strong>Planner to Researcher to Answer:</strong><br>
+                        - Planner node breaks an incoming question into the steps needed to answer it.<br>
+                        - Researcher node executes retrieval and tool calls to gather supporting evidence.<br>
+                        - Answer node synthesizes the gathered context into a final, cited response.<br>
+                        - Tool integration allows the graph to reach beyond plain retrieval where a question requires it.</p>
+
+                        <hr>
+
+                        <p><strong>5. Observability and Evaluation:</strong></p>
+
+                        <p><strong>Tracing:</strong><br>
+                        - Langfuse instrumentation captures full traces of agent runs, retrievals, and model calls.<br>
+                        - Per-step visibility makes it possible to diagnose where a weak answer originated.</p>
+
+                        <p><strong>Evaluation:</strong><br>
+                        - Evaluation CLI scoring answer quality on faithfulness using RAGAS metrics.<br>
+                        - Repeatable runs support comparison across prompt and pipeline changes.</p>
+
+                        <hr>
+
+                        <p><strong>6. Deployment and Tooling:</strong></p>
+
+                        <p><strong>Infrastructure:</strong><br>
+                        - Docker Compose for reproducible local development across API, database, and Redis.<br>
+                        - Continuous integration pipeline for automated checks on each change.<br>
+                        - Deployment configuration targeting Vercel for the frontend and Render for the backend.<br>
+                        - Accompanying project documentation covering setup, ingestion, and operation.</p>`
+        },
+        {
+            btnText: "Tech",
+            title: "Technologies Used",
+            content: `
+                        <strong>1. Frontend:</strong><br>
+                        - Next.js 16 for the React application framework and routing.<br>
+                        - TypeScript for static typing across the client codebase.<br>
+                        - Clerk for authentication, session handling, and protected routes.<br>
+                        - Server-Sent Events for streaming model output to the browser.<br><br>
+
+                        <strong>2. Backend:</strong><br>
+                        - FastAPI for the asynchronous Python API layer.<br>
+                        - Pydantic for structured output validation and schema enforcement.<br>
+                        - Redis for conversation memory and session state.<br><br>
+
+                        <strong>3. AI / GenAI Stack:</strong><br>
+                        - LangChain for document loading and RAG pipeline components.<br>
+                        - LangGraph for stateful, multi-step agent orchestration.<br>
+                        - Prompt engineering across the Planner, Researcher, and Answer stages.<br>
+                        - Guardrails for constraining and validating model responses.<br><br>
+
+                        <strong>4. Data and Retrieval:</strong><br>
+                        - PostgreSQL as the primary datastore.<br>
+                        - pgvector extension for vector storage and similarity search.<br>
+                        - Cosine similarity retrieval for ranking candidate passages.<br><br>
+
+                        <strong>5. Observability and Quality:</strong><br>
+                        - Langfuse for tracing, monitoring, and run inspection.<br>
+                        - RAGAS for faithfulness scoring of generated answers.<br>
+                        - Evaluation CLI for repeatable pipeline benchmarking.<br><br>
+
+                        <strong>6. Infrastructure:</strong><br>
+                        - Docker Compose for local multi-service orchestration.<br>
+                        - CI pipeline for automated build and test runs.<br>
+                        - Vercel and Render deployment configurations.`
+        },
+        {
+            btnText: "Libraries",
+            title: "Libraries & Dependencies",
+            content: `
+            <strong>Frontend Libraries:</strong><br>
+            1. <strong>Next.js 16</strong> - React framework providing routing, server rendering, and API routes.<br>
+            2. <strong>React</strong> - Component library underpinning the chat and search interfaces.<br>
+            3. <strong>TypeScript</strong> - Static type checking across the frontend codebase.<br>
+            4. <strong>Clerk</strong> - Managed authentication, user sessions, and route protection.<br><br>
+
+            <strong>Backend Libraries:</strong><br>
+            5. <strong>FastAPI</strong> - Asynchronous Python web framework serving chat, search, and ingest endpoints.<br>
+            6. <strong>Pydantic</strong> - Data validation and structured output modelling.<br>
+            7. <strong>Redis</strong> - In-memory store backing conversation memory.<br><br>
+
+            <strong>AI / RAG Libraries:</strong><br>
+            8. <strong>LangChain</strong> - Document loaders for PDF, DOCX, TXT, and Markdown plus RAG pipeline utilities.<br>
+            9. <strong>LangGraph</strong> - Graph-based agent framework driving the Planner, Researcher, and Answer nodes.<br>
+            10. <strong>Langfuse</strong> - LLM observability, tracing, and run analytics.<br>
+            11. <strong>RAGAS</strong> - Retrieval-augmented generation evaluation metrics, including faithfulness.<br><br>
+
+            <strong>Data Libraries:</strong><br>
+            12. <strong>PostgreSQL</strong> - Relational datastore for documents, chunks, and history.<br>
+            13. <strong>pgvector</strong> - PostgreSQL extension enabling vector similarity search.<br><br>
+
+            <strong>Infrastructure:</strong><br>
+            14. <strong>Docker Compose</strong> - Local orchestration of API, database, and cache services.<br>
+            15. <strong>Vercel / Render</strong> - Hosting targets for the frontend and backend respectively.`
+        }
+    ]
+    },
+
+    {
     "title": "AI-Powered Personalized Story Generation Platform",
     "videoPath": "/videos/story.mp4", // You'll need to create this video
     "techs": ['Django', 'Python', 'React', 'Bootstrap', 'SQLite', 'BERT', 'Transformers', 'PyTorch', 'gTTS', 'Mixtral-8x7B', 'Sentence-Transformers', 'Scikit-learn', 'Pandas', 'NumPy'],
