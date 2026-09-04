@@ -1,5 +1,5 @@
 import React from 'react'
-import pdfFile from '../assets/files/Resume-Nauman.pdf';
+import pdfFile from '../assets/files/Nauman-Ahmed-Applied-AI-CV.pdf';
 import img from '../assets/images/undraw/man-developing-website-on-desk.svg'
 import img2 from '../assets/images/undraw/img-Nauman.png'
 
@@ -17,26 +17,26 @@ export default function About() {
                             <span className="mr-2">Hey everyone, I'm</span>
                                 <div className="animated-info">
                                     <span className="animated-item">Nauman Ahmed</span>
-                                    <span className="animated-item">Full Stack Developer</span>
-                                    <span className="animated-item">AI Engineer</span>
+                                    <span className="animated-item">Applied AI Engineer</span>
+                                    <span className="animated-item">AI Systems Engineer</span>
                                 </div>
                         </h1>
 
                         <p>
-                        <strong>Results-driven Software Engineer</strong> with <strong>5+ years of experience</strong> (including <strong>2.5 years professionally</strong>) and a <strong>Master’s in Computer Science</strong> from the <strong>University of Passau, Germany</strong>. I specialize in building <strong>AI powered web and mobile applications</strong>.
+                        <strong>Applied AI Engineer</strong> with a <strong>software engineering background</strong> and <strong>5+ years</strong> of combined professional and academic experience building <strong>AI-powered applications</strong>, <strong>NLP systems</strong>, <strong>agentic workflows</strong>, and <strong>scalable backend services</strong>.
                         <br />
                         <br />
-                        {/* Experienced in developing <strong>AI-powered solutions</strong> such as <strong>conversational assistants</strong>, <strong>personalized content platforms</strong>, and <strong>intelligent search systems</strong> using <strong>LLMs</strong> (e.g., <strong>Mixtral-8x7B</strong>), <strong>BERT-based moderation</strong>, and <strong>semantic search</strong> with <strong>sentence transformers</strong>. Skilled in <strong>end-to-end AI development</strong> — from <strong>data processing</strong> to <strong>model deployment</strong> and <strong>UI integration</strong>.
+                        Experienced in <strong>multi-agent systems</strong>, <strong>Retrieval-Augmented Generation (RAG)</strong>, <strong>LLM applications</strong>, <strong>semantic search</strong>, <strong>transformer-based NLP</strong>, and <strong>workflow automation</strong>. Hands-on experience building end-to-end AI systems with <strong>LangGraph</strong>, <strong>LangChain</strong>, <strong>Hugging Face Transformers</strong>, <strong>FastAPI</strong>, <strong>PostgreSQL</strong>, <strong>pgvector</strong>, <strong>Redis</strong>, <strong>Docker</strong>, and <strong>AWS</strong>.
                         <br />
-                        <br /> */}
-                        A <strong>continuous learner</strong> passionate about <strong>solving complex problems</strong>, <strong>optimizing performance</strong>, and creating <strong>user-centric, AI-driven solutions</strong>. I thrive in <strong>Agile environments</strong> (<strong>Scrum</strong>, <strong>Kanban</strong>) and enjoy <strong>collaborating across disciplines</strong>.
+                        <br />
+                        Strong <strong>product and engineering mindset</strong>, with <strong>10+ web and cloud-based solutions</strong> delivered and production-oriented AI applications taken from <strong>experimentation and evaluation through to deployment</strong>. I hold a <strong>Master&rsquo;s in Computer Science</strong> from the <strong>University of Passau, Germany</strong>, where my thesis was the first work to apply <strong>Liquid Neural Networks</strong> to <strong>multi-agent coverage path planning</strong>.
                         <br />
                         <br />
                         Outside of work, I love <strong>chess</strong>, <strong>travel</strong>, <strong>running</strong>, and <strong>cricket</strong>.
                         </p>
                         
                         <div className="custom-btn-group mt-4">
-                          <a href={pdfFile} target="_blank" rel="noopener noreferrer" className="btn mr-lg-2 custom-btn"><i className='uil uil-file-alt'></i> View Resume</a>
+                          <a href={pdfFile} target="_blank" rel="noopener noreferrer" className="btn mr-lg-2 custom-btn"><i className='uil uil-file-alt'></i> View CV</a>
                           <a href="#contact" className="btn custom-btn custom-btn-bg custom-btn-link">Get in touch</a>
                         </div>
                     </div>

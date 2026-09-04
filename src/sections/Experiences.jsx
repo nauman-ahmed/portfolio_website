@@ -1,4 +1,5 @@
 import React from 'react'
+import thesisPdf from '../assets/files/Masters-Thesis-Nauman-Ahmed.pdf'
 
 export default function Resume() {
   return (
@@ -17,22 +18,27 @@ export default function Resume() {
                             <span>05/25-10/25 </span>
                         </div>
                         <div className="timeline-info">
-                            <h3><span>MULTI-AGENT COVERAGE PATH PLANNING (UAVs)</span><br/><small>MASTER THESIS</small></h3>
+                            <h3><span>MULTI-AGENT 3D COVERAGE PATH PLANNING (UAVs)</span><br/><small>MASTER THESIS &mdash; UNIVERSITY OF PASSAU</small></h3>
                             <p>    
-                                • Designed and implemented a multi-agent reinforcement learning environment for
-                                UAVs using PyTorch, Gym, and NCP/Liquid Neural Networks.
+                                • First application of Liquid Neural Networks (Liquid Time-Constant models) to
+                                coverage path planning as an end-to-end learned policy, addressing a gap
+                                identified in the literature.
                                 <br/>
-                                • Developed a 3D coverage environment simulator with obstacles, no-fly zones, and
-                                agent collision handling.
+                                • Built a constrained 3D voxel environment (20&times;20&times;6) with terrain,
+                                volumetric no-fly zones, safe landing zones, and hard movement-budget limits
+                                enforced through legal-action masking and forced-return safety.
                                 <br/>
-                                • Applied communication-based policies with attention and LNNs to improve
-                                coverage efficiency and cooperation.
+                                • Designed a hybrid policy combining multi-branch spatial feature extraction, an
+                                LTC recurrent core, and attention-based inter-agent communication, trained with
+                                PPO in PyTorch.
                                 <br/>
-                                • Achieved ~93% average coverage in simulation across varied terrains, visualized
-                                results using Matplotlib and Plotly.
+                                • Trained across 11,436 episodes reaching ~97% mean coverage in late training;
+                                on 100 held-out fixed-seed environments the selected checkpoint achieved 93.0%
+                                mean coverage at budget 150 and 88.0% at budget 100.
                                 <br/>
-                                • Integrated TensorBoard logging and training pipeline for reproducible
-                                experiments.
+                                • Recorded zero collision penalties across fixed-seed evaluation, with
+                                complementary exploration between agents and a fully reproducible
+                                training and evaluation protocol.
                             </p>
                         </div>
                     </div>
@@ -83,11 +89,25 @@ export default function Resume() {
                   <div className="timeline">
                       <div className="timeline-wrapper">
                             <div className="timeline-yr" >
-                                <span>2021-2025</span>
+                                <span>04/22-04/26</span>
                             </div>
                             <div className="timeline-info">
                                 <h3><span>M.Sc COMPUTER SCIENCE</span><small>UNIVERSITY OF PASSAU</small></h3>
-                                <p>Passau, Germany</p>
+                                <p>Passau, Germany
+                                    <br/>
+                                    <br/>
+                                    <strong>Master&rsquo;s Thesis &mdash; Grade: 2.0</strong>
+                                    <br/>
+                                    <em>Multi-Agent 3D Coverage Path Planning Using a Hybrid Liquid Neural
+                                    Reinforcement Learning Model for Autonomous UAV Systems</em>
+                                    <br/>
+                                    Chair of Informatik &mdash; Examiners: Prof. Dr. Mario D&ouml;ller,
+                                    Prof. Dr. Harald Kosch
+                                    <br/>
+                                    <a href={thesisPdf} target="_blank" rel="noopener noreferrer" className="btn mt-3 custom-btn">
+                                        <i className='uil uil-file-alt'></i> Read Thesis
+                                    </a>
+                                </p>
                             </div>
                       </div>
 

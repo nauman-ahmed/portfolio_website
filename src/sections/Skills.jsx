@@ -1,13 +1,103 @@
 import React from 'react'
-import { 
-  SiAngular, SiVercel, SiPlaywright, SiFlask, 
-  SiTypescript, SiD3Dotjs, SiFastapi, SiGraphql, SiJest, SiMongodb, SiPostgresql, SiMysql,
-  SiAmazonwebservices, SiDocker, SiTerraform, SiJenkins, SiHeroku,
-  SiPandas, SiNumpy, SiPytorch, SiScikitlearn, SiOpenai, SiTensorflow 
+import {
+  SiLangchain, SiHuggingface, SiPython, SiRedis, SiSupabase, SiN8N,
+  SiLinux, SiGit, SiSpacy, SiScikitlearn, SiPandas, SiNumpy, SiOpenai, SiPytorch,
+  SiAngular, SiPlaywright, SiFlask, SiTypescript, SiJavascript, SiD3Dotjs,
+  SiFastapi, SiGraphql, SiJest, SiMongodb, SiPostgresql,
+  SiAmazonwebservices, SiDocker, SiTerraform, SiJenkins
 } from "react-icons/si";
-import { MdOutlineLanguage } from "react-icons/md";
-import { GiNetworkBars } from "react-icons/gi";
-import { FaSpider } from "react-icons/fa";
+import {
+  FaRobot, FaProjectDiagram, FaSearch, FaDatabase, FaPlug, FaUsers,
+  FaChartLine, FaSlidersH, FaVectorSquare, FaLayerGroup
+} from "react-icons/fa";
+
+// Every icon carries an explicit colour so the legacy nth-child rules in
+// App.css (which assume one flat, fixed-order grid) can no longer mis-colour it.
+const skillGroups = [
+  {
+    title: 'Applied AI & LLM Systems',
+    skills: [
+      { name: 'LangChain', icon: <SiLangchain className="skill-icon" style={{ color: '#1C3C3C' }} /> },
+      { name: 'LangGraph', icon: <FaProjectDiagram className="skill-icon" style={{ color: '#1C3C3C' }} /> },
+      { name: 'RAG', icon: <FaSearch className="skill-icon" style={{ color: '#5A4FCF' }} /> },
+      { name: 'AI Agents', icon: <FaRobot className="skill-icon" style={{ color: '#412991' }} /> },
+      { name: 'LLMs', icon: <SiOpenai className="skill-icon" style={{ color: '#412991' }} /> },
+      { name: 'CrewAI', icon: <FaUsers className="skill-icon" style={{ color: '#FF5A1F' }} /> },
+      { name: 'Ollama', icon: <FaRobot className="skill-icon" style={{ color: '#000000' }} /> },
+      { name: 'ChromaDB', icon: <FaLayerGroup className="skill-icon" style={{ color: '#FFB000' }} /> },
+      { name: 'Langfuse', icon: <FaChartLine className="skill-icon" style={{ color: '#0EA5E9' }} /> },
+      { name: 'MCP', icon: <FaPlug className="skill-icon" style={{ color: '#D97757' }} /> },
+      { name: 'n8n', icon: <SiN8N className="skill-icon" style={{ color: '#EA4B71' }} /> },
+    ],
+  },
+  {
+    title: 'Machine Learning & NLP',
+    skills: [
+      { name: 'PyTorch', icon: <SiPytorch className="skill-icon" style={{ color: '#EE4C2C' }} /> },
+      { name: 'Transformers', icon: <SiHuggingface className="skill-icon" style={{ color: '#FFD21E' }} /> },
+      { name: 'spaCy', icon: <SiSpacy className="skill-icon" style={{ color: '#09A3D5' }} /> },
+      { name: 'Scikit-learn', icon: <SiScikitlearn className="skill-icon" style={{ color: '#F7931E' }} /> },
+      { name: 'Optuna', icon: <FaSlidersH className="skill-icon" style={{ color: '#2C6BAA' }} /> },
+      { name: 'Pandas', icon: <SiPandas className="skill-icon" style={{ color: '#150458' }} /> },
+      { name: 'NumPy', icon: <SiNumpy className="skill-icon" style={{ color: '#4D77CF' }} /> },
+    ],
+  },
+  {
+    title: 'Programming',
+    skills: [
+      { name: 'Python', icon: <SiPython className="skill-icon" style={{ color: '#3776AB' }} /> },
+      { name: 'TypeScript', icon: <SiTypescript className="skill-icon" style={{ color: '#3178C6' }} /> },
+      { name: 'JavaScript', icon: <SiJavascript className="skill-icon" style={{ color: '#F7DF1E' }} /> },
+      { name: 'SQL', icon: <FaDatabase className="skill-icon" style={{ color: '#4479A1' }} /> },
+    ],
+  },
+  {
+    title: 'Backend & Data',
+    skills: [
+      { name: 'FastAPI', icon: <SiFastapi className="skill-icon" style={{ color: '#009688' }} /> },
+      { name: 'Node.js', icon: <i className="devicon-nodejs-plain skill-icon" style={{ color: '#339933' }}></i> },
+      { name: 'Express', icon: <i className="devicon-express-original skill-icon" style={{ color: '#68A063' }}></i> },
+      { name: 'Django', icon: <i className="devicon-django-plain skill-icon" style={{ color: '#092E20' }}></i> },
+      { name: 'Flask', icon: <SiFlask className="skill-icon" style={{ color: '#000000' }} /> },
+      { name: 'PostgreSQL', icon: <SiPostgresql className="skill-icon" style={{ color: '#336791' }} /> },
+      { name: 'pgvector', icon: <FaVectorSquare className="skill-icon" style={{ color: '#336791' }} /> },
+      { name: 'Redis', icon: <SiRedis className="skill-icon" style={{ color: '#DC382D' }} /> },
+      { name: 'Supabase', icon: <SiSupabase className="skill-icon" style={{ color: '#3ECF8E' }} /> },
+      { name: 'MongoDB', icon: <SiMongodb className="skill-icon" style={{ color: '#47A248' }} /> },
+      { name: 'REST APIs', icon: <FaPlug className="skill-icon" style={{ color: '#FF6B6B' }} /> },
+      { name: 'GraphQL', icon: <SiGraphql className="skill-icon" style={{ color: '#E10098' }} /> },
+    ],
+  },
+  {
+    title: 'Web Development',
+    skills: [
+      { name: 'React', icon: <i className="devicon-react-original skill-icon" style={{ color: '#61DAFB' }}></i> },
+      { name: 'Next.js', icon: <i className="devicon-nextjs-original skill-icon" style={{ color: '#000000' }}></i> },
+      { name: 'React Native', icon: <i className="devicon-react-original skill-icon" style={{ color: '#61DAFB' }}></i> },
+      { name: 'Vue.js', icon: <i className="devicon-vuejs-plain skill-icon" style={{ color: '#4FC08D' }}></i> },
+      { name: 'Angular', icon: <SiAngular className="skill-icon" style={{ color: '#DD0031' }} /> },
+      { name: 'D3.js', icon: <SiD3Dotjs className="skill-icon" style={{ color: '#F9A03C' }} /> },
+    ],
+  },
+  {
+    title: 'Cloud & Infrastructure',
+    skills: [
+      { name: 'AWS', icon: <SiAmazonwebservices className="skill-icon" style={{ color: '#FF9900' }} /> },
+      { name: 'Docker', icon: <SiDocker className="skill-icon" style={{ color: '#2496ED' }} /> },
+      { name: 'CI/CD', icon: <SiJenkins className="skill-icon" style={{ color: '#D24939' }} /> },
+      { name: 'Terraform', icon: <SiTerraform className="skill-icon" style={{ color: '#7C42A0' }} /> },
+      { name: 'Linux', icon: <SiLinux className="skill-icon" style={{ color: '#000000' }} /> },
+      { name: 'Git', icon: <SiGit className="skill-icon" style={{ color: '#F05032' }} /> },
+    ],
+  },
+  {
+    title: 'Testing',
+    skills: [
+      { name: 'Jest', icon: <SiJest className="skill-icon" style={{ color: '#C21325' }} /> },
+      { name: 'Playwright', icon: <SiPlaywright className="skill-icon" style={{ color: '#2EAD32' }} /> },
+    ],
+  },
+]
 
 export default function Skills() {
   return (
@@ -17,183 +107,20 @@ export default function Skills() {
           <div className="col-lg-12 col-12">
             <h2 className="mb-5 text-center">Skills</h2>
 
-            <div className="skills-grid">
-              <div className="skill-item">
-                <i className="devicon-react-original skill-icon"></i>
-                <span className="skill-name">React</span>
+            {skillGroups.map((group) => (
+              <div key={group.title} className="skill-group">
+                <h3 className="skill-group-title">{group.title}</h3>
+                <div className="skills-grid">
+                  {group.skills.map((skill) => (
+                    <div key={skill.name} className="skill-item">
+                      {skill.icon}
+                      <span className="skill-name">{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
+            ))}
 
-              <div className="skill-item">
-                <i className="devicon-nextjs-original skill-icon"></i>
-                <span className="skill-name">Next.js</span>
-              </div>
-
-              <div className="skill-item">
-                <i className="devicon-react-original skill-icon"></i>
-                <span className="skill-name">React Native</span>
-              </div>
-
-              <div className="skill-item">
-                <i className="devicon-vuejs-plain skill-icon"></i>
-                <span className="skill-name">Vue.js</span>
-              </div>
-
-              <div className="skill-item">
-                <SiAngular className="skill-icon" color="red"/>
-                <span className="skill-name">Angular</span>
-              </div>
-
-              <div className="skill-item">
-                <SiTypescript className="skill-icon" color="#3178C6"/>
-                <span className="skill-name">TypeScript</span>
-              </div>
-
-              <div className="skill-item">
-                <SiD3Dotjs className="skill-icon" color="orange"/>
-                <span className="skill-name">D3.js</span>
-              </div>
-
-              <div className="skill-item">
-                <i className="devicon-nodejs-plain skill-icon"></i>
-                <span className="skill-name">Node.js</span>
-              </div>
-
-              <div className="skill-item">
-                <i className="devicon-express-original skill-icon"></i>
-                <span className="skill-name">Express</span>
-              </div>
-
-              <div className="skill-item">
-                <i className="devicon-django-plain skill-icon"></i>
-                <span className="skill-name">Django</span>
-              </div>
-
-              <div className="skill-item">
-                <SiFastapi className="skill-icon" color="#009688"/>
-                <span className="skill-name">FastAPI</span>
-              </div>
-
-              <div className="skill-item">
-                <SiFlask className="skill-icon" color="#000000"/>
-                <span className="skill-name">Flask</span>
-              </div>
-
-              <div className="skill-item">
-                <SiOpenai className="skill-icon" title="LLM" color="#412991" />
-                <span className="skill-name">LLMs</span>
-              </div>
-              
-              <div className="skill-item">
-                <SiPytorch className="skill-icon" color="#000000"/>
-                <span className="skill-name">PyTorch</span>
-              </div>
-
-              <div className="skill-item">
-                <SiAmazonwebservices className="skill-icon" color="#FF9900"/>
-                <span className="skill-name">AWS</span>
-              </div>
-
-              <div className="skill-item">
-                <SiDocker className="skill-icon" color="#2496ED"/>
-                <span className="skill-name">Docker</span>
-              </div>
-
-              <div className="skill-item">
-                <SiJenkins className="skill-icon" color="#D24939"/>
-                <span className="skill-name">Jenkins</span>
-              </div>
-
-              <div className="skill-item">
-                <SiTerraform className="skill-icon" color="#7C42A0"/>
-                <span className="skill-name">Terraform</span>
-              </div>
-
-              <div className="skill-item">
-                <i className="fas fa-plug skill-icon" style={{color: '#000000'}}></i>
-                <span className="skill-name">RESTful API</span>
-              </div>
-
-              <div className="skill-item">
-                <SiGraphql className="skill-icon" color="#E10098"/>
-                <span className="skill-name">GraphQL</span>
-              </div>
-
-              <div className="skill-item">
-                <SiMongodb className="skill-icon" color="#47A248"/>
-                <span className="skill-name">MongoDB</span>
-              </div>
-
-              <div className="skill-item">
-                <SiPostgresql className="skill-icon" color="#336791"/>
-                <span className="skill-name">PostgreSQL</span>
-              </div>
-
-              {/* <div className="skill-item">
-                <SiMysql className="skill-icon" color="#4479A1"/>
-                <span className="skill-name">MySQL</span>
-              </div> */}
-
-              {/* <div className="skill-item">
-                <SiVercel className="skill-icon" color="#000000"/>
-                <span className="skill-name">Vercel</span>
-              </div>
-
-              <div className="skill-item">
-                <SiHeroku className="skill-icon" color="#430098"/>
-                <span className="skill-name">Heroku</span>
-              </div> */}
-
-              {/* <div className="skill-item">
-                <SiTensorflow className="skill-icon" title="BERT" color="#FF6F00" />
-                <span className="skill-name">BERT</span>
-              </div>
-
-              <div className="skill-item">
-                <GiNetworkBars className="skill-icon" title="Sentence Transformers" color="#FFCC4D" />
-                <span className="skill-name">Sentence Transformers</span>
-              </div> */}
-
-              {/* <div className="skill-item">
-                <MdOutlineLanguage className="skill-icon" title="NLP" color="#3C91E6" />
-                <span className="skill-name">NLP</span>
-              </div>
-
-              <div className="skill-item">
-                <SiScikitlearn className="skill-icon" title="Scikit-learn" color="#F7931E" />
-                <span className="skill-name">Scikit-learn</span>
-              </div>
-
-              <div className="skill-item">
-                <SiPandas className="skill-icon" color="#150458"/>
-                <span className="skill-name">Pandas</span>
-              </div>
-
-              <div className="skill-item">
-                <SiNumpy className="skill-icon" color="#4D77CF"/>
-                <span className="skill-name">NumPy</span>
-              </div>
-
-              <div className="skill-item">
-                <FaSpider className="skill-icon" title="Web Scraping" color="#2B3A67" />
-                <span className="skill-name">Web Scraping</span>
-              </div> */}
-
-              <div className="skill-item">
-                <SiJest className="skill-icon" color="#C21325"/>
-                <span className="skill-name">Jest</span>
-              </div>
-
-              {/* <div className="skill-item">
-                <i className="fas fa-wrench skill-icon"></i>
-                <span className="skill-name">React Testing Library</span>
-              </div> */}
-
-              <div className="skill-item">
-                <SiPlaywright className="skill-icon" color="#2EAD32"/>
-                <span className="skill-name">Playwright</span>
-              </div>
-
-            </div>
           </div>
         </div>
       </div>

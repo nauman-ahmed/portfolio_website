@@ -149,7 +149,7 @@ export const projectsData = [
     // },
 
     {
-    "title": "Multi-Agent Coverage Path Planning - Liquid Neural Networks (RL)",
+    "title": "Multi-Agent 3D Coverage Path Planning - Liquid Neural Networks (Master's Thesis)",
     "imagePath": "/videos/Reinforcement_Learning.png",
     "techs": ['Python', 'PyTorch', 'Reinforcement Learning', 'PPO', 'Liquid Neural Networks', 'LTC', 'Deep Learning', 'Multi-Agent Systems'],
     "modalsArray": [
@@ -169,10 +169,15 @@ export const projectsData = [
                         Built a voxel-based 3D environment of 20x20x6 encoding collision avoidance, constrained flyability, and forced-return planning as first-class constraints rather than soft penalties.</p>
 
                         <p><strong>3. Policy Training:</strong><br>
-                        Trained for approximately 11,000 episodes using Proximal Policy Optimization (PPO), with stable convergence and consistent policy improvement across training.</p>
+                        Trained across 11,436 episodes using Proximal Policy Optimization (PPO), with coverage and reward improving consistently and late training windows reaching near 97% mean coverage.</p>
 
                         <p><strong>4. Generalization Result:</strong><br>
-                        Achieved approximately 93% average coverage across 100 unseen environments, demonstrating strong generalization under constrained and dynamic conditions rather than overfitting to the training layouts.</p>`
+                        On 100 held-out fixed-seed environments, the selected checkpoint achieved 93.0% mean coverage at budget 150 and 88.0% at budget 100 - demonstrating generalization to unseen layouts rather than overfitting to the training set.</p>
+
+                        <p><strong>5. Safety Record:</strong><br>
+                        Recorded zero collision penalties across fixed-seed evaluation, with agents exhibiting complementary rather than redundant exploration.</p>
+
+                        <p><em>Submitted as a Master's thesis at the University of Passau (Chair of Informatik), March 2026. Examiners: Prof. Dr. Mario D&ouml;ller and Prof. Dr. Harald Kosch.</em></p>`
         },
         {
             btnText: "Description",
@@ -203,18 +208,21 @@ export const projectsData = [
 
                         <p><strong>Reinforcement Learning:</strong><br>
                         - Proximal Policy Optimization (PPO) as the training algorithm.<br>
-                        - Approximately 11,000 training episodes.<br>
-                        - Stable convergence observed with consistent policy improvement over the training run.<br>
-                        - Multi-agent setup requiring cooperative rather than independent coverage behaviour.</p>
+                        - 11,436 training episodes with consistent improvement in coverage and reward.<br>
+                        - Strong positive association observed between episode return and final coverage.<br>
+                        - Late training windows reaching approximately 97% mean coverage.<br>
+                        - Two-agent setup requiring cooperative rather than independent coverage behaviour.</p>
 
                         <hr>
 
                         <p><strong>4. Evaluation:</strong></p>
 
                         <p><strong>Generalization Testing:</strong><br>
-                        - Evaluated on 100 unseen environments not encountered during training.<br>
-                        - Achieved approximately 93% average coverage across the evaluation set.<br>
-                        - Performance sustained under constrained and dynamic conditions, indicating the learned policy generalizes rather than memorizing training layouts.</p>`
+                        - Evaluated on 100 held-out fixed-seed environments not encountered during training.<br>
+                        - Four checkpoint selection criteria compared; selection by best 100-episode rolling mean of return proved most reliable.<br>
+                        - 93.0% mean coverage at budget 150 and 88.0% at budget 100 under greedy decoding.<br>
+                        - Zero collision penalties recorded across fixed-seed evaluation.<br>
+                        - Performance sustained under constrained conditions, indicating the policy generalizes rather than memorizing training layouts.</p>`
         },
         {
             btnText: "Tech",

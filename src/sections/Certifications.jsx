@@ -10,7 +10,26 @@ export default function Certifications() {
                     <h2 className="mb-5 text-center">Publications & Certifications</h2>
                     
                     <div className="row">
-                        
+
+                        <div className="col-lg-4 col-md-6 col-12 mb-4">
+                            <div className="certification-item">
+                                <div className="certification-header">
+                                    <h4>ChatGPT and LangChain: The Complete Developer&rsquo;s Masterclass</h4>
+                                    <span className="certification-date">2026</span>
+                                </div>
+                                <div className="certification-body">
+                                    <p className="certification-issuer">Udemy</p>
+                                    <p className="certification-description">
+                                        Building production-ready LLM applications with LangChain &mdash; chains, agents, tool calling, embeddings and retrieval-augmented generation.
+                                    </p>
+                                    <a href="https://www.udemy.com/certificate/UC-564ea2df-447a-4f38-8685-3eabd056a4c4/" target="_blank" rel="noopener noreferrer" className="certification-badge">
+                                        <i className="uil uil-award"></i>
+                                        <span>View Certificate</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="col-lg-4 col-md-6 col-12 mb-4">
                             <div className="certification-item">
                                 <div className="certification-header">

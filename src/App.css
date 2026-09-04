@@ -144,6 +144,31 @@
   }
 }
 
+/* Skill category groups */
+.skill-group {
+  margin-bottom: 2.5rem;
+}
+
+.skill-group-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark-mode .skill-group-title {
+  color: #cfd4da;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
 /* Clean Skills Section - No Boxes */
 .skills-grid {
   display: grid;
