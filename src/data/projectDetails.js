@@ -887,6 +887,134 @@ export const projectsData = [
     },
 
     {
+    "title": "Autonomous Systems Security & Risk Modeling",
+    "imagePath": "/videos/RiskMitigation.png",
+    "techs": ['CARLA Simulator', 'Autonomous Vehicles', 'Cybersecurity', 'Risk Assessment', 'Threat Modeling', 'SFOP Framework', 'Attack Simulation', 'Safety-Critical Systems'],
+    "modalsArray": [
+        {
+            btnText: "Info",
+            title: "General Information",
+            content: `<p><strong>Autonomous Systems Security & Risk Modeling</strong> examines how cyberattacks against self-driving systems translate into real-world consequences - and how those consequences can be quantified rather than described. Attacks are simulated in a driving environment, their impact scored across four dimensions, and mitigations proposed on the basis of measured risk.</p>
+
+                        <p><strong>My Role:</strong> Designed security features - attack scenario modelling, the quantitative impact assessment framework, and the mitigation strategy.</p>
+
+                        <p><strong>Project Overview:</strong></p>
+
+                        <p><strong>1. Attack Scenario Simulation:</strong><br>
+                        Modeled and simulated cyberattack scenarios against autonomous driving systems - including steering manipulation and camera spoofing - inside the CARLA simulator, where consequences can be observed without physical risk.</p>
+
+                        <p><strong>2. Quantitative Impact Framework:</strong><br>
+                        Designed an impact assessment framework spanning Safety, Financial, Operational, and Privacy (SFOP) dimensions, so an attack's severity is expressed as a structured score rather than a qualitative judgement.</p>
+
+                        <p><strong>3. Context-Aware Impact Models:</strong><br>
+                        Developed mathematical models estimating attack impact from contextual driving parameters and system state, recognizing that the same attack carries very different consequences at highway speed than in a stationary vehicle.</p>
+
+                        <p><strong>4. Risk-Based Mitigation:</strong><br>
+                        Evaluated system vulnerabilities and proposed mitigation strategies prioritized by assessed risk, directing defensive effort toward the attacks that matter most.</p>`
+        },
+        {
+            btnText: "Description",
+            title: "Project Description",
+            content: `<p><strong>1. Simulation Environment (CARLA):</strong></p>
+
+                        <p><strong>Attack Modelling:</strong><br>
+                        - CARLA simulator used as the testbed for autonomous driving scenarios.<br>
+                        - Attacks modelled and executed against a simulated vehicle rather than physical hardware.<br>
+                        - Simulation enabling observation of consequences that would be unsafe or impossible to test on real roads.</p>
+
+                        <p><strong>Attack Scenarios:</strong><br>
+                        - Steering manipulation, targeting the vehicle's control path directly.<br>
+                        - Camera spoofing, targeting the perception layer the driving stack depends on.<br>
+                        - Scenarios selected to cover distinct points of compromise across the autonomy pipeline.</p>
+
+                        <hr>
+
+                        <p><strong>2. Impact Assessment Framework (SFOP):</strong></p>
+
+                        <p><strong>Four-Dimensional Scoring:</strong><br>
+                        - <strong>Safety</strong> - potential for physical harm to occupants and other road users.<br>
+                        - <strong>Financial</strong> - monetary cost arising from a successful attack.<br>
+                        - <strong>Operational</strong> - degradation or loss of the vehicle's intended function.<br>
+                        - <strong>Privacy</strong> - exposure of personal or vehicle data.</p>
+
+                        <p><strong>Framework Design:</strong><br>
+                        - Quantitative structure allowing attacks to be compared on a common basis.<br>
+                        - Separation of dimensions preventing a single severe consequence from masking others.</p>
+
+                        <hr>
+
+                        <p><strong>3. Mathematical Impact Models:</strong></p>
+
+                        <p><strong>Contextual Estimation:</strong><br>
+                        - Models estimating impact as a function of contextual driving parameters rather than a fixed severity rating.<br>
+                        - System state incorporated so assessed impact reflects the conditions at the moment of attack.<br>
+                        - Formulation supporting consistent, repeatable scoring across differing scenarios.</p>
+
+                        <hr>
+
+                        <p><strong>4. Vulnerability Evaluation and Mitigation:</strong></p>
+
+                        <p><strong>Assessment:</strong><br>
+                        - Evaluation of system vulnerabilities exposed by the simulated attack scenarios.<br>
+                        - Identification of points in the autonomy stack most sensitive to compromise.</p>
+
+                        <p><strong>Mitigation Strategy:</strong><br>
+                        - Risk-based mitigation proposals prioritized according to assessed impact.<br>
+                        - Recommendations oriented toward safety-critical autonomous systems, where consequences of failure are physical rather than purely digital.</p>`
+        },
+        {
+            btnText: "Framework",
+            title: "SFOP Impact Framework",
+            content: `
+                        <p>The assessment framework scores each attack across four independent impact dimensions. Keeping them separate prevents a single dominant consequence from concealing damage in other areas.</p>
+
+                        <strong>1. Safety (S):</strong><br>
+                        - Potential for physical harm to vehicle occupants, pedestrians, and other road users.<br>
+                        - The dimension that distinguishes autonomous vehicle security from conventional IT security, where compromise rarely causes injury.<br><br>
+
+                        <strong>2. Financial (F):</strong><br>
+                        - Monetary consequences arising from a successful attack.<br>
+                        - Covers direct costs as well as losses following from operational disruption.<br><br>
+
+                        <strong>3. Operational (O):</strong><br>
+                        - Degradation or loss of the vehicle's intended function.<br>
+                        - Captures attacks that impair capability without necessarily causing immediate physical harm.<br><br>
+
+                        <strong>4. Privacy (P):</strong><br>
+                        - Exposure of personal data or vehicle telemetry.<br>
+                        - Accounts for attacks whose damage is informational rather than kinetic.<br><br>
+
+                        <strong>Contextual Weighting:</strong><br>
+                        - Impact estimated from driving parameters and system state at the time of attack.<br>
+                        - The same technical compromise scores differently depending on operating conditions, reflecting real severity rather than a fixed worst case.`
+        },
+        {
+            btnText: "Tech",
+            title: "Technologies & Methods",
+            content: `
+                        <strong>1. Simulation:</strong><br>
+                        - CARLA simulator for autonomous driving scenario construction and execution.<br>
+                        - Simulated attack injection against steering control and camera perception.<br>
+                        - Repeatable scenario runs supporting controlled comparison between attacks.<br><br>
+
+                        <strong>2. Security Analysis:</strong><br>
+                        - Threat modelling of the autonomous driving stack.<br>
+                        - Vulnerability evaluation across control and perception subsystems.<br>
+                        - Attack surface analysis for safety-critical vehicle systems.<br><br>
+
+                        <strong>3. Risk Assessment:</strong><br>
+                        - SFOP impact framework spanning Safety, Financial, Operational, and Privacy dimensions.<br>
+                        - Quantitative scoring enabling comparison across dissimilar attacks.<br>
+                        - Risk-based prioritization of mitigation measures.<br><br>
+
+                        <strong>4. Mathematical Modelling:</strong><br>
+                        - Impact estimation models parameterized by driving context and system state.<br>
+                        - Formal treatment of severity in place of qualitative rating alone.`
+        }
+    ]
+    },
+
+    {
     "title": "Passenger Volume Prediction - DB Regio",
     "imagePath": "/videos/PassengerVolume.png",
     "techs": ['Machine Learning', 'Time Series Analysis', 'Predictive Modeling', 'Feature Engineering', 'Data Science'],
