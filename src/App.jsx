@@ -1,64 +1,53 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
+import 'animate.css'
 import Navbar from './sections/Navbar'
 import About from './sections/About'
 import Experiences from './sections/Experiences'
 import Skills from './sections/Skills'
 import Certifications from './sections/Certifications'
 import Contact from './sections/Contact'
-import $ from 'jquery';
-import 'popper.js';
-import 'bootstrap';
-import 'bootstrap';
 import Projects from './sections/Projects'
-import Modal from './components/Modal'
-import 'smoothscroll';
-window.jQuery = $;
-window.$ = $;
-import 'animate.css';
 
-
+// Height of the fixed navbar, so anchors don't land underneath it.
+const NAV_OFFSET = 49;
 
 function App() {
-  const [count, setCount] = useState(0)
-
-
-
   useEffect(() => {
-    // COLOR MODE
-    $('.color-mode').click(function () {
-      $('.color-mode-icon').toggleClass('active');
-      $('body').toggleClass('dark-mode');
-    });
+    // COLOR MODE — toggles the same classes the stylesheet already expects.
+    const colorModeEl = document.querySelector('.color-mode');
+    const handleColorMode = () => {
+      document.querySelector('.color-mode-icon')?.classList.toggle('active');
+      document.body.classList.toggle('dark-mode');
+    };
+    colorModeEl?.addEventListener('click', handleColorMode);
 
-    // HEADER
-    // Headroom.js disabled to keep header always visible
+    // SMOOTHSCROLL — native smooth scrolling, offset for the fixed header.
+    const anchors = document.querySelectorAll('.nav-link, .custom-btn-link');
+    const handleAnchorClick = (event) => {
+      const href = event.currentTarget.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
 
-    // SMOOTHSCROLL
-    $('.nav-link, .custom-btn-link').on('click', function (event) {
-      var $anchor = $(this);
-      $('html, body').stop().animate(
-        {
-          scrollTop: $($anchor.attr('href')).offset().top - 49,
-        },
-        1000
-      );
+      const target = document.querySelector(href);
+      if (!target) return;
+
       event.preventDefault();
-    });
+      const top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+      window.scrollTo({ top, behavior: 'smooth' });
+    };
+    anchors.forEach((a) => a.addEventListener('click', handleAnchorClick));
 
-    // TOOLTIP INITIALIZATION
-    // $('[data-toggle="tooltip"]').tooltip();
-  }, []); // Empty dependency array ensures this runs once when the component mounts
-
-
-
+    return () => {
+      colorModeEl?.removeEventListener('click', handleColorMode);
+      anchors.forEach((a) => a.removeEventListener('click', handleAnchorClick));
+    };
+  }, []);
 
   return (
     <>
       <Navbar />
       <About />
       <Projects />
-      <Modal />
       <Experiences />
       <Skills />
       <Certifications />

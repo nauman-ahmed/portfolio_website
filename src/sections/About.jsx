@@ -1,7 +1,6 @@
 import React from 'react'
 import pdfFile from '../assets/files/Nauman-Ahmed-Applied-AI-CV.pdf';
-import img from '../assets/images/undraw/man-developing-website-on-desk.svg'
-import img2 from '../assets/images/undraw/img-Nauman.png'
+import img2 from '../assets/images/undraw/img-Nauman.webp'
 
 export default function About() {
   return (

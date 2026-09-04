@@ -1,59 +1,59 @@
-import React from 'react'
+import { useState } from 'react'
 import Swal from 'sweetalert2';
 
+const API_URL = 'https://portfolio-website-bfq5.onrender.com/api/send-email';
+
+const EMPTY_FORM = { name: '', email: '', message: '' };
+
 export default function Contact() {
+    const [form, setForm] = useState(EMPTY_FORM);
+    const [sending, setSending] = useState(false);
 
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setForm((prev) => ({ ...prev, [name]: value }));
+    };
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contact-form");
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (sending) return;
 
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value,
-          };
-
-          fetch("https://portfolio-website-bfq5.onrender.com/api/send-email", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          })
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network response was not ok");
-              }
-              return response.json();
-            })
-            .then((data) => {
-              // Use SweetAlert2 for success notification
-              Swal.fire({
-                icon: "success",
-                title: "Form submitted!",
-                text: "Your form has been submitted successfully.",
-              });
-
-              // Reset the form after successful submission
-              form.reset();
-            })
-            .catch((error) => {
-              console.error(
-                "There was a problem with the fetch operation:",
-                error
-              );
-              // Use SweetAlert2 for error notification
-              Swal.fire({
-                icon: "error",
-                title: "Error",
-                text: "There was an error submitting the form.",
-              });
+        setSending(true);
+        try {
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form),
             });
-        });
-      });
+
+            // The API answers JSON on every path, including 400/403/413/429,
+            // and its message is more useful than a generic failure string.
+            const data = await response.json().catch(() => null);
+
+            if (!response.ok || data?.success !== true) {
+                throw new Error(
+                    data?.message || `Request failed with status ${response.status}`
+                );
+            }
+
+            setForm(EMPTY_FORM);
+            Swal.fire({
+                icon: 'success',
+                title: 'Message sent!',
+                text: 'Thanks for reaching out — I will get back to you soon.',
+            });
+        } catch (error) {
+            console.error('Contact form submission failed:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Something went wrong',
+                text: `${error.message} You can also email me directly at naumanahmed449@gmail.com.`,
+            });
+        } finally {
+            setSending(false);
+        }
+    };
+
     return (
         // <!-- CONTACT -->
         <section className="contact py-5" id="contact">
@@ -62,7 +62,7 @@ export default function Contact() {
 
                     <div className="col-lg-5 mr-lg-5 col-12">
                         <div className="google-map w-100">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.2231844537023!2d13.448327144020794!3d48.571222960779345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477458a41d07896d%3A0x4784ab6e1b9463f6!2sNeuburger%20Str.%2031A%2C%2094032%20Passau!5e0!3m2!1sen!2sde!4v1729523499687!5m2!1sen!2sde" width="600" style={{ border: '0px' }} height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe title="Location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.2231844537023!2d13.448327144020794!3d48.571222960779345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477458a41d07896d%3A0x4784ab6e1b9463f6!2sNeuburger%20Str.%2031A%2C%2094032%20Passau!5e0!3m2!1sen!2sde!4v1729523499687!5m2!1sen!2sde" width="600" style={{ border: '0px' }} height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 
 
@@ -74,11 +74,11 @@ export default function Contact() {
                                 <p>Email: <a href="mailto:naumanahmed449@gmail.com" className="email-link">naumanahmed449@gmail.com</a></p>
                             </div>
                             <ul className="social-links">
-                                <li><a target='_blank' href="https://www.instagram.com/nauman_ahmed7/profilecard/?igsh=ejB2cXYzYnBncXN1" className="email-link uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
-                                <li><a target='_blank' href="https://www.linkedin.com/in/nauman-ahmed-b190b219a/" className="email-link uil" data-toggle="tooltip" data-placement="left" title="LinkedIn">
+                                <li><a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/nauman_ahmed7/profilecard/?igsh=ejB2cXYzYnBncXN1" className="email-link uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+                                <li><a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/nauman-ahmed-b190b219a/" className="email-link uil" data-toggle="tooltip" data-placement="left" title="LinkedIn">
                                     <i className="fab fa-linkedin icon"></i></a>
                                 </li>
-                                <li><a target='_blank' href="https://github.com/nauman-ahmed" className=" email-link uil" data-toggle="tooltip" data-placement="left" title="GitHub">
+                                <li><a target='_blank' rel="noopener noreferrer" href="https://github.com/nauman-ahmed" className=" email-link uil" data-toggle="tooltip" data-placement="left" title="GitHub">
                                     <i className="fab fa-github icon"></i></a>
                                 </li>
                             </ul>
@@ -87,24 +87,24 @@ export default function Contact() {
 
                     <div className="col-lg-6 col-12">
                         <div className="contact-form">
-                            <h2 className="mb-4">Interested in working together? Let's connect!</h2>
+                            <h2 className="mb-4">Interested in working together? Let&rsquo;s connect!</h2>
 
-                            <form id="contact-form">
+                            <form id="contact-form" onSubmit={handleSubmit}>
                                 <div className="row">
                                     <div className="col-lg-6 col-12">
-                                        <input type="text" className="form-control" name="name" placeholder="Your Name" id="name" required />
+                                        <input type="text" className="form-control" name="name" placeholder="Your Name" id="name" value={form.name} onChange={handleChange} disabled={sending} required />
                                     </div>
 
                                     <div className="col-lg-6 col-12">
-                                        <input type="email" className="form-control" name="email" placeholder="Email" id="email" required />
+                                        <input type="email" className="form-control" name="email" placeholder="Email" id="email" value={form.email} onChange={handleChange} disabled={sending} required />
                                     </div>
 
                                     <div className="col-12">
-                                        <textarea name="message" rows="6" className="form-control" id="message" placeholder="Message" required></textarea>
+                                        <textarea name="message" rows="6" className="form-control" id="message" placeholder="Message" value={form.message} onChange={handleChange} disabled={sending} required></textarea>
                                     </div>
 
                                     <div className="ml-lg-auto col-lg-5 col-12">
-                                        <input type="submit" className="form-control submit-btn" value="Connect!" />
+                                        <input type="submit" className="form-control submit-btn" value={sending ? 'Sending...' : 'Connect!'} disabled={sending} />
                                     </div>
                                 </div>
                             </form>

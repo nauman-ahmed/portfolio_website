@@ -10,12 +10,23 @@ export default function ProjectBox({ projectData }) {
   const isImage = Boolean(projectData.imagePath);
   const mediaPath = projectData.imagePath || projectData.videoPath;
 
+  // Every demo has a generated still beside it (foo.mp4 -> foo-poster.webp) so the
+  // card shows a real frame while preload="none" keeps the video itself unfetched.
+  const posterPath =
+    projectData.posterPath ||
+    (projectData.videoPath
+      ? projectData.videoPath.replace(/\.mp4$/, '-poster.webp')
+      : undefined);
+
+  // Only reload when the source actually changes after mount. Calling load() on the
+  // first render makes the browser fetch each video despite preload="none", which
+  // costs a request per card for no benefit.
+  const loadedPathRef = useRef(projectData.videoPath);
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load(); // Reload the video source
-      // Videos will remain paused until user manually clicks play
-    }
-  }, [projectData]); // Re-run the effect when the video path changes
+    if (loadedPathRef.current === projectData.videoPath) return;
+    loadedPathRef.current = projectData.videoPath;
+    if (videoRef.current) videoRef.current.load();
+  }, [projectData.videoPath]);
 
   return (
     <>
@@ -38,6 +49,8 @@ export default function ProjectBox({ projectData }) {
               controls
               muted
               loop
+              preload="none"
+              poster={posterPath}
             >
               <source src={projectData.videoPath} type="video/mp4" />
               Your browser does not support the video tag.

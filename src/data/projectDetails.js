@@ -150,7 +150,7 @@ export const projectsData = [
 
     {
     "title": "Multi-Agent 3D Coverage Path Planning - Liquid Neural Networks (Master's Thesis)",
-    "imagePath": "/videos/Reinforcement_Learning.png",
+    "imagePath": "/videos/Reinforcement_Learning.webp",
     "techs": ['Python', 'PyTorch', 'Reinforcement Learning', 'PPO', 'Liquid Neural Networks', 'LTC', 'Deep Learning', 'Multi-Agent Systems'],
     "modalsArray": [
         {
@@ -765,7 +765,7 @@ export const projectsData = [
 
     {
     "title": "Automated Essay Scoring System (NLP, Transformers)",
-    "imagePath": "/videos/AutomatedEssayScoring.png",
+    "imagePath": "/videos/AutomatedEssayScoring.webp",
     "techs": ['Python', 'Transformers', 'RoBERTa', 'DeBERTa', 'MiniLM', 'SpaCy', 'VADER', 'Optuna', 'TF-IDF', 'Word2Vec', 'NLP', 'Machine Learning'],
     "modalsArray": [
         {
@@ -896,7 +896,7 @@ export const projectsData = [
 
     {
     "title": "Autonomous Systems Security & Risk Modeling",
-    "imagePath": "/videos/RiskMitigation.png",
+    "imagePath": "/videos/RiskMitigation.webp",
     "techs": ['CARLA Simulator', 'Autonomous Vehicles', 'Cybersecurity', 'Risk Assessment', 'Threat Modeling', 'SFOP Framework', 'Attack Simulation', 'Safety-Critical Systems'],
     "modalsArray": [
         {
@@ -1024,7 +1024,7 @@ export const projectsData = [
 
     {
     "title": "Passenger Volume Prediction - DB Regio",
-    "imagePath": "/videos/PassengerVolume.png",
+    "imagePath": "/videos/PassengerVolume.webp",
     "techs": ['Machine Learning', 'Time Series Analysis', 'Predictive Modeling', 'Feature Engineering', 'Data Science'],
     "modalsArray": [
         {

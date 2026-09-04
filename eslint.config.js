@@ -5,7 +5,18 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  // Vendored third-party bundles and the untouched template copy are not ours to lint.
+  { ignores: ['dist', 'custom/**', 'src/js/**', 'src/assets/js/**'] },
+  {
+    // CommonJS running on Node, not in the browser.
+    files: ['backend/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'commonjs',
+      globals: globals.node,
+    },
+    rules: { ...js.configs.recommended.rules },
+  },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
