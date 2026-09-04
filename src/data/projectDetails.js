@@ -149,6 +149,115 @@ export const projectsData = [
     // },
 
     {
+    "title": "Multi-Agent Coverage Path Planning - Liquid Neural Networks (RL)",
+    "imagePath": "/videos/Reinforcement_Learning.png",
+    "techs": ['Python', 'PyTorch', 'Reinforcement Learning', 'PPO', 'Liquid Neural Networks', 'LTC', 'Deep Learning', 'Multi-Agent Systems'],
+    "modalsArray": [
+        {
+            btnText: "Info",
+            title: "General Information",
+            content: `<p><strong>Multi-Agent Coverage Path Planning with Liquid Neural Networks</strong> investigates whether Liquid Time-Constant (LTC) networks can drive cooperative coverage behaviour in a team of agents operating under hard safety constraints - and whether the learned policy holds up on environments it has never seen.</p>
+
+                        <p><strong>My Role:</strong> Reinforcement Learning Engineer - designed the simulation environment, safety constraint model, and training pipeline, and ran the generalization evaluation.</p>
+
+                        <p><strong>Project Overview:</strong></p>
+
+                        <p><strong>1. Liquid Neural Networks for Control:</strong><br>
+                        Investigated the effectiveness of Liquid Time-Constant (LTC) networks in multi-agent coverage path planning, demonstrating stable learning and generalization under safety constraints.</p>
+
+                        <p><strong>2. Safety-Critical Simulation:</strong><br>
+                        Built a voxel-based 3D environment of 20x20x6 encoding collision avoidance, constrained flyability, and forced-return planning as first-class constraints rather than soft penalties.</p>
+
+                        <p><strong>3. Policy Training:</strong><br>
+                        Trained for approximately 11,000 episodes using Proximal Policy Optimization (PPO), with stable convergence and consistent policy improvement across training.</p>
+
+                        <p><strong>4. Generalization Result:</strong><br>
+                        Achieved approximately 93% average coverage across 100 unseen environments, demonstrating strong generalization under constrained and dynamic conditions rather than overfitting to the training layouts.</p>`
+        },
+        {
+            btnText: "Description",
+            title: "Project Description",
+            content: `<p><strong>1. Research Question:</strong></p>
+
+                        <p><strong>Liquid Time-Constant Networks:</strong><br>
+                        - Investigated whether LTC networks are effective as policy networks for multi-agent coverage path planning.<br>
+                        - Evaluated learning stability across training and generalization to environments held out from training.<br>
+                        - Assessed behaviour specifically under safety constraints rather than in an unconstrained setting.</p>
+
+                        <hr>
+
+                        <p><strong>2. Simulation Environment:</strong></p>
+
+                        <p><strong>Voxel-Based World:</strong><br>
+                        - Three-dimensional voxel grid of 20x20x6 representing the coverage space.<br>
+                        - Discretized representation supporting volumetric coverage tracking across the full space.</p>
+
+                        <p><strong>Safety-Critical Constraints:</strong><br>
+                        - Collision avoidance between cooperating agents.<br>
+                        - Constrained flyability restricting which regions of the voxel space are traversable.<br>
+                        - Forced-return planning requiring agents to reserve capability to return, rather than pursuing coverage without regard to recovery.</p>
+
+                        <hr>
+
+                        <p><strong>3. Training Setup:</strong></p>
+
+                        <p><strong>Reinforcement Learning:</strong><br>
+                        - Proximal Policy Optimization (PPO) as the training algorithm.<br>
+                        - Approximately 11,000 training episodes.<br>
+                        - Stable convergence observed with consistent policy improvement over the training run.<br>
+                        - Multi-agent setup requiring cooperative rather than independent coverage behaviour.</p>
+
+                        <hr>
+
+                        <p><strong>4. Evaluation:</strong></p>
+
+                        <p><strong>Generalization Testing:</strong><br>
+                        - Evaluated on 100 unseen environments not encountered during training.<br>
+                        - Achieved approximately 93% average coverage across the evaluation set.<br>
+                        - Performance sustained under constrained and dynamic conditions, indicating the learned policy generalizes rather than memorizing training layouts.</p>`
+        },
+        {
+            btnText: "Tech",
+            title: "Technologies Used",
+            content: `
+                        <strong>1. Machine Learning Framework:</strong><br>
+                        - PyTorch for model definition, training loops, and gradient computation.<br>
+                        - Python as the primary implementation language.<br><br>
+
+                        <strong>2. Reinforcement Learning:</strong><br>
+                        - Proximal Policy Optimization (PPO) as the on-policy training algorithm.<br>
+                        - Multi-agent reinforcement learning formulation for cooperative coverage.<br>
+                        - Reward design incorporating coverage objectives alongside safety constraints.<br><br>
+
+                        <strong>3. Neural Architecture:</strong><br>
+                        - Liquid Time-Constant (LTC) networks as the policy architecture.<br>
+                        - Liquid Neural Networks explored for their continuous-time dynamics and stability properties.<br>
+                        - Deep learning techniques applied to sequential decision-making under constraints.<br><br>
+
+                        <strong>4. Simulation:</strong><br>
+                        - Custom voxel-based 3D environment at 20x20x6 resolution.<br>
+                        - Safety constraint modelling for collision avoidance, flyability, and forced return.<br>
+                        - Randomized environment generation for held-out generalization testing.`
+        },
+        {
+            btnText: "Libraries",
+            title: "Libraries & Dependencies",
+            content: `
+            <strong>Core Libraries:</strong><br>
+            1. <strong>PyTorch</strong> - Deep learning framework for policy network training and inference.<br>
+            2. <strong>Python</strong> - Implementation language for the environment, agents, and training pipeline.<br><br>
+
+            <strong>Reinforcement Learning:</strong><br>
+            3. <strong>PPO (Proximal Policy Optimization)</strong> - On-policy algorithm driving policy updates across ~11K episodes.<br>
+            4. <strong>Liquid Time-Constant (LTC) Networks</strong> - Continuous-time neural architecture used as the agent policy.<br><br>
+
+            <strong>Simulation:</strong><br>
+            5. <strong>Custom Voxel Environment</strong> - Purpose-built 20x20x6 3D coverage simulator with safety-critical constraints.`
+        }
+    ]
+    },
+
+    {
     "title": "KnowledgeFlow - AI Knowledge Assistant (RAG)",
     "videoPath": "/videos/knowledgeFlow.mp4",
     "techs": ['Next.js', 'React', 'TypeScript', 'Clerk', 'FastAPI', 'Python', 'PostgreSQL', 'pgvector', 'LangChain', 'LangGraph', 'Langfuse', 'Redis', 'Pydantic', 'RAGAS', 'Docker'],

@@ -6,6 +6,10 @@ export default function ProjectBox({ projectData }) {
   const [selectedModalIndex, setSelectedModalIndex] = useState(0);
   const videoRef = useRef(null);
 
+  // Projects ship either a video demo or a still image, never both.
+  const isImage = Boolean(projectData.imagePath);
+  const mediaPath = projectData.imagePath || projectData.videoPath;
+
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.load(); // Reload the video source
@@ -20,19 +24,28 @@ export default function ProjectBox({ projectData }) {
           <div className="w-100 titleBox bg-body-secondary p-1">
             <h5 className="mb-0">{projectData.title}</h5>
           </div>
-          <video
-            className="img-fluid w-100 rounded-vid border border-secondary"
-            ref={videoRef}
-            controls
-            muted
-            loop
-          >
-            <source src={projectData.videoPath} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {isImage ? (
+            <img
+              className="img-fluid w-100 rounded-vid border border-secondary"
+              src={projectData.imagePath}
+              alt={projectData.title}
+              loading="lazy"
+            />
+          ) : (
+            <video
+              className="img-fluid w-100 rounded-vid border border-secondary"
+              ref={videoRef}
+              controls
+              muted
+              loop
+            >
+              <source src={projectData.videoPath} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
           <div className="d-flex flex-row justify-content-center flex-wrap">
             {projectData?.modalsArray?.map((modalData, i) => (
-              <div key={projectData.videoPath + i} className="p-1">
+              <div key={mediaPath + i} className="p-1">
                 <button
                   className="w-100 btn custom-btn custom-btn-project"
                   onClick={() => {
