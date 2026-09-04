@@ -319,6 +319,182 @@ export const projectsData = [
     },
 
     {
+    "title": "LeadFlow AI - Inbound Lead Qualification (Chat + Voice)",
+    "videoPath": "/videos/leadFlow.mp4",
+    "techs": ['React', 'Vite', 'TypeScript', 'Next.js', 'Supabase', 'PostgreSQL', 'pgvector', 'Ollama', 'OpenAI', 'n8n', 'Vapi', 'Cal.com', 'Docker', 'SQL'],
+    "modalsArray": [
+        {
+            btnText: "Info",
+            title: "General Information",
+            content: `<p><strong>LeadFlow AI</strong> is an inbound lead qualification system that meets prospects wherever they arrive - through an embeddable chat widget or over the phone - answers their questions from your own documentation, scores them, and books qualified leads straight into a calendar.</p>
+
+                        <p><strong>My Role:</strong> AI Systems Engineer - full-stack and GenAI integration, covering the widget, the retrieval pipeline, lead scoring, booking flow, workflow automation, and the admin CRM.</p>
+
+                        <p><strong>Project Overview:</strong></p>
+
+                        <p><strong>1. Embeddable Chat Widget:</strong><br>
+                        A self-contained React/Vite widget that drops into any site with a single script tag and talks to a TypeScript Next.js API, so the assistant can be deployed on a client site without touching their stack.</p>
+
+                        <p><strong>2. Grounded Answers via RAG:</strong><br>
+                        Retrieval-augmented generation over Supabase Postgres with pgvector, so the assistant answers from a curated chunk store rather than improvising product details.</p>
+
+                        <p><strong>3. Voice Channel:</strong><br>
+                        Vapi voice tools extend the same qualification logic to inbound phone calls, letting chat and voice share one backend and one lead pipeline.</p>
+
+                        <p><strong>4. Automated Qualification and Booking:</strong><br>
+                        Heuristic scoring ranks incoming leads, and qualified prospects are handed to Cal.com to book a slot - written back to Supabase idempotently so a retried webhook never produces a duplicate appointment.</p>
+
+                        <p><strong>5. Bilingual Support:</strong><br>
+                        The assistant operates in English and French, switchable from the widget, so a single deployment serves both audiences.</p>
+
+                        <p><strong>6. Admin CRM:</strong><br>
+                        An internal dashboard surfacing captured leads, full conversation transcripts, and booked appointments in one place.</p>`
+        },
+        {
+            btnText: "Description",
+            title: "Project Description",
+            content: `<p><strong>1. Chat Widget (React / Vite):</strong></p>
+
+                        <p><strong>Embeddable Client:</strong><br>
+                        - Standalone React application bundled with Vite for distribution as an embeddable widget.<br>
+                        - Installs on a host page via a script tag with tenant and language configuration attributes.<br>
+                        - Conversational UI with message history maintained across a visitor session.<br>
+                        - Language toggle switching the assistant between English and French at runtime.</p>
+
+                        <hr>
+
+                        <p><strong>2. API Layer (Next.js / TypeScript):</strong></p>
+
+                        <p><strong>Backend Services:</strong><br>
+                        - TypeScript Next.js API handling chat turns, retrieval, scoring, and booking orchestration.<br>
+                        - Serves as the single backend shared by both the chat widget and the voice channel.<br>
+                        - Configurable model backend supporting Ollama for local inference and OpenAI for hosted inference.</p>
+
+                        <hr>
+
+                        <p><strong>3. Retrieval Pipeline (Supabase / pgvector):</strong></p>
+
+                        <p><strong>Vector Store:</strong><br>
+                        - Supabase Postgres with the pgvector extension as the embedding store.<br>
+                        - Document content split into a chunk store for granular retrieval.<br>
+                        - Cosine similarity search exposed as a Postgres RPC, keeping ranking in the database rather than in application code.<br>
+                        - Embeddings generated through Ollama or OpenAI depending on deployment configuration.</p>
+
+                        <hr>
+
+                        <p><strong>4. Lead Scoring and Booking:</strong></p>
+
+                        <p><strong>Qualification:</strong><br>
+                        - Heuristic scoring model evaluating captured lead signals to rank prospect quality.<br>
+                        - Scored leads persisted to Supabase alongside their originating transcript.</p>
+
+                        <p><strong>Appointment Flow:</strong><br>
+                        - Cal.com integration for scheduling qualified leads into available slots.<br>
+                        - Idempotent row writes to Supabase, so repeated or replayed booking events resolve to a single appointment record.</p>
+
+                        <hr>
+
+                        <p><strong>5. Workflow Automation (n8n):</strong></p>
+
+                        <p><strong>Event Handling:</strong><br>
+                        - HMAC-verified Cal.com webhooks, rejecting requests that fail signature validation.<br>
+                        - CRM event hooks dispatched fire-and-forget, so downstream automation never blocks a user-facing response.<br>
+                        - n8n runs containerized via Docker for reproducible workflow deployment.</p>
+
+                        <hr>
+
+                        <p><strong>6. Voice Channel (Vapi):</strong></p>
+
+                        <p><strong>Phone Qualification:</strong><br>
+                        - Vapi voice tools wired to the same retrieval and qualification backend used by chat.<br>
+                        - Inbound calls follow the same answer, score, and book path as a web conversation.</p>
+
+                        <hr>
+
+                        <p><strong>7. Admin CRM:</strong></p>
+
+                        <p><strong>Operator Dashboard:</strong><br>
+                        - Lead list with captured contact details and heuristic scores.<br>
+                        - Full conversation transcripts for reviewing how each lead was qualified.<br>
+                        - Appointment view reflecting confirmed Cal.com bookings.</p>
+
+                        <hr>
+
+                        <p><strong>8. Infrastructure and Documentation:</strong></p>
+
+                        <p><strong>Operations:</strong><br>
+                        - Versioned SQL migrations managing the Supabase schema.<br>
+                        - Docker-based n8n deployment for the automation layer.<br>
+                        - Demo walkthrough and architecture documentation maintained in the repository.</p>`
+        },
+        {
+            btnText: "Tech",
+            title: "Technologies Used",
+            content: `
+                        <strong>1. Widget Frontend:</strong><br>
+                        - React for the embeddable chat interface.<br>
+                        - Vite for bundling the widget into a distributable script.<br>
+                        - Bilingual English and French interface support.<br><br>
+
+                        <strong>2. API and Backend:</strong><br>
+                        - Next.js for the API layer serving chat, retrieval, and booking endpoints.<br>
+                        - TypeScript for static typing across the API surface.<br><br>
+
+                        <strong>3. AI / GenAI Stack:</strong><br>
+                        - Retrieval-augmented generation grounding responses in indexed source content.<br>
+                        - Ollama for locally hosted embedding and chat inference.<br>
+                        - OpenAI as the hosted alternative for embeddings and chat completion.<br>
+                        - Prompt design tuned for qualification-oriented conversation.<br><br>
+
+                        <strong>4. Data and Retrieval:</strong><br>
+                        - Supabase as the managed Postgres platform and application datastore.<br>
+                        - pgvector for embedding storage and vector similarity search.<br>
+                        - Postgres RPC implementing cosine similarity retrieval in-database.<br>
+                        - SQL migrations for versioned schema management.<br><br>
+
+                        <strong>5. Automation and Integrations:</strong><br>
+                        - n8n for workflow orchestration and event routing.<br>
+                        - HMAC signature verification securing inbound Cal.com webhooks.<br>
+                        - Cal.com for appointment scheduling and availability.<br>
+                        - Vapi for the inbound voice channel and telephony tooling.<br><br>
+
+                        <strong>6. Infrastructure:</strong><br>
+                        - Docker for containerized n8n deployment.<br>
+                        - Repository-maintained architecture and demo documentation.`
+        },
+        {
+            btnText: "Libraries",
+            title: "Libraries & Dependencies",
+            content: `
+            <strong>Frontend Libraries:</strong><br>
+            1. <strong>React</strong> - Component library powering the embeddable chat widget.<br>
+            2. <strong>Vite</strong> - Build tool bundling the widget for single-script-tag embedding.<br>
+            3. <strong>TypeScript</strong> - Static typing shared across widget and API code.<br><br>
+
+            <strong>API Libraries:</strong><br>
+            4. <strong>Next.js</strong> - Framework hosting the chat, retrieval, and booking API routes.<br><br>
+
+            <strong>AI / RAG Libraries:</strong><br>
+            5. <strong>Ollama</strong> - Local model runtime for embeddings and chat inference.<br>
+            6. <strong>OpenAI</strong> - Hosted embedding and chat completion provider.<br><br>
+
+            <strong>Data Libraries:</strong><br>
+            7. <strong>Supabase</strong> - Managed Postgres platform providing database and client SDK.<br>
+            8. <strong>PostgreSQL</strong> - Relational store for chunks, leads, transcripts, and appointments.<br>
+            9. <strong>pgvector</strong> - Postgres extension enabling vector similarity search.<br><br>
+
+            <strong>Integration Libraries:</strong><br>
+            10. <strong>n8n</strong> - Workflow automation handling webhooks and CRM event hooks.<br>
+            11. <strong>Cal.com</strong> - Scheduling platform for booking qualified leads.<br>
+            12. <strong>Vapi</strong> - Voice agent tooling for the inbound phone channel.<br><br>
+
+            <strong>Infrastructure:</strong><br>
+            13. <strong>Docker</strong> - Containerized deployment of the n8n automation layer.`
+        }
+    ]
+    },
+
+    {
     "title": "AI-Powered Personalized Story Generation Platform",
     "videoPath": "/videos/story.mp4", // You'll need to create this video
     "techs": ['Django', 'Python', 'React', 'Bootstrap', 'SQLite', 'BERT', 'Transformers', 'PyTorch', 'gTTS', 'Mixtral-8x7B', 'Sentence-Transformers', 'Scikit-learn', 'Pandas', 'NumPy'],
