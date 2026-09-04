@@ -756,6 +756,93 @@ export const projectsData = [
     },
 
     {
+    "title": "Passenger Volume Prediction - DB Regio",
+    "imagePath": "/videos/PassengerVolume.png",
+    "techs": ['Machine Learning', 'Time Series Analysis', 'Predictive Modeling', 'Feature Engineering', 'Data Science'],
+    "modalsArray": [
+        {
+            btnText: "Info",
+            title: "General Information",
+            content: `<p><strong>Passenger Volume Prediction</strong> forecasts passenger demand from real-world transportation data, giving operational teams a basis for planning capacity and allocating resources ahead of demand rather than reacting to it.</p>
+
+                        <p><strong>My Role:</strong> AI Engineer - feature engineering, model development, and evaluation.</p>
+
+                        <p><strong>Project Overview:</strong></p>
+
+                        <p><strong>1. Real-World Operational Data:</strong><br>
+                        Built predictive models on real transportation data from DB Regio, working with the irregularities of production data rather than a curated benchmark set.</p>
+
+                        <p><strong>2. Temporal and Seasonal Feature Engineering:</strong><br>
+                        Engineered temporal and seasonal features to improve model accuracy and robustness, capturing the recurring cycles that drive passenger demand.</p>
+
+                        <p><strong>3. Demand Forecasting:</strong><br>
+                        Applied machine learning models to predict passenger volume, producing forecasts intended to support operational planning and resource allocation.</p>`
+        },
+        {
+            btnText: "Description",
+            title: "Project Description",
+            content: `<p><strong>1. Data Foundation:</strong></p>
+
+                        <p><strong>Source Data:</strong><br>
+                        - Real-world transportation data from DB Regio as the basis for modelling.<br>
+                        - Operational passenger records rather than a synthetic or benchmark dataset.<br>
+                        - Preparation and cleaning to make production data suitable for supervised learning.</p>
+
+                        <hr>
+
+                        <p><strong>2. Feature Engineering:</strong></p>
+
+                        <p><strong>Temporal Features:</strong><br>
+                        - Time-based features capturing patterns tied to when travel occurs.<br>
+                        - Derived signals intended to expose recurring structure in the demand series.</p>
+
+                        <p><strong>Seasonal Features:</strong><br>
+                        - Seasonal components engineered to represent longer-cycle variation in passenger volume.<br>
+                        - Feature work targeted at improving both accuracy and robustness of the resulting models.</p>
+
+                        <hr>
+
+                        <p><strong>3. Modelling:</strong></p>
+
+                        <p><strong>Predictive Models:</strong><br>
+                        - Machine learning models trained to forecast passenger demand.<br>
+                        - Time series framing of the prediction problem, respecting the temporal ordering of observations.<br>
+                        - Model evaluation focused on forecast reliability across varying conditions.</p>
+
+                        <hr>
+
+                        <p><strong>4. Operational Application:</strong></p>
+
+                        <p><strong>Planning Support:</strong><br>
+                        - Forecasts positioned to inform operational planning decisions.<br>
+                        - Demand predictions intended to guide resource allocation ahead of observed volume.</p>`
+        },
+        {
+            btnText: "Tech",
+            title: "Technologies Used",
+            content: `
+                        <strong>1. Machine Learning:</strong><br>
+                        - Supervised learning models applied to demand forecasting.<br>
+                        - Predictive modelling workflow spanning data preparation, training, and evaluation.<br><br>
+
+                        <strong>2. Time Series Analysis:</strong><br>
+                        - Temporal framing of the forecasting problem with ordering preserved across observations.<br>
+                        - Seasonal decomposition and cycle-aware feature construction.<br><br>
+
+                        <strong>3. Feature Engineering:</strong><br>
+                        - Temporal feature derivation from raw operational records.<br>
+                        - Seasonal feature construction to capture longer-period demand variation.<br>
+                        - Feature work driven by measured impact on accuracy and robustness.<br><br>
+
+                        <strong>4. Data Science:</strong><br>
+                        - Exploratory analysis of real-world DB Regio transportation data.<br>
+                        - Data cleaning and preparation for production-sourced records.<br>
+                        - Evaluation of model performance against operational forecasting needs.`
+        }
+    ]
+    },
+
+    {
     "title": "AI-Powered Personalized Story Generation Platform",
     "videoPath": "/videos/story.mp4", // You'll need to create this video
     "techs": ['Django', 'Python', 'React', 'Bootstrap', 'SQLite', 'BERT', 'Transformers', 'PyTorch', 'gTTS', 'Mixtral-8x7B', 'Sentence-Transformers', 'Scikit-learn', 'Pandas', 'NumPy'],
