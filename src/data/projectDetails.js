@@ -495,6 +495,158 @@ export const projectsData = [
     },
 
     {
+    "title": "Smart Travel Planner - Agentic RAG System",
+    "videoPath": "/videos/smartTravel.mp4",
+    "techs": ['Python', 'CrewAI', 'Llama 3', 'Ollama', 'ChromaDB', 'n8n', 'Streamlit', 'Docker'],
+    "modalsArray": [
+        {
+            btnText: "Info",
+            title: "General Information",
+            content: `<p><strong>Smart Travel Planner</strong> is a fully local agentic RAG system that turns a travel brief into a researched, budgeted itinerary. A team of cooperating AI agents handles destination research, cost analysis, and day-by-day planning - and the entire stack runs on your own machine, with no external model API in the loop.</p>
+
+                        <p><strong>My Role:</strong> AI Systems Engineer and Generative AI Engineer - designed and developed the agent architecture, retrieval layer, ingestion pipelines, and containerized deployment.</p>
+
+                        <p><strong>Project Overview:</strong></p>
+
+                        <p><strong>1. Fully Local Inference:</strong><br>
+                        Llama 3 served through Ollama handles all generation on-device, so trip data never leaves the machine and there is no per-token API cost or rate limit to design around.</p>
+
+                        <p><strong>2. Multi-Agent Workflows:</strong><br>
+                        CrewAI orchestrates specialized agents for destination research, budget analysis, and itinerary generation, each contributing its own findings to a shared plan rather than relying on one monolithic prompt.</p>
+
+                        <p><strong>3. Retrieval-Augmented Generation:</strong><br>
+                        ChromaDB provides the vector store backing retrieval, grounding agent output in ingested travel guides instead of unverified model recall.</p>
+
+                        <p><strong>4. Automated Data Ingestion:</strong><br>
+                        ETL pipelines continuously pull weather, currency, and travel-guide data, keeping recommendations aligned with current conditions and exchange rates.</p>
+
+                        <p><strong>5. Interactive Interface:</strong><br>
+                        A Streamlit application provides the planning front end, exposing agent progress and the resulting itinerary without a separate frontend build.</p>
+
+                        <p><strong>6. Reproducible Deployment:</strong><br>
+                        The full stack is dockerized, so the model runtime, vector store, automation layer, and UI come up together with a single command.</p>`
+        },
+        {
+            btnText: "Description",
+            title: "Project Description",
+            content: `<p><strong>1. Agent Architecture (CrewAI):</strong></p>
+
+                        <p><strong>Destination Research Agent:</strong><br>
+                        - Gathers information on candidate destinations from the ingested travel-guide corpus.<br>
+                        - Surfaces attractions, regional context, and practical considerations for each option.</p>
+
+                        <p><strong>Budget Analysis Agent:</strong><br>
+                        - Evaluates trip costs against the traveller's stated budget.<br>
+                        - Uses live currency data so estimates reflect current exchange rates.</p>
+
+                        <p><strong>Itinerary Generation Agent:</strong><br>
+                        - Synthesizes research and budget findings into a structured day-by-day plan.<br>
+                        - Sequences activities into a coherent schedule rather than an unordered list.</p>
+
+                        <p><strong>Orchestration:</strong><br>
+                        - CrewAI coordinates task handoff between agents, letting each specialize while contributing to one shared output.</p>
+
+                        <hr>
+
+                        <p><strong>2. Retrieval Layer (ChromaDB):</strong></p>
+
+                        <p><strong>Vector Store:</strong><br>
+                        - ChromaDB as the local embedding store for ingested travel content.<br>
+                        - Travel guides chunked and embedded for granular semantic retrieval.<br>
+                        - Retrieved passages supplied as grounding context to the agents at query time.</p>
+
+                        <hr>
+
+                        <p><strong>3. Local LLM Inference (Ollama / Llama 3):</strong></p>
+
+                        <p><strong>Model Runtime:</strong><br>
+                        - Llama 3 served locally through Ollama for all agent reasoning and generation.<br>
+                        - No external inference provider, keeping the system fully self-contained and offline-capable.<br>
+                        - Removes per-token cost and third-party rate limits from the design constraints.</p>
+
+                        <hr>
+
+                        <p><strong>4. Data Pipelines (n8n):</strong></p>
+
+                        <p><strong>Automated ETL:</strong><br>
+                        - Weather ingestion supplying current and forecast conditions for candidate destinations.<br>
+                        - Currency ingestion feeding live exchange rates into budget calculations.<br>
+                        - Travel-guide ingestion extracting and loading reference content into the vector store.<br>
+                        - Pipelines scheduled and orchestrated in n8n so the knowledge base refreshes without manual intervention.</p>
+
+                        <hr>
+
+                        <p><strong>5. User Interface (Streamlit):</strong></p>
+
+                        <p><strong>Planning Front End:</strong><br>
+                        - Streamlit application collecting trip parameters and budget constraints.<br>
+                        - Displays agent activity and intermediate findings as the plan is assembled.<br>
+                        - Presents the finished itinerary alongside the supporting research and cost breakdown.</p>
+
+                        <hr>
+
+                        <p><strong>6. Deployment:</strong></p>
+
+                        <p><strong>Containerization:</strong><br>
+                        - Full stack dockerized covering the model runtime, vector store, automation layer, and UI.<br>
+                        - Reproducible local deployment bringing every service up together.<br>
+                        - Self-contained environment requiring no cloud account or external service configuration.</p>`
+        },
+        {
+            btnText: "Tech",
+            title: "Technologies Used",
+            content: `
+                        <strong>1. Agent Framework:</strong><br>
+                        - CrewAI for multi-agent orchestration and inter-agent task handoff.<br>
+                        - Role-specialized agents for research, budgeting, and itinerary planning.<br><br>
+
+                        <strong>2. Language Model Stack:</strong><br>
+                        - Llama 3 as the reasoning and generation model.<br>
+                        - Ollama as the local model runtime and serving layer.<br>
+                        - Prompt engineering tailored to each agent's role and output format.<br><br>
+
+                        <strong>3. Retrieval:</strong><br>
+                        - Retrieval-augmented generation grounding responses in ingested travel content.<br>
+                        - ChromaDB as the local vector database for embeddings and similarity search.<br><br>
+
+                        <strong>4. Data Engineering:</strong><br>
+                        - n8n for automated ETL workflow orchestration and scheduling.<br>
+                        - Weather, currency, and travel-guide ingestion pipelines.<br><br>
+
+                        <strong>5. Application Layer:</strong><br>
+                        - Python as the primary implementation language across agents and pipelines.<br>
+                        - Streamlit for the interactive planning interface.<br><br>
+
+                        <strong>6. Infrastructure:</strong><br>
+                        - Docker for containerizing the complete stack.<br>
+                        - Reproducible single-command local deployment.`
+        },
+        {
+            btnText: "Libraries",
+            title: "Libraries & Dependencies",
+            content: `
+            <strong>Agent and LLM Libraries:</strong><br>
+            1. <strong>CrewAI</strong> - Multi-agent framework coordinating research, budget, and itinerary agents.<br>
+            2. <strong>Ollama</strong> - Local model server providing Llama 3 inference.<br>
+            3. <strong>Llama 3</strong> - Open-weight language model powering agent reasoning and generation.<br><br>
+
+            <strong>Retrieval Libraries:</strong><br>
+            4. <strong>ChromaDB</strong> - Local vector database storing embeddings for travel-guide retrieval.<br><br>
+
+            <strong>Data Pipeline Libraries:</strong><br>
+            5. <strong>n8n</strong> - Workflow automation platform running the weather, currency, and guide ETL jobs.<br><br>
+
+            <strong>Application Libraries:</strong><br>
+            6. <strong>Python</strong> - Core implementation language for agents, retrieval, and pipeline logic.<br>
+            7. <strong>Streamlit</strong> - Rapid interactive UI framework for the planning interface.<br><br>
+
+            <strong>Infrastructure:</strong><br>
+            8. <strong>Docker</strong> - Container platform packaging the full stack for reproducible local deployment.`
+        }
+    ]
+    },
+
+    {
     "title": "AI-Powered Personalized Story Generation Platform",
     "videoPath": "/videos/story.mp4", // You'll need to create this video
     "techs": ['Django', 'Python', 'React', 'Bootstrap', 'SQLite', 'BERT', 'Transformers', 'PyTorch', 'gTTS', 'Mixtral-8x7B', 'Sentence-Transformers', 'Scikit-learn', 'Pandas', 'NumPy'],
