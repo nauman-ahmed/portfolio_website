@@ -15,7 +15,7 @@ export default function Resume() {
 
                     <div className="timeline-wrapper">
                         <div className="timeline-yr">
-                            <span>05/25-10/25 </span>
+                            <span>10/25-03/26</span>
                         </div>
                         <div className="timeline-info">
                             <h3><span>MULTI-AGENT 3D COVERAGE PATH PLANNING (UAVs)</span><br/><small>MASTER THESIS &mdash; UNIVERSITY OF PASSAU</small></h3>

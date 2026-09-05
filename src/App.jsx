@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import './styles/tokens.css'
 import './App.css'
 import 'animate.css'
 import Navbar from './sections/Navbar'
