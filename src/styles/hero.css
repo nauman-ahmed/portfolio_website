@@ -1,0 +1,294 @@
+/* ============================================================================
+   Phase 02 — hero + shell.
+   Written as plain CSS against the design tokens rather than utility soup:
+   this section has real composition (layered canvas, veil, metric rail) and
+   reads better as named rules. Tokens come from styles/tokens.css.
+   ========================================================================== */
+
+/* Dark ground for the whole document. The old stylesheet already carries 32
+   .dark-mode rules, so keeping that class on <body> lets the not-yet-migrated
+   sections stay coherent with the new hero until their own phase lands. */
+body.dark-mode {
+  background: var(--tw-color-ground);
+  color: var(--tw-color-ink-mid);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(92vh, 900px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--tw-color-ground);
+  border-bottom: 1px solid var(--tw-color-line);
+}
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  display: block;
+}
+
+/* Keeps the grid legible behind text without washing it out. */
+.hero__veil {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(105% 80% at 8% 42%, rgba(10, 13, 19, 0.93) 0%, rgba(10, 13, 19, 0.6) 42%, rgba(10, 13, 19, 0.05) 100%),
+    linear-gradient(to bottom, rgba(10, 13, 19, 0.35) 0%, rgba(10, 13, 19, 0.1) 45%, rgba(10, 13, 19, 0.82) 100%);
+}
+
+.hero__inner {
+  width: 100%;
+  max-width: var(--tw-container-shell, 1180px);
+  margin: 0 auto;
+  padding: calc(var(--tw-spacing) * 16) calc(var(--tw-spacing) * 4) calc(var(--tw-spacing) * 10);
+}
+
+.hero__eyebrow {
+  font-family: var(--tw-font-mono);
+  font-size: var(--tw-text-meta);
+  letter-spacing: var(--tw-tracking-label);
+  text-transform: uppercase;
+  color: var(--tw-color-signal);
+  margin: 0 0 calc(var(--tw-spacing) * 2.5);
+}
+
+.hero__title {
+  font-family: var(--tw-font-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: var(--tw-tracking-tight);
+  color: var(--tw-color-ink);
+  margin: 0 0 calc(var(--tw-spacing) * 3);
+  text-wrap: balance;
+}
+
+.hero__thesis {
+  font-family: var(--tw-font-sans);
+  font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--tw-color-ink);
+  max-width: 62ch;
+  margin: 0 0 calc(var(--tw-spacing) * 2.5);
+}
+.hero__thesis em {
+  font-style: normal;
+  color: var(--tw-color-signal);
+}
+
+.hero__note {
+  font-size: var(--tw-text-sm);
+  line-height: 1.6;
+  color: var(--tw-color-ink-dim);
+  max-width: 60ch;
+  margin: 0 0 calc(var(--tw-spacing) * 5);
+  padding-left: calc(var(--tw-spacing) * 2);
+  border-left: 1px solid var(--tw-color-trace-dk);
+}
+
+/* ---------- actions ---------- */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--tw-spacing) * 1.5);
+  margin-bottom: calc(var(--tw-spacing) * 8);
+}
+
+.btn-signal,
+.btn-quiet {
+  font-family: var(--tw-font-mono);
+  font-size: var(--tw-text-meta);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: calc(var(--tw-spacing) * 1.5) calc(var(--tw-spacing) * 2.5);
+  border-radius: var(--tw-radius-xs);
+  border: 1px solid transparent;
+  transition: background-color 0.18s var(--tw-ease-out-quiet),
+              border-color 0.18s var(--tw-ease-out-quiet),
+              color 0.18s var(--tw-ease-out-quiet);
+}
+
+.btn-signal {
+  background: var(--tw-color-signal);
+  color: #0A0D13;
+  font-weight: 600;
+}
+.btn-signal:hover,
+.btn-signal:focus-visible { background: #ffc063; color: #0A0D13; }
+
+.btn-quiet {
+  border-color: var(--tw-color-line);
+  color: var(--tw-color-ink-mid);
+}
+.btn-quiet:hover,
+.btn-quiet:focus-visible {
+  border-color: var(--tw-color-signal);
+  color: var(--tw-color-signal);
+}
+
+.btn-signal:focus-visible,
+.btn-quiet:focus-visible {
+  outline: 2px solid var(--tw-color-signal);
+  outline-offset: 2px;
+}
+
+/* ---------- metric rail ---------- */
+.hero__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid var(--tw-color-line);
+  border-left: 1px solid var(--tw-color-line);
+}
+
+.metric {
+  padding: calc(var(--tw-spacing) * 2.5);
+  border-right: 1px solid var(--tw-color-line);
+  border-bottom: 1px solid var(--tw-color-line);
+  background: rgba(17, 22, 32, 0.55);
+}
+
+.metric__value {
+  font-family: var(--tw-font-mono);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.4vw, 2.15rem);
+  line-height: 1;
+  color: var(--tw-color-signal);
+  font-variant-numeric: tabular-nums;
+  margin: 0 0 calc(var(--tw-spacing) * 1);
+}
+
+.metric__label {
+  margin: 0;
+  font-size: var(--tw-text-sm);
+  color: var(--tw-color-ink);
+  line-height: 1.35;
+}
+
+.metric__note {
+  display: block;
+  font-size: var(--tw-text-meta);
+  color: var(--tw-color-ink-dim);
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .hero__inner { padding-top: calc(var(--tw-spacing) * 12); }
+  .hero__note { margin-bottom: calc(var(--tw-spacing) * 4); }
+}
+
+/* ============================================================================
+   Navigation
+   ========================================================================== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 13, 19, 0.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.2s var(--tw-ease-out-quiet),
+              border-color 0.2s var(--tw-ease-out-quiet);
+}
+.nav--scrolled {
+  background: rgba(10, 13, 19, 0.94);
+  border-bottom-color: var(--tw-color-line);
+}
+
+.nav__inner {
+  max-width: var(--tw-container-shell, 1180px);
+  margin: 0 auto;
+  padding: calc(var(--tw-spacing) * 1.75) calc(var(--tw-spacing) * 4);
+  display: flex;
+  align-items: center;
+  gap: calc(var(--tw-spacing) * 3);
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--tw-spacing) * 1.25);
+  font-family: var(--tw-font-display);
+  font-weight: 600;
+  font-size: var(--tw-text-base);
+  letter-spacing: -0.01em;
+  color: var(--tw-color-ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav__mark {
+  width: 9px;
+  height: 9px;
+  background: var(--tw-color-signal);
+  border-radius: 1px;
+  flex: none;
+}
+.nav__role {
+  font-family: var(--tw-font-mono);
+  font-size: var(--tw-text-label);
+  letter-spacing: var(--tw-tracking-label);
+  text-transform: uppercase;
+  color: var(--tw-color-ink-dim);
+  padding-left: calc(var(--tw-spacing) * 1.25);
+  margin-left: calc(var(--tw-spacing) * 0.5);
+  border-left: 1px solid var(--tw-color-line);
+}
+
+.nav__links { display: flex; gap: calc(var(--tw-spacing) * 0.5); }
+
+.nav__link {
+  font-family: var(--tw-font-mono);
+  font-size: var(--tw-text-meta);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tw-color-ink-dim);
+  text-decoration: none;
+  padding: calc(var(--tw-spacing) * 0.75) calc(var(--tw-spacing) * 1.25);
+  border-radius: var(--tw-radius-xs);
+  transition: color 0.16s var(--tw-ease-out-quiet);
+}
+.nav__link:hover,
+.nav__link:focus-visible { color: var(--tw-color-signal); }
+.nav__link:focus-visible { outline: 2px solid var(--tw-color-signal); outline-offset: 1px; }
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: 1px solid var(--tw-color-line);
+  border-radius: var(--tw-radius-xs);
+  padding: 9px 8px;
+  cursor: pointer;
+}
+.nav__toggle span { display: block; width: 16px; height: 1.5px; background: var(--tw-color-ink-mid); }
+
+@media (max-width: 780px) {
+  .nav__role { display: none; }
+  .nav__toggle { display: flex; }
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(10, 13, 19, 0.98);
+    border-bottom: 1px solid var(--tw-color-line);
+    padding: calc(var(--tw-spacing) * 1) calc(var(--tw-spacing) * 3) calc(var(--tw-spacing) * 2);
+    display: none;
+  }
+  .nav__links.is-open { display: flex; }
+  .nav__link { padding: calc(var(--tw-spacing) * 1.5) 0; }
+}

@@ -1,80 +1,53 @@
+import { useEffect, useState } from 'react';
 
-
-
-import React, { useState } from 'react';
+const links = [
+  { href: '#project',        label: 'Work' },
+  { href: '#resume',         label: 'Experience' },
+  { href: '#skills',         label: 'Skills' },
+  { href: '#certifications', label: 'Publications' },
+  { href: '#contact',        label: 'Contact' },
+];
 
 export default function Navbar() {
-  const [isToggled, setIsToggled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
-  };
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-light shadow">
-      <div className="container">
-        <a className="navbar-brand" href="index.html">
-          <i className="uil uil-user"></i> Nauman
+    <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
+      <div className="nav__inner">
+        <a className="nav__brand" href="#about">
+          <span className="nav__mark" aria-hidden="true" />
+          Nauman Ahmed
+          <span className="nav__role">Applied AI Engineer</span>
         </a>
 
-        {/* Toggle Button */}
         <button
-          className="navbar-toggler"
           type="button"
-          aria-expanded={isToggled}
+          className="nav__toggle"
+          aria-expanded={open}
+          aria-controls="nav-links"
           aria-label="Toggle navigation"
-          onClick={handleToggle}
+          onClick={() => setOpen((v) => !v)}
         >
-          <span className="navbar-toggler-icon"></span>
-          <span className="navbar-toggler-icon"></span>
-          <span className="navbar-toggler-icon"></span>
+          <span />
+          <span />
         </button>
 
-        {/* Navbar Links */}
-        <div className={`collapse navbar-collapse ${isToggled ? 'show' : ''}`} id="navbarNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <a href="#about" className="nav-link">
-                <span data-hover="About">About</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#project" className="nav-link">
-                <span data-hover="Projects">Projects</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#resume" className="nav-link">
-                <span data-hover="Experiences">Experiences</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#skills" className="nav-link">
-                <span data-hover="Skills">Skills</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#certifications" className="nav-link">
-                <span data-hover="Certifications">Certifications</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#contact" className="nav-link">
-                <span data-hover="Contact">Contact</span>
-              </a>
-            </li>
-          </ul>
-
-          <ul className="navbar-nav ml-lg-auto">
-            <div className="ml-lg-4">
-              <div className="color-mode d-lg-flex justify-content-center align-items-center">
-                <i className="color-mode-icon"></i>
-                Color mode
-              </div>
-            </div>
-          </ul>
-        </div>
+        <nav id="nav-links" className={`nav__links ${open ? 'is-open' : ''}`}>
+          {links.map((l) => (
+            <a key={l.href} href={l.href} className="nav__link" onClick={() => setOpen(false)}>
+              {l.label}
+            </a>
+          ))}
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }

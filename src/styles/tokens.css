@@ -7,7 +7,16 @@
    existing site in a phase that is meant to change nothing visually.
    Preflight goes in at phase 07, once the old stylesheets are deleted.
    ========================================================================== */
-@layer theme, base, components, utilities;
+@layer legacy, theme, base, components, utilities;
+
+/* Bootstrap and the Tooplate stylesheet are pulled in here rather than via
+   <link> so they sit in a named layer. Unlayered CSS outranks every layer, so
+   while they were linked, Bootstrap's element rules (h1, p, a) beat any
+   Tailwind utility regardless of specificity. In `legacy` they now sit below
+   the utilities layer and new markup can style itself. Both files are deleted
+   in phase 07. */
+@import "../assets/css/bootstrap.min.css" layer(legacy);
+@import "../assets/css/tooplate-style.css" layer(legacy);
 
 /* Prefixed `tw:` for the duration of the migration. Bootstrap ships its utility
    classes with !important (.p-4{padding:1.5rem!important}), so an unprefixed
