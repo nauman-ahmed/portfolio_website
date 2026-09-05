@@ -5,6 +5,13 @@ const API_URL = 'https://portfolio-website-bfq5.onrender.com/api/send-email';
 
 const EMPTY_FORM = { name: '', email: '', message: '' };
 
+const direct = [
+  { label: 'Email', value: 'naumanahmed449@gmail.com', href: 'mailto:naumanahmed449@gmail.com' },
+  { label: 'Phone', value: '+49 152 288 35221', href: 'tel:+4915228835221' },
+  { label: 'GitHub', value: 'nauman-ahmed', href: 'https://github.com/nauman-ahmed' },
+  { label: 'LinkedIn', value: 'nauman-ahmed', href: 'https://www.linkedin.com/in/nauman-ahmed-b190b219a/' },
+];
+
 export default function Contact() {
     const [form, setForm] = useState(EMPTY_FORM);
     const [sending, setSending] = useState(false);
@@ -55,62 +62,93 @@ export default function Contact() {
     };
 
     return (
-        // <!-- CONTACT -->
-        <section className="contact py-5" id="contact">
-            <div className="container">
-                <div className="row">
-
-                    <div className="col-lg-5 mr-lg-5 col-12">
-                        <div className="google-map w-100">
-                            <iframe title="Location map" src="https://www.google.com/maps?q=Munich,Germany&output=embed" width="600" style={{ border: '0px' }} height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-
-
-
-                        <div className="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-                            <div className="contact-info-item">
-                                <h3 className="mb-3 text-white">Contact Us</h3>
-                                <p className="footer-text mb-0">Cell Number: +4915228835221</p>
-                                <p>Email: <a href="mailto:naumanahmed449@gmail.com" className="email-link">naumanahmed449@gmail.com</a></p>
-                            </div>
-                            <ul className="social-links">
-                                <li><a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/nauman_ahmed7/profilecard/?igsh=ejB2cXYzYnBncXN1" className="email-link uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
-                                <li><a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/nauman-ahmed-b190b219a/" className="email-link uil" data-toggle="tooltip" data-placement="left" title="LinkedIn">
-                                    <i className="fab fa-linkedin icon"></i></a>
-                                </li>
-                                <li><a target='_blank' rel="noopener noreferrer" href="https://github.com/nauman-ahmed" className=" email-link uil" data-toggle="tooltip" data-placement="left" title="GitHub">
-                                    <i className="fab fa-github icon"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+        <section className="contact" id="contact">
+            <div className="work__inner">
+                <header className="sec-head">
+                    <span className="sec-head__num">05</span>
+                    <div>
+                        <h2 className="sec-head__title">Get in touch</h2>
+                        <p className="sec-head__note">
+                            Open to Applied AI Engineer roles in Munich and remote.
+                        </p>
                     </div>
+                </header>
 
-                    <div className="col-lg-6 col-12">
-                        <div className="contact-form">
-                            <h2 className="mb-4">Interested in working together? Let&rsquo;s connect!</h2>
+                <div className="contact__grid">
+                    <div className="contact__direct">
+                        <p className="contact__pitch">
+                            If you are building AI systems that need to work in production &mdash; not
+                            just demo well &mdash; I would like to hear about it.
+                        </p>
 
-                            <form id="contact-form" onSubmit={handleSubmit}>
-                                <div className="row">
-                                    <div className="col-lg-6 col-12">
-                                        <input type="text" className="form-control" name="name" placeholder="Your Name" id="name" value={form.name} onChange={handleChange} disabled={sending} required />
-                                    </div>
-
-                                    <div className="col-lg-6 col-12">
-                                        <input type="email" className="form-control" name="email" placeholder="Email" id="email" value={form.email} onChange={handleChange} disabled={sending} required />
-                                    </div>
-
-                                    <div className="col-12">
-                                        <textarea name="message" rows="6" className="form-control" id="message" placeholder="Message" value={form.message} onChange={handleChange} disabled={sending} required></textarea>
-                                    </div>
-
-                                    <div className="ml-lg-auto col-lg-5 col-12">
-                                        <input type="submit" className="form-control submit-btn" value={sending ? 'Sending...' : 'Connect!'} disabled={sending} />
-                                    </div>
+                        <dl className="dlist">
+                            {direct.map((d) => (
+                                <div className="dlist__row" key={d.label}>
+                                    <dt>{d.label}</dt>
+                                    <dd>
+                                        <a
+                                            href={d.href}
+                                            target={d.href.startsWith('http') ? '_blank' : undefined}
+                                            rel={d.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        >
+                                            {d.value}
+                                        </a>
+                                    </dd>
                                 </div>
-                            </form>
-                        </div>
+                            ))}
+                            <div className="dlist__row">
+                                <dt>Based in</dt>
+                                <dd><span className="dlist__plain">Munich, Germany</span></dd>
+                            </div>
+                        </dl>
                     </div>
 
+                    <form className="cform" id="contact-form" onSubmit={handleSubmit}>
+                        <div className="cform__row">
+                            <label className="field">
+                                <span className="field__label">Your name</span>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    value={form.name}
+                                    onChange={handleChange}
+                                    disabled={sending}
+                                    required
+                                />
+                            </label>
+
+                            <label className="field">
+                                <span className="field__label">Email</span>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    disabled={sending}
+                                    required
+                                />
+                            </label>
+                        </div>
+
+                        <label className="field">
+                            <span className="field__label">Message</span>
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows="6"
+                                value={form.message}
+                                onChange={handleChange}
+                                disabled={sending}
+                                required
+                            />
+                        </label>
+
+                        <button type="submit" className="btn-signal cform__submit" disabled={sending}>
+                            {sending ? 'Sending…' : 'Send message'}
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>

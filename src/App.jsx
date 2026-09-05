@@ -10,6 +10,7 @@ import Skills from './sections/Skills'
 import Publications from './sections/Publications'
 import Contact from './sections/Contact'
 import Projects from './sections/Projects'
+import Footer from './sections/Footer'
 
 // Height of the sticky nav, so anchors don't land underneath it.
 const NAV_OFFSET = 64;
@@ -50,6 +51,7 @@ function App() {
       <Skills />
       <Publications />
       <Contact />
+      <Footer />
     </>
   )
 }
