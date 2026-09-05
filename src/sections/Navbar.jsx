@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import useActiveSection from '../hooks/useActiveSection';
 
 const links = [
   { href: '#project',        label: 'Work' },
@@ -11,6 +12,8 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const ids = useMemo(() => links.map((l) => l.href.slice(1)), []);
+  const active = useActiveSection(ids);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -42,7 +45,12 @@ export default function Navbar() {
 
         <nav id="nav-links" className={`nav__links ${open ? 'is-open' : ''}`}>
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="nav__link" onClick={() => setOpen(false)}>
+            <a
+              key={l.href}
+              href={l.href}
+              className={`nav__link ${active === l.href.slice(1) ? 'is-active' : ''}`}
+              onClick={() => setOpen(false)}
+            >
               {l.label}
             </a>
           ))}

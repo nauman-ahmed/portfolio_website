@@ -12,7 +12,7 @@ export default function FeaturedProject({ project, index, onOpen }) {
     : undefined;
 
   return (
-    <article className={`entry ${index % 2 === 1 ? 'entry--flip' : ''}`}>
+    <article className={`entry ${index % 2 === 1 ? 'entry--flip' : ''}`} data-reveal>
       <div className="entry__media">
         {isImage ? (
           <img src={project.imagePath} alt={project.title} loading="lazy" />

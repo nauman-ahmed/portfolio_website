@@ -64,7 +64,7 @@ export default function Contact() {
     return (
         <section className="contact" id="contact">
             <div className="work__inner">
-                <header className="sec-head">
+                <header className="sec-head" data-reveal>
                     <span className="sec-head__num">05</span>
                     <div>
                         <h2 className="sec-head__title">Get in touch</h2>

@@ -4,7 +4,7 @@ export default function Publications() {
   return (
     <section className="pubs" id="certifications">
       <div className="work__inner">
-        <header className="sec-head">
+        <header className="sec-head" data-reveal>
           <span className="sec-head__num">04</span>
           <div>
             <h2 className="sec-head__title">Publications</h2>

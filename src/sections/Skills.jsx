@@ -39,7 +39,7 @@ export default function Skills() {
   return (
     <section className="skills" id="skills">
       <div className="work__inner">
-        <header className="sec-head">
+        <header className="sec-head" data-reveal>
           <span className="sec-head__num">03</span>
           <div>
             <h2 className="sec-head__title">Skills</h2>

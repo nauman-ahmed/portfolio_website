@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
+import useReveal from './hooks/useReveal'
 import './styles/tokens.css'
 import './styles/hero.css'
 import './styles/work.css'
-import './App.css'
 import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
 import Experience from './sections/Experience'
@@ -16,6 +16,8 @@ import Footer from './sections/Footer'
 const NAV_OFFSET = 64;
 
 function App() {
+  useReveal();
+
   useEffect(() => {
     // The site is dark-only now. The legacy stylesheet carries its dark styles
     // behind .dark-mode, so keeping the class on <body> holds the not-yet-migrated

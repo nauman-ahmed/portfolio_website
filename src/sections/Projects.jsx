@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <section className="work" id="project">
       <div className="work__inner">
-        <header className="sec-head">
+        <header className="sec-head" data-reveal>
           <span className="sec-head__num">01</span>
           <div>
             <h2 className="sec-head__title">Featured work</h2>

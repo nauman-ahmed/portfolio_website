@@ -47,7 +47,7 @@ export default function Experience() {
   return (
     <section className="resume" id="resume">
       <div className="work__inner">
-        <header className="sec-head">
+        <header className="sec-head" data-reveal>
           <span className="sec-head__num">02</span>
           <div>
             <h2 className="sec-head__title">Experience &amp; education</h2>
