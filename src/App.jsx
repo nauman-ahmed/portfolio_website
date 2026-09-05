@@ -3,12 +3,11 @@ import './styles/tokens.css'
 import './styles/hero.css'
 import './styles/work.css'
 import './App.css'
-import 'animate.css'
 import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
-import Experiences from './sections/Experiences'
+import Experience from './sections/Experience'
 import Skills from './sections/Skills'
-import Certifications from './sections/Certifications'
+import Publications from './sections/Publications'
 import Contact from './sections/Contact'
 import Projects from './sections/Projects'
 
@@ -47,9 +46,9 @@ function App() {
       <Navbar />
       <Hero />
       <Projects />
-      <Experiences />
+      <Experience />
       <Skills />
-      <Certifications />
+      <Publications />
       <Contact />
     </>
   )
