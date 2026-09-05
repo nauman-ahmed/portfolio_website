@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import './styles/tokens.css'
 import './styles/hero.css'
+import './styles/work.css'
 import './App.css'
 import 'animate.css'
 import Navbar from './sections/Navbar'
