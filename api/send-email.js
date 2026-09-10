@@ -33,6 +33,30 @@ function throttled(ip) {
   return rec.count > RATE.max;
 }
 
+/** Never interpolate visitor input into HTML without escaping it. */
+function escapeHtml(value) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/**
+ * Gmail shows self-addressed mail as "me", and it lands in with everything else.
+ * Plus-addressing keeps it in the inbox but makes it trivially filterable:
+ * a single Gmail filter on "to: you+portfolio@gmail.com" can label and star it.
+ * Override with EMAIL_TO if you would rather route it somewhere else.
+ */
+function inboxAddress(user) {
+  if (process.env.EMAIL_TO) return process.env.EMAIL_TO;
+  const [local, domain] = user.split('@');
+  if (!domain) return user;
+  const gmail = /^(gmail\.com|googlemail\.com)$/i.test(domain);
+  return gmail && !local.includes('+') ? `${local}+portfolio@${domain}` : user;
+}
+
 function validate(body) {
   const errors = [];
   const clean = {};
@@ -108,14 +132,42 @@ export default async function handler(req, res) {
       auth: { user: EMAIL_USER, pass: EMAIL_PASS },
     });
 
+    // A one-line preview of the message, so the subject says what they want
+    // without needing to open it. Newlines would break the header.
+    const snippet = message.replace(/\s+/g, ' ').trim().slice(0, 60);
+    const subject = `Portfolio enquiry — ${name}: ${snippet}${message.length > 60 ? '…' : ''}`;
+
     const info = await transporter.sendMail({
       // Send as the authenticated mailbox so SPF/DKIM pass; the visitor goes in
       // Reply-To, which is what hitting reply should actually use.
-      from: `"Portfolio Contact" <${EMAIL_USER}>`,
-      to: EMAIL_USER,
+      from: `"Portfolio · ${name}" <${EMAIL_USER}>`,
+      to: inboxAddress(EMAIL_USER),
       replyTo: `"${name.replace(/"/g, '')}" <${email}>`,
-      subject: `New contact form submission from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      subject,
+      text: `New enquiry via your portfolio\n\nName:  ${name}\nEmail: ${email}\n\n${message}\n\n— Reply directly to this email to answer ${name}.`,
+      html: `
+        <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;max-width:560px;margin:0 auto;padding:24px;color:#111827;">
+          <p style="margin:0 0 4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b45309;font-weight:600;">Portfolio enquiry</p>
+          <h1 style="margin:0 0 20px;font-size:20px;line-height:1.3;color:#111827;">${escapeHtml(name)}</h1>
+
+          <table style="width:100%;border-collapse:collapse;margin-bottom:20px;font-size:14px;">
+            <tr>
+              <td style="padding:8px 0;border-bottom:1px solid #e5e7eb;color:#6b7280;width:80px;">Email</td>
+              <td style="padding:8px 0;border-bottom:1px solid #e5e7eb;">
+                <a href="mailto:${escapeHtml(email)}" style="color:#1d4ed8;text-decoration:none;">${escapeHtml(email)}</a>
+              </td>
+            </tr>
+          </table>
+
+          <div style="background:#f9fafb;border-left:3px solid #f2a93b;padding:16px;border-radius:2px;">
+            <p style="margin:0;font-size:15px;line-height:1.65;white-space:pre-wrap;">${escapeHtml(message)}</p>
+          </div>
+
+          <p style="margin:20px 0 0;font-size:13px;color:#6b7280;">
+            Reply directly to this email and it goes straight to ${escapeHtml(name)}.
+          </p>
+        </div>
+      `,
     });
 
     // Surfaced in the Vercel function logs, so "it said sent but nothing arrived"
