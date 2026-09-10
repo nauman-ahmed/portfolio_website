@@ -18,6 +18,16 @@ export default [
     rules: { ...js.configs.recommended.rules },
   },
   {
+    // Node-side ESM: Vercel functions and the Vite config, not browser code.
+    files: ['api/**/*.js', 'vite.config.js', 'eslint.config.js'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: globals.node,
+    },
+    rules: { ...js.configs.recommended.rules },
+  },
+  {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,

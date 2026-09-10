@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import Swal from 'sweetalert2';
 
-const API_URL = 'https://portfolio-website-bfq5.onrender.com/api/send-email';
+// Same origin: the endpoint is a Vercel function beside the site, so there is
+// no cross-origin request and no cold-started third-party service in the path.
+const API_URL = '/api/send-email';
 
-const EMPTY_FORM = { name: '', email: '', message: '' };
+const EMPTY_FORM = { name: '', email: '', message: '', company: '' };
 
 const direct = [
   { label: 'Email', value: 'naumanahmed449@gmail.com', href: 'mailto:naumanahmed449@gmail.com' },
@@ -130,6 +132,20 @@ export default function Contact() {
                                     required
                                 />
                             </label>
+                        </div>
+
+                        {/* Honeypot: hidden from people, irresistible to bots. */}
+                        <div className="hp" aria-hidden="true">
+                            <label htmlFor="company">Company</label>
+                            <input
+                                type="text"
+                                id="company"
+                                name="company"
+                                tabIndex={-1}
+                                autoComplete="off"
+                                value={form.company}
+                                onChange={handleChange}
+                            />
                         </div>
 
                         <label className="field">

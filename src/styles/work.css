@@ -820,3 +820,12 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal.is-in { opacity: 1; transform: none; transition: none; }
 }
+
+/* Honeypot — off-screen rather than display:none, which some bots detect. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
