@@ -13,6 +13,7 @@ import Projects from './sections/Projects'
 import Footer from './sections/Footer'
 
 // Height of the sticky nav, so anchors don't land underneath it.
+// Height of the sticky nav, so anchors don't land underneath it.
 const NAV_OFFSET = 64;
 
 function App() {
