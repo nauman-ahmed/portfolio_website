@@ -7,6 +7,11 @@ import nodemailer from 'nodemailer';
  * the first submission of the day take 21 seconds — long enough that most
  * visitors assumed the form was broken. Same origin as the site, so there is
  * no CORS handshake either.
+ *
+ * Routing note: vercel.json rewrites everything to /index.html for the SPA, so
+ * its `source` is `/((?!api/).*)`. Without that exclusion this route would be
+ * swallowed and every submission would receive the HTML page instead of JSON.
+ * (vercel.json rejects unknown keys, so the explanation has to live here.)
  */
 
 const LIMITS = { name: 100, email: 254, message: 5000 };
