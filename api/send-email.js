@@ -74,7 +74,15 @@ export default async function handler(req, res) {
   }
 
   // Bots fill hidden fields; people don't. Answer 200 so they learn nothing.
-  if (typeof req.body?.company === 'string' && req.body.company.trim() !== '') {
+  //
+  // The field is deliberately NOT called something like "company": browser
+  // address autofill fills those even with autocomplete="off", which would make
+  // this silently swallow a real message — the worst failure a contact form can
+  // have. Logged on every trigger so a false positive is visible in the logs
+  // rather than invisible to everyone.
+  const trap = req.body?.hp_reference;
+  if (typeof trap === 'string' && trap.trim() !== '') {
+    console.warn('[send-email] honeypot triggered — no mail sent. value=%j', trap.slice(0, 60));
     return res.status(200).json({ success: true, message: 'Email sent successfully!' });
   }
 
@@ -100,7 +108,7 @@ export default async function handler(req, res) {
       auth: { user: EMAIL_USER, pass: EMAIL_PASS },
     });
 
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       // Send as the authenticated mailbox so SPF/DKIM pass; the visitor goes in
       // Reply-To, which is what hitting reply should actually use.
       from: `"Portfolio Contact" <${EMAIL_USER}>`,
@@ -109,6 +117,13 @@ export default async function handler(req, res) {
       subject: `New contact form submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     });
+
+    // Surfaced in the Vercel function logs, so "it said sent but nothing arrived"
+    // can be answered: either Gmail accepted it, or it never got that far.
+    console.log(
+      '[send-email] accepted=%j rejected=%j messageId=%s',
+      info.accepted, info.rejected, info.messageId
+    );
 
     return res.status(200).json({ success: true, message: 'Email sent successfully!' });
   } catch (error) {

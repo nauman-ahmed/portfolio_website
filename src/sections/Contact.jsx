@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 // no cross-origin request and no cold-started third-party service in the path.
 const API_URL = '/api/send-email';
 
-const EMPTY_FORM = { name: '', email: '', message: '', company: '' };
+const EMPTY_FORM = { name: '', email: '', message: '', hp_reference: '' };
 
 const direct = [
   { label: 'Email', value: 'naumanahmed449@gmail.com', href: 'mailto:naumanahmed449@gmail.com' },
@@ -134,16 +134,17 @@ export default function Contact() {
                             </label>
                         </div>
 
-                        {/* Honeypot: hidden from people, irresistible to bots. */}
+                        {/* Honeypot. The name must stay meaningless: anything like
+                            "company" or "organization" gets filled by browser address
+                            autofill, which would silently discard a real message. */}
                         <div className="hp" aria-hidden="true">
-                            <label htmlFor="company">Company</label>
                             <input
                                 type="text"
-                                id="company"
-                                name="company"
+                                id="hp_reference"
+                                name="hp_reference"
                                 tabIndex={-1}
                                 autoComplete="off"
-                                value={form.company}
+                                value={form.hp_reference}
                                 onChange={handleChange}
                             />
                         </div>
