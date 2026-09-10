@@ -127,7 +127,17 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ success: true, message: 'Email sent successfully!' });
   } catch (error) {
-    console.error('sendMail failed:', error.message);
+    // The client message stays generic on purpose; the detail goes to the logs.
+    // code EAUTH almost always means the Gmail App Password is wrong, revoked,
+    // or was never set in this environment.
+    console.error(
+      '[send-email] FAILED code=%s message=%s%s',
+      error.code || 'UNKNOWN',
+      error.message,
+      error.code === 'EAUTH'
+        ? ' -> Gmail rejected the credentials. Generate a new App Password and set EMAIL_USER / EMAIL_PASS in Vercel, then redeploy.'
+        : ''
+    );
     return res.status(500).json({ success: false, message: 'Error sending email' });
   }
 }
