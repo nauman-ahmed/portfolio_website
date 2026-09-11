@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import useReveal from './hooks/useReveal'
 import './styles/tokens.css'
 import './styles/hero.css'
@@ -55,6 +57,8 @@ function App() {
       <Publications />
       <Contact />
       <Footer />
+      <Analytics />
+      <SpeedInsights />
     </>
   )
 }

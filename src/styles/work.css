@@ -829,3 +829,15 @@ body {
   height: 1px;
   overflow: hidden;
 }
+
+.cform__send {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 2);
+  flex-wrap: wrap;
+}
+.cform__promise {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-dim);
+}

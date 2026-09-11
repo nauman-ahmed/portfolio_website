@@ -162,9 +162,14 @@ export default function Contact() {
                             />
                         </label>
 
-                        <button type="submit" className="btn-signal cform__submit" disabled={sending}>
-                            {sending ? 'Sending…' : 'Send message'}
-                        </button>
+                        <div className="cform__send">
+                            <button type="submit" className="btn-signal cform__submit" disabled={sending}>
+                                {sending ? 'Sending…' : 'Send message'}
+                            </button>
+                            {/* Removes the "will this go into a void?" hesitation, which is
+                                the most common reason a filled-in form never gets sent. */}
+                            <span className="cform__promise">I reply within one working day.</span>
+                        </div>
                     </form>
                 </div>
             </div>
