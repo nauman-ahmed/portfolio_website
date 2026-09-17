@@ -1,4 +1,5 @@
 import { experience, education } from '../data/resume';
+import events from '../lib/analytics';
 
 function Entry({ item }) {
   const heading = item.role || item.qualification;
@@ -34,6 +35,7 @@ function Entry({ item }) {
             href={item.link.href}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => events.thesisOpened('experience')}
           >
             {item.link.label}
           </a>

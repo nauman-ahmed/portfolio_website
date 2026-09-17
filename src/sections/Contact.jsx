@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Swal from 'sweetalert2';
+import events from '../lib/analytics';
 
 // Same origin: the endpoint is a Vercel function beside the site, so there is
 // no cross-origin request and no cold-started third-party service in the path.
@@ -18,8 +19,16 @@ export default function Contact() {
     const [form, setForm] = useState(EMPTY_FORM);
     const [sending, setSending] = useState(false);
 
+    const [startedTracked, setStartedTracked] = useState(false);
+
     const handleChange = (event) => {
         const { name, value } = event.target;
+        // Fires once, on the first keystroke — the gap between this and
+        // contact_form_sent is the form's abandonment rate.
+        if (!startedTracked) {
+            events.contactStarted();
+            setStartedTracked(true);
+        }
         setForm((prev) => ({ ...prev, [name]: value }));
     };
 
@@ -46,6 +55,7 @@ export default function Contact() {
             }
 
             setForm(EMPTY_FORM);
+            events.contactSent();
             Swal.fire({
                 icon: 'success',
                 title: 'Message sent!',
@@ -53,6 +63,7 @@ export default function Contact() {
             });
         } catch (error) {
             console.error('Contact form submission failed:', error);
+            events.contactFailed(error.message);
             Swal.fire({
                 icon: 'error',
                 title: 'Something went wrong',
@@ -67,7 +78,7 @@ export default function Contact() {
         <section className="contact" id="contact">
             <div className="work__inner">
                 <header className="sec-head" data-reveal>
-                    <span className="sec-head__num">05</span>
+                    <span className="sec-head__num">06</span>
                     <div>
                         <h2 className="sec-head__title">Get in touch</h2>
                         <p className="sec-head__note">

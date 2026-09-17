@@ -1,6 +1,7 @@
 import cvFile from '../assets/files/Nauman-Ahmed-Applied-AI-CV.pdf';
 import CoverageGrid from '../components/CoverageGrid';
 import CountUp from '../components/CountUp';
+import events from '../lib/analytics';
 
 const metrics = [
   { value: 93.0, decimals: 1, suffix: '%', label: 'Mean coverage', note: '100 held-out environments' },
@@ -34,7 +35,13 @@ export default function Hero() {
         </p>
 
         <div className="hero__actions">
-          <a className="btn-signal" href={cvFile} target="_blank" rel="noopener noreferrer">
+          <a
+            className="btn-signal"
+            href={cvFile}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={events.cvDownloaded}
+          >
             View CV
           </a>
           <a className="btn-quiet" href="#project">Featured work</a>

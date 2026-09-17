@@ -10,6 +10,7 @@ import Hero from './sections/Hero'
 import Experience from './sections/Experience'
 import Skills from './sections/Skills'
 import Publications from './sections/Publications'
+import Faq from './sections/Faq'
 import Contact from './sections/Contact'
 import Projects from './sections/Projects'
 import Footer from './sections/Footer'
@@ -55,6 +56,7 @@ function App() {
       <Experience />
       <Skills />
       <Publications />
+      <Faq />
       <Contact />
       <Footer />
       <Analytics />

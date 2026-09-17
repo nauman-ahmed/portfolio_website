@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import events from '../lib/analytics';
 
 /**
  * One full-width entry. Media and content alternate sides down the page so the
@@ -50,7 +51,10 @@ export default function FeaturedProject({ project, index, onOpen }) {
         </ul>
 
         <div className="entry__actions">
-          <button type="button" className="btn-quiet" onClick={() => onOpen(project)}>
+          <button type="button" className="btn-quiet" onClick={() => {
+              events.projectOpened(project.id);
+              onOpen(project);
+            }}>
             Overview
           </button>
           {project.links?.map((l) => (
@@ -60,6 +64,7 @@ export default function FeaturedProject({ project, index, onOpen }) {
               href={l.href}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => events.repoClicked(project.id)}
             >
               {l.label}
             </a>

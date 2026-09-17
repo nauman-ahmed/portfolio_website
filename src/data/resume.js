@@ -25,7 +25,7 @@ export const experience = [
   },
   {
     period: '09/19 — 09/21',
-    role: 'Software Engineer',
+    role: 'Full Stack Developer',
     org: 'StratgIT',
     points: [
       'Delivered web applications and cloud infrastructure for company clients using React, React Native and Vue.js.',

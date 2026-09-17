@@ -841,3 +841,58 @@ body {
   font-size: var(--text-meta);
   color: var(--color-ink-dim);
 }
+
+/* ---------- FAQ ---------- */
+.faq { background: var(--color-ground); border-bottom: 1px solid var(--color-line); }
+
+.qlist { border-top: 1px solid var(--color-line); }
+
+.qitem { border-bottom: 1px solid var(--color-line-soft); }
+
+.qitem__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 2.25) 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+  transition: color 0.16s var(--ease-out-quiet);
+}
+/* Hide the native disclosure triangle in both engines. */
+.qitem__q::-webkit-details-marker { display: none; }
+.qitem__q::marker { content: ''; }
+
+.qitem__q:hover { color: var(--color-signal); }
+.qitem__q:focus-visible { outline: 2px solid var(--color-signal); outline-offset: 3px; }
+
+/* A plus that becomes a minus — states the control rather than decorating it. */
+.qitem__mark {
+  position: relative;
+  flex: none;
+  width: 12px;
+  height: 12px;
+}
+.qitem__mark::before,
+.qitem__mark::after {
+  content: '';
+  position: absolute;
+  background: var(--color-signal);
+  transition: transform 0.2s var(--ease-out-quiet);
+}
+.qitem__mark::before { top: 5px; left: 0; width: 12px; height: 1.5px; }
+.qitem__mark::after  { left: 5px; top: 0; width: 1.5px; height: 12px; }
+.qitem[open] .qitem__mark::after { transform: rotate(90deg); }
+
+.qitem__a {
+  margin: 0;
+  padding: 0 calc(var(--spacing) * 4) calc(var(--spacing) * 2.5) 0;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-ink-mid);
+  max-width: 70ch;
+}

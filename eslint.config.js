@@ -8,16 +8,6 @@ export default [
   // Vendored third-party bundles and the untouched template copy are not ours to lint.
   { ignores: ['dist', 'custom/**', 'src/js/**', 'src/assets/js/**'] },
   {
-    // CommonJS running on Node, not in the browser.
-    files: ['backend/**/*.js'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'commonjs',
-      globals: globals.node,
-    },
-    rules: { ...js.configs.recommended.rules },
-  },
-  {
     // Node-side ESM: Vercel functions and the Vite config, not browser code.
     files: ['api/**/*.js', 'vite.config.js', 'eslint.config.js'],
     languageOptions: {
