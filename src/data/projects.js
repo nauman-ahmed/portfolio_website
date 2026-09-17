@@ -147,7 +147,9 @@ export const featuredProjects = [
       knowledge base stays current, Streamlit provides the interface, and the full stack is
       dockerised for reproducible local deployment.</p>
     `,
-    links: [],
+    links: [
+      { label: 'Repository', href: 'https://github.com/nauman-ahmed/smart-travel-planner-agentic-rag' },
+    ],
   },
 
   {
@@ -187,13 +189,13 @@ export const featuredProjects = [
 export const archiveProjects = [
   { title: 'Passenger Volume Prediction', kind: 'DB Regio · time series forecasting', year: null, stack: ['Machine Learning', 'Time Series', 'Feature Engineering'], href: null },
   { title: 'AI-Powered Story Generation', kind: 'LLM · content moderation', year: null, stack: ['Django', 'Mixtral-8x7B', 'BERT', 'PyTorch'], href: null },
-  { title: 'Shannon Associates', kind: 'Digital artist platform', year: null, stack: ['React', 'Node.js', 'MongoDB', 'AWS S3'], href: null },
+  { title: 'Shannon Associates', kind: 'Digital artist platform', year: null, stack: ['React', 'Node.js', 'MongoDB', 'AWS S3'], href: 'https://github.com/nauman-ahmed/shannon-website' },
   { title: 'Academic Assistant', kind: 'Course catalog semantic search', year: null, stack: ['Django', 'sentence-transformers', 'scikit-learn'], href: null },
   { title: 'DEWA', kind: 'Energy management platform (IoT)', year: null, stack: ['React', 'Node.js', 'IoT', 'PostgreSQL'], href: null },
   { title: 'Conversational Campus Assistant', kind: 'University cafeteria & news', year: null, stack: ['Django', 'Transformers', 'PyTorch', 'Prometheus'], href: null },
-  { title: 'ShutterDown', kind: 'Event management system', year: null, stack: ['React', 'Node.js', 'MongoDB', 'Socket.io'], href: null },
+  { title: 'ShutterDown', kind: 'Event management system', year: null, stack: ['React', 'Node.js', 'MongoDB', 'Socket.io'], href: 'https://github.com/nauman-ahmed/shutterdown' },
   { title: 'POS System', kind: 'Point of sale', year: null, stack: ['React', 'Node.js', 'MongoDB'], href: null },
   { title: 'Stock Tracking App', kind: 'Inventory tracking', year: null, stack: ['React', 'Node.js', 'MongoDB'], href: null },
-  { title: 'Liver Disease Analytics', kind: 'Interactive data visualisation', year: null, stack: ['D3.js', 'JavaScript'], href: null },
+  { title: 'Liver Disease Analytics', kind: 'Interactive data visualisation', year: null, stack: ['D3.js', 'JavaScript'], href: 'https://github.com/nauman-ahmed/d3visualization' },
   { title: 'Real-Time Assessment Scoring', kind: 'Simulation-based grading platform', year: null, stack: ['React', 'Flask', 'MongoDB'], href: null },
 ];
